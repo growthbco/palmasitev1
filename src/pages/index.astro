@@ -1,5 +1,7 @@
 ---
 // Homepage content - serving main landing page
+import Navigation from '../components/Navigation.astro';
+
 const title = "Palma Cleaning Co - Professional House & Commercial Cleaning in Ocala FL";
 const description = "Professional house cleaning for busy families & professionals throughout Ocala, FL. Serving all neighborhoods including premium communities near World Equestrian Center. Licensed & insured.";
 ---
@@ -89,44 +91,7 @@ const description = "Professional house cleaning for busy families & professiona
     </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Palma Cleaning</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/about" class="nav-link">About</a></li>
-                <li>
-                    <a href="/services" class="nav-link has-dropdown">Services</a>
-                    <div class="dropdown">
-                        <div class="dropdown-section">Residential Services</div>
-                        <a href="/services#residential" class="dropdown-item">Standard House Cleaning</a>
-                        <a href="/services#residential" class="dropdown-item">Deep Cleaning</a>
-                        <a href="/services#residential" class="dropdown-item">Move-in/Move-out</a>
-                        <div class="dropdown-section">Commercial & Specialized</div>
-                        <a href="/services#commercial" class="dropdown-item">Commercial Cleaning</a>
-                        <a href="/services#commercial" class="dropdown-item">Post-Construction</a>
-                        <a href="/services#commercial" class="dropdown-item">Equestrian Properties</a>
-                        <div class="dropdown-section">Service Areas</div>
-                        <a href="/stone-creek" class="dropdown-item">Stone Creek</a>
-                        <a href="/oak-run" class="dropdown-item">Oak Run</a>
-                        <a href="/the-villages" class="dropdown-item">The Villages</a>
-                    </div>
-                </li>
-                <li><a href="/contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-contact">
-                <a href="tel:+13521234567" class="nav-phone">(352) 123-4567</a>
-                <a href="/quote" class="nav-cta">Book Now</a>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <Navigation />
 
     <section class="hero" id="home">
         <div class="hero-container">
