@@ -7,11 +7,42 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+// Close mobile menu when clicking on a link (but not dropdown toggles)
+document.querySelectorAll('.nav-link:not(.has-dropdown)').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }));
+
+// Mobile dropdown toggle functionality
+document.querySelectorAll('.nav-link.has-dropdown').forEach(link => {
+    link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = link.nextElementSibling;
+            dropdown.classList.toggle('active');
+            
+            // Close other open dropdowns
+            document.querySelectorAll('.dropdown.active').forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Close dropdowns when clicking dropdown items on mobile
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.querySelectorAll('.dropdown.active').forEach(d => {
+                d.classList.remove('active');
+            });
+        }
+    });
+});
 
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
