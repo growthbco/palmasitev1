@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage - Highest Priority -->
+    <url>
+        <loc>https://palmacleaningco.com/</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Core Service Pages - High Priority -->
+    <url>
+        <loc>https://palmacleaningco.com/residential-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/standard-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/deep-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/move-in-out-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/commercial-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Location-Specific Service Pages - High Priority for Local SEO -->
+    <url>
+        <loc>https://palmacleaningco.com/house-cleaning-ocala-fl</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/stone-creek-cleaning-services</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/oak-run-cleaning-services</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/golden-hills-cleaning-services</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/cleaning-services-belleview-fl</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/the-villages-cleaning-services</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/world-equestrian-center-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Specialized Service Pages -->
+    <url>
+        <loc>https://palmacleaningco.com/equestrian-facility-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/medical-facility-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/office-cleaning-ocala</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/auto-dealership-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Main Navigation Pages -->
+    <url>
+        <loc>https://palmacleaningco.com/about</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/services</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/service-areas</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/contact</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/quote</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- FAQ and Information Pages -->
+    <url>
+        <loc>https://palmacleaningco.com/faq</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/cleaning-tips</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/pricing</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- Blog/Content Pages for SEO -->
+    <url>
+        <loc>https://palmacleaningco.com/blog</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/house-cleaning-checklist</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/spring-cleaning-ocala</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/cleaning-stone-creek-homes</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/horse-capital-cleaning-guide</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Legal/Policy Pages -->
+    <url>
+        <loc>https://palmacleaningco.com/privacy-policy</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/terms-of-service</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Testimonials and Reviews -->
+    <url>
+        <loc>https://palmacleaningco.com/testimonials</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/reviews</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Emergency/Specialty Services -->
+    <url>
+        <loc>https://palmacleaningco.com/emergency-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/post-construction-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/eco-friendly-cleaning</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+</urlset>
