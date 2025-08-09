@@ -1,6 +1,37 @@
 ---
-// Temporary redirect to migrated static homepage in /public
-export async function GET({ request }) {
-  return Response.redirect(new URL('/index.html', request.url));
-}
+// Homepage content - serving main landing page
+const title = "Palma Cleaning Co - Professional House & Commercial Cleaning in Ocala FL";
+const description = "Professional house cleaning for busy families & professionals throughout Ocala, FL. Serving all neighborhoods including premium communities near World Equestrian Center. Licensed & insured.";
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="house cleaning Ocala FL, residential cleaning Ocala, commercial cleaning Ocala, Marion County cleaning, Ocala cleaning service, WEC cleaning">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Schema markup and other head content can go here -->
+</head>
+<body>
+    <h1>Palma Cleaning Co - Coming Soon</h1>
+    <p>Professional cleaning services in Ocala, FL</p>
+    <p>Service × Location matrix pages available:</p>
+    <ul>
+        <li><a href="/stone-creek-standard-cleaning.html">Stone Creek Standard Cleaning</a></li>
+        <li><a href="/oak-run-standard-cleaning.html">Oak Run Standard Cleaning</a></li>
+        <li><a href="/stone-creek-deep-cleaning.html">Stone Creek Deep Cleaning</a></li>
+        <li><a href="/oak-run-deep-cleaning.html">Oak Run Deep Cleaning</a></li>
+    </ul>
+    
+    <script is:inline src="/script-clean.js"></script>
+</body>
+</html>
