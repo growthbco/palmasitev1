@@ -1,13 +1,27 @@
+# SEO Headers for Apex Domain
 /*
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
+# Canonical domain enforcement
 /*.html
-  Cache-Control: no-cache, no-store, must-revalidate
+  X-Canonical-Domain: palmacleaningco.com
   
+# Performance headers  
 /*.css
-  Cache-Control: no-cache, no-store, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+  
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
 
-/*.js  
-  Cache-Control: no-cache, no-store, must-revalidate
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
