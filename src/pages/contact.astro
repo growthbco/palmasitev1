@@ -47,6 +47,26 @@ const description = "Contact Palma Cleaning for professional cleaning services i
         "priceRange": "$$"
     }
     </script>
+    
+    <style>
+        @media (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .contact-item {
+                padding: 1.5rem 1rem !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-item h4 {
+                font-size: 1rem !important;
+            }
+            .contact-item p {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <Navigation />
@@ -73,27 +93,37 @@ const description = "Contact Palma Cleaning for professional cleaning services i
     <section class="contact" id="contact-info">
         <div class="container">
             <h2 class="section-title">Contact Information</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-phone" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Phone</h4>
-                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;"><a href="tel:+13527644747" style="color: #666; text-decoration: none;">(352) 764-4747</a></p>
-                    <p style="color: #888; font-size: 0.9rem;">Call or text us anytime</p>
+            <div class="contact-info-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                <div class="contact-item" style="text-align: center; padding: 2rem 1rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem; font-size: 1.1rem;">Phone</h4>
+                    <p style="color: #666; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">
+                        <a href="tel:+13527644747" style="color: #2f5047; text-decoration: none;">(352) 764-4747</a>
+                    </p>
+                    <p style="color: #888; font-size: 0.9rem; line-height: 1.4;">Call or text us anytime</p>
                 </div>
                 
-                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-envelope" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Email</h4>
-                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">hello@palmacleaningco.com</p>
-                    <p style="color: #888; font-size: 0.9rem;">We respond within 24 hours</p>
+                <div class="contact-item" style="text-align: center; padding: 2rem 1rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem; font-size: 1.1rem;">Email</h4>
+                    <p style="color: #666; font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; word-break: break-all;">
+                        <a href="mailto:hello@palmacleaningco.com" style="color: #2f5047; text-decoration: none;">hello@palmacleaningco.com</a>
+                    </p>
+                    <p style="color: #888; font-size: 0.9rem; line-height: 1.4;">We respond within 24 hours</p>
                 </div>
                 
-                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Business Hours</h4>
-                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Monday - Friday</p>
-                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">8:00 AM - 6:00 PM</p>
-                    <p style="color: #888; font-size: 0.9rem;">Weekend appointments available</p>
+                <div class="contact-item" style="text-align: center; padding: 2rem 1rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem; font-size: 1.1rem;">Business Hours</h4>
+                    <p style="color: #666; font-size: 1rem; font-weight: 500; margin-bottom: 0.3rem; line-height: 1.4;">Monday - Friday</p>
+                    <p style="color: #666; font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; line-height: 1.4;">8:00 AM - 6:00 PM</p>
+                    <p style="color: #888; font-size: 0.9rem; line-height: 1.4;">Weekend appointments available</p>
                 </div>
             </div>
         </div>
