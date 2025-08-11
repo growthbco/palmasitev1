@@ -299,6 +299,47 @@
     </url>
 
     <!-- ======================================== -->
+    <!-- MEDIUM PRIORITY - BLOG & CONTENT PAGES -->
+    <!-- ======================================== -->
+    
+    <!-- Blog Main Page -->
+    <url>
+        <loc>https://palmacleaningco.com/blog/</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- High-Value Blog Posts -->
+    <url>
+        <loc>https://palmacleaningco.com/blog/spring-cleaning-checklist-ocala</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/how-often-deep-clean-house</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/commercial-office-cleaning-guide</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/blog/summer-cleaning-tips-florida</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- ======================================== -->
     <!-- LOWER PRIORITY - SUPPORTING PAGES -->
     <!-- ======================================== -->
     
