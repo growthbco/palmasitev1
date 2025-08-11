@@ -90,6 +90,19 @@ const description = "Professional house cleaning for busy families & professiona
         "priceRange": "$$"
     }
     </script>
+    
+    <style>
+        .area-item a {
+            transition: color 0.2s ease;
+        }
+        .area-item a:hover {
+            color: #ff8057 !important;
+            text-decoration: underline !important;
+        }
+        .area-item h4 a:hover {
+            color: #ff8057 !important;
+        }
+    </style>
 </head>
 <body>
     <Navigation />
@@ -273,16 +286,16 @@ const description = "Professional house cleaning for busy families & professiona
                 <div class="area-item">
                     <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
                     <ul>
-                        <li>Downtown Ocala</li>
-                        <li>Stone Creek</li>
-                        <li>Oak Run</li>
-                        <li>Golden Hills</li>
+                        <li><a href="/ocala" style="color: #666; text-decoration: none;">Downtown Ocala</a></li>
+                        <li><a href="/stone-creek" style="color: #666; text-decoration: none;">Stone Creek</a></li>
+                        <li><a href="/oak-run" style="color: #666; text-decoration: none;">Oak Run</a></li>
+                        <li><a href="/golden-hills" style="color: #666; text-decoration: none;">Golden Hills</a></li>
                         <li>Spruce Creek</li>
                         <li>All Marion County areas</li>
                     </ul>
                 </div>
                 <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> The Villages</h4>
+                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/the-villages" style="color: #2f5047; text-decoration: none;">The Villages</a></h4>
                     <ul>
                         <li>Spanish Springs</li>
                         <li>Lake Sumter Landing</li>
@@ -292,7 +305,7 @@ const description = "Professional house cleaning for busy families & professiona
                     </ul>
                 </div>
                 <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> World Equestrian Center Area</h4>
+                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/wec-area" style="color: #2f5047; text-decoration: none;">World Equestrian Center Area</a></h4>
                     <ul>
                         <li>WEC neighborhoods</li>
                         <li>Equestrian properties</li>
@@ -304,8 +317,8 @@ const description = "Professional house cleaning for busy families & professiona
                 <div class="area-item">
                     <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
                     <ul>
-                        <li>Belleview</li>
-                        <li>Dunnellon</li>
+                        <li><a href="/belleview" style="color: #666; text-decoration: none;">Belleview</a></li>
+                        <li><a href="/dunnellon" style="color: #666; text-decoration: none;">Dunnellon</a></li>
                         <li>Rainbow Springs</li>
                         <li>Silver Springs</li>
                         <li>And more!</li>
