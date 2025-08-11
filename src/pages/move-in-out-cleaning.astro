@@ -24,21 +24,129 @@ const description = "Professional move-in and move-out cleaning services in Ocal
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Move-in Move-out Cleaning Services",
+        "alternateName": ["Move-out Cleaning", "Move-in Cleaning", "Transition Cleaning", "Rental Deposit Cleaning"],
+        "description": "Complete cleaning for empty homes including all cabinets, drawers, appliances, and detailed cleaning to get deposits back or prepare for new residents. Perfect for renters, homeowners, and real estate professionals.",
+        "url": "https://palmacleaningco.com/move-in-out-cleaning",
+        "image": "https://palmacleaningco.com/images/move-in-out-cleaning-service.jpg",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "Service"],
             "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
             "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ocala",
                 "addressRegion": "FL",
                 "postalCode": "34471",
                 "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
             }
         },
-        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Stone Creek",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Run",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "City",
+                "name": "The Villages",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
+            }
+        ],
         "serviceType": "Move-in Move-out House Cleaning",
-        "description": "Complete cleaning for empty homes including all cabinets, drawers, appliances, and detailed cleaning to get deposits back or prepare for new residents."
+        "category": ["Move-in Cleaning", "Move-out Cleaning", "Transition Services", "Real Estate Cleaning"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Move-out Deposit Recovery Cleaning",
+                "description": "Thorough cleaning to maximize rental deposit return",
+                "priceRange": "$250-$600",
+                "availability": "InStock",
+                "eligibilityToWorkStatus": "Available for same-day service"
+            },
+            {
+                "@type": "Offer",
+                "name": "Move-in Fresh Start Cleaning",
+                "description": "Complete sanitizing and cleaning for new residents",
+                "priceRange": "$200-$500",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Real Estate Ready Cleaning",
+                "description": "Professional cleaning for showings and open houses",
+                "priceRange": "$300-$700",
+                "availability": "InStock"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Renters, Homeowners, Real Estate Agents, Property Managers, Landlords"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Deep Cleaning Services",
+                "url": "https://palmacleaningco.com/deep-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Post-Construction Cleaning",
+                "url": "https://palmacleaningco.com/post-construction-cleaning"
+            }
+        ]
     }
     </script>
 </head>

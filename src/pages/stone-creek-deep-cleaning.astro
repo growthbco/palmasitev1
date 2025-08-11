@@ -26,21 +26,120 @@ const description = "Deep house cleaning for Stone Creek luxury homes in Ocala, 
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Stone Creek Deep House Cleaning",
-        "description": "Comprehensive deep cleaning services for Stone Creek luxury homes",
+        "alternateName": ["Stone Creek Spring Cleaning", "Stone Creek Intensive Cleaning", "Luxury Home Deep Cleaning Stone Creek"],
+        "description": "Comprehensive deep cleaning services for Stone Creek luxury homes including premium fixtures, high-end surfaces, and designer elements. Specialized for Stone Creek community's luxury properties.",
+        "url": "https://palmacleaningco.com/stone-creek-deep-cleaning",
+        "image": "https://palmacleaningco.com/images/stone-creek-deep-cleaning.jpg",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "Service"],
             "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
             "telephone": "(352) 764-4747",
-            "url": "https://palmacleaningco.com"
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
+            }
         },
         "areaServed": {
             "@type": "Place",
-            "name": "Stone Creek, Ocala, FL"
+            "name": "Stone Creek",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "addressCountry": "US",
+            "description": "Luxury residential community in Ocala, FL"
         },
-        "offers": {
-            "@type": "Offer",
-            "description": "Top-to-bottom detailed cleaning, spring cleaning, and seasonal deep cleaning services"
-        }
+        "serviceArea": [
+            {
+                "@type": "Place",
+                "name": "Stone Creek Community",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                }
+            }
+        ],
+        "serviceType": "Luxury Home Deep Cleaning",
+        "category": ["Deep Cleaning", "Luxury Home Cleaning", "Premium Community Services", "Stone Creek Services"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Stone Creek Spring Deep Clean",
+                "description": "Annual comprehensive deep cleaning for Stone Creek luxury homes",
+                "priceRange": "$400-$800",
+                "availability": "InStock",
+                "validFrom": "2025-01-01"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pre-Event Deep Cleaning",
+                "description": "Deep cleaning before hosting events in Stone Creek homes",
+                "priceRange": "$500-$1000",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Luxury Home Seasonal Clean",
+                "description": "Quarterly deep maintenance for Stone Creek premium properties",
+                "priceRange": "$600-$1200",
+                "availability": "InStock"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Stone Creek Residents, Luxury Homeowners, Premium Property Owners"
+        },
+        "isPartOf": {
+            "@type": "Service",
+            "name": "Deep Cleaning Services",
+            "url": "https://palmacleaningco.com/deep-cleaning"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Stone Creek Standard Cleaning",
+                "url": "https://palmacleaningco.com/stone-creek-standard-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Stone Creek Move-in Move-out Cleaning",
+                "url": "https://palmacleaningco.com/stone-creek-move-in-out-cleaning"
+            }
+        ],
+        "locationFeatureSpecification": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Premium Community Service",
+                "value": "Stone Creek luxury home expertise"
+            },
+            {
+                "@type": "LocationFeatureSpecification", 
+                "name": "High-End Property Experience",
+                "value": "Specialized in luxury fixtures and finishes"
+            }
+        ]
     }
     </script>
 </head>

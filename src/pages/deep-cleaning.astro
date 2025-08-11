@@ -24,50 +24,135 @@ const description = "Professional deep house cleaning services in Ocala, FL. Com
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Deep House Cleaning Services",
-        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, and detailed cleaning throughout your home.",
+        "alternateName": ["Spring Cleaning", "Intensive House Cleaning", "Detailed Home Cleaning"],
+        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, ceiling fans, and detailed cleaning throughout your home. Perfect for spring cleaning, seasonal refreshes, and move-in preparation.",
+        "url": "https://palmacleaningco.com/deep-cleaning",
+        "image": "https://palmacleaningco.com/images/deep-cleaning-service.jpg",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "Service"],
             "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
             "telephone": "(352) 764-4747",
             "email": "hello@palmacleaningco.com",
             "url": "https://palmacleaningco.com",
+            "sameAs": [
+                "https://www.facebook.com/palmacleaningco",
+                "https://www.instagram.com/palmacleaningco"
+            ],
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ocala",
                 "addressRegion": "FL",
                 "postalCode": "34471",
                 "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
             }
         },
         "areaServed": [
             {
                 "@type": "City",
-                "name": "Ocala"
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Stone Creek",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Run",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
             },
             {
                 "@type": "City",
-                "name": "Stone Creek"
-            },
-            {
-                "@type": "City",
-                "name": "Oak Run"
-            },
-            {
-                "@type": "City",
-                "name": "The Villages"
+                "name": "The Villages",
+                "addressRegion": "FL",
+                "addressCountry": "US"
             },
             {
                 "@type": "AdministrativeArea",
                 "name": "Marion County",
-                "containedInPlace": "Florida"
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
             }
         ],
         "serviceType": "Deep House Cleaning",
-        "offers": {
-            "@type": "Offer",
-            "description": "Professional deep cleaning including spring cleaning, move-in preparation, and seasonal deep cleans",
-            "priceRange": "$$"
-        }
+        "category": ["Deep Cleaning", "House Cleaning", "Spring Cleaning", "Seasonal Cleaning"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "One-Time Deep Cleaning",
+                "description": "Comprehensive deep cleaning service for spring cleaning or special occasions",
+                "priceRange": "$200-$500",
+                "availability": "InStock",
+                "validFrom": "2025-01-01"
+            },
+            {
+                "@type": "Offer",
+                "name": "Pre-Event Deep Cleaning",
+                "description": "Deep cleaning service before hosting events or parties",
+                "priceRange": "$250-$600",
+                "availability": "InStock",
+                "validFrom": "2025-01-01"
+            },
+            {
+                "@type": "Offer",
+                "name": "Move-In Deep Cleaning",
+                "description": "Deep cleaning for new homeowners or renters",
+                "priceRange": "$300-$700",
+                "availability": "InStock",
+                "validFrom": "2025-01-01"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Homeowners, Renters, Property Managers"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Standard House Cleaning",
+                "url": "https://palmacleaningco.com/residential-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Move-in Move-out Cleaning",
+                "url": "https://palmacleaningco.com/move-in-out-cleaning"
+            }
+        ]
     }
     </script>
 </head>

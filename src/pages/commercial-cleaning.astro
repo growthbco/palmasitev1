@@ -24,21 +24,116 @@ const description = "Professional commercial office cleaning services in Ocala, 
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Commercial Cleaning Services",
+        "alternateName": ["Office Cleaning", "Business Cleaning", "Janitorial Services"],
+        "description": "Professional commercial cleaning services for office buildings, retail spaces, medical offices, restaurants, and corporate facilities with flexible scheduling and reliable service.",
+        "url": "https://palmacleaningco.com/commercial-cleaning",
+        "image": "https://palmacleaningco.com/images/commercial-cleaning-service.jpg",
         "provider": {
-            "@type": "LocalBusiness",
+            "@type": ["LocalBusiness", "Service"],
             "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
             "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ocala",
                 "addressRegion": "FL",
                 "postalCode": "34471",
                 "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
             }
         },
-        "areaServed": ["Ocala, FL", "Marion County, FL"],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
+            }
+        ],
         "serviceType": "Commercial Office Cleaning",
-        "description": "Professional commercial cleaning services for office buildings, retail spaces, medical offices, and restaurants with flexible scheduling and reliable service."
+        "category": ["Commercial Cleaning", "Office Cleaning", "Janitorial Services", "Business Services"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            }
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Daily Office Cleaning",
+                "description": "Daily cleaning service for offices and corporate facilities",
+                "priceRange": "$150-$400",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Weekly Commercial Cleaning",
+                "description": "Weekly cleaning for retail spaces and small businesses",
+                "priceRange": "$200-$600",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Medical Office Cleaning",
+                "description": "Specialized cleaning for medical and healthcare facilities",
+                "priceRange": "$300-$800",
+                "availability": "InStock"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Business Owners, Office Managers, Property Managers, Healthcare Administrators"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Post-Construction Cleaning",
+                "url": "https://palmacleaningco.com/post-construction-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Deep Cleaning Services",
+                "url": "https://palmacleaningco.com/deep-cleaning"
+            }
+        ]
     }
     </script>
 </head>
