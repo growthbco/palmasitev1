@@ -23,11 +23,14 @@ const description = "Professional deep house cleaning services in Ocala, FL. Com
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Deep Cleaning Services",
+        "name": "Deep House Cleaning Services",
+        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, and detailed cleaning throughout your home.",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Palma Cleaning",
             "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Ocala",
@@ -36,15 +39,54 @@ const description = "Professional deep house cleaning services in Ocala, FL. Com
                 "addressCountry": "US"
             }
         },
-        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"],
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala"
+            },
+            {
+                "@type": "City",
+                "name": "Stone Creek"
+            },
+            {
+                "@type": "City",
+                "name": "Oak Run"
+            },
+            {
+                "@type": "City",
+                "name": "The Villages"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida"
+            }
+        ],
         "serviceType": "Deep House Cleaning",
-        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, and detailed cleaning throughout your home."
+        "offers": {
+            "@type": "Offer",
+            "description": "Professional deep cleaning including spring cleaning, move-in preparation, and seasonal deep cleans",
+            "priceRange": "$$"
+        }
     }
     </script>
 </head>
 
 <body>
     <Navigation />
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <a href="/services" style="color: #ff8057; text-decoration: none;">Services</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #333;">Deep Cleaning</span>
+            </div>
+        </div>
+    </nav>
     
     <section class="hero">
         <div class="hero-container">

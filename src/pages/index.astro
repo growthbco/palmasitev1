@@ -18,6 +18,13 @@ const description = "Professional house cleaning for busy families & professiona
     <meta name="robots" content="index, follow">
     
     <link rel="canonical" href="https://palmacleaningco.com/">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/styles-clean.css?v=3" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
     <link rel="stylesheet" href="/styles-clean.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -37,12 +44,20 @@ const description = "Professional house cleaning for busy families & professiona
             "addressCountry": "US"
         },
         "telephone": "(352) 764-4747",
+        "email": "hello@palmacleaningco.com",
         "url": "https://palmacleaningco.com",
         "sameAs": [
             "https://www.facebook.com/palmacleaningco",
             "https://www.instagram.com/palmacleaningco"
         ],
         "serviceType": "House Cleaning Service",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "147",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
         "areaServed": [
             {
                 "@type": "City",
@@ -52,6 +67,23 @@ const description = "Professional house cleaning for busy families & professiona
             {
                 "@type": "City",
                 "name": "The Villages"
+            },
+            {
+                "@type": "City",
+                "name": "Stone Creek"
+            },
+            {
+                "@type": "City", 
+                "name": "Oak Run"
+            },
+            {
+                "@type": "City",
+                "name": "Golden Hills"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida"
             }
         ],
         "hasOfferCatalog": {
@@ -62,21 +94,48 @@ const description = "Professional house cleaning for busy families & professiona
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Standard House Cleaning"
+                        "name": "Standard House Cleaning",
+                        "description": "Weekly, bi-weekly, and monthly residential cleaning services"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Deep Cleaning"
+                        "name": "Deep Cleaning",
+                        "description": "Comprehensive top-to-bottom detailed cleaning"
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Commercial Cleaning"
+                        "name": "Commercial Cleaning",
+                        "description": "Professional office and business cleaning services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Move-in Move-out Cleaning",
+                        "description": "Complete empty house cleaning for transitions"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Post-Construction Cleaning",
+                        "description": "Cleanup services for new construction and renovations"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Equestrian Property Cleaning",
+                        "description": "Specialized cleaning for horse properties and estates"
                     }
                 }
             ]
@@ -86,8 +145,18 @@ const description = "Professional house cleaning for busy families & professiona
             "latitude": "29.1872",
             "longitude": "-82.1401"
         },
-        "openingHours": "Mo-Fr 08:00-18:00",
-        "priceRange": "$$"
+        "openingHours": ["Mo-Fr 08:00-18:00"],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "$$",
+        "paymentAccepted": "Cash, Check, Credit Card",
+        "currenciesAccepted": "USD"
     }
     </script>
     

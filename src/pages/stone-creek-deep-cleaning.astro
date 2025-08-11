@@ -3,7 +3,7 @@
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 const title = "Stone Creek Deep House Cleaning | Palma Cleaning - Ocala FL";
-const description = "Comprehensive deep house cleaning services for Stone Creek luxury homes in Ocala, FL. Top-to-bottom detailed cleaning for Stone Creek community residents. Licensed & insured.";
+const description = "Deep house cleaning for Stone Creek luxury homes in Ocala, FL. Top-to-bottom detailed cleaning for Stone Creek residents. Licensed & insured.";
 ---
 
 <!DOCTYPE html>
@@ -47,6 +47,21 @@ const description = "Comprehensive deep house cleaning services for Stone Creek 
 <body>
     <Navigation />
 
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <a href="/service-areas" style="color: #ff8057; text-decoration: none;">Service Areas</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <a href="/stone-creek" style="color: #ff8057; text-decoration: none;">Stone Creek</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #333;">Deep Cleaning</span>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -71,6 +86,16 @@ const description = "Comprehensive deep house cleaning services for Stone Creek 
             <h2 class="section-title">Stone Creek Deep Cleaning Service</h2>
             <div style="max-width: 800px; margin: 0 auto 3rem;">
                 <p style="font-size: 1.1rem; color: #666; text-align: center; line-height: 1.6;">Our deep cleaning service is meticulously designed for Stone Creek's luxury homes, addressing areas that require intensive attention. Perfect for spring cleaning, pre-event preparation, or when your beautiful home needs extra care and attention.</p>
+                
+                <!-- Related Services Links -->
+                <div style="background: #fff; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #ff8057; margin-top: 2rem;">
+                    <p style="margin: 0; color: #666; font-size: 0.95rem;">
+                        <strong>Related Stone Creek Services:</strong> 
+                        <a href="/stone-creek-standard-cleaning" style="color: #ff8057; text-decoration: none;">Standard Cleaning</a> • 
+                        <a href="/stone-creek-move-in-out-cleaning" style="color: #ff8057; text-decoration: none;">Move-in/Move-out</a> • 
+                        <a href="/stone-creek-commercial-cleaning" style="color: #ff8057; text-decoration: none;">Commercial Cleaning</a>
+                    </p>
+                </div>
             </div>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">

@@ -17,6 +17,12 @@ const description = "Contact Palma Cleaning for professional cleaning services i
     <meta name="robots" content="index, follow">
     
     <link rel="canonical" href="https://palmacleaningco.com/contact">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/styles-clean.css" as="style">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
     <link rel="stylesheet" href="/styles-clean.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -70,6 +76,17 @@ const description = "Contact Palma Cleaning for professional cleaning services i
 </head>
 <body>
     <Navigation />
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #333;">Contact</span>
+            </div>
+        </div>
+    </nav>
 
     <section class="hero">
         <div class="hero-container">
