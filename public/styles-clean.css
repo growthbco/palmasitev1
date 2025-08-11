@@ -828,6 +828,10 @@ section {
         height: 60px;
     }
     
+    .nav-logo {
+        display: none;
+    }
+    
     .nav-logo h2 {
         font-size: 1.4rem;
     }
@@ -1173,6 +1177,10 @@ section {
     .nav-container {
         padding: 0 10px;
         height: 55px;
+    }
+    
+    .nav-logo {
+        display: none;
     }
     
     .nav-logo h2 {
