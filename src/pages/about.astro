@@ -1,7 +1,7 @@
 ---
 // About page
 import Navigation from '../components/Navigation.astro';
-
+import Footer from '../components/Footer.astro';
 const title = "About Palma Cleaning - Professional Cleaning Services in Ocala FL";
 const description = "Learn about Palma Cleaning's story, values, and commitment to providing exceptional cleaning services throughout Ocala, Marion County, and The Villages. Licensed, insured, and trusted by hundreds of customers.";
 ---
@@ -213,49 +213,7 @@ const description = "Learn about Palma Cleaning's story, values, and commitment 
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Palma Cleaning</h3>
-                    <p>Professional house and commercial cleaning services throughout Ocala, Marion County, and The Villages. Licensed, insured, and trusted since 2020.</p>
-                    <p><strong>Licensed & Insured in Florida</strong></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/" style="color: #ccc; text-decoration: none;">Home</a></li>
-                        <li><a href="/about" style="color: #ccc; text-decoration: none;">About Us</a></li>
-                        <li><a href="/services" style="color: #ccc; text-decoration: none;">Services</a></li>
-                        <li><a href="/contact" style="color: #ccc; text-decoration: none;">Contact Us</a></li>
-                        <li><a href="tel:+13527644747" style="color: #ff8057; text-decoration: none;">Call Now</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Service Areas</h4>
-                    <ul>
-                        <li>Ocala & Marion County</li>
-                        <li>Stone Creek Community</li>
-                        <li>Oak Run Community</li>
-                        <li>The Villages</li>
-                        <li>World Equestrian Center Area</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>Phone: <a href="tel:+13527644747" style="color: #ccc; text-decoration: none;">(352) 764-4747</a></li>
-                        <li>Email: hello@palmacleaningco.com</li>
-                        <li>Hours: Monday - Friday 8AM-6PM</li>
-                        <li>Free quotes within 24 hours</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Palma Cleaning. All rights reserved. Professional cleaning services in Ocala, FL and surrounding areas.</p>
-            </div>
-        </div>
-    </footer>
+    <Footer />
 
     <script is:inline src="/script-clean.js"></script>
     <script 
