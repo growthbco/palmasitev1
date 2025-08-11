@@ -1,14 +1,18 @@
 ---
-export const prerender = true;
+// Residential cleaning service page
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';---
+import Footer from '../components/Footer.astro';
+const title = "Residential House Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Professional residential house cleaning services in Ocala, FL. Regular weekly, bi-weekly, and monthly cleaning for busy families and professionals. Licensed & insured.";
+---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residential House Cleaning Services in Ocala FL | Palma Cleaning</title>
-    <meta name="description" content="Professional residential house cleaning services in Ocala, FL. Regular weekly, bi-weekly, and monthly cleaning for busy families and professionals. Licensed & insured.">
+    <title>{title}</title>
+    <meta name="description" content={description}>
     <meta name="keywords" content="residential cleaning Ocala FL, house cleaning services, weekly cleaning, bi-weekly cleaning, monthly cleaning, home cleaning Ocala">
     <link rel="canonical" href="https://palmacleaningco.com/residential-cleaning">
     <link rel="stylesheet" href="/styles-clean.css?v=2">

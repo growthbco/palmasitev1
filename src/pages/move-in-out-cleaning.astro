@@ -1,14 +1,18 @@
 ---
-export const prerender = true;
+// Move-in Move-out cleaning service page
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';---
+import Footer from '../components/Footer.astro';
+const title = "Move-in Move-out Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Professional move-in and move-out cleaning services in Ocala, FL. Complete empty house cleaning perfect for new homeowners and renters getting deposits back.";
+---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Move-in Move-out Cleaning Services in Ocala FL | Palma Cleaning</title>
-    <meta name="description" content="Professional move-in and move-out cleaning services in Ocala, FL. Complete empty house cleaning perfect for new homeowners and renters getting deposits back.">
+    <title>{title}</title>
+    <meta name="description" content={description}>
     <meta name="keywords" content="move-in cleaning Ocala FL, move-out cleaning, empty house cleaning, rental deposit cleaning, new home cleaning">
     <link rel="canonical" href="https://palmacleaningco.com/move-in-out-cleaning">
     <link rel="stylesheet" href="/styles-clean.css?v=2">
@@ -169,6 +173,6 @@ import Footer from '../components/Footer.astro';---
 
     <Footer />
 
-    <script src="/script-clean.js" is:inline></script>
+    <script is:inline src="/script-clean.js"></script>
 </body>
 </html>

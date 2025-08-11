@@ -1,14 +1,18 @@
 ---
-export const prerender = true;
+// Deep cleaning service page
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';---
+import Footer from '../components/Footer.astro';
+const title = "Deep House Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Professional deep house cleaning services in Ocala, FL. Comprehensive top-to-bottom cleaning including baseboards, ceiling fans, inside appliances, and detailed sanitization.";
+---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Cleaning Services in Ocala FL | Palma Cleaning</title>
-    <meta name="description" content="Professional deep cleaning services in Ocala, FL. Comprehensive top-to-bottom cleaning perfect for spring cleaning, moving, or getting started with our service.">
+    <title>{title}</title>
+    <meta name="description" content={description}>
     <meta name="keywords" content="deep cleaning Ocala FL, spring cleaning, thorough house cleaning, move-in cleaning, detailed cleaning service">
     <link rel="canonical" href="https://palmacleaningco.com/deep-cleaning">
     <link rel="stylesheet" href="/styles-clean.css?v=2">

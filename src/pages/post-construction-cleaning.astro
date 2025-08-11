@@ -1,14 +1,18 @@
 ---
-export const prerender = true;
+// Post-construction cleaning service page
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';---
+import Footer from '../components/Footer.astro';
+const title = "Post-Construction Cleanup Services in Ocala FL | Palma Cleaning";
+const description = "Professional post-construction cleanup services in Ocala, FL. Complete debris removal, dust elimination, and detailed cleaning after renovations, new builds, and remodels.";
+---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post-Construction Cleaning Services in Ocala FL | Palma Cleaning</title>
-    <meta name="description" content="Professional post-construction cleaning in Ocala, FL. Complete cleanup for new construction and renovation projects. Dust removal and final cleanup services.">
+    <title>{title}</title>
+    <meta name="description" content={description}>
     <meta name="keywords" content="post-construction cleaning Ocala FL, construction cleanup, renovation cleaning, new construction cleaning, dust removal">
     <link rel="canonical" href="https://palmacleaningco.com/post-construction-cleaning">
     <link rel="stylesheet" href="/styles-clean.css?v=2">

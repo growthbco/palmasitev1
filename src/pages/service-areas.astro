@@ -1,14 +1,18 @@
 ---
-export const prerender = true;
+// Service areas page
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';---
+import Footer from '../components/Footer.astro';
+const title = "Service Areas - House Cleaning Throughout Ocala FL | Palma Cleaning";
+const description = "Professional house cleaning services throughout Ocala, Florida and surrounding areas including Stone Creek, Oak Run, The Villages, Golden Hills, and all Marion County communities.";
+---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Areas - Ocala FL House Cleaning | Palma Cleaning</title>
-    <meta name="description" content="Palma Cleaning serves Ocala, Stone Creek, Oak Run, The Villages, Golden Hills, Belleview, and surrounding Marion County areas with professional house cleaning.">
+    <title>{title}</title>
+    <meta name="description" content={description}>
     <meta name="keywords" content="house cleaning service areas Ocala FL, Stone Creek cleaning, Oak Run cleaning, The Villages cleaning, Marion County cleaning services">
     <link rel="canonical" href="https://palmacleaningco.com/service-areas">
     <link rel="stylesheet" href="/styles-clean.css?v=2">
