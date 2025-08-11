@@ -119,6 +119,11 @@ body {
 }
 
 /* Navbar scrolled state styles */
+.navbar.scrolled {
+    background: white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
 .navbar.scrolled .nav-link {
     color: #333;
 }
