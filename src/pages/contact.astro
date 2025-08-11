@@ -1,0 +1,347 @@
+---
+// Contact page
+import Navigation from '../components/Navigation.astro';
+
+const title = "Contact Palma Cleaning Co - Get Your Free Quote | Ocala FL";
+const description = "Contact Palma Cleaning Co for professional cleaning services in Ocala, Marion County, and The Villages. Call (352) 123-4567 or request your free quote online. Licensed & insured.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="contact Palma Cleaning Co, free quote cleaning Ocala FL, cleaning service contact Marion County, The Villages cleaning quote">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/contact">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Palma Cleaning Co",
+        "image": "https://palmacleaningco.com/images/logo-02-2048x1324-1.png",
+        "description": "Professional house and commercial cleaning services in Ocala, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "postalCode": "34471",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 123-4567",
+        "email": "hello@palmacleaningco.com",
+        "url": "https://palmacleaningco.com/contact",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "29.1872",
+            "longitude": "-82.1401"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Contact Palma Cleaning Co</h1>
+                <p class="hero-subtitle">Get Your Free Cleaning Quote Today</p>
+                <p class="hero-description">Ready to experience the best cleaning service in Ocala? Contact us for a free, no-obligation quote. We respond to all inquiries within 24 hours.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+13521234567" class="btn btn-primary">Call (352) 123-4567</a>
+                    <a href="#quote-form" class="btn btn-secondary">Get Quote Online</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-phone"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact-info">
+        <div class="container">
+            <h2 class="section-title">Contact Information</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-phone" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Phone</h4>
+                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">(352) 123-4567</p>
+                    <p style="color: #888; font-size: 0.9rem;">Call or text us anytime</p>
+                </div>
+                
+                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-envelope" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Email</h4>
+                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">hello@palmacleaningco.com</p>
+                    <p style="color: #888; font-size: 0.9rem;">We respond within 24 hours</p>
+                </div>
+                
+                <div class="contact-item" style="text-align: center; padding: 2rem; background: #f8fafa; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Business Hours</h4>
+                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">Monday - Friday</p>
+                    <p style="color: #666; font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem;">8:00 AM - 6:00 PM</p>
+                    <p style="color: #888; font-size: 0.9rem;">Weekend appointments available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: #f8fafa;" id="quote-form">
+        <div class="container">
+            <h2 class="section-title">Request Your Free Quote</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <form class="contact-form" style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: #2f5047;">Get Your Personalized Cleaning Quote</h3>
+                    
+                    <div class="form-row">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                        <input type="text" name="lastName" placeholder="Last Name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <select name="service" required>
+                        <option value="">Select Service Type</option>
+                        <option value="standard">Standard House Cleaning</option>
+                        <option value="deep">Deep Cleaning</option>
+                        <option value="commercial">Commercial Cleaning</option>
+                        <option value="move">Move-in/Move-out Cleaning</option>
+                        <option value="construction">Post-Construction Cleaning</option>
+                        <option value="equestrian">Equestrian Property Cleaning</option>
+                        <option value="other">Other (please specify)</option>
+                    </select>
+                    
+                    <select name="frequency">
+                        <option value="">Select Cleaning Frequency</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="bi-weekly">Bi-weekly (Every 2 weeks)</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="one-time">One-time Service</option>
+                        <option value="as-needed">As Needed</option>
+                    </select>
+                    
+                    <textarea name="address" placeholder="Property Address (Include city - Ocala, Stone Creek, Oak Run, The Villages, etc.)" rows="3" required></textarea>
+                    
+                    <div class="form-row">
+                        <input type="number" name="bedrooms" placeholder="Number of Bedrooms">
+                        <input type="number" name="bathrooms" placeholder="Number of Bathrooms">
+                    </div>
+                    
+                    <div class="form-row">
+                        <input type="number" name="squareFootage" placeholder="Approximate Square Footage (optional)">
+                        <select name="pets">
+                            <option value="">Do you have pets?</option>
+                            <option value="none">No pets</option>
+                            <option value="dogs">Dogs</option>
+                            <option value="cats">Cats</option>
+                            <option value="both">Dogs and Cats</option>
+                            <option value="other">Other pets</option>
+                        </select>
+                    </div>
+                    
+                    <textarea name="specialRequests" placeholder="Special requests, areas of focus, or additional information..." rows="4"></textarea>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #666;">
+                            <input type="checkbox" name="urgentService" style="margin: 0;">
+                            <span>I need service within 48 hours (rush service may apply)</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Get My Free Quote</button>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <p class="form-note" style="margin-bottom: 0.5rem;">We'll respond with your personalized quote within 24 hours</p>
+                        <p style="color: #888; font-size: 0.8rem;">Licensed & Insured • No obligation • Free estimates</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="service-areas">
+        <div class="container">
+            <h2 class="section-title">Service Areas</h2>
+            <div class="areas-grid">
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
+                    <ul>
+                        <li>Downtown Ocala</li>
+                        <li>Southwest Ocala</li>
+                        <li>Northeast Ocala</li>
+                        <li>Golden Hills</li>
+                        <li>Spruce Creek</li>
+                        <li>All Marion County areas</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> Premium Communities</h4>
+                    <ul>
+                        <li><a href="/stone-creek" style="color: #666; text-decoration: none;">Stone Creek</a></li>
+                        <li><a href="/oak-run" style="color: #666; text-decoration: none;">Oak Run</a></li>
+                        <li>Equestrian properties near WEC</li>
+                        <li>Luxury estates</li>
+                        <li>Golf course communities</li>
+                        <li>Horse farms and ranches</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> The Villages</h4>
+                    <ul>
+                        <li><a href="/the-villages" style="color: #666; text-decoration: none;">All Villages neighborhoods</a></li>
+                        <li>Spanish Springs</li>
+                        <li>Lake Sumter Landing</li>
+                        <li>Brownwood</li>
+                        <li>All village centers</li>
+                        <li>Golf cart accessible</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
+                    <ul>
+                        <li>Belleview</li>
+                        <li>Dunnellon</li>
+                        <li>Rainbow Springs</li>
+                        <li>Silver Springs</li>
+                        <li>Citra</li>
+                        <li>And more!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-note">
+                <p><i class="fas fa-info-circle"></i> Don't see your area listed? We're expanding our service area regularly. Contact us to check if we can serve your location!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">How quickly can you provide a quote?</h4>
+                    <p style="color: #666; line-height: 1.6;">We provide free quotes within 24 hours. For urgent requests, we often respond the same day. All quotes are detailed, transparent, and come with no obligation.</p>
+                </div>
+                
+                <div style="background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Do you provide supplies and equipment?</h4>
+                    <p style="color: #666; line-height: 1.6;">Yes! We bring all necessary cleaning supplies, equipment, and tools. Everything is included in our service price. We also offer eco-friendly product options upon request.</p>
+                </div>
+                
+                <div style="background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Are you licensed and insured?</h4>
+                    <p style="color: #666; line-height: 1.6;">Absolutely. Palma Cleaning Co is fully licensed and carries comprehensive general liability and bonding insurance. All team members are background-checked for your peace of mind.</p>
+                </div>
+                
+                <div style="background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">What if I'm not satisfied with the cleaning?</h4>
+                    <p style="color: #666; line-height: 1.6;">Your satisfaction is our guarantee. If you're not completely happy with any aspect of our cleaning, we'll return within 24 hours to make it right at no additional charge.</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Do you clean during weekends or holidays?</h4>
+                    <p style="color: #666; line-height: 1.6;">While our standard business hours are Monday-Friday 8AM-6PM, we do offer weekend appointments based on availability. Holiday service may also be arranged with advance notice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="background: #f8fafa;">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join hundreds of satisfied customers who trust Palma Cleaning Co for their home and business cleaning needs. Contact us today!</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <a href="tel:+13521234567" class="btn btn-primary" style="padding: 1rem; font-size: 1.1rem;">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
+                        Call Now
+                    </a>
+                    <a href="#quote-form" class="btn btn-secondary" style="padding: 1rem; font-size: 1.1rem;">
+                        <i class="fas fa-edit" style="margin-right: 0.5rem;"></i>
+                        Get Quote Online
+                    </a>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Business Hours</h4>
+                    <p style="color: #666; margin: 0; line-height: 1.8;">
+                        <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM<br>
+                        <strong>Saturday:</strong> By appointment<br>
+                        <strong>Sunday:</strong> Emergency service only<br>
+                        <strong>Response Time:</strong> Within 24 hours
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Palma Cleaning Co</h3>
+                    <p>Professional house and commercial cleaning services throughout Ocala, Marion County, and The Villages. Your trusted cleaning partner since 2020.</p>
+                    <p><strong>Licensed & Insured in Florida</strong></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Methods</h4>
+                    <ul>
+                        <li><i class="fas fa-phone" style="margin-right: 0.5rem; color: #ff8057;"></i> (352) 123-4567</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 0.5rem; color: #ff8057;"></i> hello@palmacleaningco.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 0.5rem; color: #ff8057;"></i> Mon-Fri 8AM-6PM</li>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; color: #ff8057;"></i> Ocala, FL & Surrounding Areas</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="/services" style="color: #ccc; text-decoration: none;">All Services</a></li>
+                        <li>Standard House Cleaning</li>
+                        <li>Deep Cleaning</li>
+                        <li>Commercial Cleaning</li>
+                        <li>Move-in/Move-out</li>
+                        <li>Post-Construction</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li><a href="/stone-creek" style="color: #ccc; text-decoration: none;">Stone Creek</a></li>
+                        <li><a href="/oak-run" style="color: #ccc; text-decoration: none;">Oak Run</a></li>
+                        <li><a href="/the-villages" style="color: #ccc; text-decoration: none;">The Villages</a></li>
+                        <li>Ocala & Marion County</li>
+                        <li>WEC Area</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Palma Cleaning Co. All rights reserved. Professional cleaning services in Ocala, FL and surrounding areas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

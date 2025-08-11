@@ -1,0 +1,323 @@
+---
+// Stone Creek area landing page
+import Navigation from '../components/Navigation.astro';
+
+const title = "Stone Creek Cleaning Services | Palma Cleaning Co - Ocala FL";
+const description = "Professional cleaning services for Stone Creek community in Ocala, FL. House cleaning, commercial cleaning, and specialized services for Stone Creek residents. Licensed & insured.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Stone Creek cleaning services, Stone Creek house cleaning, Stone Creek commercial cleaning, Stone Creek Ocala FL cleaning company">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/stone-creek">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Palma Cleaning Co",
+        "image": "https://palmacleaningco.com/images/logo-02-2048x1324-1.png",
+        "description": "Professional cleaning services for Stone Creek community in Ocala, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 123-4567",
+        "url": "https://palmacleaningco.com/stone-creek",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Stone Creek, Ocala, FL"
+        }
+    }
+    </script>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Stone Creek Cleaning Services</h1>
+                <p class="hero-subtitle">Professional Cleaning for Stone Creek Community</p>
+                <p class="hero-description">Trusted cleaning services specifically designed for Stone Creek residents. From luxury home cleaning to commercial services, we understand the unique needs of your premium community.</p>
+                <div class="hero-buttons">
+                    <a href="/contact" class="btn btn-primary">Get Free Quote</a>
+                    <a href="tel:+13521234567" class="btn btn-secondary">Call (352) 123-4567</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-home"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Stone Creek Residents Choose Palma Cleaning Co</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">The trusted cleaning service for Stone Creek's discerning homeowners and businesses.</p>
+                    <p>Stone Creek is one of Ocala's most prestigious gated communities, and we understand that your home and lifestyle deserve the highest level of cleaning service. Our team is experienced with the luxury homes, golf course properties, and upscale standards that define Stone Creek living.</p>
+                    <p>From regular house cleaning that maintains your home's pristine condition to specialized services for unique needs, we provide the professional, reliable service that Stone Creek residents expect and deserve.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Premium Service</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-key"></i>
+                            <span>Gated Community Experience</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Stone Creek Homes Served</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Complete Cleaning Services for Stone Creek</h2>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Standard House Cleaning</h3>
+                    <p>Regular cleaning service tailored for Stone Creek's luxury homes and lifestyle.</p>
+                    <ul class="service-list">
+                        <li>Weekly, bi-weekly, or monthly service</li>
+                        <li>Complete kitchen and bathroom cleaning</li>
+                        <li>Premium home care standards</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-standard-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Deep Cleaning</h3>
+                    <p>Comprehensive deep cleaning for Stone Creek homes that demand perfection.</p>
+                    <ul class="service-list">
+                        <li>Top-to-bottom detailed cleaning</li>
+                        <li>Perfect for seasonal cleaning</li>
+                        <li>Move-in preparation</li>
+                        <li>Special occasion preparation</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-deep-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Professional cleaning for Stone Creek businesses and community facilities.</p>
+                    <ul class="service-list">
+                        <li>Office and retail spaces</li>
+                        <li>Community facilities</li>
+                        <li>Medical offices</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-commercial-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Move-in/Move-out</h3>
+                    <p>Complete transition cleaning for Stone Creek property transfers.</p>
+                    <ul class="service-list">
+                        <li>Real estate ready cleaning</li>
+                        <li>New homeowner preparation</li>
+                        <li>Realtor partnerships</li>
+                        <li>Same-day service available</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-move-in-out-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Post-Construction</h3>
+                    <p>Specialized cleanup after renovations and home improvements.</p>
+                    <ul class="service-list">
+                        <li>Construction dust removal</li>
+                        <li>Renovation cleanup</li>
+                        <li>New construction final clean</li>
+                        <li>Contractor partnerships</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-post-construction-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-horse"></i>
+                    </div>
+                    <h3>Equestrian Properties</h3>
+                    <p>Specialized cleaning for Stone Creek's equestrian estates and facilities.</p>
+                    <ul class="service-list">
+                        <li>Horse property cleaning</li>
+                        <li>Barn and stable maintenance</li>
+                        <li>Animal-safe products</li>
+                        <li>Farm-friendly scheduling</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/stone-creek-equestrian-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="stone-creek-specific">
+        <div class="container">
+            <h2 class="section-title">Understanding Stone Creek Living</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-home" style="margin-right: 0.5rem;"></i>Luxury Home Standards</h4>
+                        <p style="color: #666; line-height: 1.6;">We understand that Stone Creek homes feature high-end finishes, custom details, and premium materials that require specialized care and attention. Our team is trained in proper care for luxury surfaces, fixtures, and furnishings.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-golf-ball" style="margin-right: 0.5rem;"></i>Golf Course Community</h4>
+                        <p style="color: #666; line-height: 1.6;">Many Stone Creek homes overlook the beautiful golf course or have golf course access. We're experienced with the unique cleaning challenges this presents, from pollen management to maintaining pristine outdoor living spaces.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i>Gated Community Access</h4>
+                        <p style="color: #666; line-height: 1.6;">Our team is familiar with Stone Creek's security procedures and works seamlessly with the gate staff to ensure smooth, professional service without any inconvenience to residents.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Flexible Scheduling</h4>
+                        <p style="color: #666; line-height: 1.6;">We understand the active Stone Creek lifestyle. Whether you're on the golf course, traveling, or hosting events, we work around your schedule to provide convenient, reliable service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Ready to Experience Premium Stone Creek Cleaning?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join your Stone Creek neighbors who trust Palma Cleaning Co for exceptional cleaning services. Contact us today for your free quote!</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="/contact" class="btn btn-primary">Get Free Quote</a>
+                    <a href="tel:+13521234567" class="btn btn-secondary">Call (352) 123-4567</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <p style="color: #2f5047; font-weight: 500; margin: 0;">
+                        <i class="fas fa-check-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                        Licensed & Insured • Stone Creek Experienced • Satisfaction Guaranteed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Palma Cleaning Co</h3>
+                    <p>Professional cleaning services specifically for Stone Creek community residents. Trusted, reliable, and experienced with luxury home care.</p>
+                    <p><strong>Licensed & Insured in Florida</strong></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Stone Creek Services</h4>
+                    <ul>
+                        <li><a href="/stone-creek-standard-cleaning.html" style="color: #ccc; text-decoration: none;">Standard Cleaning</a></li>
+                        <li><a href="/stone-creek-deep-cleaning.html" style="color: #ccc; text-decoration: none;">Deep Cleaning</a></li>
+                        <li><a href="/stone-creek-commercial-cleaning.html" style="color: #ccc; text-decoration: none;">Commercial Cleaning</a></li>
+                        <li><a href="/stone-creek-move-in-out-cleaning.html" style="color: #ccc; text-decoration: none;">Move-in/Move-out</a></li>
+                        <li><a href="/stone-creek-post-construction-cleaning.html" style="color: #ccc; text-decoration: none;">Post-Construction</a></li>
+                        <li><a href="/stone-creek-equestrian-cleaning.html" style="color: #ccc; text-decoration: none;">Equestrian Properties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Other Areas</h4>
+                    <ul>
+                        <li><a href="/oak-run" style="color: #ccc; text-decoration: none;">Oak Run</a></li>
+                        <li><a href="/the-villages" style="color: #ccc; text-decoration: none;">The Villages</a></li>
+                        <li><a href="/services" style="color: #ccc; text-decoration: none;">All Services</a></li>
+                        <li>Ocala & Marion County</li>
+                        <li>World Equestrian Center Area</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>Phone: (352) 123-4567</li>
+                        <li>Email: hello@palmacleaningco.com</li>
+                        <li>Hours: Monday - Friday 8AM-6PM</li>
+                        <li><a href="/contact" style="color: #ff8057; text-decoration: none;">Get Free Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Palma Cleaning Co. All rights reserved. Professional cleaning services for Stone Creek, Ocala, FL.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
