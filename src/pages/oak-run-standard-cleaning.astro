@@ -43,6 +43,22 @@ const description = "Regular house cleaning services for Oak Run active adult co
         }
     }
     </script>
+    
+    <style>
+        @media (max-width: 768px) {
+            .schedule-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <Navigation />
@@ -71,26 +87,55 @@ const description = "Regular house cleaning services for Oak Run active adult co
                 <p style="font-size: 1.1rem; color: #666; text-align: center; line-height: 1.6;">Our standard house cleaning service is perfectly tailored for Oak Run's active adult lifestyle and golf course community living. We understand the importance of maintaining a clean, welcoming home for entertaining guests, participating in community activities, and enjoying your active retirement.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;"><i class="fas fa-calendar" style="color: #ff8057; margin-right: 0.5rem;"></i>Flexible Scheduling</h3>
-                    <ul style="color: #666; line-height: 1.8;">
-                        <li><strong>Weekly:</strong> Perfect for active entertainers</li>
-                        <li><strong>Bi-weekly:</strong> Most popular for community members</li>
-                        <li><strong>Monthly:</strong> Ideal for frequent travelers</li>
-                        <li><strong>Custom:</strong> Adapt to your golf and activity schedule</li>
+            <h3 style="color: #2f5047; margin-bottom: 2rem; text-align: center;">Choose Your Cleaning Schedule</h3>
+            <div class="schedule-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Weekly</h4>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Perfect for active entertainers who frequently host guests and want their home always guest-ready.</p>
+                    <ul style="color: #666; text-align: left; line-height: 1.6;">
+                        <li>Maximum cleanliness</li>
+                        <li>Always guest-ready</li>
+                        <li>Best for entertainers</li>
+                        <li>Premium service</li>
                     </ul>
                 </div>
                 
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;"><i class="fas fa-golf-ball" style="color: #ff8057; margin-right: 0.5rem;"></i>Oak Run Lifestyle Focus</h3>
-                    <ul style="color: #666; line-height: 1.8;">
-                        <li>Golf course community expertise</li>
-                        <li>Entertainment-ready cleaning</li>
-                        <li>Travel-flexible scheduling</li>
-                        <li>Active adult living optimized</li>
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #ff8057;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Bi-weekly</h4>
+                    <div style="background: #ff8057; color: white; padding: 0.3rem 1rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1rem; display: inline-block;">MOST POPULAR</div>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Most popular choice for Oak Run residents who want consistent cleanliness with great value.</p>
+                    <ul style="color: #666; text-align: left; line-height: 1.6;">
+                        <li>Best value option</li>
+                        <li>Consistent cleanliness</li>
+                        <li>Perfect balance</li>
+                        <li>Community favorite</li>
                     </ul>
                 </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Monthly</h4>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Ideal for frequent travelers and seasonal residents who need flexible, thorough cleaning.</p>
+                    <ul style="color: #666; text-align: left; line-height: 1.6;">
+                        <li>Travel-friendly</li>
+                        <li>Seasonal residents</li>
+                        <li>Thorough deep clean</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center; max-width: 600px; margin: 0 auto;">
+                <h4 style="color: #2f5047; margin-bottom: 1rem;"><i class="fas fa-golf-ball" style="color: #ff8057; margin-right: 0.5rem;"></i>Oak Run Lifestyle Focus</h4>
+                <p style="color: #666; line-height: 1.6;">All our schedules are designed around Oak Run's active adult lifestyle - golf course community expertise, entertainment-ready cleaning, travel-flexible scheduling, and active living optimized.</p>
             </div>
         </div>
     </section>
@@ -156,7 +201,7 @@ const description = "Regular house cleaning services for Oak Run active adult co
     <section class="services">
         <div class="container">
             <h2 class="section-title">Why Oak Run Residents Choose Our Standard Cleaning</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
                 <div style="text-align: center; padding: 2rem;">
                     <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
                         <i class="fas fa-golf-ball"></i>
