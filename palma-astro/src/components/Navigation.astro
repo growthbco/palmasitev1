@@ -2,7 +2,7 @@
     <div class="nav-container">
         <div class="nav-logo">
             <div>
-                <h2>Palma Cleaning</h2>
+                <h2>PALMA CLEANING</h2>
                 <span class="tagline">House Cleaning for Parents & Busy Professionals</span>
             </div>
         </div>
@@ -51,3 +51,196 @@
         </div>
     </div>
 </nav>
+
+<style>
+body {
+    padding-top: 80px; /* Account for fixed navbar */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.nav-logo h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2f5047;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-logo .tagline {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ff8057;
+}
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-phone {
+    text-decoration: none;
+    color: #2f5047;
+    font-weight: 600;
+}
+
+.nav-cta {
+    background: #ff8057;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.nav-cta:hover {
+    background: #e56d45;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Dropdown styles */
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: #ff8057;
+}
+
+.dropdown-section {
+    padding: 8px 20px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #ff8057;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-menu, .nav-contact {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-logo h2 {
+        font-size: 20px;
+    }
+    
+    .nav-logo .tagline {
+        font-size: 11px;
+    }
+}
+
+/* Scroll effect */
+.navbar.scrolled {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    
+    // Add scroll effect for sticky navbar
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+});
+</script>
