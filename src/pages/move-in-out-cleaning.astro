@@ -1,0 +1,286 @@
+---
+// Move-in Move-out cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Move-in Move-out Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Professional move-in and move-out cleaning services in Ocala, FL. Complete empty house cleaning perfect for new homeowners and renters getting deposits back.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="move-in cleaning Ocala FL, move-out cleaning, empty house cleaning, rental deposit cleaning, new home cleaning">
+    <link rel="canonical" href="https://palmacleaningco.com/move-in-out-cleaning">
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Move-in Move-out Cleaning Services",
+        "alternateName": ["Move-out Cleaning", "Move-in Cleaning", "Transition Cleaning", "Rental Deposit Cleaning"],
+        "description": "Complete cleaning for empty homes including all cabinets, drawers, appliances, and detailed cleaning to get deposits back or prepare for new residents. Perfect for renters, homeowners, and real estate professionals.",
+        "url": "https://palmacleaningco.com/move-in-out-cleaning",
+        "image": "https://palmacleaningco.com/images/move-in-out-cleaning-service.jpg",
+        "provider": {
+            "@type": ["LocalBusiness", "Service"],
+            "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
+            }
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Stone Creek",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Run",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "City",
+                "name": "The Villages",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
+            }
+        ],
+        "serviceType": "Move-in Move-out House Cleaning",
+        "category": ["Move-in Cleaning", "Move-out Cleaning", "Transition Services", "Real Estate Cleaning"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Move-out Deposit Recovery Cleaning",
+                "description": "Thorough cleaning to maximize rental deposit return",
+                "priceRange": "$250-$600",
+                "availability": "InStock",
+                "eligibilityToWorkStatus": "Available for same-day service"
+            },
+            {
+                "@type": "Offer",
+                "name": "Move-in Fresh Start Cleaning",
+                "description": "Complete sanitizing and cleaning for new residents",
+                "priceRange": "$200-$500",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Real Estate Ready Cleaning",
+                "description": "Professional cleaning for showings and open houses",
+                "priceRange": "$300-$700",
+                "availability": "InStock"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Renters, Homeowners, Real Estate Agents, Property Managers, Landlords"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Deep Cleaning Services",
+                "url": "https://palmacleaningco.com/deep-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Post-Construction Cleaning",
+                "url": "https://palmacleaningco.com/post-construction-cleaning"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <Navigation />
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Move-in & Move-out Cleaning in Ocala, FL</h1>
+                <p class="hero-description">Complete empty house cleaning perfect for new homeowners, renters getting deposits back, and real estate transitions.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Complete Move-in & Move-out Cleaning</h2>
+            
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Move-out Cleaning</h3>
+                    <p>Get your rental deposit back with our thorough move-out cleaning service.</p>
+                    <ul class="service-list">
+                        <li>All cabinets inside and out</li>
+                        <li>All drawers cleaned thoroughly</li>
+                        <li>Inside all appliances</li>
+                        <li>Deep scrub bathrooms</li>
+                        <li>Clean inside of closets</li>
+                        <li>Baseboards and trim</li>
+                        <li>Light fixtures and ceiling fans</li>
+                        <li>Window sills and tracks</li>
+                        <li>Switch plates and outlets</li>
+                        <li>Deep clean all floors</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Move-in Cleaning</h3>
+                    <p>Start fresh in your new home with our comprehensive move-in cleaning.</p>
+                    <ul class="service-list">
+                        <li>Sanitize all surfaces</li>
+                        <li>Clean and disinfect bathrooms</li>
+                        <li>Kitchen deep clean and sanitize</li>
+                        <li>Wipe down all cabinets</li>
+                        <li>Clean appliances inside and out</li>
+                        <li>Dust all surfaces and fixtures</li>
+                        <li>Vacuum and mop all floors</li>
+                        <li>Clean windows and mirrors</li>
+                        <li>Disinfect door handles and switches</li>
+                        <li>Remove any construction dust</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Real Estate Ready</h3>
+                    <p>Perfect for real estate agents, landlords, and property managers.</p>
+                    <ul class="service-list">
+                        <li>Showroom-ready presentation</li>
+                        <li>Same-day service available</li>
+                        <li>Flexible scheduling around showings</li>
+                        <li>Professional and reliable service</li>
+                        <li>Photo-ready results</li>
+                        <li>Work with your timeline</li>
+                        <li>Licensed and insured</li>
+                        <li>References available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: #f8fafa; padding: 2rem; border-radius: 15px;">
+                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Why Choose Our Move-in/Move-out Service</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Same-Day Service</h4>
+                        <p>We understand moving timelines are tight. We offer same-day cleaning to meet your schedule.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-dollar-sign" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Deposit Back Guarantee</h4>
+                        <p>Our thorough move-out cleaning helps ensure you get your full rental deposit returned.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-checklist" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Comprehensive Checklist</h4>
+                        <p>We follow a detailed checklist to ensure every area is cleaned to perfection.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Realtor Partnerships</h4>
+                        <p>We work closely with real estate agents and property managers throughout Ocala.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border: 2px solid #ff8057; border-radius: 15px; text-align: center;">
+                <h4 style="color: #2f5047; margin-bottom: 1rem;">💡 Pro Tip for Renters</h4>
+                <p style="color: #666; margin: 0;">Schedule your move-out cleaning for the day after you finish moving to ensure the property is completely empty and we can clean thoroughly. This maximizes your chances of getting your full deposit back!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Schedule Your Move-in/Move-out Cleaning?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+                    Contact us as soon as you know your moving dates. We'll work with your timeline to provide thorough cleaning when you need it most.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+</body>
+</html>

@@ -1,75 +1,59 @@
-# Modern Website
+# Palma Cleaning Website
 
-A beautiful, responsive website built with HTML, CSS, and JavaScript featuring modern design principles and smooth animations.
+Professional cleaning services website for Palma Cleaning, serving The Villages, Ocala, and surrounding areas in Florida.
 
 ## 🌟 Features
 
-### Design & UI
-- **Modern Design**: Clean, professional layout with gradient backgrounds
-- **Responsive**: Fully responsive design that works on all devices
-- **Smooth Animations**: CSS animations and JavaScript-powered interactions
-- **Accessibility**: Keyboard navigation and focus management
-- **Typography**: Beautiful Inter font from Google Fonts
+### Services
+- **Move-In/Move-Out Cleaning**: Complete deep cleaning for property transitions
+- **Standard Cleaning**: Regular maintenance cleaning
+- **Deep Cleaning**: Comprehensive top-to-bottom cleaning
+- **Commercial Cleaning**: Professional office and business cleaning
+- **Post-Construction Cleaning**: Debris removal and final touches
+- **Equestrian Facility Cleaning**: Specialized cleaning for barns and facilities
 
-### Navigation
-- **Fixed Navigation**: Sticky navigation bar with blur effect
-- **Mobile Menu**: Hamburger menu for mobile devices
-- **Smooth Scrolling**: Smooth scroll to sections when clicking navigation links
-- **Active States**: Visual feedback for navigation interactions
+### Service Areas
+- The Villages
+- Ocala
+- Belleview
+- Oak Run
+- Stone Creek
+- Golden Hills
+- WEC Area
 
-### Sections
-1. **Hero Section**: Eye-catching landing area with call-to-action buttons
-2. **About Section**: Company information with animated statistics
-3. **Services Section**: Service cards with hover effects
-4. **Contact Section**: Contact form with validation and contact information
-5. **Footer**: Social links and additional navigation
-
-### Interactive Features
-- **Form Validation**: Client-side form validation with notifications
-- **Counter Animations**: Animated statistics counters
-- **Parallax Effects**: Subtle parallax scrolling in hero section
-- **Button Ripple Effects**: Material design-inspired button interactions
-- **Notification System**: Toast notifications for user feedback
-- **Intersection Observer**: Scroll-triggered animations
+### Website Features
+- **Responsive Design**: Mobile-friendly layout
+- **Service Pages**: Detailed information for each service type
+- **Location Pages**: Specific pages for each service area
+- **Contact Forms**: Easy booking and inquiry options
+- **Professional Design**: Clean, modern interface
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- No additional dependencies required
+- No additional dependencies required for viewing
 
 ### Installation
-1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. That's it! The website is ready to use
+1. Clone the repository
+2. Open `index-clean.html` in your web browser
+3. Navigate through the various service and location pages
 
 ### File Structure
 ```
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md           # This documentation
+├── index-clean.html          # Main homepage
+├── move-in-out-cleaning.html # Move-in/out service page
+├── standard-cleaning.html    # Standard cleaning service
+├── deep-cleaning.html        # Deep cleaning service
+├── commercial-cleaning.html  # Commercial cleaning service
+├── post-construction-cleaning.html # Post-construction service
+├── equestrian-facility-cleaning.html # Equestrian facility service
+├── [location]-cleaning.html  # Location-specific pages
+├── styles-clean.css          # Main stylesheet
+├── script-clean.js           # JavaScript functionality
+├── palma-astro/             # Astro version of the site
+└── images/                   # Image assets
 ```
-
-## 🎨 Customization
-
-### Colors
-The website uses a modern color palette:
-- Primary Blue: `#2563eb`
-- Gradient: `#667eea` to `#764ba2`
-- Text: `#1f2937` (dark) and `#6b7280` (light)
-- Background: `#f8fafc`
-
-### Typography
-- Font Family: Inter (Google Fonts)
-- Weights: 300, 400, 500, 600, 700
-
-### Content
-To customize the content:
-1. Edit the text in `index.html`
-2. Update contact information in the contact section
-3. Modify service cards to match your offerings
-4. Change the brand name and logo
 
 ## 📱 Responsive Design
 
@@ -78,82 +62,27 @@ The website is fully responsive with breakpoints at:
 - **Tablet**: 768px to 1199px
 - **Mobile**: Below 768px
 
-### Mobile Features
-- Hamburger navigation menu
-- Optimized touch targets
-- Simplified layouts for small screens
-- Touch-friendly interactions
+## 🎨 Customization
 
-## 🔧 Technical Details
+### Colors
+- Primary Green: `#4CAF50`
+- Text: `#333333`
+- Background: `#FFFFFF`
 
-### CSS Features
-- CSS Grid and Flexbox for layouts
-- CSS Custom Properties for theming
-- Smooth transitions and animations
-- Backdrop filters for modern effects
-- Box shadows and border radius for depth
-
-### JavaScript Features
-- ES6+ syntax
-- Event delegation
-- Intersection Observer API
-- Form validation
-- DOM manipulation
-- Animation controls
-
-### Performance
-- Optimized animations using `transform` and `opacity`
-- Efficient event listeners
-- Minimal DOM queries
-- Smooth scrolling with native browser support
-
-## 🌐 Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## 📝 Usage Examples
-
-### Adding a New Section
-```html
-<section id="new-section" class="new-section">
-    <div class="container">
-        <h2 class="section-title">New Section</h2>
-        <!-- Your content here -->
-    </div>
-</section>
-```
-
-### Customizing Colors
-```css
-:root {
-    --primary-color: #your-color;
-    --secondary-color: #your-color;
-}
-```
-
-### Adding New Animations
-```css
-@keyframes yourAnimation {
-    from { /* start state */ }
-    to { /* end state */ }
-}
-```
-
-## 🤝 Contributing
-
-Feel free to customize and modify this website for your needs. The code is well-commented and organized for easy modification.
+### Typography
+- Font Family: Arial, sans-serif
+- Clean, professional styling
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is proprietary to Palma Cleaning Services.
 
 ## 🆘 Support
 
-If you have any questions or need help customizing the website, feel free to reach out!
+For website support or inquiries:
+- Phone: (352) 414-0081
+- Email: Contact through website forms
 
 ---
 
-**Built with ❤️ using modern web technologies** 
+**Professional Cleaning Services in Central Florida**
