@@ -1,14 +1,11 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "18"
+  # No build command needed for static HTML files
+  publish = "."
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404
+  from = "/"
+  to = "/index-clean.html"
+  status = 200
 
 # Headers for better performance
 [[headers]]
