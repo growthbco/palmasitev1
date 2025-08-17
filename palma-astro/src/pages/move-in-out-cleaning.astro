@@ -1,0 +1,663 @@
+---
+// Move-in Move-out cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Move-in Move-out Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Professional move-in and move-out cleaning services in Ocala, FL. Complete empty house cleaning perfect for new homeowners and renters getting deposits back.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="move-in cleaning Ocala FL, move-out cleaning, empty house cleaning, rental deposit cleaning, new home cleaning">
+    <link rel="canonical" href="https://palmacleaningco.com/move-in-out-cleaning">
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .visual-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .visual-card img {
+            transition: transform 0.3s ease;
+        }
+        
+        .visual-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .checklist-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .checklist-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Move-in Move-out Cleaning Services",
+        "alternateName": ["Move-out Cleaning", "Move-in Cleaning", "Transition Cleaning", "Rental Deposit Cleaning"],
+        "description": "Complete cleaning for empty homes including all cabinets, drawers, appliances, and detailed cleaning to get deposits back or prepare for new residents. Perfect for renters, homeowners, and real estate professionals.",
+        "url": "https://palmacleaningco.com/move-in-out-cleaning",
+        "image": "https://palmacleaningco.com/images/move-in-out-cleaning-service.jpg",
+        "provider": {
+            "@type": ["LocalBusiness", "Service"],
+            "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
+            }
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Stone Creek",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Oak Run",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "City",
+                "name": "The Villages",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
+            }
+        ],
+        "serviceType": "Move-in Move-out House Cleaning",
+        "category": ["Move-in Cleaning", "Move-out Cleaning", "Transition Services", "Real Estate Cleaning"],
+        "additionalType": "https://schema.org/Service",
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Move-out Deposit Recovery Cleaning",
+                "description": "Thorough cleaning to maximize rental deposit return",
+                "priceRange": "$250-$600",
+                "availability": "InStock",
+                "eligibilityToWorkStatus": "Available for same-day service"
+            },
+            {
+                "@type": "Offer",
+                "name": "Move-in Fresh Start Cleaning",
+                "description": "Complete sanitizing and cleaning for new residents",
+                "priceRange": "$200-$500",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Real Estate Ready Cleaning",
+                "description": "Professional cleaning for showings and open houses",
+                "priceRange": "$300-$700",
+                "availability": "InStock"
+            }
+        ],
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Renters, Homeowners, Real Estate Agents, Property Managers, Landlords"
+        },
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Deep Cleaning Services",
+                "url": "https://palmacleaningco.com/deep-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Post-Construction Cleaning",
+                "url": "https://palmacleaningco.com/post-construction-cleaning"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <Navigation />
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Move-in & Move-out Cleaning in Ocala, FL</h1>
+                <p class="hero-description">Complete empty house cleaning perfect for new homeowners, renters getting deposits back, and real estate transitions.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+            </div>
+            <div class="hero-image" style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Professional move-in move-out cleaning service" style="width: 100%; max-width: 500px; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Complete Move-in & Move-out Cleaning</h2>
+            
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Move-out Cleaning</h3>
+                    <p>Get your rental deposit back with our thorough move-out cleaning service.</p>
+                    <ul class="service-list">
+                        <li>All cabinets inside and out</li>
+                        <li>All drawers cleaned thoroughly</li>
+                        <li>Inside all appliances</li>
+                        <li>Deep scrub bathrooms</li>
+                        <li>Clean inside of closets</li>
+                        <li>Baseboards and trim</li>
+                        <li>Light fixtures and ceiling fans</li>
+                        <li>Window sills and tracks</li>
+                        <li>Switch plates and outlets</li>
+                        <li>Deep clean all floors</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Move-in Cleaning</h3>
+                    <p>Start fresh in your new home with our comprehensive move-in cleaning.</p>
+                    <ul class="service-list">
+                        <li>Sanitize all surfaces</li>
+                        <li>Clean and disinfect bathrooms</li>
+                        <li>Kitchen deep clean and sanitize</li>
+                        <li>Wipe down all cabinets</li>
+                        <li>Clean appliances inside and out</li>
+                        <li>Dust all surfaces and fixtures</li>
+                        <li>Vacuum and mop all floors</li>
+                        <li>Clean windows and mirrors</li>
+                        <li>Disinfect door handles and switches</li>
+                        <li>Remove any construction dust</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Real Estate Ready</h3>
+                    <p>Perfect for real estate agents, landlords, and property managers.</p>
+                    <ul class="service-list">
+                        <li>Showroom-ready presentation</li>
+                        <li>Same-day service available</li>
+                        <li>Flexible scheduling around showings</li>
+                        <li>Professional and reliable service</li>
+                        <li>Photo-ready results</li>
+                        <li>Work with your timeline</li>
+                        <li>Licensed and insured</li>
+                        <li>References available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: #f8fafa; padding: 2rem; border-radius: 15px;">
+                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Why Choose Our Move-in/Move-out Service</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Same-Day Service</h4>
+                        <p>We understand moving timelines are tight. We offer same-day cleaning to meet your schedule.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-dollar-sign" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Deposit Back Guarantee</h4>
+                        <p>Our thorough move-out cleaning helps ensure you get your full rental deposit returned.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-checklist" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Comprehensive Checklist</h4>
+                        <p>We follow a detailed checklist to ensure every area is cleaned to perfection.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h4>Realtor Partnerships</h4>
+                        <p>We work closely with real estate agents and property managers throughout Ocala.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border: 2px solid #ff8057; border-radius: 15px; text-align: center;">
+                <h4 style="color: #2f5047; margin-bottom: 1rem;">💡 Pro Tip for Renters</h4>
+                <p style="color: #666; margin: 0;">Schedule your move-out cleaning for the day after you finish moving to ensure the property is completely empty and we can clean thoroughly. This maximizes your chances of getting your full deposit back!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Cleaning Areas Section -->
+    <section style="padding: 4rem 0; background: white;">
+        <div class="container">
+            <h2 class="section-title">Every Room, Every Detail</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+                Our comprehensive cleaning covers all areas of your home with attention to detail
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="visual-card" style="text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px; transition: transform 0.3s ease;">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Kitchen deep cleaning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="color: #2f5047; margin: 1rem 0;">Kitchen Deep Clean</h3>
+                    <p style="color: #666; margin: 0;">Complete kitchen sanitization including appliances, cabinets, and all surfaces</p>
+                </div>
+                
+                <div class="visual-card" style="text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px; transition: transform 0.3s ease;">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Bathroom deep cleaning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="color: #2f5047; margin: 1rem 0;">Bathroom Sanitization</h3>
+                    <p style="color: #666; margin: 0;">Thorough bathroom cleaning with disinfecting of all fixtures and surfaces</p>
+                </div>
+                
+                <div class="visual-card" style="text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px; transition: transform 0.3s ease;">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Living area cleaning" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem;">
+                    <h3 style="color: #2f5047; margin: 1rem 0;">Living Areas</h3>
+                    <p style="color: #666; margin: 0;">Complete dusting, vacuuming, and cleaning of all living spaces</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Cleaning Checklists -->
+    <section style="background: #f8fafa; padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title">Detailed Cleaning Checklists</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+                Our comprehensive move-in/move-out cleaning follows detailed checklists to ensure every area is spotless
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Bathroom Checklist -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-bath" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #2f5047; margin: 0;">Bathroom Checklist</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Scrub and disinfect sinks
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe/clean tub and shower tiles
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Disinfect toilets inside and out
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean and shine chrome fixtures
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Hang and fold towels neatly
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Disinfect countertops
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean cabinet fronts
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Vacuum and/or wash floor
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust window sills
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust baseboards
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Empty trash
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean mirrors
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Hand wash baseboards (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Scrub shower and bathtubs (included)</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kitchen Checklist -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-utensils" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #2f5047; margin: 0;">Kitchen Checklist</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean appliance exteriors
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe down microwave (int/ext)
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean tables and chairs
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Disinfect countertops and backsplash
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe cabinet fronts
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Scrub and disinfect sinks
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wash dishes or load dishwasher
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Vacuum and/or wash floor
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust window sills
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust baseboards
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Remove cobwebs
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Empty trash
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe door handles & light switches
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Degrease and clean oven interior (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Hand wash baseboards (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Scrub & wipe inside refrigerator (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Wipe inside cabinets and drawers (included)</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bedroom Checklist -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-bed" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #2f5047; margin: 0;">Bedroom Checklist</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Make beds
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust lamps and lampshades (int/ext)
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust picture frames
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust furniture (top, front, and under)
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Vacuum and/or wash floor
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust window sills
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust baseboards
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Remove cobwebs
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Empty trash
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Clean mirrors
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe door handles & light switches
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Basic organizing
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Hand wash baseboards (included)</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Living Areas Checklist -->
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-couch" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                        <h3 style="color: #2f5047; margin: 0;">Other Living Areas</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Fluff and straighten cushions and pillows
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust ceiling fans (if accessible)
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust lamps and lampshades
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust picture frames
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust furniture
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Vacuum and/or wash floor
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Vacuum and/or wash hallways/stairs
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust window sills
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Dust baseboards
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Remove cobwebs
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Wipe door handles & light switches
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Empty trash
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-check" style="color: #28a745; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            Basic organizing
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Hand wash baseboards (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Wipe down/vacuum furniture (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Clean windows and blinds (included)</strong>
+                        </li>
+                        <li style="padding: 0.5rem 0; display: flex; align-items: center;">
+                            <i class="fas fa-star" style="color: #ff8057; margin-right: 0.5rem; font-size: 0.9rem;"></i>
+                            <strong>Sweep garage floors (if vacant) (included)</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Schedule Your Move-in/Move-out Cleaning?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+                    Contact us as soon as you know your moving dates. We'll work with your timeline to provide thorough cleaning when you need it most.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+</body>
+</html>

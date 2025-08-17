@@ -1,0 +1,280 @@
+---
+// Dunnellon area landing page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Dunnellon Cleaning Services | Palma Cleaning - Marion County FL";
+const description = "Professional cleaning services in Dunnellon, FL. House cleaning, commercial cleaning, and specialized services for Dunnellon residents and businesses. Licensed & insured cleaning company.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Dunnellon cleaning services, Dunnellon house cleaning, Dunnellon commercial cleaning, Dunnellon FL cleaning company, Rainbow River cleaning">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/dunnellon">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Palma Cleaning",
+        "image": "https://palmacleaningco.com/images/logo.jpg",
+        "description": "Professional cleaning services in Dunnellon, Marion County, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dunnellon",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 764-4747",
+        "url": "https://palmacleaningco.com/dunnellon",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Dunnellon, Marion County, FL"
+        }
+    }
+    </script>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Dunnellon Cleaning Services</h1>
+                <p class="hero-subtitle">Professional Cleaning Along the Rainbow River</p>
+                <p class="hero-description">Trusted cleaning services throughout Dunnellon, Florida. From historic downtown to riverfront properties, we provide comprehensive cleaning solutions for homes and businesses in this scenic Marion County community.</p>
+                <div class="hero-buttons">
+                    <a href="/contact" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-home"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Dunnellon Residents Choose Palma Cleaning</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">The trusted cleaning service for Dunnellon's historic charm and natural beauty.</p>
+                    <p>Dunnellon is a picturesque city along the Rainbow and Withlacoochee Rivers, known for its historic downtown, beautiful natural springs, and outdoor recreation opportunities. We understand the unique character of Dunnellon - from charming historic homes to modern riverfront properties and rural estates.</p>
+                    <p>From regular house cleaning that maintains your home's comfort to specialized services for vacation rentals and local businesses, we provide professional, reliable service that serves all of Dunnellon's diverse community needs.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Professional Service</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-water"></i>
+                            <span>River Community Experience</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>75+</h3>
+                        <p>Dunnellon Homes Served</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Complete Cleaning Services for Dunnellon</h2>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Standard House Cleaning</h3>
+                    <p>Regular cleaning service for Dunnellon homes, from historic downtown to riverfront properties.</p>
+                    <ul class="service-list">
+                        <li>Weekly, bi-weekly, or monthly service</li>
+                        <li>Historic and modern homes</li>
+                        <li>Riverfront property experience</li>
+                        <li>Humidity and moisture management</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-standard-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Deep Cleaning</h3>
+                    <p>Comprehensive deep cleaning for Dunnellon homes that deserve thorough attention.</p>
+                    <ul class="service-list">
+                        <li>Top-to-bottom detailed cleaning</li>
+                        <li>Perfect for seasonal cleaning</li>
+                        <li>River humidity deep cleaning</li>
+                        <li>Historic home specialized care</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-deep-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Professional cleaning for Dunnellon's local businesses and tourism facilities.</p>
+                    <ul class="service-list">
+                        <li>Historic downtown businesses</li>
+                        <li>Tourism and hospitality</li>
+                        <li>Restaurants and cafes</li>
+                        <li>Professional services</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-commercial-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Move-in/Move-out</h3>
+                    <p>Complete transition cleaning for Dunnellon property moves and vacation rentals.</p>
+                    <ul class="service-list">
+                        <li>Real estate ready cleaning</li>
+                        <li>Vacation rental turnover</li>
+                        <li>River property preparation</li>
+                        <li>Same-day service available</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-move-in-out-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Post-Construction</h3>
+                    <p>Specialized cleanup after construction and historic renovation projects.</p>
+                    <ul class="service-list">
+                        <li>Historic renovation cleanup</li>
+                        <li>New construction final clean</li>
+                        <li>Restoration project cleanup</li>
+                        <li>Heritage-sensitive cleaning</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-post-construction-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-horse"></i>
+                    </div>
+                    <h3>Equestrian Properties</h3>
+                    <p>Specialized cleaning for Dunnellon area horse properties and rural estates.</p>
+                    <ul class="service-list">
+                        <li>Rural estate cleaning</li>
+                        <li>Horse property maintenance</li>
+                        <li>Barn and stable facilities</li>
+                        <li>Large acreage properties</li>
+                    </ul>
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="/dunnellon-equestrian-cleaning.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="dunnellon-specific">
+        <div class="container">
+            <h2 class="section-title">Understanding Dunnellon Living</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-building" style="margin-right: 0.5rem;"></i>Historic Character</h4>
+                        <p style="color: #666; line-height: 1.6;">Dunnellon's historic downtown and heritage homes require specialized care and attention. We understand the unique cleaning needs of historic properties while providing modern standards.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-water" style="margin-right: 0.5rem;"></i>River Community</h4>
+                        <p style="color: #666; line-height: 1.6;">Located along the beautiful Rainbow and Withlacoochee Rivers, Dunnellon homes face unique challenges from humidity and moisture. We provide specialized cleaning that addresses these riverfront conditions.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-leaf" style="margin-right: 0.5rem;"></i>Natural Beauty</h4>
+                        <p style="color: #666; line-height: 1.6;">Surrounded by natural springs, state parks, and outdoor recreation areas, Dunnellon attracts nature lovers and outdoor enthusiasts. We understand the outdoor lifestyle and cleaning needs this brings.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-heart" style="margin-right: 0.5rem;"></i>Small Town Feel</h4>
+                        <p style="color: #666; line-height: 1.6;">Dunnellon maintains a charming small-town atmosphere with close-knit community values. We provide personalized service that reflects the friendly, reliable approach Dunnellon residents expect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Ready to Experience Premium Dunnellon Cleaning?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join your Dunnellon neighbors who trust Palma Cleaning for exceptional cleaning services. Contact us today for your free quote!</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="/contact" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <p style="color: #2f5047; font-weight: 500; margin: 0;">
+                        <i class="fas fa-check-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                        Licensed & Insured • Dunnellon Experienced • Satisfaction Guaranteed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

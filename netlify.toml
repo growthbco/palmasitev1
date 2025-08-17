@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Redirect .html extensions to clean URLs
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+
+# Handle 404s
 [[redirects]]
   from = "/*"
   to = "/index.html"

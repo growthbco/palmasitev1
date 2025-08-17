@@ -1,0 +1,208 @@
+---
+// Book Now page with Convertlabs booking embed
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Book Now - Schedule Your Cleaning Service | Palma Cleaning - Ocala FL";
+const description = "Book your cleaning service online! Easy booking form for house cleaning, commercial cleaning, and specialized services in Ocala, Marion County, and The Villages.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="book cleaning service Ocala FL, schedule cleaning Marion County, book house cleaning The Villages, online cleaning booking">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/quote">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style>.Convertlabs{width: 100%; height: 1400px; min-height: 1400px;}</style>
+    <script src="https://convertlabs.io/js/booking_embed.js"></script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Palma Cleaning",
+        "image": "https://palmacleaningco.com/images/logo.jpg",
+        "description": "Book your cleaning service online for professional cleaning services in Ocala, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "postalCode": "34471",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 764-4747",
+        "email": "hello@palmacleaningco.com",
+        "url": "https://palmacleaningco.com/quote",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "29.1872",
+            "longitude": "-82.1401"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero" style="padding: 6rem 0 4rem;">
+        <div class="hero-container">
+            <div class="hero-content" style="text-align: center; grid-column: 1 / -1;">
+                <h1 class="hero-title">Book Your Cleaning Service</h1>
+                <p class="hero-subtitle">Professional Cleaning Services in Ocala, Marion County & The Villages</p>
+                <p class="hero-description" style="max-width: 800px; margin: 0 auto;">Schedule your cleaning service online with our easy booking system. Choose your service type, date, and time - we'll take care of the rest!</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <div style="background: rgba(255, 255, 255, 0.15); padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-clock" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: 500;">Instant Booking</p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.15); padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-calendar-check" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: 500;">Easy Scheduling</p>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.15); padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-shield-alt" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0; font-weight: 500;">Licensed & Insured</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: white; padding: 3rem 0;">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="background: #f8fafa; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <h2 style="text-align: center; color: #2f5047; margin-bottom: 1.5rem;">Book Your Service</h2>
+                    <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6;">Choose your cleaning service, select your preferred date and time, and we'll handle the rest!</p>
+                    
+                    <iframe src="https://convertlabs.io/booking_form/3473" frameborder="0" scrolling="auto" style="width: 100%; height: 1400px; min-height: 1400px; border-radius: 15px;" class="Convertlabs"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="background: #f8fafa; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="section-title">What Happens Next?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        1
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Book Online</h4>
+                    <p style="color: #666; line-height: 1.6;">Choose your service type, preferred date and time using our easy online booking system.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        2
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Confirmation</h4>
+                    <p style="color: #666; line-height: 1.6;">You'll receive an instant booking confirmation with all the details of your scheduled service.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        3
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">We Clean!</h4>
+                    <p style="color: #666; line-height: 1.6;">Our professional team arrives on time and provides exceptional cleaning service that exceeds your expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="padding: 3rem 0;">
+        <div class="container">
+            <h2 class="section-title">Our Cleaning Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-home" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Standard House Cleaning</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Regular weekly, bi-weekly, or monthly cleaning</p>
+                </div>
+                
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-magic" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Deep Cleaning</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Comprehensive top-to-bottom cleaning</p>
+                </div>
+                
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-building" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Commercial Cleaning</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Professional office and business cleaning</p>
+                </div>
+                
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-box-open" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Move-in/Move-out</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Complete cleaning for property transitions</p>
+                </div>
+                
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-hard-hat" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Post-Construction</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Cleanup after construction and renovation</p>
+                </div>
+                
+                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <i class="fas fa-horse" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Equestrian Properties</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Specialized cleaning for horse properties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="background: #f8fafa; padding: 3rem 0;">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="section-title">Need Help or Have Questions?</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Our team is here to help! Contact us directly if you need assistance with your booking or have specific questions.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                    <a href="tel:+13527644747" class="btn btn-primary" style="padding: 1rem; font-size: 1.1rem; text-decoration: none;">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>
+                        Call (352) 764-4747
+                    </a>
+                    <a href="/contact" class="btn btn-secondary" style="padding: 1rem; font-size: 1.1rem; text-decoration: none;">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                        Contact Form
+                    </a>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Business Hours</h4>
+                    <p style="color: #666; margin: 0; line-height: 1.8;">
+                        <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM<br>
+                        <strong>Response Time:</strong> Within 24 hours<br>
+                        <strong>Emergency Service:</strong> Available weekends
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+---
+// Homepage content - serving main landing page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Palma Cleaning - Professional House & Commercial Cleaning in Ocala FL";
+const description = "Professional house cleaning for busy families & professionals throughout Ocala, FL. Serving all neighborhoods including premium communities near World Equestrian Center. Licensed & insured.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="house cleaning Ocala FL, residential cleaning Ocala, commercial cleaning Ocala, Marion County cleaning, Ocala cleaning service, WEC cleaning">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/styles-clean.css?v=3" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "Service"],
+        "@id": "https://palmacleaningco.com/#organization",
+        "name": "Palma Cleaning",
+        "image": "https://palmacleaningco.com/images/logo.jpg",
+        "description": "Professional house and commercial cleaning services in Ocala, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "postalCode": "34471",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 764-4747",
+        "email": "hello@palmacleaningco.com",
+        "url": "https://palmacleaningco.com",
+        "sameAs": [
+            "https://www.facebook.com/palmacleaningco",
+            "https://www.instagram.com/palmacleaningco"
+        ],
+        "serviceType": ["House Cleaning Service", "Commercial Cleaning Service", "Residential Cleaning Service"],
+        "category": ["Cleaning Services", "House Cleaning", "Janitorial Services", "Residential Services"],
+        "additionalType": "https://schema.org/Service",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "147",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US",
+                "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+            },
+            {
+                "@type": "City",
+                "name": "The Villages",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Stone Creek",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place", 
+                "name": "Oak Run",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "Golden Hills",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "Place",
+                "name": "World Equestrian Center Area",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceArea": [
+            {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "29.1872",
+                    "longitude": "-82.1401"
+                },
+                "geoRadius": "48280"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Professional Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard House Cleaning",
+                        "description": "Weekly, bi-weekly, and monthly residential cleaning services",
+                        "serviceType": "Residential Cleaning",
+                        "category": "House Cleaning",
+                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
+                    },
+                    "availability": "Monday-Friday 8AM-6PM",
+                    "priceRange": "$$"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Cleaning",
+                        "description": "Comprehensive top-to-bottom detailed cleaning including baseboards, fixtures, inside appliances",
+                        "serviceType": "Deep House Cleaning",
+                        "category": "Intensive Cleaning",
+                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
+                    },
+                    "availability": "Monday-Friday 8AM-6PM",
+                    "priceRange": "$$$"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Commercial Cleaning",
+                        "description": "Professional office and business cleaning services for retail, medical, and corporate facilities",
+                        "serviceType": "Commercial Office Cleaning",
+                        "category": "Business Cleaning",
+                        "areaServed": ["Ocala, FL", "Marion County, FL"]
+                    },
+                    "availability": "Flexible scheduling including evenings and weekends",
+                    "priceRange": "$$"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Move-in Move-out Cleaning",
+                        "description": "Complete empty house cleaning for transitions, rental deposit recovery, and real estate preparation",
+                        "serviceType": "Transition Cleaning",
+                        "category": "Move-in/Move-out Cleaning",
+                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
+                    },
+                    "availability": "Same-day service available",
+                    "priceRange": "$$$"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Post-Construction Cleaning",
+                        "description": "Specialized cleanup services for new construction projects, renovations, and contractor cleanup",
+                        "serviceType": "Construction Cleanup",
+                        "category": "Specialized Cleaning",
+                        "areaServed": ["Ocala, FL", "Marion County, FL"]
+                    },
+                    "availability": "Project-based scheduling",
+                    "priceRange": "$$$"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Equestrian Property Cleaning",
+                        "description": "Specialized cleaning for horse properties, luxury estates, and World Equestrian Center area homes",
+                        "serviceType": "Luxury Estate Cleaning",
+                        "category": "Equestrian Facility Cleaning",
+                        "areaServed": ["World Equestrian Center Area", "Golden Hills", "Ocala Horse Country"]
+                    },
+                    "availability": "Flexible scheduling around horse activities",
+                    "priceRange": "$$$$"
+                }
+            ]
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "29.1872",
+            "longitude": "-82.1401"
+        },
+        "openingHours": ["Mo-Fr 08:00-18:00"],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "$$",
+        "paymentAccepted": ["Cash", "Check", "Credit Card", "Zelle", "Venmo"],
+        "currenciesAccepted": "USD",
+        "knowsAbout": [
+            "Residential House Cleaning",
+            "Commercial Office Cleaning", 
+            "Deep Cleaning Services",
+            "Post-Construction Cleanup",
+            "Move-in Move-out Cleaning",
+            "Luxury Home Cleaning",
+            "Equestrian Property Cleaning",
+            "Eco-friendly Cleaning Products",
+            "Stone Creek Community Services",
+            "Oak Run Community Services",
+            "The Villages Cleaning Services"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Licensed Cleaning Service",
+                "description": "Licensed and bonded cleaning service in Florida"
+            },
+            {
+                "@type": "EducationalOccupationalCredential", 
+                "name": "General Liability Insurance",
+                "description": "Comprehensive general liability and bonding insurance coverage"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Background Checked Team",
+                "description": "All team members are background-checked for customer security"
+            }
+        ],
+        "slogan": "Life's Messy. We Can Help.",
+        "brand": {
+            "@type": "Brand",
+            "name": "Palma Cleaning",
+            "slogan": "House Cleaning for Parents & Busy Professionals"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Palma Cleaning Founders",
+            "description": "Professional cleaning service established in 2020"
+        },
+        "yearEstablished": "2020",
+        "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "minValue": 5,
+            "maxValue": 15
+        }
+    }
+    </script>
+    
+    <style>
+        .area-item a {
+            transition: color 0.2s ease;
+        }
+        .area-item a:hover {
+            color: #ff8057 !important;
+            text-decoration: underline !important;
+        }
+        .area-item h4 a:hover {
+            color: #ff8057 !important;
+        }
+    </style>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Life's Messy.</h1>
+                <h2 class="hero-subtitle">We Can Help.</h2>
+                <p class="hero-description">You've got a million things on your plate... cleaning <strong><u>shouldn't</u></strong> be one of them.</p>
+                <p class="hero-description-sub">Premium, eco-friendly cleaning by Ocala's trusted cleaning professionals.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Request Quote</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>5-STAR SERVICE</span>
+                </div>
+            </div>
+            <div class="hero-images">
+                <div class="hero-image large">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPOnw5izoRW8TgFgYfRSpCzggHMsXQBUSBkwSit=s1360-w1360-h1020-rw" alt="Professional House Cleaning in Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                </div>
+                <div class="hero-image">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMb64CY2eRqex-SQz_ocsbmdpN3ZYv7KPV016ov=s1360-w1360-h1020-rw" alt="Trusted Cleaning Services Ocala" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                </div>
+                <div class="hero-guarantee">
+                    <div>48 HR RECLEAN</div>
+                    <div>GUARANTEE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Palma Cleaning?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Trusted by hundreds of Ocala families and businesses since 2020.</p>
+                    <p>At Palma Cleaning, we understand that life is busy. Whether you're a professional working long hours, a family with young children, or managing a business, cleaning shouldn't add stress to your life.</p>
+                    <p>We serve residential and commercial clients throughout Ocala, Marion County, and The Villages with reliable, professional cleaning services that give you back your valuable time.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Flexible Scheduling</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>100% Satisfaction</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4+</h3>
+                        <p>Years in Business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: #f8fafa; padding: 3rem 0;">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <script type='text/javascript' src='https://link.palmacleaningco.com/reputation/assets/review-widget.js'></script>
+                <iframe class='lc_reviews_widget' src='https://link.palmacleaningco.com/reputation/widgets/review_widget/mAdkXDEE8QQPYfj1uzSF?widgetId=689752c11080b4d725e2dadc' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; min-height: 400px; border-radius: 15px;'></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Cleaning Services</h2>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <p style="font-size: 1.1rem; color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Professional house cleaning solutions for every need and budget.</p>
+                <a href="/house-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-book-open"></i>
+                    Complete House Cleaning Guide
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Standard House Cleaning</h3>
+                    <p>Regular weekly, bi-weekly, or monthly cleaning to keep your home consistently clean and fresh.</p>
+                    <ul class="service-list">
+                        <li>Kitchen and bathroom cleaning</li>
+                        <li>Dusting all surfaces</li>
+                        <li>Vacuuming and mopping</li>
+                        <li>Trash removal</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Deep Cleaning</h3>
+                    <p>Comprehensive top-to-bottom cleaning perfect for spring cleaning, moving, or getting started.</p>
+                    <ul class="service-list">
+                        <li>Inside appliances</li>
+                        <li>Baseboards and fixtures</li>
+                        <li>Cabinet fronts</li>
+                        <li>Window sills</li>
+                        <li>Detailed bathroom work</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Professional office and business cleaning to maintain a clean, productive work environment.</p>
+                    <ul class="service-list">
+                        <li>Office buildings</li>
+                        <li>Retail spaces</li>
+                        <li>Medical offices</li>
+                        <li>Restaurants</li>
+                        <li>Flexible hours</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Move-in/Move-out</h3>
+                    <p>Complete cleaning for transitions, perfect for new homeowners and renters getting deposits back.</p>
+                    <ul class="service-list">
+                        <li>Empty house cleaning</li>
+                        <li>All cabinets and drawers</li>
+                        <li>Appliance cleaning</li>
+                        <li>Real estate ready</li>
+                        <li>Same-day service</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px;">
+                <h3 style="color: #2f5047; margin-bottom: 1rem;">Additional Specialized Services</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="text-align: left;">
+                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;"><i class="fas fa-hard-hat"></i> Post-Construction Cleaning</h4>
+                        <p style="color: #666; margin-bottom: 1rem;">Complete cleanup for new construction and renovation projects.</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;"><i class="fas fa-horse"></i> Equestrian Property Cleaning</h4>
+                        <p style="color: #666; margin-bottom: 1rem;">Specialized cleaning for horse properties and barns.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="areas" id="areas">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
+                <i class="fas fa-info-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                <strong>Tip:</strong> Use the "Locations" menu above for detailed information about each area we serve!
+            </p>
+            <div class="areas-grid">
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
+                    <ul>
+                        <li><a href="/ocala" style="color: #666; text-decoration: none;">Downtown Ocala</a></li>
+                        <li><a href="/stone-creek" style="color: #666; text-decoration: none;">Stone Creek</a></li>
+                        <li><a href="/oak-run" style="color: #666; text-decoration: none;">Oak Run</a></li>
+                        <li><a href="/golden-hills" style="color: #666; text-decoration: none;">Golden Hills</a></li>
+                        <li><a href="/calesa" style="color: #666; text-decoration: none;">Calesa</a></li>
+                        <li>Spruce Creek</li>
+                        <li>All Marion County areas</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/the-villages" style="color: #2f5047; text-decoration: none;">The Villages</a></h4>
+                    <ul>
+                        <li>Spanish Springs</li>
+                        <li>Lake Sumter Landing</li>
+                        <li>Brownwood</li>
+                        <li>All Village Centers</li>
+                        <li>Golf course communities</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/wec-area" style="color: #2f5047; text-decoration: none;">World Equestrian Center Area</a></h4>
+                    <ul>
+                        <li>WEC neighborhoods</li>
+                        <li>Equestrian properties</li>
+                        <li>Horse farms</li>
+                        <li>Luxury estates</li>
+                        <li>Agricultural properties</li>
+                    </ul>
+                </div>
+                <div class="area-item">
+                    <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
+                    <ul>
+                        <li><a href="/belleview" style="color: #666; text-decoration: none;">Belleview</a></li>
+                        <li><a href="/dunnellon" style="color: #666; text-decoration: none;">Dunnellon</a></li>
+                        <li>Rainbow Springs</li>
+                        <li>Silver Springs</li>
+                        <li>And more!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-note">
+                <p><i class="fas fa-info-circle"></i> Don't see your area listed? We serve many locations throughout Central Florida. Check our "Locations" menu above for detailed area information, or call us to confirm service in your area!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Get Started?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Contact us today for a free, no-obligation quote for any of our cleaning services. We'll create a custom cleaning plan that fits your needs and budget.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-phone" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="color: #666; margin: 0; font-weight: 500;"><a href="tel:+13527644747" style="color: #666; text-decoration: none;">(352) 764-4747</a></p>
+                    </div>
+                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-envelope" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="color: #666; margin: 0; font-weight: 500;">hello@palmacleaningco.com</p>
+                    </div>
+                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
+                        <i class="fas fa-clock" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="color: #666; margin: 0; font-weight: 500;">Mon-Fri 8AM-6PM</p>
+                    </div>
+                </div>
+                <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
