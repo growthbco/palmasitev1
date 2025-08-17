@@ -1,5 +1,5 @@
 ---
-// Global Navigation component with complete menu and phone number
+// Global Navigation component with mobile hamburger menu
 ---
 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,15 +31,9 @@
         <div class="nav-item has-dropdown">
             <a href="/service-areas" class="nav-link">Locations</a>
             <div class="dropdown">
-                <a href="/stone-creek" class="dropdown-item">Stone Creek</a>
-                <a href="/oak-run" class="dropdown-item">Oak Run</a>
-                <a href="/the-villages" class="dropdown-item">The Villages</a>
-                <a href="/golden-hills" class="dropdown-item">Golden Hills</a>
-                <a href="/belleview" class="dropdown-item">Belleview</a>
-                <a href="/calesa" class="dropdown-item">Calesa</a>
-                <a href="/wec-area" class="dropdown-item">WEC Area</a>
                 <a href="/ocala" class="dropdown-item">Ocala</a>
-                <a href="/otow" class="dropdown-item">OTOW</a>
+                <a href="/the-villages" class="dropdown-item">The Villages</a>
+                <a href="/belleview" class="dropdown-item">Belleview</a>
                 <a href="/dunnellon" class="dropdown-item">Dunnellon</a>
             </div>
         </div>
@@ -59,6 +53,46 @@
         <a href="/book-now" class="book-now-btn">
             <span class="book-now-text">Book Now</span>
         </a>
+    </div>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="mobile-menu-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="/" class="mobile-nav-link">Home</a>
+            
+            <div class="mobile-nav-section">
+                <span class="mobile-nav-title">Services</span>
+                <a href="/house-cleaning" class="mobile-nav-link">House Cleaning Guide</a>
+                <a href="/residential-cleaning" class="mobile-nav-link">Standard Cleaning</a>
+                <a href="/deep-cleaning" class="mobile-nav-link">Deep Cleaning</a>
+                <a href="/move-in-out-cleaning" class="mobile-nav-link">Move-in/Move-out</a>
+                <a href="/commercial-cleaning" class="mobile-nav-link">Commercial Cleaning</a>
+                <a href="/post-construction-cleaning" class="mobile-nav-link">Post-Construction</a>
+            </div>
+            
+            <div class="mobile-nav-section">
+                <span class="mobile-nav-title">Locations</span>
+                <a href="/ocala" class="mobile-nav-link">Ocala</a>
+                <a href="/the-villages" class="mobile-nav-link">The Villages</a>
+                <a href="/belleview" class="mobile-nav-link">Belleview</a>
+                <a href="/dunnellon" class="mobile-nav-link">Dunnellon</a>
+            </div>
+            
+            <a href="/about" class="mobile-nav-link">About</a>
+            <a href="/contact" class="mobile-nav-link">Contact</a>
+            
+            <div class="mobile-contact">
+                <a href="tel:+13527644747" class="mobile-phone">(352) 764-4747</a>
+                <a href="/book-now" class="mobile-book-btn">Book Now</a>
+            </div>
+        </nav>
     </div>
 </header>
 
@@ -214,6 +248,129 @@
     text-transform: uppercase;
 }
 
+/* Mobile hamburger menu */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #2f5047;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.mobile-nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    color: #ff8057;
+}
+
+.mobile-nav-section {
+    margin: 30px 0;
+}
+
+.mobile-nav-title {
+    display: block;
+    color: #ff8057;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.mobile-nav-section .mobile-nav-link {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.mobile-contact {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-phone {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.mobile-book-btn {
+    display: inline-block;
+    background-color: #ff8057;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-book-btn:hover {
+    background-color: #e56d45;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 1200px) {
     .header {
@@ -256,5 +413,43 @@
     .book-now-text {
         font-size: 12px;
     }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+    
+    if (mobileToggle && mobileOverlay) {
+        mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking outside
+        mobileOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileOverlay) {
+                mobileToggle.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking links
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-phone, .mobile-book-btn');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
+</script>
