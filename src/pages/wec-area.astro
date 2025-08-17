@@ -365,32 +365,28 @@ const description = "Professional cleaning services for World Equestrian Center 
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="quoteForm">
+                <div class="contact-form" id="quoteForm">
                     <h3>WEC Area Property Quote</h3>
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                    </div>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <div class="form-row">
-                        <select name="service" required>
-                            <option value="">Select Service</option>
-                            <option value="equestrian">Equestrian Facility Cleaning</option>
-                            <option value="luxury">Luxury Estate Cleaning</option>
-                            <option value="event">Event Preparation Service</option>
-                        </select>
-                        <select name="property-type">
-                            <option value="">Property Type</option>
-                            <option value="estate">Residential Estate</option>
-                            <option value="farm">Horse Farm</option>
-                            <option value="both">Estate + Equestrian</option>
-                        </select>
-                    </div>
-                    <input type="text" name="address" placeholder="Property Address or Area" required>
-                    <textarea name="message" placeholder="Tell us about your WEC area property (acreage, horse facilities, special features, event needs)" rows="4"></textarea>
-                    <button type="submit" class="btn btn-primary btn-large">Get Specialized Quote</button>
+                    
+                    <iframe
+                        src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
+                        style="width:100%;height:844px;border:none;border-radius:10px"
+                        id="wec-area-form"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="WEC Area Contact Form"
+                        data-height="844"
+                        data-form-id="aSlLmaqsq5CZ1gocNBlC"
+                        title="WEC Area Contact Form">
+                    </iframe>
+                    
                     <p class="form-note">✓ Equestrian facility experts ✓ Horse-safe products ✓ Licensed & insured</p>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -399,6 +395,7 @@ const description = "Professional cleaning services for World Equestrian Center 
     <Footer />
 
     <script is:inline src="/script-clean.js"></script>
+    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 

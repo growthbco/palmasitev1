@@ -150,74 +150,32 @@ const description = "Contact Palma Cleaning for professional cleaning services i
         <div class="container">
             <h2 class="section-title">Request Your Free Quote</h2>
             <div style="max-width: 800px; margin: 0 auto;">
-                <form class="contact-form" style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <h3 style="text-align: center; margin-bottom: 2rem; color: #2f5047;">Get Your Personalized Cleaning Quote</h3>
                     
-                    <div class="form-row">
-                        <input type="text" name="firstName" placeholder="First Name" required>
-                        <input type="text" name="lastName" placeholder="Last Name" required>
-                    </div>
-                    
-                    <div class="form-row">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    
-                    <select name="service" required>
-                        <option value="">Select Service Type</option>
-                        <option value="standard">Standard House Cleaning</option>
-                        <option value="deep">Deep Cleaning</option>
-                        <option value="commercial">Commercial Cleaning</option>
-                        <option value="move">Move-in/Move-out Cleaning</option>
-                        <option value="construction">Post-Construction Cleaning</option>
-                        <option value="equestrian">Equestrian Property Cleaning</option>
-                        <option value="other">Other (please specify)</option>
-                    </select>
-                    
-                    <select name="frequency">
-                        <option value="">Select Cleaning Frequency</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="bi-weekly">Bi-weekly (Every 2 weeks)</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="one-time">One-time Service</option>
-                        <option value="as-needed">As Needed</option>
-                    </select>
-                    
-                    <textarea name="address" placeholder="Property Address (Include city - Ocala, Stone Creek, Oak Run, The Villages, etc.)" rows="3" required></textarea>
-                    
-                    <div class="form-row">
-                        <input type="number" name="bedrooms" placeholder="Number of Bedrooms">
-                        <input type="number" name="bathrooms" placeholder="Number of Bathrooms">
-                    </div>
-                    
-                    <div class="form-row">
-                        <input type="number" name="squareFootage" placeholder="Approximate Square Footage (optional)">
-                        <select name="pets">
-                            <option value="">Do you have pets?</option>
-                            <option value="none">No pets</option>
-                            <option value="dogs">Dogs</option>
-                            <option value="cats">Cats</option>
-                            <option value="both">Dogs and Cats</option>
-                            <option value="other">Other pets</option>
-                        </select>
-                    </div>
-                    
-                    <textarea name="specialRequests" placeholder="Special requests, areas of focus, or additional information..." rows="4"></textarea>
-                    
-                    <div style="margin-bottom: 1.5rem;">
-                        <label style="display: flex; align-items: center; gap: 0.5rem; color: #666;">
-                            <input type="checkbox" name="urgentService" style="margin: 0;">
-                            <span>I need service within 48 hours (rush service may apply)</span>
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large">Get My Free Quote</button>
+                    <iframe
+                        src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
+                        style="width:100%;height:844px;border:none;border-radius:10px"
+                        id="inline-aSlLmaqsq5CZ1gocNBlC" 
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Contact Form"
+                        data-height="844"
+                        data-layout-iframe-id="inline-aSlLmaqsq5CZ1gocNBlC"
+                        data-form-id="aSlLmaqsq5CZ1gocNBlC"
+                        title="Contact Form">
+                    </iframe>
                     
                     <div style="text-align: center; margin-top: 1.5rem;">
-                        <p class="form-note" style="margin-bottom: 0.5rem;">We'll respond with your personalized quote within 24 hours</p>
+                        <p style="color: #888; font-size: 0.9rem;">We'll respond with your personalized quote within 24 hours</p>
                         <p style="color: #888; font-size: 0.8rem;">Licensed & Insured • No obligation • Free estimates</p>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -342,6 +300,7 @@ const description = "Contact Palma Cleaning for professional cleaning services i
     <Footer />
 
     <script is:inline src="/script-clean.js"></script>
+    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
