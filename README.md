@@ -1,88 +1,43 @@
-# Palma Cleaning Website
+# Astro Starter Kit: Minimal
 
-Professional cleaning services website for Palma Cleaning, serving The Villages, Ocala, and surrounding areas in Florida.
-
-## 🌟 Features
-
-### Services
-- **Move-In/Move-Out Cleaning**: Complete deep cleaning for property transitions
-- **Standard Cleaning**: Regular maintenance cleaning
-- **Deep Cleaning**: Comprehensive top-to-bottom cleaning
-- **Commercial Cleaning**: Professional office and business cleaning
-- **Post-Construction Cleaning**: Debris removal and final touches
-- **Equestrian Facility Cleaning**: Specialized cleaning for barns and facilities
-
-### Service Areas
-- The Villages
-- Ocala
-- Belleview
-- Oak Run
-- Stone Creek
-- Golden Hills
-- WEC Area
-
-### Website Features
-- **Responsive Design**: Mobile-friendly layout
-- **Service Pages**: Detailed information for each service type
-- **Location Pages**: Specific pages for each service area
-- **Contact Forms**: Easy booking and inquiry options
-- **Professional Design**: Clean, modern interface
-
-## 🚀 Getting Started
-
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No additional dependencies required for viewing
-
-### Installation
-1. Clone the repository
-2. Open `index-clean.html` in your web browser
-3. Navigate through the various service and location pages
-
-### File Structure
-```
-├── index-clean.html          # Main homepage
-├── move-in-out-cleaning.html # Move-in/out service page
-├── standard-cleaning.html    # Standard cleaning service
-├── deep-cleaning.html        # Deep cleaning service
-├── commercial-cleaning.html  # Commercial cleaning service
-├── post-construction-cleaning.html # Post-construction service
-├── equestrian-facility-cleaning.html # Equestrian facility service
-├── [location]-cleaning.html  # Location-specific pages
-├── styles-clean.css          # Main stylesheet
-├── script-clean.js           # JavaScript functionality
-├── palma-astro/             # Astro version of the site
-└── images/                   # Image assets
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-## 📱 Responsive Design
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-The website is fully responsive with breakpoints at:
-- **Desktop**: 1200px and above
-- **Tablet**: 768px to 1199px
-- **Mobile**: Below 768px
+## 🚀 Project Structure
 
-## 🎨 Customization
+Inside of your Astro project, you'll see the following folders and files:
 
-### Colors
-- Primary Green: `#4CAF50`
-- Text: `#333333`
-- Background: `#FFFFFF`
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-### Typography
-- Font Family: Arial, sans-serif
-- Clean, professional styling
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## 📄 License
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-This project is proprietary to Palma Cleaning Services.
+Any static assets, like images, can be placed in the `public/` directory.
 
-## 🆘 Support
+## 🧞 Commands
 
-For website support or inquiries:
-- Phone: (352) 414-0081
-- Email: Contact through website forms
+All commands are run from the root of the project, from a terminal:
 
----
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-**Professional Cleaning Services in Central Florida**
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
