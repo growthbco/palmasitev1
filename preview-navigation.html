@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Preview - Palma Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Open Sans", Helvetica, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            height: 100px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .jo-clean {
+            position: absolute;
+            left: 120px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #2f5047;
+        }
+
+        .header .group {
+            position: absolute;
+            width: 463px;
+            height: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header .navbar-wrapper {
+            height: 25px;
+        }
+
+        .header .navbar {
+            position: relative;
+            width: 471px;
+            height: 25px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header .navbar a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header .text-wrapper {
+            font-weight: 700;
+            color: #ff8057;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.50px;
+            line-height: normal;
+        }
+
+        .header .div,
+        .header .text-wrapper-2,
+        .header .text-wrapper-3 {
+            font-weight: 600;
+            color: #666666;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.50px;
+            line-height: normal;
+        }
+
+        .header .div:hover,
+        .header .text-wrapper-2:hover,
+        .header .text-wrapper-3:hover {
+            color: #ff8057;
+        }
+
+        .header .overlap-group-wrapper {
+            position: absolute;
+            width: 185px;
+            height: 60px;
+            right: 120px;
+        }
+
+        .header .overlap-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 183px;
+            height: 60px;
+            background-color: #ff8057;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .header .overlap-group:hover {
+            background-color: #e56d45;
+            transform: translateY(-2px);
+        }
+
+        .header .text-wrapper-4 {
+            font-family: "Open Sans", Helvetica, sans-serif;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 18px;
+            letter-spacing: 0.50px;
+            line-height: normal;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 1200px) {
+            .header {
+                padding: 0 40px;
+            }
+            
+            .jo-clean {
+                left: 40px;
+            }
+            
+            .header .overlap-group-wrapper {
+                right: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 80px;
+                padding: 0 20px;
+            }
+            
+            .jo-clean {
+                left: 20px;
+                font-size: 20px;
+            }
+            
+            .header .group {
+                display: none;
+            }
+            
+            .header .overlap-group-wrapper {
+                right: 20px;
+                width: 120px;
+                height: 45px;
+            }
+            
+            .header .overlap-group {
+                width: 120px;
+                height: 45px;
+            }
+            
+            .header .text-wrapper-4 {
+                font-size: 14px;
+            }
+        }
+        
+        /* Demo content */
+        .demo-content {
+            max-width: 1440px;
+            margin: 40px auto;
+            padding: 0 120px;
+        }
+        
+        .demo-content h1 {
+            color: #2f5047;
+            margin-bottom: 20px;
+        }
+        
+        .demo-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="jo-clean">Palma Cleaning</div>
+        <div class="group">
+            <div class="navbar-wrapper">
+                <nav class="navbar">
+                    <a href="#" class="text-wrapper">HOME</a>
+                    <a href="#" class="div">SERVICES</a>
+                    <a href="#" class="text-wrapper-2">ABOUT</a>
+                    <a href="#" class="text-wrapper-3">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+        <div class="overlap-group-wrapper">
+            <a href="#" class="overlap-group">
+                <span class="text-wrapper-4">BOOK NOW</span>
+            </a>
+        </div>
+    </header>
+    
+    <div class="demo-content">
+        <h1>Navigation Preview</h1>
+        <p>This is a preview of the new navigation design for Palma Cleaning. The navigation features:</p>
+        <ul style="margin: 20px 0; padding-left: 20px;">
+            <li>Clean, modern design with Open Sans font</li>
+            <li>Logo on the left</li>
+            <li>Centered navigation menu</li>
+            <li>Prominent "BOOK NOW" button on the right</li>
+            <li>Hover effects on all interactive elements</li>
+            <li>Fully responsive design for mobile devices</li>
+        </ul>
+        <p>Try hovering over the menu items and the BOOK NOW button to see the interactive effects.</p>
+        <p>Resize your browser window to see the responsive mobile design.</p>
+    </div>
+</body>
+</html>

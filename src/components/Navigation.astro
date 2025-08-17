@@ -1,53 +1,260 @@
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <div>
-                <h2>Palma Cleaning</h2>
-                <span class="tagline">House Cleaning for Parents & Busy Professionals</span>
+---
+// Global Navigation component with complete menu and phone number
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<header class="header">
+    <!-- Logo -->
+    <div class="logo">Palma Cleaning</div>
+    
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+        </div>
+        
+        <div class="nav-item has-dropdown">
+            <a href="/services" class="nav-link">Services</a>
+            <div class="dropdown">
+                <a href="/house-cleaning" class="dropdown-item" style="font-weight: 600; color: #ff8057;">House Cleaning Guide</a>
+                <div class="dropdown-section">Residential</div>
+                <a href="/residential-cleaning" class="dropdown-item">Standard House Cleaning</a>
+                <a href="/deep-cleaning" class="dropdown-item">Deep Cleaning</a>
+                <a href="/move-in-out-cleaning" class="dropdown-item">Move-in/Move-out</a>
+                <div class="dropdown-section">Commercial</div>
+                <a href="/commercial-cleaning" class="dropdown-item">Office Cleaning</a>
+                <a href="/post-construction-cleaning" class="dropdown-item">Post-Construction</a>
             </div>
         </div>
-        <ul class="nav-menu">
-            <li><a href="/" class="nav-link">Home</a></li>
-            <li>
-                <a href="/services" class="nav-link has-dropdown">Services</a>
-                <div class="dropdown">
-                    <a href="/house-cleaning" class="dropdown-item" style="font-weight: 600; color: #ff8057;">House Cleaning Guide</a>
-                    <div class="dropdown-section">Residential</div>
-                    <a href="/residential-cleaning" class="dropdown-item">Standard House Cleaning</a>
-                    <a href="/deep-cleaning" class="dropdown-item">Deep Cleaning</a>
-                    <a href="/move-in-out-cleaning" class="dropdown-item">Move-in/Move-out</a>
-                    <div class="dropdown-section">Commercial</div>
-                    <a href="/commercial-cleaning" class="dropdown-item">Office Cleaning</a>
-                    <a href="/post-construction-cleaning" class="dropdown-item">Post-Construction</a>
-                </div>
-            </li>
-            <li>
-                <a href="/service-areas" class="nav-link has-dropdown">Locations</a>
-                <div class="dropdown">
-                    <a href="/stone-creek" class="dropdown-item">Stone Creek</a>
-                    <a href="/oak-run" class="dropdown-item">Oak Run</a>
-                    <a href="/the-villages" class="dropdown-item">The Villages</a>
-                    <a href="/golden-hills" class="dropdown-item">Golden Hills</a>
-                    <a href="/belleview" class="dropdown-item">Belleview</a>
-                    <a href="/calesa" class="dropdown-item">Calesa</a>
-                    <a href="/wec-area" class="dropdown-item">WEC Area</a>
-                    <a href="/ocala" class="dropdown-item">Ocala</a>
-                    <a href="/otow" class="dropdown-item">OTOW</a>
-                    <a href="/dunnellon" class="dropdown-item">Dunnellon</a>
-                </div>
-            </li>
-
-            <li><a href="/about" class="nav-link">About</a></li>
-            <li><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="nav-contact">
-            <a href="tel:+13527644747" class="nav-phone">(352) 764-4747</a>
-            <a href="/book-now" class="nav-cta">Book Now</a>
+        
+        <div class="nav-item has-dropdown">
+            <a href="/service-areas" class="nav-link">Locations</a>
+            <div class="dropdown">
+                <a href="/stone-creek" class="dropdown-item">Stone Creek</a>
+                <a href="/oak-run" class="dropdown-item">Oak Run</a>
+                <a href="/the-villages" class="dropdown-item">The Villages</a>
+                <a href="/golden-hills" class="dropdown-item">Golden Hills</a>
+                <a href="/belleview" class="dropdown-item">Belleview</a>
+                <a href="/calesa" class="dropdown-item">Calesa</a>
+                <a href="/wec-area" class="dropdown-item">WEC Area</a>
+                <a href="/ocala" class="dropdown-item">Ocala</a>
+                <a href="/otow" class="dropdown-item">OTOW</a>
+                <a href="/dunnellon" class="dropdown-item">Dunnellon</a>
+            </div>
         </div>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        
+        <div class="nav-item">
+            <a href="/about" class="nav-link">About</a>
         </div>
+        
+        <div class="nav-item">
+            <a href="/contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Right side - Phone and Book Now -->
+    <div class="header-right">
+        <a href="tel:+13527644747" class="phone-number">(352) 764-4747</a>
+        <a href="/book-now" class="book-now-btn">
+            <span class="book-now-text">Book Now</span>
+        </a>
     </div>
-</nav>
+</header>
+
+<style>
+.header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #2f5047;
+    flex-shrink: 0;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #666666;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #ff8057;
+}
+
+/* Dropdown styling */
+.nav-item.has-dropdown:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: white;
+    min-width: 220px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: #ff8057;
+}
+
+.dropdown-section {
+    padding: 8px 20px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #ff8057;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+}
+
+/* Right side - Phone and Book Now */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.phone-number {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2f5047;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.phone-number:hover {
+    color: #ff8057;
+}
+
+.book-now-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 50px;
+    background-color: #ff8057;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #e56d45;
+    transform: translateY(-2px);
+}
+
+.book-now-text {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
+    .header {
+        padding: 0 30px;
+    }
+    
+    .main-nav {
+        gap: 30px;
+        margin: 0 20px;
+    }
+    
+    .nav-link {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 80px;
+        padding: 0 20px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .phone-number {
+        display: none;
+    }
+    
+    .book-now-btn {
+        width: 100px;
+        height: 40px;
+    }
+    
+    .book-now-text {
+        font-size: 12px;
+    }
+}
+</style>
