@@ -29,6 +29,27 @@ const description = "Professional house cleaning for busy families & professiona
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <style>
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            .contact-title {
+                font-size: 2rem !important;
+            }
+            .contact-buttons {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .contact-btn {
+                width: 100% !important;
+                max-width: 300px !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -521,30 +542,59 @@ const description = "Professional house cleaning for busy families & professiona
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" style="background: #2f5047; padding: 4rem 0; color: white;">
         <div class="container">
-            <h2 class="section-title">Ready to Get Started?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Contact us today for a free, no-obligation quote for any of our cleaning services. We'll create a custom cleaning plan that fits your needs and budget.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="contact-title" style="color: white; font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Ready to Get Started?</h2>
+                    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); line-height: 1.6; max-width: 600px; margin: 0 auto;">Contact us today for a free, no-obligation quote. We'll create a custom cleaning plan that fits your needs and budget.</p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-phone" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;"><a href="tel:+13527644747" style="color: #666; text-decoration: none;">(352) 764-4747</a></p>
+                
+                <div class="contact-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; text-align: center; backdrop-filter: blur(10px);">
+                        <div style="background: #ff8057; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-phone" style="color: white; font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Phone</h4>
+                        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1.1rem; font-weight: 600;">
+                            <a href="tel:+13527644747" style="color: rgba(255,255,255,0.9); text-decoration: none;">(352) 764-4747</a>
+                        </p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9rem;">Call or text us anytime</p>
                     </div>
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-envelope" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;">hello@palmacleaningco.com</p>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; text-align: center; backdrop-filter: blur(10px);">
+                        <div style="background: #ff8057; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-envelope" style="color: white; font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Email</h4>
+                        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1.1rem; font-weight: 600;">hello@palmacleaningco.com</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9rem;">We respond within 24 hours</p>
                     </div>
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-clock" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;">Mon-Fri 8AM-6PM</p>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; text-align: center; backdrop-filter: blur(10px);">
+                        <div style="background: #ff8057; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                            <i class="fas fa-clock" style="color: white; font-size: 1.5rem;"></i>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">Business Hours</h4>
+                        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1.1rem; font-weight: 600;">Monday - Friday</p>
+                        <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 1.1rem; font-weight: 600;">8:00 AM - 6:00 PM</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9rem;">Weekend appointments available</p>
                     </div>
                 </div>
-                <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
+                
+                <div style="text-align: center;">
+                    <div class="contact-buttons" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <a href="/book-now" class="contact-btn" style="background: #ff8057; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-calendar-check"></i>
+                            Book Now
+                        </a>
+                        <a href="tel:+13527644747" class="contact-btn" style="background: transparent; color: white; padding: 1rem 2rem; border: 2px solid white; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-phone"></i>
+                            Call (352) 764-4747
+                        </a>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin: 0;">Licensed & Insured • Satisfaction Guaranteed • Same Day Service Available</p>
+                </div>
             </div>
         </div>
     </section>
