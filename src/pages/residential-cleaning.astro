@@ -1,9 +1,9 @@
 ---
-// Residential cleaning service page
+// Standard cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-const title = "Residential House Cleaning Services in Ocala FL | Palma Cleaning";
-const description = "Professional residential house cleaning services in Ocala, FL. Regular weekly, bi-weekly, and monthly cleaning for busy families and professionals. Licensed & insured.";
+const title = "Standard House Cleaning Services Ocala FL | Regular Home Cleaning | Palma Cleaning";
+const description = "Professional standard house cleaning services in Ocala, FL. Regular maintenance cleaning to keep your home consistently fresh. Weekly, bi-weekly, and monthly schedules available. Licensed & insured.";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ const description = "Professional residential house cleaning services in Ocala, 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
-    <meta name="keywords" content="residential cleaning Ocala FL, house cleaning services, weekly cleaning, bi-weekly cleaning, monthly cleaning, home cleaning Ocala">
+    <meta name="keywords" content="standard cleaning Ocala FL, regular house cleaning, maintenance cleaning, weekly cleaning service, bi-weekly cleaning, monthly cleaning, routine home cleaning Ocala">
     <link rel="canonical" href="https://palmacleaningco.com/residential-cleaning">
     <link rel="stylesheet" href="/styles-clean.css?v=3">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@ const description = "Professional residential house cleaning services in Ocala, 
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Residential House Cleaning Services",
+        "name": "Standard House Cleaning Services",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Palma Cleaning",
@@ -43,8 +43,8 @@ const description = "Professional residential house cleaning services in Ocala, 
             "The Villages",
             "Marion County, FL"
         ],
-        "serviceType": "Residential House Cleaning",
-        "description": "Professional residential house cleaning services including regular weekly, bi-weekly, and monthly cleaning for homes in Ocala, FL and surrounding areas."
+        "serviceType": "Standard House Cleaning",
+        "description": "Professional standard house cleaning services for regular maintenance of homes in Ocala, FL. Includes kitchen, bathroom, bedroom, and living area cleaning on a consistent schedule."
     }
     </script>
 </head>
@@ -52,11 +52,25 @@ const description = "Professional residential house cleaning services in Ocala, 
 <body>
     <Navigation />
     
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <a href="/services" style="color: #ff8057; text-decoration: none;">Services</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #333;">Standard Cleaning</span>
+            </div>
+        </div>
+    </nav>
+    
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Residential House Cleaning in Ocala, FL</h1>
-                <p class="hero-description">Reliable, thorough house cleaning services for busy families and professionals throughout Ocala and Marion County.</p>
+                <h1 class="hero-title">Standard House Cleaning Services in Ocala, FL</h1>
+                <p class="hero-subtitle">Regular Maintenance Cleaning to Keep Your Home Consistently Fresh</p>
+                <p class="hero-description">Our standard cleaning service is the perfect solution for maintaining a clean, healthy home without the stress. Designed for regular visits, this comprehensive service keeps your Ocala home looking its best week after week.</p>
                 <div class="hero-buttons">
                     <a href="/book-now" class="btn btn-primary">Book Now</a>
                     <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
@@ -67,24 +81,27 @@ const description = "Professional residential house cleaning services in Ocala, 
 
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Our Residential Cleaning Services</h2>
+            <h2 class="section-title">What is Standard Cleaning in Ocala?</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Standard cleaning is our regular maintenance service designed to keep your home consistently clean and healthy. Perfect for busy Ocala families who want to come home to a fresh, spotless space without lifting a finger.
+            </p>
             
             <div class="services-grid">
                 <div class="service-card featured">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>Standard House Cleaning</h3>
-                    <p>Our most popular service - regular weekly, bi-weekly, or monthly cleaning to keep your home consistently clean and fresh.</p>
+                    <h3>What's Included in Standard Cleaning</h3>
+                    <p>Our comprehensive standard cleaning service covers all the essential areas of your home to maintain cleanliness and hygiene.</p>
                     <ul class="service-list">
-                        <li>Kitchen cleaning and sanitization</li>
-                        <li>Bathroom deep cleaning</li>
-                        <li>Dusting all surfaces and furniture</li>
-                        <li>Vacuuming carpets and rugs</li>
-                        <li>Mopping all hard floors</li>
-                        <li>Trash removal and fresh liners</li>
-                        <li>Bed making</li>
-                        <li>Light fixture cleaning</li>
+                        <li><strong>Kitchen:</strong> Countertop sanitization, appliance exterior cleaning, sink scrubbing, floor mopping</li>
+                        <li><strong>Bathrooms:</strong> Toilet, tub, and shower cleaning, mirror polishing, floor sanitization</li>
+                        <li><strong>Bedrooms:</strong> Dusting surfaces, vacuuming, bed making, trash removal</li>
+                        <li><strong>Living Areas:</strong> Dusting furniture, vacuuming carpets, mopping floors</li>
+                        <li><strong>Throughout Home:</strong> Emptying trash, dusting baseboards (reachable), wiping light switches</li>
+                        <li>Window sill dusting</li>
+                        <li>Cobweb removal</li>
+                        <li>Door and cabinet front wiping</li>
                     </ul>
                 </div>
 
@@ -92,37 +109,83 @@ const description = "Professional residential house cleaning services in Ocala, 
                     <div class="service-icon">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <h3>Flexible Scheduling</h3>
+                    <h3>Perfect Frequency for Ocala Homes</h3>
+                    <p>Choose the schedule that works best for your lifestyle and budget:</p>
                     <ul class="service-list">
-                        <li><strong>Weekly Cleaning:</strong> Best for busy families with children or pets</li>
-                        <li><strong>Bi-weekly Cleaning:</strong> Perfect balance of cleanliness and budget</li>
-                        <li><strong>Monthly Cleaning:</strong> Great for maintaining already clean homes</li>
-                        <li><strong>One-time Cleaning:</strong> Special occasions or trial service</li>
-                        <li>Same-day service available</li>
-                        <li>Holiday cleaning specials</li>
+                        <li><strong>Weekly:</strong> Ideal for families with kids, pets, or allergies - maintains highest cleanliness</li>
+                        <li><strong>Bi-weekly:</strong> Most popular choice - perfect balance for busy professionals</li>
+                        <li><strong>Monthly:</strong> Great for smaller households or as a supplement to your own cleaning</li>
+                        <li>Consistent scheduling means better rates</li>
+                        <li>Same team assigned when possible</li>
+                        <li>Easy to adjust frequency as needed</li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-shield-check"></i>
+                        <i class="fas fa-sparkles"></i>
                     </div>
-                    <h3>Why Choose Us</h3>
+                    <h3>Standard vs. Deep Cleaning</h3>
+                    <p>Understanding the difference helps you choose the right service:</p>
                     <ul class="service-list">
-                        <li>Licensed & insured professionals</li>
-                        <li>Background-checked team members</li>
-                        <li>Eco-friendly cleaning products</li>
-                        <li>100% satisfaction guarantee</li>
-                        <li>Consistent cleaning teams</li>
-                        <li>Free estimates</li>
-                        <li>No contracts required</li>
-                        <li>Easy online booking</li>
+                        <li><strong>Standard:</strong> Regular maintenance, surface cleaning, routine tasks</li>
+                        <li><strong>Deep:</strong> Detailed cleaning including inside appliances, baseboards, light fixtures</li>
+                        <li>Start with deep cleaning, maintain with standard</li>
+                        <li>Standard cleaning maintains cleanliness between deep cleans</li>
+                        <li>Most Ocala homes need deep cleaning 2-4 times per year</li>
+                        <li>Florida humidity makes regular cleaning essential</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Why Standard Cleaning is Essential in Ocala -->
+            <div style="margin-top: 3rem; background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Why Standard Cleaning is Essential for Ocala Homes</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-tint" style="margin-right: 0.5rem;"></i>Florida Humidity</h4>
+                        <p style="color: #666; line-height: 1.6;">Ocala's humid climate means dust, mold, and mildew can accumulate quickly. Regular standard cleaning prevents buildup and maintains a healthy indoor environment.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-leaf" style="margin-right: 0.5rem;"></i>Pollen & Allergens</h4>
+                        <p style="color: #666; line-height: 1.6;">With year-round growing seasons, Ocala homes need consistent cleaning to manage pollen and allergens that affect indoor air quality.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-sun" style="margin-right: 0.5rem;"></i>Active Lifestyle</h4>
+                        <p style="color: #666; line-height: 1.6;">From horse farms to outdoor activities, Ocala residents track in more dirt. Standard cleaning keeps your home fresh despite an active lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Cleaning Process -->
+            <div style="margin-top: 3rem; background: #f8fafa; padding: 3rem; border-radius: 15px;">
+                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Our Standard Cleaning Process</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">1</div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Top to Bottom</h4>
+                        <p style="color: #666;">We clean from ceiling to floor, ensuring dust and debris don't resettle on cleaned surfaces.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">2</div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Room by Room</h4>
+                        <p style="color: #666;">Systematic approach ensures nothing is missed and your home is thoroughly cleaned.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">3</div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Quality Check</h4>
+                        <p style="color: #666;">Final walkthrough to ensure every area meets our high standards before we leave.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">4</div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Consistent Results</h4>
+                        <p style="color: #666;">Same high-quality clean every visit, with notes kept about your preferences.</p>
+                    </div>
+                </div>
+            </div>
+
             <div style="margin-top: 3rem; text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; margin-bottom: 2rem;">Service Areas for Residential Cleaning</h3>
+                <h3 style="color: #2f5047; margin-bottom: 2rem;">Service Areas for Standard Cleaning</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                     <div>
                         <h4 style="color: #ff8057;">Stone Creek</h4>
@@ -149,12 +212,47 @@ const description = "Professional residential house cleaning services in Ocala, 
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions About Standard Cleaning</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">What's the difference between standard and deep cleaning?</h4>
+                        <p style="color: #666; line-height: 1.6;">Standard cleaning maintains your home's cleanliness with regular surface cleaning, dusting, vacuuming, and sanitizing. Deep cleaning includes detailed tasks like cleaning inside appliances, scrubbing baseboards, and cleaning light fixtures. We recommend starting with a deep clean, then maintaining with standard cleaning.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">How often should I schedule standard cleaning in Ocala?</h4>
+                        <p style="color: #666; line-height: 1.6;">Most Ocala families choose bi-weekly standard cleaning as it provides the perfect balance of cleanliness and value. However, homes with pets, children, or allergy sufferers often benefit from weekly cleaning. Monthly cleaning works well for smaller households or empty nesters.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Do I need to be home during standard cleaning?</h4>
+                        <p style="color: #666; line-height: 1.6;">No, many of our regular clients provide us with a key or access code. We're fully licensed, insured, and all team members are background-checked. We'll lock up when we're done and can send you a text confirmation.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">What should I do before the cleaning team arrives?</h4>
+                        <p style="color: #666; line-height: 1.6;">Simply pick up personal items, toys, and clutter from surfaces so our team can focus on cleaning rather than organizing. Secure any valuables and let us know about any special instructions or areas that need extra attention.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">How long does standard cleaning take?</h4>
+                        <p style="color: #666; line-height: 1.6;">Typically, standard cleaning takes 1.5-3 hours depending on your home's size and condition. First-time cleanings may take longer as we learn your home's layout. Regular clients often see faster service as our teams become familiar with your space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Ready for a Cleaner Home?</h2>
+            <h2 class="section-title">Ready for Consistent, Reliable Cleaning?</h2>
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                 <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
-                    Contact us today for a free, no-obligation quote for residential house cleaning. We'll create a custom cleaning plan that fits your schedule and budget.
+                    Start enjoying a consistently clean home with our professional standard cleaning service. Get your free quote today and discover why Ocala families trust us for their regular cleaning needs.
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="/book-now" class="btn btn-primary">Book Now</a>
