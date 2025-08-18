@@ -1,9 +1,9 @@
 ---
-// Residential cleaning service page
+// Standard house cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-const title = "Residential House Cleaning Services in Ocala FL | Palma Cleaning";
-const description = "Professional residential house cleaning services in Ocala, FL. Regular weekly, bi-weekly, and monthly cleaning for busy families and professionals. Licensed & insured.";
+const title = "Standard House Cleaning Services in Ocala FL | Regular Home Cleaning | Palma Cleaning";
+const description = "Standard house cleaning services in Ocala, FL. Discover what's included in our regular cleaning service - kitchen, bathrooms, bedrooms, living areas. Weekly, bi-weekly & monthly schedules. Licensed & insured. Free quotes.";
 ---
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ const description = "Professional residential house cleaning services in Ocala, 
     {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Residential House Cleaning Services",
+        "name": "Standard House Cleaning Services",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Palma Cleaning",
@@ -43,8 +43,8 @@ const description = "Professional residential house cleaning services in Ocala, 
             "The Villages",
             "Marion County, FL"
         ],
-        "serviceType": "Residential House Cleaning",
-        "description": "Professional residential house cleaning services including regular weekly, bi-weekly, and monthly cleaning for homes in Ocala, FL and surrounding areas."
+        "serviceType": "Standard House Cleaning",
+        "description": "Standard house cleaning services including all essential areas - kitchens, bathrooms, bedrooms, living areas. Regular weekly, bi-weekly, and monthly schedules available in Ocala, FL."
     }
     </script>
 </head>
@@ -55,110 +55,380 @@ const description = "Professional residential house cleaning services in Ocala, 
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Residential House Cleaning in Ocala, FL</h1>
-                <p class="hero-description">Reliable, thorough house cleaning services for busy families and professionals throughout Ocala and Marion County.</p>
+                <h1 class="hero-title">Standard House Cleaning Services in Ocala, FL</h1>
+                <p class="hero-subtitle">Your Complete Guide to Regular Home Cleaning</p>
+                <p class="hero-description">Standard house cleaning is the foundation of a healthy, comfortable home. Our comprehensive cleaning service covers all essential areas - from sanitizing kitchens and bathrooms to dusting living spaces and vacuuming bedrooms. Perfect for maintaining consistent cleanliness with weekly, bi-weekly, or monthly schedules.</p>
                 <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
+                    <a href="/book-now" class="btn btn-primary">Get Your Free Quote</a>
                     <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>TRUSTED STANDARD CLEANING SERVICE</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-home"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- What is Standard House Cleaning Section -->
+    <section class="about">
         <div class="container">
-            <h2 class="section-title">Our Residential Cleaning Services</h2>
+            <h2 class="section-title">What is Standard House Cleaning?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Standard house cleaning is your regular maintenance cleaning service designed to keep your home consistently clean, healthy, and welcoming.</p>
+                    <p>Also known as regular cleaning or maintenance cleaning, standard house cleaning focuses on the high-traffic areas and surfaces that accumulate dirt, dust, and germs on a weekly basis. Unlike deep cleaning which tackles accumulated grime and hard-to-reach areas, standard cleaning maintains the cleanliness level of your home through regular, systematic attention to all living spaces.</p>
+                    <p>In Ocala's humid climate, regular standard cleaning is especially important. Florida's year-round warmth and humidity create ideal conditions for dust mites, allergens, and bacteria to thrive. Our standard cleaning service helps combat these challenges, ensuring your home remains a healthy sanctuary for your family.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>60-90 Minutes Average</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Weekly to Monthly</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-home"></i>
+                            <span>All Living Areas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-sparkles"></i>
+                            <span>Maintenance Focus</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Tasks Per Room</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2-3 hrs</h3>
+                        <p>Average Service Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">What's Included in Standard House Cleaning?</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Our standard cleaning service covers all essential areas of your home with a systematic, thorough approach that ensures nothing is missed.
+            </p>
             
             <div class="services-grid">
                 <div class="service-card featured">
                     <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-kitchen-set"></i>
                     </div>
-                    <h3>Standard House Cleaning</h3>
-                    <p>Our most popular service - regular weekly, bi-weekly, or monthly cleaning to keep your home consistently clean and fresh.</p>
+                    <h3>Kitchen Cleaning</h3>
+                    <p>The heart of your home deserves special attention. Our standard kitchen cleaning includes:</p>
                     <ul class="service-list">
-                        <li>Kitchen cleaning and sanitization</li>
-                        <li>Bathroom deep cleaning</li>
-                        <li>Dusting all surfaces and furniture</li>
-                        <li>Vacuuming carpets and rugs</li>
-                        <li>Mopping all hard floors</li>
-                        <li>Trash removal and fresh liners</li>
-                        <li>Bed making</li>
-                        <li>Light fixture cleaning</li>
+                        <li>Wipe down and sanitize all countertops</li>
+                        <li>Clean stovetop and exterior of appliances</li>
+                        <li>Clean microwave inside and out</li>
+                        <li>Wipe cabinet fronts and handles</li>
+                        <li>Clean and disinfect sink and faucet</li>
+                        <li>Empty trash and replace liner</li>
+                        <li>Sweep and mop floors</li>
+                        <li>Wipe down table and chairs</li>
                     </ul>
                 </div>
-
+                
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-calendar-check"></i>
+                        <i class="fas fa-bath"></i>
                     </div>
-                    <h3>Flexible Scheduling</h3>
+                    <h3>Bathroom Cleaning</h3>
+                    <p>Thorough sanitization for health and hygiene:</p>
                     <ul class="service-list">
-                        <li><strong>Weekly Cleaning:</strong> Best for busy families with children or pets</li>
-                        <li><strong>Bi-weekly Cleaning:</strong> Perfect balance of cleanliness and budget</li>
-                        <li><strong>Monthly Cleaning:</strong> Great for maintaining already clean homes</li>
-                        <li><strong>One-time Cleaning:</strong> Special occasions or trial service</li>
-                        <li>Same-day service available</li>
-                        <li>Holiday cleaning specials</li>
+                        <li>Scrub and disinfect toilet inside and out</li>
+                        <li>Clean and sanitize shower/tub</li>
+                        <li>Wipe down vanity and sink</li>
+                        <li>Clean mirrors and fixtures</li>
+                        <li>Wipe down all surfaces</li>
+                        <li>Empty trash and replace liner</li>
+                        <li>Sweep and mop floors</li>
+                        <li>Restock toilet paper if needed</li>
                     </ul>
                 </div>
-
+                
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-shield-check"></i>
+                        <i class="fas fa-bed"></i>
                     </div>
-                    <h3>Why Choose Us</h3>
+                    <h3>Bedrooms</h3>
+                    <p>Creating restful, dust-free sleeping spaces:</p>
                     <ul class="service-list">
-                        <li>Licensed & insured professionals</li>
-                        <li>Background-checked team members</li>
-                        <li>Eco-friendly cleaning products</li>
-                        <li>100% satisfaction guarantee</li>
-                        <li>Consistent cleaning teams</li>
-                        <li>Free estimates</li>
-                        <li>No contracts required</li>
-                        <li>Easy online booking</li>
+                        <li>Dust all surfaces and furniture</li>
+                        <li>Wipe down nightstands and dressers</li>
+                        <li>Make beds (change sheets if left out)</li>
+                        <li>Vacuum carpets and rugs</li>
+                        <li>Vacuum under bed if accessible</li>
+                        <li>Empty trash baskets</li>
+                        <li>Dust window sills</li>
+                        <li>Organize visible clutter</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Living Areas</h3>
+                    <p>Maintaining your family's gathering spaces:</p>
+                    <ul class="service-list">
+                        <li>Dust all surfaces and electronics</li>
+                        <li>Vacuum carpets and rugs</li>
+                        <li>Vacuum upholstered furniture</li>
+                        <li>Dust ceiling fans (if reachable)</li>
+                        <li>Wipe down light switches and door handles</li>
+                        <li>Clean glass surfaces and mirrors</li>
+                        <li>Mop hard floors</li>
+                        <li>Straighten cushions and pillows</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>General Areas</h3>
+                    <p>Attention to detail throughout your home:</p>
+                    <ul class="service-list">
+                        <li>Dust all baseboards</li>
+                        <li>Clean all door frames</li>
+                        <li>Wipe light switches and outlets</li>
+                        <li>Vacuum all floors and stairs</li>
+                        <li>Mop all hard surface floors</li>
+                        <li>Remove cobwebs</li>
+                        <li>Take out all trash</li>
+                        <li>General tidying and organization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality Standards</h3>
+                    <p>What sets our standard cleaning apart:</p>
+                    <ul class="service-list">
+                        <li>Systematic room-by-room approach</li>
+                        <li>EPA-approved disinfectants</li>
+                        <li>Color-coded cleaning tools</li>
+                        <li>HEPA filter vacuums</li>
+                        <li>Eco-friendly options available</li>
+                        <li>Detailed quality checklist</li>
+                        <li>Same team when possible</li>
+                        <li>48-hour satisfaction guarantee</li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div style="margin-top: 3rem; text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; margin-bottom: 2rem;">Service Areas for Residential Cleaning</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div>
-                        <h4 style="color: #ff8057;">Stone Creek</h4>
-                        <p>Luxury home cleaning for Stone Creek's beautiful community</p>
-                        <a href="/stone-creek" class="btn btn-secondary" style="margin-top: 0.5rem;">Learn More</a>
+    <!-- Benefits Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Benefits of Regular Standard House Cleaning</h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-heart" style="margin-right: 0.5rem;"></i>Health Benefits</h4>
+                        <ul style="color: #666; line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+                            <li>Reduces allergens and dust mites</li>
+                            <li>Eliminates bacteria and viruses</li>
+                            <li>Improves indoor air quality</li>
+                            <li>Prevents mold and mildew growth</li>
+                            <li>Reduces asthma and allergy triggers</li>
+                        </ul>
                     </div>
-                    <div>
-                        <h4 style="color: #ff8057;">Oak Run</h4>
-                        <p>Professional cleaning for Oak Run's 55+ active adult community</p>
-                        <a href="/oak-run" class="btn btn-secondary" style="margin-top: 0.5rem;">Learn More</a>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Time & Lifestyle Benefits</h4>
+                        <ul style="color: #666; line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+                            <li>Save 4-6 hours per week</li>
+                            <li>More time with family</li>
+                            <li>Reduced stress and anxiety</li>
+                            <li>Always guest-ready home</li>
+                            <li>Consistent cleanliness level</li>
+                        </ul>
                     </div>
-                    <div>
-                        <h4 style="color: #ff8057;">The Villages</h4>
-                        <p>Trusted cleaning services throughout The Villages</p>
-                        <a href="/the-villages" class="btn btn-secondary" style="margin-top: 0.5rem;">Learn More</a>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057;">Golden Hills</h4>
-                        <p>Horse country home cleaning for Golden Hills residents</p>
-                        <a href="/golden-hills" class="btn btn-secondary" style="margin-top: 0.5rem;">Learn More</a>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-dollar-sign" style="margin-right: 0.5rem;"></i>Economic Benefits</h4>
+                        <ul style="color: #666; line-height: 1.8; margin: 0; padding-left: 1.5rem;">
+                            <li>Extends life of furniture and surfaces</li>
+                            <li>Maintains property value</li>
+                            <li>Prevents costly deep cleaning needs</li>
+                            <li>Reduces replacement costs</li>
+                            <li>Energy savings from clean appliances</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- Scheduling Options Section -->
+    <section class="services" style="background: #f8fafa;">
         <div class="container">
-            <h2 class="section-title">Ready for a Cleaner Home?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
-                    Contact us today for a free, no-obligation quote for residential house cleaning. We'll create a custom cleaning plan that fits your schedule and budget.
+            <h2 class="section-title">Choose Your Standard Cleaning Schedule</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Find the perfect cleaning frequency for your lifestyle and budget. All schedules include the same thorough standard cleaning service.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #ff8057;">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Weekly Cleaning</h4>
+                    <p style="color: #ff8057; text-align: center; font-weight: 600; margin-bottom: 1rem;">Most Popular</p>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">Ideal for busy families with children or pets</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Maintains highest cleanliness</li>
+                        <li>Minimal dust accumulation</li>
+                        <li>Best value per cleaning</li>
+                        <li>Consistent cleaning team</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Bi-Weekly Cleaning</h4>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">Perfect balance of clean and budget</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Great for moderate activity homes</li>
+                        <li>Maintains good cleanliness</li>
+                        <li>Budget-friendly option</li>
+                        <li>Most common choice</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Monthly Cleaning</h4>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">For well-maintained homes</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Supplements your own cleaning</li>
+                        <li>Tackles harder tasks</li>
+                        <li>Most economical option</li>
+                        <li>Good for tidy households</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Ocala Needs Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Standard Cleaning is Essential in Ocala</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <p style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;">
+                        <strong style="color: #2f5047;">Ocala's unique climate creates specific cleaning challenges</strong> that make regular standard cleaning more important than in many other parts of the country.
+                    </p>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-water" style="margin-right: 0.5rem;"></i>High Humidity (70-90% year-round)</h4>
+                        <p style="color: #666; line-height: 1.6;">Florida's humidity accelerates dust accumulation, promotes mold and mildew growth, and creates ideal conditions for dust mites. Regular cleaning prevents these issues from taking hold.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-tree" style="margin-right: 0.5rem;"></i>Pollen & Allergens</h4>
+                        <p style="color: #666; line-height: 1.6;">With year-round growing seasons, Ocala experiences continuous pollen from oak, pine, grass, and other plants. Standard cleaning removes these allergens before they accumulate.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-sun" style="margin-right: 0.5rem;"></i>Active Outdoor Lifestyle</h4>
+                        <p style="color: #666; line-height: 1.6;">Ocala's beautiful weather encourages outdoor activities, but this means more dirt, sand, and debris tracked indoors. Regular cleaning maintains your home despite increased foot traffic.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-bug" style="margin-right: 0.5rem;"></i>Pest Prevention</h4>
+                        <p style="color: #666; line-height: 1.6;">Florida's warm climate attracts various pests. Regular cleaning eliminates food sources and hiding spots, helping prevent ant, roach, and spider infestations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Standard House Cleaning FAQs</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">What's the difference between standard and deep cleaning?</h4>
+                        <p style="color: #666; line-height: 1.6;">Standard cleaning maintains your home's cleanliness with regular attention to all living areas, focusing on surfaces, floors, and frequently used spaces. Deep cleaning goes further, addressing accumulated grime, inside appliances, baseboards, light fixtures, and areas not covered in standard cleaning. We recommend starting with deep cleaning, then maintaining with standard cleaning.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">How long does standard house cleaning take?</h4>
+                        <p style="color: #666; line-height: 1.6;">Standard cleaning typically takes 1.5 to 3 hours depending on home size, condition, and specific requirements. A 2-bedroom home averages 1.5-2 hours, while a 4-bedroom home may take 2.5-3 hours. First-time cleanings often take longer as we familiarize ourselves with your home.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Do I need to provide cleaning supplies?</h4>
+                        <p style="color: #666; line-height: 1.6;">No, we bring all necessary cleaning supplies and equipment, including EPA-approved cleaners, microfiber cloths, mops, and HEPA-filter vacuums. If you prefer specific products or have allergies, we're happy to use your supplies.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">What should I do before the cleaning team arrives?</h4>
+                        <p style="color: #666; line-height: 1.6;">Pick up personal items, clothes, and toys so we can focus on cleaning rather than organizing. Secure valuables and provide any special instructions. If you have pets, please let us know in advance so we can plan accordingly.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #2f5047; margin-bottom: 1rem;">How much does standard house cleaning cost in Ocala?</h4>
+                        <p style="color: #666; line-height: 1.6;">Standard cleaning costs vary based on home size, frequency, and specific needs. Weekly cleanings offer the best value per visit. We provide free, no-obligation quotes tailored to your specific home and requirements. Call (352) 764-4747 for an instant quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Start Your Standard House Cleaning Service Today</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; line-height: 1.8;">
+                    Join hundreds of Ocala families who trust Palma Cleaning for their standard house cleaning needs. Experience the peace of mind that comes with a consistently clean home.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Get Your Free Quote in 30 Seconds</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">No obligations, no hidden fees, just transparent pricing</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/book-now" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Get Free Quote</a>
+                        <a href="tel:+13527644747" class="btn btn-secondary" style="font-size: 1.2rem; padding: 1rem 2rem;">Call (352) 764-4747</a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Licensed & Insured</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Same Day Service</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> 100% Guarantee</span>
                 </div>
             </div>
         </div>
