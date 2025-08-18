@@ -1,0 +1,419 @@
+---
+// Ocala Commercial Cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Commercial Cleaning Services Ocala FL | Office Building Cleaning | Palma Cleaning";
+const description = "Professional commercial cleaning services in Ocala, FL. Office buildings, retail stores, medical facilities, restaurants. Flexible scheduling, licensed & insured. Serving downtown Ocala and Marion County businesses.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="commercial cleaning Ocala FL, office cleaning downtown Ocala, business cleaning Marion County, retail cleaning services, medical office cleaning Ocala, restaurant cleaning services">
+    <link rel="canonical" href="https://palmacleaningco.com/ocala-commercial-cleaning">
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Commercial Cleaning Services Ocala FL",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": [
+            "Ocala, FL",
+            "Downtown Ocala", 
+            "Marion County, FL",
+            "Ocala Business District"
+        ],
+        "serviceType": "Commercial Cleaning",
+        "description": "Professional commercial cleaning services for offices, retail stores, medical facilities, and restaurants in Ocala, FL and Marion County."
+    }
+    </script>
+</head>
+
+<body>
+    <Navigation />
+    
+    <!-- Breadcrumb Navigation -->
+    <div style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <nav style="font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #666; text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <a href="/services" style="color: #666; text-decoration: none;">Services</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <span style="color: #ff8057; font-weight: 500;">Ocala Commercial Cleaning</span>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Commercial Cleaning Services in Ocala, FL</h1>
+                <h2 class="hero-subtitle">Professional Business Cleaning for Ocala & Marion County</h2>
+                <p class="hero-description">Maintain a professional, healthy work environment with our reliable commercial cleaning services. From downtown Ocala offices to retail stores and medical facilities, we provide consistent, thorough cleaning that keeps your business running smoothly.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Get Business Quote</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>TRUSTED BY OCALA BUSINESSES</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-building"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Commercial Cleaning -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Ocala Businesses Choose Professional Cleaning</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">A clean business environment is essential for productivity, health, and making a positive impression on customers and employees.</p>
+                    <p>In Ocala's competitive business environment, maintaining a professional appearance is crucial for success. Our commercial cleaning services ensure your workplace is consistently clean, healthy, and welcoming, allowing you to focus on growing your business.</p>
+                    <p>From downtown Ocala's historic district to Marion County's growing commercial areas, we understand the unique needs of different business types and provide customized cleaning solutions that fit your schedule and budget.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Flexible Scheduling</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <span>Trained Professionals</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>75+</h3>
+                        <p>Ocala Businesses</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Flexible Scheduling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Services -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Commercial Cleaning Services for Ocala Businesses</h2>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Office Building Cleaning</h3>
+                    <p>Complete cleaning for Ocala's office buildings and business centers:</p>
+                    <ul class="service-list">
+                        <li>Reception and common areas</li>
+                        <li>Individual offices and workstations</li>
+                        <li>Conference and meeting rooms</li>
+                        <li>Break rooms and kitchenettes</li>
+                        <li>Restroom sanitization</li>
+                        <li>Floor care (carpet and hard surfaces)</li>
+                        <li>Trash removal and recycling</li>
+                        <li>Window and glass cleaning</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Retail Store Cleaning</h3>
+                    <p>Maintain an inviting shopping environment for customers:</p>
+                    <ul class="service-list">
+                        <li>Sales floor deep cleaning</li>
+                        <li>Fitting room sanitization</li>
+                        <li>Customer restroom maintenance</li>
+                        <li>Break room and employee areas</li>
+                        <li>Window and entrance cleaning</li>
+                        <li>Floor maintenance and polishing</li>
+                        <li>Dust removal from displays</li>
+                        <li>After-hours cleaning available</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Medical Office Cleaning</h3>
+                    <p>Specialized cleaning for healthcare facilities in Ocala:</p>
+                    <ul class="service-list">
+                        <li>Medical-grade disinfection</li>
+                        <li>Waiting room and reception cleaning</li>
+                        <li>Examination room sanitization</li>
+                        <li>Restroom deep cleaning</li>
+                        <li>Floor care and maintenance</li>
+                        <li>Proper waste disposal</li>
+                        <li>HIPAA-compliant cleaning</li>
+                        <li>Flexible scheduling around patients</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restaurant Cleaning</h3>
+                    <p>Comprehensive cleaning for Ocala's dining establishments:</p>
+                    <ul class="service-list">
+                        <li>Dining area deep cleaning</li>
+                        <li>Kitchen deep cleaning and sanitization</li>
+                        <li>Restroom maintenance</li>
+                        <li>Floor care and degreasing</li>
+                        <li>Equipment exterior cleaning</li>
+                        <li>Window and glass cleaning</li>
+                        <li>Trash removal and area cleaning</li>
+                        <li>Early morning or late-night service</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Warehouse & Industrial</h3>
+                    <p>Specialized cleaning for Ocala's industrial facilities:</p>
+                    <ul class="service-list">
+                        <li>Warehouse floor cleaning</li>
+                        <li>Office area maintenance</li>
+                        <li>Restroom and break room cleaning</li>
+                        <li>Dust and debris removal</li>
+                        <li>Loading dock area cleaning</li>
+                        <li>Safety compliance cleaning</li>
+                        <li>Flexible scheduling options</li>
+                        <li>Equipment and machinery cleaning</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Cleaning services that work around your business:</p>
+                    <ul class="service-list">
+                        <li>After-hours cleaning</li>
+                        <li>Weekend service available</li>
+                        <li>Daily, weekly, or monthly schedules</li>
+                        <li>Emergency cleaning services</li>
+                        <li>Holiday coverage</li>
+                        <li>Customized cleaning plans</li>
+                        <li>Consistent cleaning teams</li>
+                        <li>Real-time communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for Business -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Benefits of Professional Commercial Cleaning in Ocala</h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-chart-line" style="margin-right: 0.5rem;"></i>Increased Productivity</h4>
+                        <p style="color: #666; line-height: 1.8;">A clean, organized workplace improves employee morale and productivity. Studies show clean offices can increase productivity by up to 15%.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-heart" style="margin-right: 0.5rem;"></i>Healthier Environment</h4>
+                        <p style="color: #666; line-height: 1.8;">Regular professional cleaning reduces germs, allergens, and bacteria, leading to fewer sick days and a healthier workforce.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-handshake" style="margin-right: 0.5rem;"></i>Professional Image</h4>
+                        <p style="color: #666; line-height: 1.8;">First impressions matter. A spotless workplace projects professionalism and attention to detail to clients and customers.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-dollar-sign" style="margin-right: 0.5rem;"></i>Cost Effective</h4>
+                        <p style="color: #666; line-height: 1.8;">Professional cleaning extends the life of carpets, furniture, and equipment, saving money on replacements and repairs.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Time Savings</h4>
+                        <p style="color: #666; line-height: 1.8;">Let your employees focus on their core responsibilities while professionals handle the cleaning efficiently and thoroughly.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i>Liability Protection</h4>
+                        <p style="color: #666; line-height: 1.8;">Our licensed and insured team reduces your liability while ensuring professional-grade cleaning standards are met.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ocala Business Areas -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Ocala Business Areas We Serve</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-building" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Downtown Ocala</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Historic downtown business district, professional offices, government buildings</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-store" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Retail Centers</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Shopping centers, strip malls, standalone retail locations</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-hospital" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Medical District</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Medical offices, dental practices, healthcare facilities</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-industry" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Industrial Areas</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Warehouses, manufacturing facilities, distribution centers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process and Pricing -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Our Commercial Cleaning Process</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; margin-bottom: 3rem;">
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        1
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Facility Assessment</h4>
+                    <p style="color: #666; line-height: 1.6;">We visit your Ocala business to understand your specific cleaning needs and create a customized plan.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        2
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Custom Proposal</h4>
+                    <p style="color: #666; line-height: 1.6;">Receive a detailed proposal with transparent pricing and customized cleaning schedule.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        3
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Professional Service</h4>
+                    <p style="color: #666; line-height: 1.6;">Our trained team provides consistent, thorough cleaning according to your business schedule.</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: bold;">
+                        4
+                    </div>
+                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Quality Assurance</h4>
+                    <p style="color: #666; line-height: 1.6;">Regular quality checks and open communication ensure your satisfaction and business success.</p>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                <h3 style="color: #2f5047; margin-bottom: 1rem;">Commercial Cleaning Investment</h3>
+                <p style="color: #666; margin-bottom: 1.5rem;">Pricing varies based on facility size, type, frequency, and specific requirements. Contact us for a customized quote.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <div style="text-align: center;">
+                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">Small Offices</h4>
+                        <p style="color: #666;">Starting at $150/week</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">Medium Facilities</h4>
+                        <p style="color: #666;">$300-800/week</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">Large Buildings</h4>
+                        <p style="color: #666;">Custom pricing</p>
+                    </div>
+                </div>
+                <p style="color: #666; font-size: 0.9rem;">*Prices vary based on facility type, size, and cleaning requirements. Free consultations provided.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Elevate Your Ocala Business?</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; line-height: 1.8;">
+                    Partner with Ocala's trusted commercial cleaning professionals. Focus on your business while we maintain a clean, professional environment for your success.
+                </p>
+                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Get Your Free Commercial Cleaning Consultation</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Custom proposals, flexible scheduling, professional results</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/book-now" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Schedule Consultation</a>
+                        <a href="tel:+13527644747" class="btn btn-secondary" style="font-size: 1.2rem; padding: 1rem 2rem;">Call (352) 764-4747</a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Licensed & Insured</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Flexible Scheduling</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> 100% Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

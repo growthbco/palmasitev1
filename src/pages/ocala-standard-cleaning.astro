@@ -1,0 +1,365 @@
+---
+// Ocala Standard Cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Standard House Cleaning Services Ocala FL | Weekly Bi-weekly Monthly | Palma Cleaning";
+const description = "Professional standard house cleaning services in Ocala, FL. Weekly, bi-weekly & monthly cleaning schedules. Serving downtown Ocala, Marion County neighborhoods. Licensed & insured. Free quotes.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="standard cleaning Ocala FL, house cleaning Ocala, weekly cleaning Ocala, bi-weekly cleaning Ocala, monthly cleaning Marion County, residential cleaning downtown Ocala">
+    <link rel="canonical" href="https://palmacleaningco.com/ocala-standard-cleaning">
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Standard House Cleaning Services Ocala FL",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": [
+            "Ocala, FL",
+            "Downtown Ocala", 
+            "Marion County, FL",
+            "Southwest Ocala",
+            "Northeast Ocala"
+        ],
+        "serviceType": "Standard House Cleaning",
+        "description": "Professional standard house cleaning services in Ocala, FL including weekly, bi-weekly, and monthly schedules for all Ocala neighborhoods."
+    }
+    </script>
+</head>
+
+<body>
+    <Navigation />
+    
+    <!-- Breadcrumb Navigation -->
+    <div style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <nav style="font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #666; text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <a href="/services" style="color: #666; text-decoration: none;">Services</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <span style="color: #ff8057; font-weight: 500;">Ocala Standard Cleaning</span>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Standard House Cleaning Services in Ocala, FL</h1>
+                <h2 class="hero-subtitle">Professional Regular Cleaning for Ocala Homes & Families</h2>
+                <p class="hero-description">Keep your Ocala home consistently clean with our professional standard cleaning service. Perfect for busy families in downtown Ocala, Southwest Ocala, and throughout Marion County. Our reliable team handles all the essentials so you can focus on what matters most.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Get Free Ocala Quote</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>TRUSTED BY OCALA FAMILIES</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-home"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Standard Cleaning Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Standard House Cleaning in Ocala: What's Included</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Standard cleaning is our most popular service for Ocala homeowners who want consistent, reliable home maintenance.</p>
+                    <p>Our standard house cleaning service in Ocala covers all the essential cleaning tasks that keep your home fresh, healthy, and welcoming. We focus on the high-traffic areas and surfaces that accumulate dust, dirt, and germs on a regular basis.</p>
+                    <p>Living in Ocala means dealing with Florida's humidity, pollen, and active outdoor lifestyle. Our standard cleaning service is specifically designed to address these challenges, ensuring your home remains a comfortable sanctuary year-round.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-home"></i>
+                            <span>All Living Areas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Flexible Schedules</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Satisfaction Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>300+</h3>
+                        <p>Ocala Homes Served</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2-3 hrs</h3>
+                        <p>Average Service Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Complete Standard Cleaning Checklist for Ocala Homes</h2>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class="fas fa-kitchen-set"></i>
+                    </div>
+                    <h3>Kitchen Cleaning</h3>
+                    <p>Essential for Ocala's year-round cooking and entertaining lifestyle:</p>
+                    <ul class="service-list">
+                        <li>Clean and sanitize all countertops</li>
+                        <li>Wipe down stovetop and appliance exteriors</li>
+                        <li>Clean microwave inside and out</li>
+                        <li>Scrub sink and polish faucet</li>
+                        <li>Clean cabinet fronts and handles</li>
+                        <li>Sweep and mop floors</li>
+                        <li>Empty trash and replace liner</li>
+                        <li>Wipe down dining table and chairs</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>Bathroom Sanitization</h3>
+                    <p>Critical in Florida's humid climate to prevent mold and bacteria:</p>
+                    <ul class="service-list">
+                        <li>Deep clean and disinfect toilet</li>
+                        <li>Scrub shower/tub and remove soap scum</li>
+                        <li>Clean and sanitize vanity and sink</li>
+                        <li>Polish mirrors and fixtures</li>
+                        <li>Mop floors with disinfectant</li>
+                        <li>Empty trash and replace liner</li>
+                        <li>Wipe down all surfaces</li>
+                        <li>Check and restock supplies</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Bedrooms & Living Areas</h3>
+                    <p>Creating comfortable spaces for rest and relaxation:</p>
+                    <ul class="service-list">
+                        <li>Dust all furniture and surfaces</li>
+                        <li>Vacuum carpets and area rugs</li>
+                        <li>Make beds with fresh linens (if provided)</li>
+                        <li>Dust electronics and decorations</li>
+                        <li>Vacuum upholstered furniture</li>
+                        <li>Empty wastebaskets</li>
+                        <li>Organize visible clutter</li>
+                        <li>Mop hardwood/tile floors</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>General Areas</h3>
+                    <p>Comprehensive cleaning throughout your Ocala home:</p>
+                    <ul class="service-list">
+                        <li>Vacuum all carpeted areas</li>
+                        <li>Mop all hard surface floors</li>
+                        <li>Dust ceiling fans (where reachable)</li>
+                        <li>Wipe down light switches and door handles</li>
+                        <li>Clean interior windows and glass doors</li>
+                        <li>Remove cobwebs</li>
+                        <li>Take out all trash</li>
+                        <li>Light straightening and organizing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ocala-Specific Benefits -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Why Ocala Homes Need Regular Standard Cleaning</h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-water" style="margin-right: 0.5rem;"></i>Florida's High Humidity</h4>
+                        <p style="color: #666; line-height: 1.8;">Ocala's 70-90% humidity year-round creates ideal conditions for dust mites, mold, and bacteria. Regular cleaning prevents these health hazards from taking hold in your home.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-tree" style="margin-right: 0.5rem;"></i>Year-Round Pollen</h4>
+                        <p style="color: #666; line-height: 1.8;">With oak, pine, and grass pollen present throughout most of the year, Ocala homes accumulate allergens quickly. Weekly or bi-weekly cleaning removes these before they affect your family's health.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-sun" style="margin-right: 0.5rem;"></i>Active Outdoor Lifestyle</h4>
+                        <p style="color: #666; line-height: 1.8;">Ocala's beautiful weather encourages outdoor activities, but this means more dirt, sand, and debris tracked into homes. Regular cleaning maintains your indoor air quality.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-home" style="margin-right: 0.5rem;"></i>Property Value Protection</h4>
+                        <p style="color: #666; line-height: 1.8;">Regular cleaning prevents dirt and grime buildup that can damage surfaces and fixtures, protecting your investment in Ocala's competitive real estate market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scheduling Options -->
+    <section class="services" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Standard Cleaning Schedules for Ocala Residents</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #ff8057;">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Weekly Cleaning</h4>
+                    <p style="color: #ff8057; text-align: center; font-weight: 600; margin-bottom: 1rem;">Most Popular</p>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">Perfect for busy Ocala families</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Ideal for homes with children or pets</li>
+                        <li>Combats Florida's humidity effects</li>
+                        <li>Prevents allergen buildup</li>
+                        <li>Best value per cleaning</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Bi-Weekly Cleaning</h4>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">Great balance of clean and budget</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Perfect for most Ocala households</li>
+                        <li>Maintains good cleanliness level</li>
+                        <li>Budget-friendly option</li>
+                        <li>Works well for tidy families</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <h4 style="color: #2f5047; text-align: center; margin-bottom: 1rem;">Monthly Cleaning</h4>
+                    <p style="color: #666; text-align: center; margin-bottom: 1.5rem;">Maintenance for clean homes</p>
+                    <ul style="color: #666; line-height: 1.8; margin-bottom: 2rem; padding-left: 1.5rem;">
+                        <li>Supplements your regular cleaning</li>
+                        <li>Tackles harder-to-reach areas</li>
+                        <li>Most economical choice</li>
+                        <li>Good for empty nesters</li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="/book-now" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas in Ocala -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Ocala Neighborhoods We Serve</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Downtown Ocala</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Historic downtown, cultural district, urban core areas</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-home" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Southwest Ocala</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Residential neighborhoods, family communities</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-trees" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Northeast Ocala</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Newer developments, family-friendly areas</p>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-building" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
+                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">All Marion County</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Suburban Ocala, surrounding communities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready for Regular Standard Cleaning in Ocala?</h2>
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem; line-height: 1.8;">
+                    Join hundreds of Ocala families who trust Palma Cleaning for reliable, professional standard cleaning. Experience the difference regular cleaning makes in Florida's challenging climate.
+                </p>
+                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Get Your Free Ocala Cleaning Quote</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">No obligations, no hidden fees, just transparent pricing for Ocala residents</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/book-now" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Get Free Quote</a>
+                        <a href="tel:+13527644747" class="btn btn-secondary" style="font-size: 1.2rem; padding: 1rem 2rem;">Call (352) 764-4747</a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Licensed & Insured</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> Ocala Local</span>
+                    <span style="color: #ff8057; font-weight: 500;"><i class="fas fa-check-circle"></i> 100% Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
