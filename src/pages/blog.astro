@@ -1,0 +1,316 @@
+---
+// Blog page with cleaning tips and articles
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Cleaning Blog & Tips | Palma Cleaning - Ocala FL";
+const description = "Expert cleaning tips, house cleaning guides, and professional advice from Palma Cleaning. Learn the best cleaning techniques for your home in Ocala and Marion County FL.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="cleaning tips, house cleaning blog, cleaning advice, home cleaning guide, Ocala cleaning tips, professional cleaning advice">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/blog">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles-clean.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #ff8057;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-title {
+            color: #2f5047;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .read-more {
+            color: #ff8057;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        
+        .read-more:hover {
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <Navigation />
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Cleaning Tips & Blog</h1>
+                <p class="hero-subtitle">Expert Advice from Professional Cleaners</p>
+                <p class="hero-description">Discover professional cleaning tips, techniques, and advice to keep your home spotless. Learn from Palma Cleaning's experienced team serving Ocala and Marion County.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Latest Cleaning Tips & Articles</h2>
+            
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80" alt="Professional house cleaning supplies and tools" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Cleaning Tips</span>
+                        <h3 class="blog-title">10 Essential Cleaning Supplies Every Home Needs</h3>
+                        <p class="blog-excerpt">Discover the must-have cleaning supplies that professional cleaners recommend for maintaining a spotless home year-round.</p>
+                        <div class="blog-meta">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1527515545081-5db817172677?w=800&auto=format&fit=crop&q=80" alt="Deep cleaning a modern kitchen" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Deep Cleaning</span>
+                        <h3 class="blog-title">The Ultimate Kitchen Deep Cleaning Checklist</h3>
+                        <p class="blog-excerpt">Step-by-step guide to deep cleaning your kitchen like a pro, including those often-forgotten spots that need attention.</p>
+                        <div class="blog-meta">
+                            <span>7 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&auto=format&fit=crop&q=80" alt="Eco-friendly cleaning products" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Green Cleaning</span>
+                        <h3 class="blog-title">Eco-Friendly Cleaning: Natural Solutions That Work</h3>
+                        <p class="blog-excerpt">Learn how to clean your home effectively using natural, environmentally-friendly products that are safe for your family and pets.</p>
+                        <div class="blog-meta">
+                            <span>6 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=80" alt="Cleaning bathroom tiles and surfaces" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Bathroom Cleaning</span>
+                        <h3 class="blog-title">How to Keep Your Bathroom Sparkling Clean</h3>
+                        <p class="blog-excerpt">Professional tips for maintaining a hygienic and fresh bathroom, including daily habits that make a big difference.</p>
+                        <div class="blog-meta">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80" alt="Organizing and decluttering bedroom" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Organization</span>
+                        <h3 class="blog-title">Decluttering Before Cleaning: A Game Changer</h3>
+                        <p class="blog-excerpt">Why decluttering before cleaning makes your home maintenance easier and how to do it effectively room by room.</p>
+                        <div class="blog-meta">
+                            <span>8 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&auto=format&fit=crop&q=80" alt="Professional floor cleaning and mopping" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Floor Care</span>
+                        <h3 class="blog-title">The Right Way to Clean Different Floor Types</h3>
+                        <p class="blog-excerpt">From hardwood to tile to carpet, learn the best cleaning methods for every type of flooring in your home.</p>
+                        <div class="blog-meta">
+                            <span>6 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&auto=format&fit=crop&q=80" alt="Cleaning supplies in a organized caddy" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Time-Saving Tips</span>
+                        <h3 class="blog-title">Speed Cleaning: 30-Minute House Cleaning Routine</h3>
+                        <p class="blog-excerpt">Master the art of speed cleaning with this efficient routine that keeps your home guest-ready in just 30 minutes.</p>
+                        <div class="blog-meta">
+                            <span>4 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop&q=80" alt="Clean and organized laundry room" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Laundry Tips</span>
+                        <h3 class="blog-title">Laundry Room Organization & Cleaning Guide</h3>
+                        <p class="blog-excerpt">Transform your laundry room into an efficient, clean space with these organization and maintenance tips.</p>
+                        <div class="blog-meta">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&auto=format&fit=crop&q=80" alt="Clean and bright living room" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-category">Seasonal Cleaning</span>
+                        <h3 class="blog-title">Spring Cleaning Checklist for Florida Homes</h3>
+                        <p class="blog-excerpt">A comprehensive spring cleaning guide tailored for Florida's unique climate and the challenges it brings.</p>
+                        <div class="blog-meta">
+                            <span>10 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="background: #f8fafa;">
+        <div class="container">
+            <h2 class="section-title">Why Trust Our Cleaning Advice?</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; color: #666; line-height: 1.8; margin-bottom: 2rem;">
+                    With years of professional cleaning experience serving Ocala and Marion County, our team at Palma Cleaning shares insider tips and techniques that really work. We're committed to helping our community maintain cleaner, healthier homes.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div>
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Professional Experience</h4>
+                        <p style="color: #666;">Tips from certified cleaning professionals</p>
+                    </div>
+                    <div>
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Local Expertise</h4>
+                        <p style="color: #666;">Advice tailored for Florida homes</p>
+                    </div>
+                    <div>
+                        <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Proven Methods</h4>
+                        <p style="color: #666;">Techniques we use in homes daily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Need Professional Cleaning Help?</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+                    While these tips can help maintain your home, sometimes you need professional assistance. Let Palma Cleaning take care of your cleaning needs!
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
+                    <a href="/services" class="btn btn-secondary">View Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+
+    <script is:inline src="/script-clean.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
