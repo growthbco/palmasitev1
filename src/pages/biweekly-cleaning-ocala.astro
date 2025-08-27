@@ -1,0 +1,126 @@
+---
+// Biweekly Cleaning Service Ocala - SEO optimized page  
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+const title = "Biweekly Cleaning Service Ocala FL | Every Two Weeks House Cleaning";
+const description = "Biweekly house cleaning service in Ocala FL. Perfect balance of clean home and affordability. Every 2 weeks cleaning schedule. Save time and money. Book your bi-weekly cleaner today.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="biweekly cleaning Ocala, bi-weekly house cleaning Ocala FL, every two weeks cleaning, 2 week cleaning service Marion County">
+    <link rel="canonical" href="https://palmacleaningco.com/biweekly-cleaning-ocala">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles-clean.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Biweekly House Cleaning Service Ocala FL",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": ["Ocala, FL", "Marion County, FL"],
+        "serviceType": "Biweekly House Cleaning",
+        "description": "Professional biweekly house cleaning service - the perfect balance of cleanliness and affordability."
+    }
+    </script>
+</head>
+
+<body>
+    <Navigation />
+    
+    <div style="background: #f8fafa; padding: 1rem 0;">
+        <div class="container">
+            <nav style="font-size: 0.9rem; color: #666;">
+                <a href="/" style="color: #666; text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <a href="/services" style="color: #666; text-decoration: none;">Services</a>
+                <span style="margin: 0 0.5rem;">></span>
+                <span style="color: #ff8057; font-weight: 500;">Biweekly Cleaning</span>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Biweekly Cleaning Service in Ocala, FL</h1>
+                <h2 class="hero-subtitle">The Perfect Balance: Clean Home Every Two Weeks</h2>
+                <p class="hero-description">Our most popular service! Biweekly cleaning gives you a consistently clean home without the weekly expense. Ideal for Ocala families who maintain their homes between professional cleanings.</p>
+                <div class="hero-buttons">
+                    <a href="/book-now" class="btn btn-primary">Schedule Biweekly Service</a>
+                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>MOST POPULAR SCHEDULE</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/images/ocala-downtown.png" alt="Biweekly cleaning service Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Biweekly Cleaning is Perfect for You</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Value</h3>
+                    <p>Get professional cleaning at half the cost of weekly service while maintaining a clean, healthy home.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📅</div>
+                    <h3>Perfect Timing</h3>
+                    <p>Two weeks is ideal - your home stays clean without excessive buildup of dust and dirt.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Consistent Schedule</h3>
+                    <p>Same day, same time every two weeks. Easy to plan around, never forget when cleaning day is.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Thorough Clean</h3>
+                    <p>More time between visits means we can be extra thorough each cleaning session.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Start Biweekly Cleaning Service Today</h2>
+            <p style="color: white; max-width: 600px; margin: 0 auto 2rem;">Join thousands of Ocala families who trust us for biweekly cleaning. No contracts, flexible scheduling.</p>
+            <div class="cta-buttons">
+                <a href="/book-now" class="btn btn-white">Book Biweekly Service</a>
+                <a href="tel:+13527644747" class="btn btn-outline">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</body>
+</html>
