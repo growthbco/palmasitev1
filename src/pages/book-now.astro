@@ -32,6 +32,54 @@ const description = "Book your cleaning service online! Easy booking form for ho
                 grid-template-columns: 1fr !important;
                 max-width: 400px !important;
             }
+            
+            /* Fix mobile scrolling issues */
+            body {
+                overflow-x: hidden;
+            }
+            
+            .Convertlabs {
+                height: 1200px !important;
+                min-height: 1200px !important;
+            }
+            
+            /* Ensure iframe container is responsive */
+            .booking-container {
+                overflow: visible;
+                padding: 1rem;
+            }
+            
+            /* Fix any potential scrolling issues */
+            html, body {
+                height: auto !important;
+                overflow-x: hidden;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .Convertlabs {
+                height: 1000px !important;
+                min-height: 1000px !important;
+            }
+            
+            .booking-container {
+                padding: 1rem !important;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
+        
+        /* Ensure proper touch scrolling on mobile */
+        @media (max-width: 768px) {
+            .services {
+                padding: 2rem 0 !important;
+            }
+            
+            .hero {
+                padding: 4rem 0 2rem !important;
+            }
         }
     </style>
     <script src="https://convertlabs.io/js/booking_embed.js"></script>
@@ -98,7 +146,7 @@ const description = "Book your cleaning service online! Easy booking form for ho
     <section class="services" style="background: white; padding: 3rem 0;">
         <div class="container">
             <div style="max-width: 1000px; margin: 0 auto;">
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                <div class="booking-container" style="background: #f8fafa; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem;">
                     <h2 style="text-align: center; color: #2f5047; margin-bottom: 1.5rem;">Book Your Service</h2>
                     <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6;">Choose your cleaning service, select your preferred date and time, and we'll handle the rest!</p>
                     
