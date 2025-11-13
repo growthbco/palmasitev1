@@ -120,7 +120,7 @@ const allRoomsChecklist = [
     <GTMBody />
 
     <Navigation />
-
+    
     <main>
         <!-- Hero -->
         <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
@@ -132,31 +132,31 @@ const allRoomsChecklist = [
                 <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
                     VIEW PRICING
                 </a>
-            </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Checklist Section -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
-                    
-                    <!-- Bathroom Checklist -->
+
+                <!-- Bathroom Checklist -->
                     <div>
                         <h2 class="text-3xl font-bold mb-6 text-[#305048]">Bathroom checklist</h2>
                         <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
                             <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a70505989e-13f092990f9f3c0f7a53.png" alt="a person with yellow gloves cleaning a white bathroom sink, detailed, professional cleaning service photo" />
-                        </div>
+                    </div>
                         <ul class="space-y-3 text-gray-700">
                             {bathroomChecklist.map((item) => (
                                 <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span>
+                                    <span class="text-base">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
-                                </li>
+                        </li>
                             ))}
-                        </ul>
+                    </ul>
                     </div>
 
                     <!-- Bedroom Checklist -->
@@ -169,15 +169,15 @@ const allRoomsChecklist = [
                             {bedroomChecklist.map((item) => (
                                 <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span>
+                                    <span class="text-base">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
-                                </li>
+                        </li>
                             ))}
-                        </ul>
-                    </div>
-
+                    </ul>
+            </div>
+            
                     <!-- Kitchen Checklist -->
                     <div>
                         <h2 class="text-3xl font-bold mb-6 text-[#305048]">Kitchen checklist</h2>
@@ -188,7 +188,7 @@ const allRoomsChecklist = [
                             {kitchenChecklist.map((item) => (
                                 <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span>
+                                    <span class="text-base">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
@@ -207,7 +207,7 @@ const allRoomsChecklist = [
                             {allRoomsChecklist.map((item) => (
                                 <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span>
+                                    <span class="text-base">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
@@ -216,9 +216,9 @@ const allRoomsChecklist = [
                         </ul>
                     </div>
 
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Coupon Section -->
         <section class="bg-[#305048] py-20">
@@ -230,8 +230,8 @@ const allRoomsChecklist = [
                 <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
                     BOOK NOW
                 </a>
-            </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <Footer />
