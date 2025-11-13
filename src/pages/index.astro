@@ -29,29 +29,11 @@ const year = new Date().getFullYear();
     <script is:inline>
         window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
     </script>
-    <script is:inline>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-green': '#305048',
-                        'brand-coral': '#FF8057',
-                        'brand-gray': {
-                            light: '#F4F7F6',
-                            medium: '#E3EAE8'
-                        }
-                    },
-                    fontFamily: {
-                        poppins: ['Poppins', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         ::-webkit-scrollbar { display: none; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
     </style>
     
     <script type="application/ld+json">
@@ -210,48 +192,48 @@ const year = new Date().getFullYear();
     }
     </script>
 </head>
-<body class="bg-white font-poppins text-brand-green">
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
 
     <!-- Header -->
-    <header class="bg-brand-green text-white sticky top-0 z-50 shadow-md">
+    <header class="bg-[#305048] text-white sticky top-0 z-50 shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold tracking-wide">PALMA <span class="text-brand-coral">CLEANING</span></a>
+            <a href="/" class="text-2xl font-bold tracking-wide">PALMA <span class="text-[#FF8057]">CLEANING</span></a>
             <nav class="hidden lg:flex items-center space-x-8 text-sm">
-                <a href="#services" class="hover:text-brand-coral transition duration-300 flex items-center">Services <i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
-                <a href="#about" class="hover:text-brand-coral transition duration-300">About</a>
-                <a href="#areas" class="hover:text-brand-coral transition duration-300">Locations</a>
-                <a href="/blog" class="hover:text-brand-coral transition duration-300">Blog</a>
-                <a href="/service-areas" class="hover:text-brand-coral transition duration-300">Service Areas</a>
+                <a href="#services" class="hover:text-[#FF8057] transition duration-300 flex items-center">Services <i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
+                <a href="#about" class="hover:text-[#FF8057] transition duration-300">About</a>
+                <a href="#areas" class="hover:text-[#FF8057] transition duration-300">Locations</a>
+                <a href="/blog" class="hover:text-[#FF8057] transition duration-300">Blog</a>
+                <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300">Service Areas</a>
             </nav>
             <div class="flex items-center space-x-6">
                 <a href="tel:3527644747" class="text-xs font-semibold hidden md:block tracking-wide">(352) 764-4747</a>
-                <a href="#quote" class="bg-brand-coral text-brand-green font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
+                <a href="#quote" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
                 <button id="mobile-menu-button" class="lg:hidden text-2xl" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-brand-green/95">
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-[#305048]/95">
             <nav class="px-6 py-4 space-y-3 text-sm">
-                <a href="#services" class="block text-white/90 hover:text-brand-coral transition">Services</a>
-                <a href="#about" class="block text-white/90 hover:text-brand-coral transition">About</a>
-                <a href="#areas" class="block text-white/90 hover:text-brand-coral transition">Locations</a>
-                <a href="/blog" class="block text-white/90 hover:text-brand-coral transition">Blog</a>
-                <a href="/service-areas" class="block text-white/90 hover:text-brand-coral transition">Service Areas</a>
-                <a href="#quote" class="block text-brand-coral font-semibold">Request Quote</a>
+                <a href="#services" class="block text-white/90 hover:text-[#FF8057] transition">Services</a>
+                <a href="#about" class="block text-white/90 hover:text-[#FF8057] transition">About</a>
+                <a href="#areas" class="block text-white/90 hover:text-[#FF8057] transition">Locations</a>
+                <a href="/blog" class="block text-white/90 hover:text-[#FF8057] transition">Blog</a>
+                <a href="/service-areas" class="block text-white/90 hover:text-[#FF8057] transition">Service Areas</a>
+                <a href="#quote" class="block text-[#FF8057] font-semibold">Request Quote</a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="bg-brand-gray-light">
+        <section class="bg-[#F4F7F6]">
             <div class="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-center lg:text-left">
                     <h1 class="text-5xl md:text-6xl font-bold leading-tight">Life's Messy.<br>We Can Help.</h1>
                     <p class="mt-6 text-lg text-gray-600">You've got a million things on your plate... cleaning <span class="underline">shouldn't</span> be one of them.</p>
-                    <a href="#quote" class="mt-8 inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
+                    <a href="#quote" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
                     <p class="mt-6 text-sm text-gray-500">Premium, eco-friendly cleaning by Ocala's trusted professionals. Licensed & insured.</p>
                     <div class="mt-6 flex items-center justify-center lg:justify-start space-x-6">
                         <div class="flex items-center space-x-2 text-gray-500">
@@ -260,7 +242,7 @@ const year = new Date().getFullYear();
                         </div>
                         <div class="flex items-center">
                             <span class="font-semibold text-gray-700">147 Five-Star Reviews</span>
-                            <div class="flex ml-2 text-brand-coral">
+                            <div class="flex ml-2 text-[#FF8057]">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -277,7 +259,7 @@ const year = new Date().getFullYear();
                     <div class="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-xl overflow-hidden shadow-2xl">
                         <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/p/AF1QipMb64CY2eRqex-SQz_ocsbmdpN3ZYv7KPV016ov=s1360-w1360-h1020-rw" alt="Trusted Cleaning Team" loading="lazy" />
                     </div>
-                    <div class="absolute bottom-1/4 right-1/2 translate-x-1/4 bg-brand-coral text-brand-green px-5 py-4 rounded-lg shadow-lg z-20 flex items-center space-x-3">
+                    <div class="absolute bottom-1/4 right-1/2 translate-x-1/4 bg-[#FF8057] text-[#305048] px-5 py-4 rounded-lg shadow-lg z-20 flex items-center space-x-3">
                         <i class="fa-solid fa-shield-halved text-2xl"></i>
                         <span class="font-bold text-sm leading-tight">48 HR RECLEAN<br>GUARANTEE</span>
                     </div>
@@ -300,39 +282,39 @@ const year = new Date().getFullYear();
                     <h2 class="text-4xl font-bold">Cleaning designed for parents & busy professionals.</h2>
                     <p class="mt-6 text-gray-600 leading-relaxed">Between careers, family schedules, and hosting, keeping a spotless home shouldn't add stress. Palma Cleaning brings dependable, vetted pros to homes throughout Ocala, The Villages, and Marion County.</p>
                     <p class="mt-4 text-gray-600 leading-relaxed">Enjoy seamless online booking, personalized plans, and eco-conscious products that leave your spaces sparkling — all backed by our 48-hour satisfaction guarantee.</p>
-                    <a href="#quote" class="mt-8 inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
+                    <a href="#quote" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
             </div>
         </div>
     </section>
 
         <!-- Why Choose -->
-        <section id="why" class="bg-brand-green py-24 text-white">
+        <section id="why" class="bg-[#305048] py-24 text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold">Why <span class="text-brand-coral">Palma Cleaning?</span></h2>
+                <h2 class="text-4xl font-bold">Why <span class="text-[#FF8057]">Palma Cleaning?</span></h2>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
                         <h3 class="text-xl font-bold">Safe for kids & pets</h3>
                         <p class="mt-3 text-gray-600 text-sm">We use eco-friendly, non-toxic products that keep your whole family comfortable.</p>
                     </div>
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
                         <h3 class="text-xl font-bold">Licensed & insured</h3>
                         <p class="mt-3 text-gray-600 text-sm">Palma Cleaning is licensed, insured, and bonded across Central Florida.</p>
                     </div>
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
                         <h3 class="text-xl font-bold">Background checked pros</h3>
                         <p class="mt-3 text-gray-600 text-sm">Every team member is carefully vetted, trained, and locally trusted.</p>
                     </div>
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
                         <h3 class="text-xl font-bold">Effortless booking</h3>
                         <p class="mt-3 text-gray-600 text-sm">Transparent pricing, real-time availability, and easy online scheduling.</p>
                     </div>
                 </div>
-                <div class="mt-16 bg-brand-coral text-brand-green p-10 rounded-2xl max-w-4xl mx-auto shadow-xl">
+                <div class="mt-16 bg-[#FF8057] text-[#305048] p-10 rounded-2xl max-w-4xl mx-auto shadow-xl">
                     <h3 class="text-2xl font-bold">48-Hour Satisfaction Guarantee</h3>
-                    <p class="mt-4 max-w-2xl mx-auto text-brand-green/80">We follow up with every visit. If anything isn’t perfect, we’ll return within 48 hours and make it right — at no additional cost.</p>
-                </div>
-                <p class="mt-8 text-brand-gray-medium text-sm tracking-wide uppercase">Instant pricing & booking in under 60 seconds</p>
-                <a href="#quote" class="mt-4 inline-block bg-white text-brand-green font-bold py-4 px-10 rounded-md hover:bg-brand-gray-light transition duration-300">View Pricing</a>
+                    <p class="mt-4 max-w-2xl mx-auto text-[#305048]/80">We follow up with every visit. If anything isn’t perfect, we’ll return within 48 hours and make it right — at no additional cost.</p>
+            </div>
+                <p class="mt-8 text-[#E3EAE8] text-sm tracking-wide uppercase">Instant pricing & booking in under 60 seconds</p>
+                <a href="#quote" class="mt-4 inline-block bg-white text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#F4F7F6] transition duration-300">View Pricing</a>
         </div>
     </section>
 
@@ -345,137 +327,137 @@ const year = new Date().getFullYear();
                 <h2 class="text-4xl font-bold">One less thing to worry about.</h2>
                 <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Flexible cleaning plans for Ocala, The Villages, Dunnellon, Stone Creek, and surrounding communities. Reclaim your weekends while we handle the details.</p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-brand-gray-medium/40 text-left">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-[#E3EAE8]/40 text-left">
                         <h3 class="text-2xl font-bold">Standard Cleaning</h3>
                         <p class="mt-4 text-gray-600">Weekly, bi-weekly, or monthly upkeep to keep kitchens, baths, living areas, and bedrooms in beautiful shape.</p>
-                        <a href="/standard-cleaning" class="mt-6 inline-block bg-brand-green text-white font-semibold py-3 px-6 rounded-md hover:bg-brand-green/90 transition">Learn More</a>
+                        <a href="/standard-cleaning" class="mt-6 inline-block bg-[#305048] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#305048]/90 transition">Learn More</a>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-brand-gray-medium/40 text-left">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-[#E3EAE8]/40 text-left">
                         <h3 class="text-2xl font-bold">Deep Cleaning</h3>
                         <p class="mt-4 text-gray-600">Comprehensive top-to-bottom refresh — baseboards, fixtures, inside appliances, and more detailed attention.</p>
-                        <a href="/deep-cleaning" class="mt-6 inline-block bg-brand-green text-white font-semibold py-3 px-6 rounded-md hover:bg-brand-green/90 transition">Learn More</a>
+                        <a href="/deep-cleaning" class="mt-6 inline-block bg-[#305048] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#305048]/90 transition">Learn More</a>
                 </div>
-                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-brand-gray-medium/40 text-left">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border border-[#E3EAE8]/40 text-left">
                         <h3 class="text-2xl font-bold">Move-In / Move-Out</h3>
                         <p class="mt-4 text-gray-600">Realtor-ready finish for transitions — includes inside cabinets, drawers, and appliance detailing.</p>
-                        <a href="/move-in-out-cleaning" class="mt-6 inline-block bg-brand-green text-white font-semibold py-3 px-6 rounded-md hover:bg-brand-green/90 transition">Learn More</a>
+                        <a href="/move-in-out-cleaning" class="mt-6 inline-block bg-[#305048] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#305048]/90 transition">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Full Services Catalog -->
-        <section id="all-services" class="py-24 bg-white border-t border-brand-gray-medium/40">
+        <section id="all-services" class="py-24 bg-white border-t border-[#E3EAE8]/40">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
                     <h2 class="text-4xl font-bold">Every Service We Offer</h2>
                     <p class="mt-4 text-gray-600">From recurring maintenance to specialty cleanings, Palma Cleaning delivers tailored solutions for homes, estates, and commercial spaces across Central Florida.</p>
                 </div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="/weekly-cleaning-service-ocala" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/weekly-cleaning-service-ocala" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Recurring House Cleaning</h3>
                         <p class="mt-3 text-gray-600 text-sm">Weekly, bi-weekly, or monthly upkeep to keep everyday spaces fresh.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/deep-cleaning" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/deep-cleaning" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Deep / Deluxe Cleaning</h3>
                         <p class="mt-3 text-gray-600 text-sm">Detailed scrubbing of baseboards, fixtures, high-touch surfaces, and appliances.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/move-in-out-cleaning" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/move-in-out-cleaning" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Move-In / Move-Out</h3>
                         <p class="mt-3 text-gray-600 text-sm">Realtor-ready results for transitions, including cabinets, drawers, and inside appliances.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/post-construction-cleaning" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/post-construction-cleaning" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Post-Construction Cleaning</h3>
                         <p class="mt-3 text-gray-600 text-sm">Dust removal, detail polishing, and debris haul-away after renovations or new builds.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/commercial-cleaning" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/commercial-cleaning" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Commercial & Office Cleaning</h3>
                         <p class="mt-3 text-gray-600 text-sm">Custom schedules for offices, medical suites, retail, and common areas.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/services#rentals" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/services#rentals" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Short-Term Rental Turnovers</h3>
                         <p class="mt-3 text-gray-600 text-sm">Same-day turnovers for Airbnbs, VRBOs, and vacation rentals.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/wec-area" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/wec-area" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Equestrian & Luxury Estates</h3>
                         <p class="mt-3 text-gray-600 text-sm">Specialized care for barns, tack rooms, show properties, and large estates.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/service-areas#senior" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/service-areas#senior" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Senior Living & Assisted Care</h3>
                         <p class="mt-3 text-gray-600 text-sm">Gentle, respectful cleaning plans for residents and common areas.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/services#addons" class="bg-brand-gray-light rounded-xl p-6 shadow-sm border border-brand-gray-medium/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/services#addons" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Add-On Services</h3>
                         <p class="mt-3 text-gray-600 text-sm">Interior window detailing, oven/fridge cleans, linen refresh, laundry folding, and more.</p>
-                        <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
+                        <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
                     </div>
                 <div class="mt-12 text-center">
-                    <a href="/services" class="inline-block bg-brand-green text-white font-semibold py-3 px-8 rounded-md hover:bg-brand-green/90 transition">See Service Details</a>
+                    <a href="/services" class="inline-block bg-[#305048] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#305048]/90 transition">See Service Details</a>
                 </div>
             </div>
         </section>
 
         <!-- Testimonial -->
-        <section id="testimonial" class="bg-brand-green py-24 text-white">
+        <section id="testimonial" class="bg-[#305048] py-24 text-white">
             <div class="container mx-auto px-6 max-w-3xl text-center">
-                <h2 class="text-3xl font-bold">Angie's <span class="text-brand-coral">Experience</span></h2>
+                <h2 class="text-3xl font-bold">Angie's <span class="text-[#FF8057]">Experience</span></h2>
                 <p class="mt-6 text-lg italic text-white/80">"Absolutely amazing! Every detail has been thought through, from the ease of booking to the actual hardworking cleaner! Our home was in desperate need of a deep clean and Palma Cleaning did not miss a thing. We’re so happy we chose them!"</p>
                 <div class="mt-8 flex items-center justify-center space-x-4">
-                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60" alt="Angie" class="w-16 h-16 rounded-full border-2 border-brand-coral object-cover" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60" alt="Angie" class="w-16 h-16 rounded-full border-2 border-[#FF8057] object-cover" loading="lazy" />
                     <div class="text-left">
                         <p class="font-bold">Angie F.</p>
                         <p class="text-sm text-white/70">Ocala, FL</p>
                     </div>
                 </div>
-                <a href="#quote" class="mt-10 inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
+                <a href="#quote" class="mt-10 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
             </div>
         </section>
 
         <!-- Comparison -->
-        <section id="comparison" class="py-24 bg-brand-gray-light">
+        <section id="comparison" class="py-24 bg-[#F4F7F6]">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="flex justify-center mb-8">
-                    <button class="bg-brand-green text-white font-semibold py-3 px-12 rounded-l-lg">Palma Cleaning</button>
-                    <button class="bg-white text-gray-500 font-semibold py-3 px-12 rounded-r-lg border border-brand-gray-medium">Independent Cleaners</button>
+                    <button class="bg-[#305048] text-white font-semibold py-3 px-12 rounded-l-lg">Palma Cleaning</button>
+                    <button class="bg-white text-gray-500 font-semibold py-3 px-12 rounded-r-lg border border-[#E3EAE8]">Independent Cleaners</button>
                 </div>
                 <div class="space-y-3">
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">Locally owned & operated in Marion County</span>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
                     </div>
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">Easy online booking & reminders</span>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-brand-coral"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-[#FF8057]"></i></div>
                     </div>
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">Background checks & training</span>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-brand-coral"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-[#FF8057]"></i></div>
                     </div>
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">Fully insured & bonded</span>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-brand-coral"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-[#FF8057]"></i></div>
                         </div>
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">48-hour satisfaction guarantee</span>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
-                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-brand-coral"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-[#305048]"></i></div>
+                        <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2xl text-[#FF8057]"></i></div>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <a href="#quote" class="inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
+                    <a href="#quote" class="inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
             </div>
         </div>
     </section>
@@ -488,7 +470,7 @@ const year = new Date().getFullYear();
                     <p class="mt-4 text-gray-600">Palma Cleaning serves families, professionals, and businesses across Marion County and neighboring communities. If you don’t see your neighborhood listed, contact us — chances are we’re nearby.</p>
                 </div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">Ocala & Marion County</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                             <li>Downtown & Historic District</li>
@@ -497,7 +479,7 @@ const year = new Date().getFullYear();
                             <li>Spruce Creek & Marion Oaks</li>
                         </ul>
                     </div>
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">The Villages & Sumter County</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                         <li>Spanish Springs</li>
@@ -506,7 +488,7 @@ const year = new Date().getFullYear();
                             <li>Surrounding golf cart communities</li>
                         </ul>
                     </div>
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">World Equestrian Center Area</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                             <li>Luxury estates & farm properties</li>
@@ -515,16 +497,16 @@ const year = new Date().getFullYear();
                             <li>NW Hwy 225 & 326 corridors</li>
                         </ul>
                     </div>
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">Dunnellon & Rainbow Springs</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                             <li>Blue Cove & Rainbow River Estates</li>
                             <li>Juliette Falls</li>
                             <li>Historic downtown Dunnellon</li>
                             <li>Rainbow Springs Country Club</li>
-                        </ul>
-                    </div>
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    </ul>
+                </div>
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">55+ Active Adult Communities</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                             <li>Oak Run</li>
@@ -533,7 +515,7 @@ const year = new Date().getFullYear();
                             <li>Del Webb Spruce Creek</li>
                     </ul>
                 </div>
-                    <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
+                    <div class="border border-[#E3EAE8]/60 rounded-xl p-6 shadow-sm bg-[#F4F7F6]">
                         <h3 class="font-semibold text-lg">Additional Service Areas</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
                             <li>Belleview & Summerfield</li>
@@ -541,29 +523,29 @@ const year = new Date().getFullYear();
                             <li>Gainesville suburbs (select)</li>
                             <li>Custom routes upon request</li>
                     </ul>
-                    </div>
                 </div>
+            </div>
                 <div class="mt-12 text-center">
-                    <a href="/service-areas" class="inline-block bg-brand-coral text-brand-green font-semibold py-3 px-8 rounded-md hover:bg-[#ff996f] transition">View Detailed Service Areas</a>
+                    <a href="/service-areas" class="inline-block bg-[#FF8057] text-[#305048] font-semibold py-3 px-8 rounded-md hover:bg-[#ff996f] transition">View Detailed Service Areas</a>
             </div>
         </div>
     </section>
 
         <!-- Reviews -->
-        <section id="reviews" class="bg-brand-green py-24 text-white">
+        <section id="reviews" class="bg-[#305048] py-24 text-white">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-6 mb-10">
                     <h2 class="text-4xl font-bold">Why our customers love us</h2>
-                    <a href="https://link.palmacleaningco.com/reputation/widgets/review_widget/mAdkXDEE8QQPYfj1uzSF" class="text-brand-coral font-semibold flex items-center">Write review <i class="fa-solid fa-arrow-up-right-from-square text-sm ml-2"></i></a>
+                    <a href="https://link.palmacleaningco.com/reputation/widgets/review_widget/mAdkXDEE8QQPYfj1uzSF" class="text-[#FF8057] font-semibold flex items-center">Write review <i class="fa-solid fa-arrow-up-right-from-square text-sm ml-2"></i></a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white text-brand-green p-6 rounded-xl shadow-lg">
+                    <div class="bg-white text-[#305048] p-6 rounded-xl shadow-lg">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center space-x-3">
-                                <span class="w-12 h-12 rounded-full bg-brand-coral/20 flex items-center justify-center font-semibold text-brand-green">RN</span>
+                                <span class="w-12 h-12 rounded-full bg-[#FF8057]/20 flex items-center justify-center font-semibold text-[#305048]">RN</span>
                                 <div>
                                     <p class="font-bold">Ronda N.</p>
-                                    <div class="flex text-brand-coral text-xs">
+                                    <div class="flex text-[#FF8057] text-xs">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
@@ -572,13 +554,13 @@ const year = new Date().getFullYear();
                         </div>
                         <p class="mt-4 text-gray-600">"Awesome experience! Palma Cleaning keeps our Ocala home looking amazing week after week."</p>
                     </div>
-                    <div class="bg-white text-brand-green p-6 rounded-xl shadow-lg">
+                    <div class="bg-white text-[#305048] p-6 rounded-xl shadow-lg">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center space-x-3">
-                                <span class="w-12 h-12 rounded-full bg-brand-coral/20 flex items-center justify-center font-semibold text-brand-green">TB</span>
+                                <span class="w-12 h-12 rounded-full bg-[#FF8057]/20 flex items-center justify-center font-semibold text-[#305048]">TB</span>
                                 <div>
                                     <p class="font-bold">Tolu B.</p>
-                                    <div class="flex text-brand-coral text-xs">
+                                    <div class="flex text-[#FF8057] text-xs">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
@@ -587,13 +569,13 @@ const year = new Date().getFullYear();
                         </div>
                         <p class="mt-4 text-gray-600">"Great service and very professional. The team was thorough and respectful of our space."</p>
                     </div>
-                    <div class="bg-white text-brand-green p-6 rounded-xl shadow-lg">
+                    <div class="bg-white text-[#305048] p-6 rounded-xl shadow-lg">
                         <div class="flex justify-between items-start">
                             <div class="flex items-center space-x-3">
-                                <span class="w-12 h-12 rounded-full bg-brand-coral/20 flex items-center justify-center font-semibold text-brand-green">SM</span>
+                                <span class="w-12 h-12 rounded-full bg-[#FF8057]/20 flex items-center justify-center font-semibold text-[#305048]">SM</span>
                                 <div>
                                     <p class="font-bold">Sarah M.</p>
-                                    <div class="flex text-brand-coral text-xs">
+                                    <div class="flex text-[#FF8057] text-xs">
                                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     </div>
                                 </div>
@@ -607,25 +589,25 @@ const year = new Date().getFullYear();
         </section>
 
         <!-- CTA -->
-        <section id="quote" class="bg-brand-coral py-24">
+        <section id="quote" class="bg-[#FF8057] py-24">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold text-brand-green">Ready for a cleaner home?</h2>
-                <p class="mt-4 text-brand-green/90 text-lg">Get your free quote in under 60 seconds. Serving Ocala, The Villages, Dunnellon, Stone Creek, Golden Hills, and more.</p>
+                <h2 class="text-4xl font-bold text-[#305048]">Ready for a cleaner home?</h2>
+                <p class="mt-4 text-[#305048]/90 text-lg">Get your free quote in under 60 seconds. Serving Ocala, The Villages, Dunnellon, Stone Creek, Golden Hills, and more.</p>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
-                        <i class="fas fa-phone text-brand-coral text-3xl"></i>
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
+                        <i class="fas fa-phone text-[#FF8057] text-3xl"></i>
                         <h3 class="mt-4 text-xl font-bold">Phone</h3>
-                        <p class="mt-2 text-gray-600 text-sm"><a href="tel:+13527644747" class="hover:text-brand-coral transition">(352) 764-4747</a></p>
+                        <p class="mt-2 text-gray-600 text-sm"><a href="tel:+13527644747" class="hover:text-[#FF8057] transition">(352) 764-4747</a></p>
                         <p class="mt-1 text-gray-600 text-sm">Call or text us anytime</p>
                     </div>
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
-                        <i class="fas fa-envelope text-brand-coral text-3xl"></i>
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
+                        <i class="fas fa-envelope text-[#FF8057] text-3xl"></i>
                         <h3 class="mt-4 text-xl font-bold">Email</h3>
-                        <p class="mt-2 text-gray-600 text-sm"><a href="mailto:hello@palmacleaningco.com" class="hover:text-brand-coral transition">hello@palmacleaningco.com</a></p>
+                        <p class="mt-2 text-gray-600 text-sm"><a href="mailto:hello@palmacleaningco.com" class="hover:text-[#FF8057] transition">hello@palmacleaningco.com</a></p>
                         <p class="mt-1 text-gray-600 text-sm">We respond within 24 hours</p>
                     </div>
-                    <div class="bg-white text-brand-green p-8 rounded-xl shadow-xl">
-                        <i class="fas fa-clock text-brand-coral text-3xl"></i>
+                    <div class="bg-white text-[#305048] p-8 rounded-xl shadow-xl">
+                        <i class="fas fa-clock text-[#FF8057] text-3xl"></i>
                         <h3 class="mt-4 text-xl font-bold">Business Hours</h3>
                         <p class="mt-2 text-gray-600 text-sm">Monday - Friday</p>
                         <p class="text-gray-600 text-sm">8:00 AM - 6:00 PM</p>
@@ -633,46 +615,46 @@ const year = new Date().getFullYear();
                     </div>
                 </div>
                 <div class="mt-10 flex flex-wrap justify-center gap-4">
-                    <a href="/book-now" class="bg-brand-green text-white font-bold py-4 px-10 rounded-md hover:bg-brand-green/90 transition duration-300 text-sm uppercase"><i class="fas fa-calendar-check mr-2"></i>Book Now</a>
-                    <a href="tel:+13527644747" class="bg-transparent text-brand-green font-bold py-4 px-10 rounded-md border border-brand-green transition duration-300 text-sm uppercase"><i class="fas fa-phone mr-2"></i>Call (352) 764-4747</a>
+                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fas fa-calendar-check mr-2"></i>Book Now</a>
+                    <a href="tel:+13527644747" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fas fa-phone mr-2"></i>Call (352) 764-4747</a>
                 </div>
-                <p class="mt-6 text-brand-green/80 text-sm">Licensed & Insured • Satisfaction Guaranteed • Same Day Service Available</p>
+                <p class="mt-6 text-[#305048]/80 text-sm">Licensed & Insured • Satisfaction Guaranteed • Same Day Service Available</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-green text-white py-12">
+    <footer class="bg-[#305048] text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold tracking-wide">PALMA <span class="text-brand-coral">CLEANING</span></h3>
+                    <h3 class="text-2xl font-bold tracking-wide">PALMA <span class="text-[#FF8057]">CLEANING</span></h3>
                     <p class="mt-4 text-white/70 text-sm">Premium residential & commercial cleaning services throughout Ocala, Marion County, and The Villages.</p>
                     <div class="mt-4 flex space-x-4">
-                        <a href="https://www.facebook.com/palmacleaningco" class="text-white hover:text-brand-coral transition" aria-label="Facebook"><i class="fa-brands fa-facebook text-xl"></i></a>
-                        <a href="https://www.instagram.com/palmacleaningco" class="text-white hover:text-brand-coral transition" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
-                        <a href="tel:3527644747" class="text-white hover:text-brand-coral transition" aria-label="Call Palma Cleaning"><i class="fa-solid fa-phone text-xl"></i></a>
+                        <a href="https://www.facebook.com/palmacleaningco" class="text-white hover:text-[#FF8057] transition" aria-label="Facebook"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/palmacleaningco" class="text-white hover:text-[#FF8057] transition" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="tel:3527644747" class="text-white hover:text-[#FF8057] transition" aria-label="Call Palma Cleaning"><i class="fa-solid fa-phone text-xl"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Services</h4>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a href="/standard-cleaning" class="hover:text-brand-coral transition">Standard Cleaning</a></li>
-                        <li><a href="/deep-cleaning" class="hover:text-brand-coral transition">Deep Cleaning</a></li>
-                        <li><a href="/move-in-out-cleaning" class="hover:text-brand-coral transition">Move-In / Move-Out</a></li>
-                        <li><a href="/post-construction-cleaning" class="hover:text-brand-coral transition">Post-Construction</a></li>
-                        <li><a href="/commercial-cleaning" class="hover:text-brand-coral transition">Commercial / Office</a></li>
-                        <li><a href="/services#addons" class="hover:text-brand-coral transition">Add-On Services</a></li>
+                        <li><a href="/standard-cleaning" class="hover:text-[#FF8057] transition">Standard Cleaning</a></li>
+                        <li><a href="/deep-cleaning" class="hover:text-[#FF8057] transition">Deep Cleaning</a></li>
+                        <li><a href="/move-in-out-cleaning" class="hover:text-[#FF8057] transition">Move-In / Move-Out</a></li>
+                        <li><a href="/post-construction-cleaning" class="hover:text-[#FF8057] transition">Post-Construction</a></li>
+                        <li><a href="/commercial-cleaning" class="hover:text-[#FF8057] transition">Commercial / Office</a></li>
+                        <li><a href="/services#addons" class="hover:text-[#FF8057] transition">Add-On Services</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold text-lg mb-4">Service Areas</h4>
                     <ul class="space-y-2 text-white/70 text-sm">
-                        <li><a href="/ocala" class="hover:text-brand-coral transition">Ocala & Marion County</a></li>
-                        <li><a href="/the-villages" class="hover:text-brand-coral transition">The Villages</a></li>
-                        <li><a href="/dunnellon" class="hover:text-brand-coral transition">Dunnellon & Rainbow Springs</a></li>
-                        <li><a href="/wec-area" class="hover:text-brand-coral transition">World Equestrian Center</a></li>
-                        <li><a href="/service-areas" class="hover:text-brand-coral transition">View All Locations</a></li>
+                        <li><a href="/ocala" class="hover:text-[#FF8057] transition">Ocala & Marion County</a></li>
+                        <li><a href="/the-villages" class="hover:text-[#FF8057] transition">The Villages</a></li>
+                        <li><a href="/dunnellon" class="hover:text-[#FF8057] transition">Dunnellon & Rainbow Springs</a></li>
+                        <li><a href="/wec-area" class="hover:text-[#FF8057] transition">World Equestrian Center</a></li>
+                        <li><a href="/service-areas" class="hover:text-[#FF8057] transition">View All Locations</a></li>
                     </ul>
                 </div>
                 <div>
