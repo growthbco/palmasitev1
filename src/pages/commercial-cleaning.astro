@@ -4,26 +4,119 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Commercial Office Cleaning Services in Ocala FL | Palma Cleaning";
 const description = "Professional commercial office cleaning services in Ocala, FL. Daily, weekly, and monthly cleaning plans for offices, medical facilities, and retail spaces. Licensed & insured.";
+
+const services = [
+  {
+    title: "Office Cleaning",
+    icon: "fa-solid fa-building",
+    description: "Professional daily, weekly, or monthly office cleaning to maintain a productive work environment.",
+    items: [
+      "Desks and workstations",
+      "Conference and meeting rooms",
+      "Reception areas",
+      "Break rooms and kitchens",
+      "Restroom sanitization",
+      "Trash removal and recycling",
+      "Floor care (carpet and hard surface)",
+      "Window cleaning",
+      "Dusting and surface cleaning"
+    ]
+  },
+  {
+    title: "Retail Cleaning",
+    icon: "fa-solid fa-store",
+    description: "Keep your retail space spotless and welcoming for customers with our specialized retail cleaning.",
+    items: [
+      "Sales floor maintenance",
+      "Fitting room cleaning",
+      "Customer restroom sanitization",
+      "Display case cleaning",
+      "Entry and storefront cleaning",
+      "Stock room organization",
+      "Floor care and maintenance",
+      "Flexible scheduling around business hours"
+    ]
+  },
+  {
+    title: "Medical Facility Cleaning",
+    icon: "fa-solid fa-user-md",
+    description: "Specialized cleaning and sanitization for medical offices, clinics, and healthcare facilities.",
+    items: [
+      "Exam room sanitization",
+      "Waiting area maintenance",
+      "Medical equipment cleaning",
+      "Biohazard waste handling",
+      "HIPAA-compliant service",
+      "Hospital-grade disinfectants",
+      "Infection control protocols",
+      "Flexible after-hours scheduling"
+    ]
+  }
+];
+
+const whyChoose = [
+  {
+    icon: "fa-solid fa-clock",
+    title: "Flexible Scheduling",
+    copy: "Early morning, after-hours, or weekend cleaning to fit your business schedule without disruption."
+  },
+  {
+    icon: "fa-solid fa-users",
+    title: "Trained Professionals",
+    copy: "Background-checked, uniformed staff trained in commercial cleaning protocols and safety procedures."
+  },
+  {
+    icon: "fa-solid fa-shield-check",
+    title: "Licensed & Insured",
+    copy: "Full liability insurance and bonding for your peace of mind and protection of your business."
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Eco-Friendly Options",
+    copy: "Green cleaning products available to maintain a healthy environment for your employees and customers."
+  }
+];
+
+const additionalServices = [
+  {
+    icon: "fa-solid fa-utensils",
+    title: "Restaurant Cleaning",
+    copy: "Kitchen deep cleaning, dining area maintenance, and health code compliance."
+  },
+  {
+    icon: "fa-solid fa-car",
+    title: "Auto Dealership Cleaning",
+    copy: "Showroom cleaning, service area maintenance, and customer lounge upkeep."
+  },
+  {
+    icon: "fa-solid fa-hard-hat",
+    title: "Post-Construction Cleaning",
+    copy: "Construction cleanup for new commercial spaces and renovation projects."
+  },
+  {
+    icon: "fa-solid fa-warehouse",
+    title: "Warehouse Cleaning",
+    copy: "Large facility maintenance, loading dock cleaning, and industrial spaces."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="commercial cleaning Ocala FL, office cleaning, janitorial services, retail cleaning, medical office cleaning, restaurant cleaning">
     <link rel="canonical" href="https://palmacleaningco.com/commercial-cleaning">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
@@ -33,7 +126,6 @@ const description = "Professional commercial office cleaning services in Ocala, 
         "alternateName": ["Office Cleaning", "Business Cleaning", "Janitorial Services"],
         "description": "Professional commercial cleaning services for office buildings, retail spaces, medical offices, restaurants, and corporate facilities with flexible scheduling and reliable service.",
         "url": "https://palmacleaningco.com/commercial-cleaning",
-        "image": "https://palmacleaningco.com/images/commercial-cleaning-service.jpg",
         "provider": {
             "@type": ["LocalBusiness", "Service"],
             "name": "Palma Cleaning",
@@ -68,20 +160,8 @@ const description = "Professional commercial office cleaning services in Ocala, 
                 "addressCountry": "US"
             }
         ],
-        "serviceArea": [
-            {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "29.1872",
-                    "longitude": "-82.1401"
-                },
-                "geoRadius": "48280"
-            }
-        ],
         "serviceType": "Commercial Office Cleaning",
         "category": ["Commercial Cleaning", "Office Cleaning", "Janitorial Services", "Business Services"],
-        "additionalType": "https://schema.org/Service",
         "availableChannel": {
             "@type": "ServiceChannel",
             "serviceUrl": "https://palmacleaningco.com/book-now",
@@ -124,10 +204,6 @@ const description = "Professional commercial office cleaning services in Ocala, 
                 "availability": "InStock"
             }
         ],
-        "audience": {
-            "@type": "Audience",
-            "audienceType": "Business Owners, Office Managers, Property Managers, Healthcare Administrators"
-        },
         "isRelatedTo": [
             {
                 "@type": "Service",
@@ -143,183 +219,126 @@ const description = "Professional commercial office cleaning services in Ocala, 
     }
     </script>
 </head>
-
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
+
     <Navigation />
-    
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/services" style="color: #ff8057; text-decoration: none;">Services</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Commercial Cleaning</span>
-            </div>
-        </div>
-    </nav>
-    
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Professional Commercial Cleaning in Ocala, FL</h1>
-                <p class="hero-description">Maintain a clean, productive work environment with our reliable commercial cleaning services for offices, retail, and medical facilities.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
-                </div>
-                <div class="hero-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>TRUSTED COMMERCIAL CLEANING SERVICE</span>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Commercial cleaning services in Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-            </div>
-        </div>
-    </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Commercial Cleaning Services</h2>
-            
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Office Cleaning</h3>
-                    <p>Professional daily, weekly, or monthly office cleaning to maintain a productive work environment.</p>
-                    <ul class="service-list">
-                        <li>Desks and workstations</li>
-                        <li>Conference and meeting rooms</li>
-                        <li>Reception areas</li>
-                        <li>Break rooms and kitchens</li>
-                        <li>Restroom sanitization</li>
-                        <li>Trash removal and recycling</li>
-                        <li>Floor care (carpet and hard surface)</li>
-                        <li>Window cleaning</li>
-                        <li>Dusting and surface cleaning</li>
-                    </ul>
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Commercial cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Maintain a clean, productive work environment with our reliable commercial cleaning services for offices, retail, and medical facilities.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    VIEW PRICING
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Commercial Cleaning Services</h2>
+                    <p class="mt-4 text-gray-600">Comprehensive cleaning solutions tailored to your business needs.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Retail Cleaning</h3>
-                    <p>Keep your retail space spotless and welcoming for customers with our specialized retail cleaning.</p>
-                    <ul class="service-list">
-                        <li>Sales floor maintenance</li>
-                        <li>Fitting room cleaning</li>
-                        <li>Customer restroom sanitization</li>
-                        <li>Display case cleaning</li>
-                        <li>Entry and storefront cleaning</li>
-                        <li>Stock room organization</li>
-                        <li>Floor care and maintenance</li>
-                        <li>Flexible scheduling around business hours</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>Medical Facility Cleaning</h3>
-                    <p>Specialized cleaning and sanitization for medical offices, clinics, and healthcare facilities.</p>
-                    <ul class="service-list">
-                        <li>Exam room sanitization</li>
-                        <li>Waiting area maintenance</li>
-                        <li>Medical equipment cleaning</li>
-                        <li>Biohazard waste handling</li>
-                        <li>HIPAA-compliant service</li>
-                        <li>Hospital-grade disinfectants</li>
-                        <li>Infection control protocols</li>
-                        <li>Flexible after-hours scheduling</li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-[#F4F7F6] rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#305048] mb-3">{service.title}</h3>
+                            <p class="text-gray-600 mb-6 text-sm">{service.description}</p>
+                            <ul class="space-y-2">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 3rem; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Why Businesses Choose Palma Cleaning</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Flexible Scheduling</h4>
-                        <p>Early morning, after-hours, or weekend cleaning to fit your business schedule without disruption.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-users" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Trained Professionals</h4>
-                        <p>Background-checked, uniformed staff trained in commercial cleaning protocols and safety procedures.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-shield-check" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Licensed & Insured</h4>
-                        <p>Full liability insurance and bonding for your peace of mind and protection of your business.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-leaf" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Eco-Friendly Options</h4>
-                        <p>Green cleaning products available to maintain a healthy environment for your employees and customers.</p>
-                    </div>
+        <!-- Why Choose Us Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Businesses Choose Palma Cleaning</h2>
+                    <p class="mt-4 text-white/80">Professional commercial cleaning services you can trust.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {whyChoose.map((item) => (
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mx-auto mb-4">
+                                <i class={item.icon}></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-3">{item.title}</h3>
+                            <p class="text-sm text-white/80 leading-relaxed">{item.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 3rem; text-align: center; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: #2f5047; margin-bottom: 2rem;">Additional Commercial Services</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-utensils"></i> Restaurant Cleaning
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Kitchen deep cleaning, dining area maintenance, and health code compliance.</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-car"></i> Auto Dealership Cleaning
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Showroom cleaning, service area maintenance, and customer lounge upkeep.</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-hard-hat"></i> Post-Construction Cleaning
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Construction cleanup for new commercial spaces and renovation projects.</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-warehouse"></i> Warehouse Cleaning
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Large facility maintenance, loading dock cleaning, and industrial spaces.</p>
-                    </div>
+        <!-- Additional Services Section -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">More Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Additional Commercial Services</h2>
+                    <p class="mt-4 text-gray-600">Specialized cleaning solutions for various commercial industries.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {additionalServices.map((service) => (
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-[#E3EAE8]/60 text-center">
+                            <i class={`${service.icon} text-3xl text-[#FF8057] mb-4`}></i>
+                            <h3 class="text-lg font-semibold text-[#305048] mb-2">{service.title}</h3>
+                            <p class="text-sm text-gray-600">{service.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Ready for Professional Commercial Cleaning?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Professional Commercial Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
                     Contact us for a free commercial cleaning assessment. We'll create a custom cleaning plan and schedule that works for your business.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
                 </div>
-                <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">
-                    Free on-site consultations • Flexible contracts • 24-hour response time
-                </p>
+                <p class="mt-6 text-white/70 text-sm">Free on-site consultations • Flexible contracts • 24-hour response time</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script src="/script-clean.js" is:inline></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
 </body>
 </html>

@@ -4,218 +4,270 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Post-Construction Cleanup Services in Ocala FL | Palma Cleaning";
 const description = "Professional post-construction cleanup services in Ocala, FL. Complete debris removal, dust elimination, and detailed cleaning after renovations, new builds, and remodels.";
+
+const services = [
+  {
+    title: "Rough Construction Cleanup",
+    icon: "fa-solid fa-hard-hat",
+    description: "Initial cleanup during construction phase to keep the worksite safe and organized.",
+    items: [
+      "Debris removal and disposal",
+      "Drywall dust removal",
+      "Paint and material cleanup",
+      "Window cleaning (inside and out)",
+      "Floor cleaning and protection",
+      "HVAC vent cleaning",
+      "Light fixture cleaning",
+      "Bathroom and kitchen cleanup"
+    ]
+  },
+  {
+    title: "Final Construction Cleaning",
+    icon: "fa-solid fa-broom",
+    description: "Detailed final cleaning to make the space move-in ready and perfect for occupancy.",
+    items: [
+      "Deep cleaning of all surfaces",
+      "Cabinet cleaning inside and out",
+      "Appliance cleaning and polishing",
+      "Baseboard and trim detailing",
+      "Floor polishing and sealing",
+      "Fixture and hardware polishing",
+      "Final window and mirror cleaning",
+      "Touch-up cleaning throughout"
+    ]
+  },
+  {
+    title: "Renovation Cleanup",
+    icon: "fa-solid fa-tools",
+    description: "Specialized cleaning for home and office renovation projects of all sizes.",
+    items: [
+      "Dust containment and removal",
+      "Paint splatter cleanup",
+      "Adhesive and residue removal",
+      "Tile and grout cleaning",
+      "Carpet and upholstery cleaning",
+      "Air duct cleaning coordination",
+      "Sanitization and disinfection",
+      "Final quality inspection"
+    ]
+  }
+];
+
+const whyChoose = [
+  {
+    icon: "fa-solid fa-calendar-check",
+    title: "Flexible Scheduling",
+    copy: "We work around your construction timeline and can provide same-day or emergency cleaning services."
+  },
+  {
+    icon: "fa-solid fa-users-cog",
+    title: "Experienced Team",
+    copy: "Our team is experienced with construction sites and understands safety protocols and requirements."
+  },
+  {
+    icon: "fa-solid fa-truck",
+    title: "Proper Equipment",
+    copy: "Industrial-grade equipment and specialized tools for handling construction dust and debris removal."
+  },
+  {
+    icon: "fa-solid fa-handshake",
+    title: "Builder Partnerships",
+    copy: "We work closely with contractors, builders, and project managers throughout Marion County."
+  }
+];
+
+const projectTypes = [
+  {
+    icon: "fa-solid fa-home",
+    title: "Residential New Construction",
+    copy: "New homes, custom builds, and residential developments"
+  },
+  {
+    icon: "fa-solid fa-building",
+    title: "Commercial Construction",
+    copy: "Office buildings, retail spaces, and commercial properties"
+  },
+  {
+    icon: "fa-solid fa-paint-roller",
+    title: "Renovation Projects",
+    copy: "Kitchen remodels, bathroom renovations, and home additions"
+  },
+  {
+    icon: "fa-solid fa-hammer",
+    title: "Remodeling Projects",
+    copy: "Interior remodels, flooring installation, and fixture updates"
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="post-construction cleaning Ocala FL, construction cleanup, renovation cleaning, new construction cleaning, dust removal">
     <link rel="canonical" href="https://palmacleaningco.com/post-construction-cleaning">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Post-Construction Cleaning Services",
+        "alternateName": ["Construction Cleanup", "Renovation Cleaning", "New Construction Cleaning"],
+        "description": "Complete post-construction cleanup services for new construction and renovation projects including dust removal, debris cleanup, and final cleaning.",
+        "url": "https://palmacleaningco.com/post-construction-cleaning",
         "provider": {
             "@type": "LocalBusiness",
             "name": "Palma Cleaning",
             "telephone": "(352) 764-4747",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "postalCode": "34471",
-                "addressCountry": "US"
-            }
-        },
-        "areaServed": ["Ocala, FL", "Marion County, FL"],
-        "serviceType": "Post-Construction Cleaning",
-        "description": "Complete post-construction cleanup services for new construction and renovation projects including dust removal, debris cleanup, and final cleaning."
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com"
+        }
     }
     </script>
 </head>
-
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
+
     <Navigation />
-    
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Post-Construction Cleaning in Ocala, FL</h1>
-                <p class="hero-description">Professional construction cleanup for new builds, renovations, and remodeling projects. From rough cleanup to final cleaning.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Post-construction cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional construction cleanup for new builds, renovations, and remodeling projects. From rough cleanup to final cleaning.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    VIEW PRICING
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Post-Construction Cleaning Services</h2>
+                    <p class="mt-4 text-gray-600">Comprehensive cleaning solutions for every stage of your construction project.</p>
                 </div>
-                <div class="hero-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>POST-CONSTRUCTION CLEANING EXPERTS</span>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-[#F4F7F6] rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#305048] mb-3">{service.title}</h3>
+                            <p class="text-gray-600 mb-6 text-sm">{service.description}</p>
+                            <ul class="space-y-2">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Post-construction cleaning services in Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Post-Construction Cleaning Services</h2>
-            
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3>Rough Construction Cleanup</h3>
-                    <p>Initial cleanup during construction phase to keep the worksite safe and organized.</p>
-                    <ul class="service-list">
-                        <li>Debris removal and disposal</li>
-                        <li>Drywall dust removal</li>
-                        <li>Paint and material cleanup</li>
-                        <li>Window cleaning (inside and out)</li>
-                        <li>Floor cleaning and protection</li>
-                        <li>HVAC vent cleaning</li>
-                        <li>Light fixture cleaning</li>
-                        <li>Bathroom and kitchen cleanup</li>
-                    </ul>
+        <!-- Why Choose Us Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Choose Us for Post-Construction Cleaning</h2>
+                    <p class="mt-4 text-white/80">We understand construction timelines and deliver cleaning services that meet your project needs.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-broom"></i>
-                    </div>
-                    <h3>Final Construction Cleaning</h3>
-                    <p>Detailed final cleaning to make the space move-in ready and perfect for occupancy.</p>
-                    <ul class="service-list">
-                        <li>Deep cleaning of all surfaces</li>
-                        <li>Cabinet cleaning inside and out</li>
-                        <li>Appliance cleaning and polishing</li>
-                        <li>Baseboard and trim detailing</li>
-                        <li>Floor polishing and sealing</li>
-                        <li>Fixture and hardware polishing</li>
-                        <li>Final window and mirror cleaning</li>
-                        <li>Touch-up cleaning throughout</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Renovation Cleanup</h3>
-                    <p>Specialized cleaning for home and office renovation projects of all sizes.</p>
-                    <ul class="service-list">
-                        <li>Dust containment and removal</li>
-                        <li>Paint splatter cleanup</li>
-                        <li>Adhesive and residue removal</li>
-                        <li>Tile and grout cleaning</li>
-                        <li>Carpet and upholstery cleaning</li>
-                        <li>Air duct cleaning coordination</li>
-                        <li>Sanitization and disinfection</li>
-                        <li>Final quality inspection</li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {whyChoose.map((item) => (
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mx-auto mb-4">
+                                <i class={item.icon}></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-3">{item.title}</h3>
+                            <p class="text-sm text-white/80 leading-relaxed">{item.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 3rem; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Why Choose Us for Post-Construction Cleaning</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-calendar-check" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Flexible Scheduling</h4>
-                        <p>We work around your construction timeline and can provide same-day or emergency cleaning services.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-users-cog" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Experienced Team</h4>
-                        <p>Our team is experienced with construction sites and understands safety protocols and requirements.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-truck" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Proper Equipment</h4>
-                        <p>Industrial-grade equipment and specialized tools for handling construction dust and debris removal.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-handshake" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Builder Partnerships</h4>
-                        <p>We work closely with contractors, builders, and project managers throughout Marion County.</p>
-                    </div>
+        <!-- Project Types Section -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">We Service All Types</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Construction Project Types We Service</h2>
+                    <p class="mt-4 text-gray-600">From small renovations to large-scale construction projects, we handle them all.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {projectTypes.map((project) => (
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-[#E3EAE8]/60 text-center">
+                            <i class={`${project.icon} text-3xl text-[#FF8057] mb-4`}></i>
+                            <h3 class="text-lg font-semibold text-[#305048] mb-2">{project.title}</h3>
+                            <p class="text-sm text-gray-600">{project.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 3rem; text-align: center; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                <h3 style="color: #2f5047; margin-bottom: 2rem;">Construction Project Types We Service</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-home"></i> Residential New Construction
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">New homes, custom builds, and residential developments</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-building"></i> Commercial Construction
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Office buildings, retail spaces, and commercial properties</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-paint-roller"></i> Renovation Projects
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Kitchen remodels, bathroom renovations, and home additions</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;">
-                            <i class="fas fa-hammer"></i> Remodeling Projects
-                        </h4>
-                        <p style="font-size: 0.9rem; color: #666;">Interior remodels, flooring installation, and fixture updates</p>
-                    </div>
+        <!-- Pro Tip Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-2xl p-8 text-center">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold text-[#305048] mb-4">Construction Pro Tip</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Schedule your final post-construction cleaning 24-48 hours before the final walkthrough or occupancy. This ensures everything is spotless and ready for inspection or move-in!
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 2rem; padding: 1.5rem; background: #fff; border: 2px solid #ff8057; border-radius: 15px; text-align: center;">
-                <h4 style="color: #2f5047; margin-bottom: 1rem;">💡 Construction Pro Tip</h4>
-                <p style="color: #666; margin: 0;">Schedule your final post-construction cleaning 24-48 hours before the final walkthrough or occupancy. This ensures everything is spotless and ready for inspection or move-in!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Ready for Post-Construction Cleaning?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Post-Construction Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
                     Contact us early in your construction timeline. We'll coordinate with your contractors to provide cleaning services exactly when you need them.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
                 </div>
-                <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">
-                    Emergency cleanup available • Licensed & Insured • Free project consultations
-                </p>
+                <p class="mt-6 text-white/70 text-sm">Emergency cleanup available • Licensed & Insured • Free project consultations</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script src="/script-clean.js" is:inline></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
 </body>
 </html>
