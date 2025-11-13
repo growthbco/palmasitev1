@@ -2,6 +2,8 @@
 // Oak Run Commercial Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Oak Run Commercial Cleaning | Palma Cleaning - Ocala FL";
 const description = "Professional commercial cleaning services for Oak Run community centers, clubhouses, and businesses in Ocala, FL. Specialized cleaning for Oak Run golf facilities, recreation centers, and commercial properties.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional commercial cleaning services for Oak Run commu
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -48,6 +51,7 @@ const description = "Professional commercial cleaning services for Oak Run commu
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

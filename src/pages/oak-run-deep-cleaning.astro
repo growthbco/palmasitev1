@@ -2,6 +2,8 @@
 // Oak Run Deep Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Oak Run Deep House Cleaning | Palma Cleaning - Ocala FL";
 const description = "Comprehensive deep house cleaning services for Oak Run active adult community homes in Ocala, FL. Top-to-bottom detailed cleaning for Oak Run golf course community residents. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Comprehensive deep house cleaning services for Oak Run acti
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -48,6 +51,7 @@ const description = "Comprehensive deep house cleaning services for Oak Run acti
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

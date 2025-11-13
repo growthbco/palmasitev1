@@ -2,6 +2,8 @@
 // OTOW (On Top of the World) area landing page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "OTOW Cleaning Services | Palma Cleaning - On Top of the World FL";
 const description = "Professional cleaning services for On Top of the World (OTOW), Florida. House cleaning, villa cleaning, and specialized services for OTOW residents. Licensed & insured cleaning company.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional cleaning services for On Top of the World (OTO
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -47,6 +50,7 @@ const description = "Professional cleaning services for On Top of the World (OTO
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

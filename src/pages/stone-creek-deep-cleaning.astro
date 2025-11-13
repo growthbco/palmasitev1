@@ -2,6 +2,8 @@
 // Stone Creek Deep Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Stone Creek Deep House Cleaning | Palma Cleaning - Ocala FL";
 const description = "Deep house cleaning for Stone Creek luxury homes in Ocala, FL. Top-to-bottom detailed cleaning for Stone Creek residents. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Deep house cleaning for Stone Creek luxury homes in Ocala, 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -147,6 +150,7 @@ const description = "Deep house cleaning for Stone Creek luxury homes in Ocala, 
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->

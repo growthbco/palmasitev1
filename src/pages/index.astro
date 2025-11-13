@@ -2,6 +2,8 @@
 // Homepage content - serving main landing page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 
 const title = "Palma Cleaning - Professional House & Commercial Cleaning in Ocala FL";
 const description = "Professional house cleaning for busy families & professionals throughout Ocala, FL. Serving all neighborhoods including premium communities near World Equestrian Center. Licensed & insured.";
@@ -10,6 +12,7 @@ const description = "Professional house cleaning for busy families & professiona
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -310,6 +313,7 @@ const description = "Professional house cleaning for busy families & professiona
     </style>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero" id="home">

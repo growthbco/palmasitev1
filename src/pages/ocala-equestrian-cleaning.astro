@@ -2,6 +2,8 @@
 // Ocala Equestrian Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Ocala Equestrian Property Cleaning | Palma Cleaning - Marion County FL";
 const description = "Professional equestrian property cleaning for Ocala horse properties in Marion County, FL. Specialized cleaning for horse farms, barns, and equestrian facilities in Ocala - Horse Capital of the World.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional equestrian property cleaning for Ocala horse p
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -48,6 +51,7 @@ const description = "Professional equestrian property cleaning for Ocala horse p
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

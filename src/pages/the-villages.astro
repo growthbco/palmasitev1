@@ -2,6 +2,8 @@
 // The Villages area landing page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "The Villages Cleaning Services | Palma Cleaning - FL";
 const description = "Professional cleaning services for The Villages, Florida. House cleaning, commercial cleaning, and specialized services for Villages residents. Licensed & insured cleaning company.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional cleaning services for The Villages, Florida. H
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -47,6 +50,7 @@ const description = "Professional cleaning services for The Villages, Florida. H
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

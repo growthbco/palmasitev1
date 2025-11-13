@@ -2,6 +2,8 @@
 // Dunnellon Move-in/Move-out Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Dunnellon Move-in/Move-out Cleaning | Palma Cleaning - Marion County FL";
 const description = "Professional move-in and move-out cleaning services for Dunnellon properties in Marion County, FL. Real estate ready cleaning, vacation rental turnover, and transition cleaning. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional move-in and move-out cleaning services for Dun
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -48,6 +51,7 @@ const description = "Professional move-in and move-out cleaning services for Dun
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

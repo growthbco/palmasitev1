@@ -2,6 +2,8 @@
 // Commercial cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Commercial Office Cleaning Services in Ocala FL | Palma Cleaning";
 const description = "Professional commercial office cleaning services in Ocala, FL. Daily, weekly, and monthly cleaning plans for offices, medical facilities, and retail spaces. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional commercial office cleaning services in Ocala, 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -142,6 +145,7 @@ const description = "Professional commercial office cleaning services in Ocala, 
 </head>
 
 <body>
+    <GTMBody />
     <Navigation />
     
     <!-- Breadcrumb Navigation -->

@@ -2,6 +2,8 @@
 // Stone Creek area landing page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Stone Creek Cleaning Services | Palma Cleaning - Ocala FL";
 const description = "Professional cleaning services for Stone Creek community in Ocala, FL. House cleaning, commercial cleaning, and specialized services for Stone Creek residents. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional cleaning services for Stone Creek community in
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -47,6 +50,7 @@ const description = "Professional cleaning services for Stone Creek community in
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->

@@ -2,6 +2,8 @@
 // Commercial Office Cleaning Guide - targeting business owner queries
 import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
+import GTMHead from '../../components/GTMHead.astro';
+import GTMBody from '../../components/GTMBody.astro';
 
 const title = "Commercial Office Cleaning: Complete Guide for Business Owners | Palma Cleaning";
 const description = "Complete guide to maintaining professional, healthy workplace environments. Learn about cleaning schedules, costs, standards, and how to choose the right commercial cleaning service.";
@@ -11,6 +13,7 @@ const publishDate = "2025-08-11";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -83,6 +86,7 @@ const publishDate = "2025-08-11";
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->

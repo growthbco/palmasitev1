@@ -2,6 +2,8 @@
 // OTOW Equestrian Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "OTOW Equestrian Property Cleaning | Palma Cleaning - On Top of the World FL";
 const description = "Professional equestrian property cleaning services for On Top of the World (OTOW) community horse properties in Florida. Specialized barn and stable cleaning. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional equestrian property cleaning services for On T
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -48,6 +51,7 @@ const description = "Professional equestrian property cleaning services for On T
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <section class="hero">

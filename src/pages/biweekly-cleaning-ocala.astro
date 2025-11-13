@@ -2,6 +2,8 @@
 // Biweekly Cleaning Service Ocala - SEO optimized page  
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Biweekly Cleaning Service Ocala FL | Every Two Weeks House Cleaning";
 const description = "Biweekly house cleaning service in Ocala FL. Perfect balance of clean home and affordability. Every 2 weeks cleaning schedule. Save time and money. Book your bi-weekly cleaner today.";
 ---
@@ -9,6 +11,7 @@ const description = "Biweekly house cleaning service in Ocala FL. Perfect balanc
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -47,6 +50,7 @@ const description = "Biweekly house cleaning service in Ocala FL. Perfect balanc
 </head>
 
 <body>
+    <GTMBody />
     <Navigation />
     
     <div style="background: #f8fafa; padding: 1rem 0;">

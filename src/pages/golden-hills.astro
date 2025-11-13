@@ -2,6 +2,8 @@
 // Golden Hills area landing page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Golden Hills Cleaning Services Ocala FL - Northwest Ocala House Cleaning | Palma Cleaning";
 const description = "Professional house cleaning services for Golden Hills community in northwest Ocala FL. All-age community cleaning specialists serving single-family homes and equestrian properties.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional house cleaning services for Golden Hills commu
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -85,6 +88,7 @@ const description = "Professional house cleaning services for Golden Hills commu
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Hero Section -->

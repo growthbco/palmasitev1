@@ -2,6 +2,8 @@
 // Affordable House Cleaning Ocala - SEO optimized page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Premium House Cleaning Ocala FL | Best Value Professional Service";
 const description = "Premium house cleaning services in Ocala FL with exceptional value. Professional quality cleaning for discerning homeowners. Licensed & insured. Transparent pricing, no hidden fees.";
 ---
@@ -9,6 +11,7 @@ const description = "Premium house cleaning services in Ocala FL with exceptiona
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -63,6 +66,7 @@ const description = "Premium house cleaning services in Ocala FL with exceptiona
 </head>
 
 <body>
+    <GTMBody />
     <Navigation />
     
     <!-- Breadcrumb Navigation -->

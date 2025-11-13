@@ -2,6 +2,8 @@
 // Summer Cleaning Tips for Florida - seasonal content targeting year-round traffic
 import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
+import GTMHead from '../../components/GTMHead.astro';
+import GTMBody from '../../components/GTMBody.astro';
 
 const title = "Summer Cleaning Tips for Florida Homes | Beat Heat & Humidity | Palma Cleaning";
 const description = "Specialized summer cleaning strategies for Florida's heat and humidity. Learn to combat mold, manage AC loads, and keep your home fresh during hot months.";
@@ -11,6 +13,7 @@ const publishDate = "2025-08-11";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -57,6 +60,7 @@ const publishDate = "2025-08-11";
     </script>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->

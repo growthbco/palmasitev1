@@ -2,6 +2,8 @@
 // Oak Run Standard Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Oak Run Standard House Cleaning | Palma Cleaning - Ocala FL";
 const description = "Regular house cleaning services for Oak Run active adult community in Ocala, FL. Weekly, bi-weekly, and monthly cleaning plans for Oak Run golf course homes. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Regular house cleaning services for Oak Run active adult co
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -64,6 +67,7 @@ const description = "Regular house cleaning services for Oak Run active adult co
     </style>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->
@@ -93,7 +97,7 @@ const description = "Regular house cleaning services for Oak Run active adult co
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://i0.wp.com/oakrunflorida.com/wp-content/uploads/2024/01/2024_OakRunComm-FULL-116.jpg" alt="Oak Run Community - Beautiful Golf Course Views" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Professional House Cleaning Service" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
             </div>
         </div>
     </section>

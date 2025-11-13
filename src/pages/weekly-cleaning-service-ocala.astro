@@ -2,6 +2,8 @@
 // Weekly Cleaning Service Ocala - SEO optimized page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Weekly House Cleaning Service Ocala FL | Recurring Maid Service";
 const description = "Weekly house cleaning service in Ocala FL. Consistent, reliable cleaning every week. Save 10% with regular service. Serving Marion County families since 2020. Book your weekly cleaner today.";
 ---
@@ -9,6 +11,7 @@ const description = "Weekly house cleaning service in Ocala FL. Consistent, reli
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -59,6 +62,7 @@ const description = "Weekly house cleaning service in Ocala FL. Consistent, reli
 </head>
 
 <body>
+    <GTMBody />
     <Navigation />
     
     <!-- Breadcrumb Navigation -->

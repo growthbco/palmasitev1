@@ -2,6 +2,8 @@
 // Contact page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Contact Palma Cleaning - Get Your Free Quote | Ocala FL";
 const description = "Contact Palma Cleaning for professional cleaning services in Ocala, Marion County, and The Villages. Call (352) 764-4747 or request your free quote online. Licensed & insured.";
 ---
@@ -9,6 +11,7 @@ const description = "Contact Palma Cleaning for professional cleaning services i
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -79,6 +82,7 @@ const description = "Contact Palma Cleaning for professional cleaning services i
     </style>
 </head>
 <body>
+    <GTMBody />
     <Navigation />
 
     <!-- Breadcrumb Navigation -->

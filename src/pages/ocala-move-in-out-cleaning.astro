@@ -2,6 +2,8 @@
 // Ocala Move-in/Move-out Cleaning service page
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
 const title = "Move In Move Out Cleaning Services Ocala FL | Real Estate Ready | Palma Cleaning";
 const description = "Professional move-in and move-out cleaning services in Ocala, FL. Real estate ready cleaning, deposit recovery cleaning, same-day service. Licensed & insured. Serving all Ocala neighborhoods and Marion County.";
 ---
@@ -9,6 +11,7 @@ const description = "Professional move-in and move-out cleaning services in Ocal
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <GTMHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -53,6 +56,7 @@ const description = "Professional move-in and move-out cleaning services in Ocal
 </head>
 
 <body>
+    <GTMBody />
     <Navigation />
     
     <!-- Breadcrumb Navigation -->
