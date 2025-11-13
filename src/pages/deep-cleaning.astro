@@ -135,7 +135,7 @@ const allRoomsChecklist = [
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {bathroomChecklist.map((item) => (
-                                <li class="flex items-start" key={item.text}>
+                                <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
                                     <span>
                                         {item.text}
@@ -154,7 +154,7 @@ const allRoomsChecklist = [
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {bedroomChecklist.map((item) => (
-                                <li class="flex items-start" key={item.text}>
+                                <li class="flex items-start">
                                     <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
                                     <span>
                                         {item.text}
@@ -173,7 +173,7 @@ const allRoomsChecklist = [
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {kitchenChecklist.map((item) => (
-                                <li class="flex items-start" key={item.text}>
+                                <li class="flex items-start">
                                     <i class={`fa-regular ${item.addOn ? 'fa-square text-gray-400' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
                                     <span>
                                         {item.text}
@@ -193,7 +193,7 @@ const allRoomsChecklist = [
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {allRoomsChecklist.map((item) => (
-                                <li class="flex items-start" key={item.text}>
+                                <li class="flex items-start">
                                     <i class={`fa-regular ${item.addOn ? 'fa-square text-gray-400' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
                                     <span>
                                         {item.text}
