@@ -152,20 +152,20 @@ const seasonalPosts = [
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+        <section class="bg-[#305048] text-white py-20 md:py-24">
             <div class="text-center max-w-3xl mx-auto px-6">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Cleaning Tips & Professional Guides</h1>
-                <p class="text-lg mb-8 leading-relaxed">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">Cleaning Tips & Professional Guides</h1>
+                <p class="text-xl mb-6 leading-relaxed">
                     Expert Advice from Ocala's Trusted Cleaning Professionals
                 </p>
-                <p class="text-white/90 mb-8 leading-relaxed">
+                <p class="text-white/90 mb-10 leading-relaxed text-lg max-w-2xl mx-auto">
                     Discover proven cleaning tips, maintenance guides, and industry insights to keep your home or business spotless. From seasonal deep cleaning to daily maintenance, we share the expertise that's helped hundreds of Ocala families and businesses.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
                         Get Professional Cleaning
                     </a>
-                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white px-10 py-3 rounded-md text-lg font-bold hover:bg-white hover:text-[#305048] transition-colors duration-300 inline-block">
+                    <a href="tel:+13527644747" class="bg-transparent border-2 border-[#305048] text-[#305048] bg-white px-10 py-3 rounded-md text-lg font-bold hover:bg-[#F4F7F6] transition-colors duration-300 inline-block">
                         Call (352) 764-4747
                     </a>
                 </div>
@@ -173,19 +173,19 @@ const seasonalPosts = [
         </section>
 
         <!-- Blog Categories -->
-        <section class="py-24 bg-[#F4F7F6]">
+        <section class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center mb-12">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Browse by Category</p>
-                    <h2 class="text-3xl md:text-4xl font-bold">Browse by Category</h2>
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057] mb-3">Browse by Category</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#305048]">Browse by Category</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {categories.map((category) => (
                         <a href={category.link} class="bg-white rounded-2xl p-8 text-center shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300 group">
-                            <i class={`${category.icon} text-4xl text-[#FF8057] mb-4 group-hover:scale-110 transition-transform`}></i>
-                            <h3 class="text-lg font-bold text-[#305048] mb-3">{category.title}</h3>
-                            <p class="text-sm text-gray-600 mb-4">{category.description}</p>
-                            <span class="text-[#FF8057] font-semibold text-sm group-hover:underline">View Articles →</span>
+                            <i class={`${category.icon} text-5xl text-[#FF8057] mb-6 group-hover:scale-110 transition-transform`}></i>
+                            <h3 class="text-lg font-bold text-[#305048] mb-4">{category.title}</h3>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">{category.description}</p>
+                            <span class="text-[#FF8057] font-semibold text-sm group-hover:underline inline-block">View Articles →</span>
                         </a>
                     ))}
                 </div>
