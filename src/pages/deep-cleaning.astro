@@ -9,134 +9,67 @@ import GlobalHead from '../components/GlobalHead.astro';
 const title = "Deep House Cleaning Services in Ocala FL | Palma Cleaning";
 const description = "Professional deep house cleaning services in Ocala, FL. Comprehensive top-to-bottom cleaning including baseboards, ceiling fans, inside appliances, and detailed sanitization.";
 
-const checklists = [
-  {
-    title: "Bathroom checklist",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
-    items: [
-      { text: "Scrub and disinfect sinks" },
-      { text: "Wipe/clean tub and shower tile" },
-      { text: "Disinfect toilets inside, outside, and behind" },
-      { text: "Clean and shine chrome fixtures" },
-      { text: "Clean mirrors and glass" },
-      { text: "Dust window sills & blinds" },
-      { text: "Vacuum and mop floors" },
-      { text: "Empty trash & replace liners" },
-      { text: "Hand wash baseboards", tag: "included" },
-      { text: "Scrub shower doors & tubs", tag: "included" }
-    ]
-  },
-  {
-    title: "Bedroom checklist",
-    image: "https://images.unsplash.com/photo-1584622650517-1e3885ab0a83?auto=format&fit=crop&w=900&q=80",
-    items: [
-      { text: "Make beds & straighten linens" },
-      { text: "Dust lamps, frames, and décor" },
-      { text: "Dust furniture top, front, and base" },
-      { text: "Vacuum and/or mop floors" },
-      { text: "Dust window sills & blinds" },
-      { text: "Remove cobwebs" },
-      { text: "Clean mirrors & glass" },
-      { text: "Wipe door handles & switches" },
-      { text: "Basic organizing as needed" },
-      { text: "Hand wash baseboards", tag: "included" }
-    ]
-  },
-  {
-    title: "Kitchen checklist",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80",
-    items: [
-      { text: "Clean appliance exteriors" },
-      { text: "Microwave interior & exterior" },
-      { text: "Disinfect countertops & backsplash" },
-      { text: "Clean cabinet fronts & hardware" },
-      { text: "Scrub sink, polish fixtures & stainless" },
-      { text: "Load dishes or dishwasher" },
-      { text: "Dust window sills & lights" },
-      { text: "Vacuum and mop floors" },
-      { text: "Degrease stove top" },
-      { text: "Hand wash baseboards", tag: "included" }
-    ]
-  },
-  {
-    title: "Other living areas",
-    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80",
-    items: [
-      { text: "Dust and straighten cushions & pillows" },
-      { text: "Ceiling fans, vents, and fixtures dusted" },
-      { text: "Dust picture frames & décor" },
-      { text: "Vacuum and/or mop floors & stairs" },
-      { text: "Dust window sills & blinds" },
-      { text: "Clean mirrors & glass" },
-      { text: "Remove cobwebs" },
-      { text: "Empty trash" },
-      { text: "Hand wash baseboards", tag: "included" },
-      { text: "Wipe down/vacuum furniture", tag: "included" }
-    ]
-  }
+const bathroomChecklist = [
+  { text: "Scrub and disinfect sinks" },
+  { text: "Wipe/clean tub and shower tiles" },
+  { text: "Disinfect toilets inside and out" },
+  { text: "Clean and shine chrome fixtures" },
+  { text: "Disinfect countertops" },
+  { text: "Clean cabinet front" },
+  { text: "Vacuum and/or wash floor" },
+  { text: "Dust window sills" },
+  { text: "Dust baseboards" },
+  { text: "Empty trash" },
+  { text: "Clean mirrors" },
+  { text: "Hand wash baseboards", included: true },
+  { text: "Scrub shower and bathtubs", included: true }
 ];
 
-const addonUpgrades = [
-  "Clean inside oven",
-  "Clean inside refrigerator",
-  "Inside cabinets & drawers reset",
-  "Pantry or closet organization",
-  "Exterior air vent & return dusting",
-  "Garage sweep & vacuum (if accessible)"
+const bedroomChecklist = [
+  { text: "Make beds" },
+  { text: "Dust lamps and lampshades (int/ext)" },
+  { text: "Dust picture frames" },
+  { text: "Dust furniture (top, front, and under)" },
+  { text: "Vacuum and/or wash floor" },
+  { text: "Dust window sills" },
+  { text: "Dust baseboards" },
+  { text: "Remove cobwebs" },
+  { text: "Empty trash" },
+  { text: "Clean mirrors" },
+  { text: "Wipe door handles & light switches" },
+  { text: "Basic organizing" },
+  { text: "Hand wash baseboards", included: true }
 ];
 
-const deepVsStandard = [
-  {
-    title: "Time Investment",
-    icon: "fa-solid fa-clock",
-    copy: "Deep cleans average 4–6 hours vs. 2–3 hours for standard service, letting us hit every detail."
-  },
-  {
-    title: "Specialized Equipment",
-    icon: "fa-solid fa-toolbox",
-    copy: "Commercial-grade vacuums, microfiber systems, and eco-friendly solutions remove buildup safely."
-  },
-  {
-    title: "Comprehensive Coverage",
-    icon: "fa-solid fa-expand",
-    copy: "We tackle baseboards, trim, light fixtures, high dusting, furniture edges, and appliance interiors."
-  },
-  {
-    title: "Sanitization",
-    icon: "fa-solid fa-shield-heart",
-    copy: "Disinfection of high-touch points reduces allergens, bacteria, and everyday germs for a healthier home."
-  }
+const kitchenChecklist = [
+  { text: "Clean appliance exteriors" },
+  { text: "Wipe down microwave (int/ext)" },
+  { text: "Clean tables and chairs" },
+  { text: "Disinfect countertops and backsplash" },
+  { text: "Wipe cabinet fronts" },
+  { text: "Scrub and disinfect sinks" },
+  { text: "Wash dishes or load dishwasher" },
+  { text: "Hand wash baseboards", included: true },
+  { text: "Degrease and clean oven interior", included: true },
+  { text: "Scrub & wipe inside refrigerator", addOn: true },
+  { text: "Wipe inside cabinets and drawers", addOn: true },
+  { text: "Wipe inside pantry and closets", addOn: true }
 ];
 
-const useCases = [
-  {
-    icon: "fa-solid fa-calendar-day",
-    title: "Seasonal Reset",
-    copy: "Get ready for spring, holidays, or post-vacation recovery with a full refresh."
-  },
-  {
-    icon: "fa-solid fa-person-carry-box",
-    title: "Move-In / Move-Out",
-    copy: "Present your home in its best light or move into a space that feels truly new."
-  },
-  {
-    icon: "fa-solid fa-star",
-    title: "First-Time Service",
-    copy: "Start recurring maintenance with a baseline deep clean for lasting results."
-  },
-  {
-    icon: "fa-solid fa-champagne-glasses",
-    title: "Special Events",
-    copy: "Hosting guests? Ensure every surface sparkles before (and after) the festivities."
-  }
+const allRoomsChecklist = [
+  { text: "Fluff and straighten cushions and pillows" },
+  { text: "Dust ceiling fans (if accessible)" },
+  { text: "Dust lamps and lampshades" },
+  { text: "Dust picture frames" },
+  { text: "Dust furniture" },
+  { text: "Vacuum and/or wash floor" },
+  { text: "Hand wash baseboards", included: true },
+  { text: "Wipe down/vacuum furniture", included: true },
+  { text: "Clean windows (interior) and blinds", included: true },
+  { text: "Vacuum exterior air vents & return", addOn: true },
+  { text: "Sweep garage floors (if vacant)", addOn: true }
 ];
 
-const quickStats = [
-  { icon: "fa-solid fa-clock", title: "4–6 Hours", copy: "Dedicated cleaning timeline based on home size." },
-  { icon: "fa-solid fa-spray-can-sparkles", title: "Sanitized", copy: "High-touch points disinfected throughout." },
-  { icon: "fa-solid fa-leaf", title: "Eco-Friendly", copy: "Family and pet-safe products available." },
-  { icon: "fa-solid fa-user-shield", title: "Licensed & Insured", copy: "W-2, background-checked Palma Cleaning pros." }
-];
 ---
 
 <!DOCTYPE html>
@@ -177,175 +110,115 @@ const quickStats = [
 
     <main>
         <!-- Hero -->
-        <section class="bg-[#F4F7F6]">
-            <div class="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-[1.3fr,1fr] gap-12 items-center">
-                <div class="space-y-6 text-center lg:text-left">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Deep Cleaning Specialists</p>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Professional Deep Cleaning Services in Ocala, FL</h1>
-                    <p class="text-lg text-gray-600 max-w-2xl">Our top-to-bottom service targets buildup, high-touch surfaces, and hard-to-reach areas—perfect for seasonal resets, move-ins, or detailed refreshes.</p>
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Book Now</a>
-                        <a href="tel:+13527644747" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Call (352) 764-4747</a>
-                    </div>
-                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-3 text-sm">
-                        <span class="text-[#FF8057] text-lg">★★★★★</span>
-                        <span class="uppercase tracking-[0.25em] text-[#305048]/70">5-Star Deep Cleaning Service</span>
-                    </div>
-                </div>
-                <div class="hidden lg:flex">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Palma Cleaning deep clean" class="rounded-2xl shadow-2xl object-cover">
-                </div>
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Deep cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Our deep cleaning tackles grime and neglected areas, reaching beyond our standard clean. We scrub bathrooms (including baseboards!), banish dust bunnies in vents and corners, and make your oven sparkle.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    VIEW PRICING
+                </a>
             </div>
         </section>
 
         <!-- Checklist Section -->
-        <section class="py-24 bg-white" id="checklists">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Detailed Checklists</p>
-                    <h2 class="text-3xl md:text-4xl font-bold">Every deep clean covers these spaces</h2>
-                    <p class="mt-4 text-gray-600">From tile grout to baseboards and vent covers, we follow a proven checklist to ensure every room feels freshly reset.</p>
-                </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {checklists.map((list) => (
-                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-6 shadow-sm" key={list.title}>
-                            {list.image && (
-                                <img src={list.image} alt={list.title} class="rounded-xl object-cover w-full h-48" loading="lazy" />
-                            )}
-                            <h3 class="mt-6 text-xl font-semibold">{list.title}</h3>
-                            <ul class="mt-5 space-y-2">
-                                {list.items.map((item) => (
-                                    <li class="flex items-start gap-3" key={item.text}>
-                                        <span class="mt-1 text-[#FF8057]"><i class="fa-solid fa-square-check"></i></span>
-                                        <span class="text-sm text-gray-600 leading-relaxed">
-                                            {item.text}
-                                            {item.tag && (
-                                                <span class="ml-1 text-[#305048] font-semibold text-xs uppercase tracking-wide">({item.tag})</span>
-                                            )}
-                                        </span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-        <!-- Add-on Upgrades -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-2xl px-6 py-10">
-                    <h3 class="text-2xl font-semibold text-[#305048]">Want to go even deeper?</h3>
-                    <p class="mt-3 text-sm text-gray-600">Add any of these upgrades to your deep clean and we&rsquo;ll tailor the visit to your exact priorities.</p>
-                    <div class="mt-6 flex flex-wrap justify-center gap-3">
-                        {addonUpgrades.map((upgrade) => (
-                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 text-sm font-semibold text-[#305048]" key={upgrade}>
-                                <i class="fa-solid fa-plus text-[#FF8057] mr-2"></i>{upgrade}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Deep vs Standard -->
-        <section class="py-24 bg-[#305048] text-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Beyond the Basics</p>
-                    <h2 class="text-3xl md:text-4xl font-bold">What Makes Deep Cleaning Different?</h2>
-                    <p class="mt-4 text-white/80">More time, more detail, and professional equipment ensure your home looks and feels truly refreshed.</p>
-                </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {deepVsStandard.map((item) => (
-                        <div class="bg-white/15 backdrop-blur rounded-2xl p-8 shadow-lg" key={item.title}>
-                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl"><i class={item.icon}></i></div>
-                            <h3 class="mt-6 text-xl font-semibold">{item.title}</h3>
-                            <p class="mt-3 text-sm text-white/80 leading-relaxed">{item.copy}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-        <!-- Use Cases -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Perfect For</p>
-                    <h2 class="text-3xl md:text-4xl font-bold">When to Book a Deep Clean</h2>
-                    <p class="mt-4 text-gray-600">Our deep clean is ideal for resets, transitions, and moments when your home deserves extra care.</p>
-                </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-                    {useCases.map((item) => (
-                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 text-center shadow-sm" key={item.title}>
-                            <i class={`${item.icon} text-3xl text-[#FF8057]`}></i>
-                            <h3 class="mt-4 text-xl font-semibold">{item.title}</h3>
-                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">{item.copy}</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+                    
+                    <!-- Bathroom Checklist -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Bathroom checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                            <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a70505989e-13f092990f9f3c0f7a53.png" alt="a person with yellow gloves cleaning a white bathroom sink, detailed, professional cleaning service photo" />
                         </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+                        <ul class="space-y-3 text-gray-700">
+                            {bathroomChecklist.map((item) => (
+                                <li class="flex items-start" key={item.text}>
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
+                                    <span>
+                                        {item.text}
+                                        {item.included && <strong class="text-[#305048]"> (included)</strong>}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-        <!-- Process & Highlights -->
-        <section class="py-24 bg-[#F4F7F6]">
-            <div class="container mx-auto px-6">
-                <div class="bg-white border border-[#E3EAE8]/60 rounded-2xl shadow-2xl p-8 md:p-12">
-                    <div class="text-center max-w-3xl mx-auto">
-                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">How We Work</p>
-                        <h2 class="text-3xl font-bold">Professional Deep Cleaning Process</h2>
-                        <p class="mt-4 text-gray-600">Certified Palma Cleaning professionals use commercial-grade equipment, microfiber systems, and eco-friendly products to deliver a spotless, healthier home.</p>
-                    </div>
-                    <div class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
-                        {quickStats.map((stat) => (
-                            <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60" key={stat.title}>
-                                <i class={`${stat.icon} text-2xl text-[#FF8057]`}></i>
-                                <h3 class="mt-4 text-lg font-semibold">{stat.title}</h3>
-                                <p class="mt-2 text-sm text-gray-600 leading-relaxed">{stat.copy}</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div class="mt-10 bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-xl p-6 text-center">
-                        <h3 class="text-lg font-semibold text-[#305048]">Always Included</h3>
-                        <p class="mt-3 text-sm text-gray-600">Cobweb removal, ceiling fan cleaning (3-step ladder), trim and baseboards, detailed dusting, appliance exteriors, interior windows, and full floor care.</p>
-                        <div class="mt-4 flex flex-wrap justify-center gap-3 text-sm font-semibold text-[#305048]">
-                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-shield-heart text-[#FF8057]"></i>Licensed & Insured</span>
-                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-star text-[#FF8057]"></i>5-Star Rated</span>
-                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-seedling text-[#FF8057]"></i>Satisfaction Guaranteed</span>
+                    <!-- Bedroom Checklist -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Bedroom checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                           <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/060275ebb2-e51b07395b88f28a62d6.png" alt="a neatly made bed in a modern sunlit bedroom, with a person spraying a cleaning solution on a nightstand, professional cleaning service photo" />
                         </div>
+                        <ul class="space-y-3 text-gray-700">
+                            {bedroomChecklist.map((item) => (
+                                <li class="flex items-start" key={item.text}>
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
+                                    <span>
+                                        {item.text}
+                                        {item.included && <strong class="text-[#305048]"> (included)</strong>}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
+
+                    <!-- Kitchen Checklist -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Kitchen checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                           <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/87a66f6f45-2f29ac21b02afbd662b9.png" alt="a person carefully washing a glass plate in a clean kitchen sink, close-up shot, professional cleaning service photo" />
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            {kitchenChecklist.map((item) => (
+                                <li class="flex items-start" key={item.text}>
+                                    <i class={`fa-regular ${item.addOn ? 'fa-square text-gray-400' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
+                                    <span>
+                                        {item.text}
+                                        {item.included && <strong class="text-[#305048]"> (included)</strong>}
+                                        {item.addOn && <strong class="text-[#305048]"> (add-on)</strong>}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <!-- Other Living Areas -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Other living areas</h2>
+                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                            <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/12b6a06b16-0741abe4166921665763.png" alt="a person in yellow gloves using a squeegee to clean a large window in a living room, bright and airy, professional cleaning service photo" />
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            {allRoomsChecklist.map((item) => (
+                                <li class="flex items-start" key={item.text}>
+                                    <i class={`fa-regular ${item.addOn ? 'fa-square text-gray-400' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
+                                    <span>
+                                        {item.text}
+                                        {item.included && <strong class="text-[#305048]"> (included)</strong>}
+                                        {item.addOn && <strong class="text-[#305048]"> (add-on)</strong>}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
 
         <!-- Coupon Section -->
-        <section class="py-20 bg-[#305048] text-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto bg-white/10 border border-white/20 rounded-2xl p-10 text-center shadow-xl">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Limited Time Offer</p>
-                    <h2 class="mt-4 text-3xl md:text-4xl font-bold">Save up to 25% on your first deep clean</h2>
-                    <p class="mt-4 text-white/80">New recurring clients receive up to 25% off the first deep clean when they schedule ongoing weekly or bi-weekly service with Palma Cleaning.</p>
-                    <div class="mt-8 flex flex-wrap justify-center gap-4">
-                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Claim Offer</a>
-                        <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">Call (352) 764-4747</a>
-                    </div>
-                    <p class="mt-4 text-xs uppercase tracking-[0.2em] text-white/60">Discount applied after first recurring visit · New Palma Cleaning clients only</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA -->
-        <section class="py-24 bg-[#FF8057]">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#305048]">Ready for a Palma Cleaning Deep Clean?</h2>
-                <p class="mt-4 text-[#305048]/90 text-lg max-w-2xl mx-auto">Share your checklist and availability—we’ll customize a quote, assign the right team, and lock in your preferred date.</p>
-                <div class="mt-10 flex flex-wrap justify-center gap-4">
-                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fa-solid fa-calendar-check mr-2"></i>Book Now</a>
-                    <a href="tel:+13527644747" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747</a>
-                </div>
-                <p class="mt-6 text-[#305048]/80 text-sm">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Get up to 25% off your first deep clean</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    If you're a new customer, get up to 25% off your first deep clean when you sign up for a bi-weekly cleaning with us.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    LEARN MORE
+                </a>
             </div>
         </section>
     </main>
