@@ -143,6 +143,26 @@ const showHomeLink = Astro.props?.showHome ?? true;
             document.head.appendChild(style);
         }
 
+        // Initialize dropdowns when DOM is ready
+        const initDropdowns = () => {
+            // Ensure all dropdowns start closed
+            document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
+                menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
+                menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                menu.style.display = 'none';
+            });
+            document.querySelectorAll('.desktop-dropdown-toggle i').forEach(chevron => {
+                chevron.classList.remove('rotate-180', 'opacity-100');
+                chevron.classList.add('opacity-70');
+            });
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDropdowns);
+        } else {
+            initDropdowns();
+        }
+
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuButton && mobileMenu) {
@@ -172,6 +192,7 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
                     menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
                     menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    menu.style.display = 'none';
                 });
                 document.querySelectorAll('.desktop-dropdown-toggle i').forEach(chevron => {
                     chevron.classList.remove('rotate-180', 'opacity-100');
@@ -193,6 +214,7 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
                     menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
                     menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    menu.style.display = 'none';
                 });
                 document.querySelectorAll('.desktop-dropdown-toggle i').forEach(chevron => {
                     chevron.classList.remove('rotate-180', 'opacity-100');
@@ -221,14 +243,14 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 
                 if (!targetMenu) return;
                 
-                // Check if current dropdown is open (not hidden and visible)
-                const isCurrentlyOpen = !targetMenu.classList.contains('hidden') && 
-                                       targetMenu.classList.contains('opacity-100');
+                // Check if current dropdown is open by checking if hidden class is absent
+                const isCurrentlyOpen = !targetMenu.classList.contains('hidden');
                 
                 // Close all desktop dropdowns first
                 document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
                     menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
                     menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    menu.style.display = 'none';
                 });
                 document.querySelectorAll('.desktop-dropdown-toggle i').forEach(ch => {
                     ch.classList.remove('rotate-180', 'opacity-100');
@@ -237,12 +259,18 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 
                 // If it was closed, open it now (toggle behavior)
                 if (!isCurrentlyOpen) {
-                    targetMenu.classList.remove('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
-                    targetMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
-                    if (chevron) {
-                        chevron.classList.add('rotate-180', 'opacity-100');
-                        chevron.classList.remove('opacity-70');
-                    }
+                    targetMenu.style.display = 'block';
+                    setTimeout(() => {
+                        targetMenu.classList.remove('hidden');
+                        // Force a reflow
+                        targetMenu.offsetHeight;
+                        targetMenu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                        targetMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                        if (chevron) {
+                            chevron.classList.add('rotate-180', 'opacity-100');
+                            chevron.classList.remove('opacity-70');
+                        }
+                    }, 10);
                 }
             });
         });
