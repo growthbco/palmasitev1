@@ -1,0 +1,247 @@
+---
+// Benefits & Rewards page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Benefits & Rewards | Palma Cleaning - Ocala FL";
+const description = "Exclusive benefits and rewards for Palma Cleaning customers. Get discounts, free deep clean upgrades, and priority scheduling when you sign up for bi-weekly service.";
+
+const newCustomerBenefits = [
+  { text: "25% off first deep clean (bi-weekly)" },
+  { text: "25% off all bi-weekly services" },
+  { text: "Consistent, trusted cleaning team" }
+];
+
+const loyaltyBenefits = [
+  { text: "FREE deep clean upgrade every 6 months" },
+  { text: "Exclusive benefits and priority scheduling" },
+  { text: "15% discount codes for friends + family" }
+];
+
+const faqs = [
+  {
+    question: "How do I qualify for the FREE deep clean?",
+    answer: "We offer our Free Deep Clean Program for clients who are on our bi-weekly cleaning service. You'll receive 25% off your first deep clean to start, and after six months of continuous service, you'll qualify for a free bi-annual deep clean. To begin, a commitment to at least six bi-weekly cleanings is required. No additional enrollment is necessary; we'll automatically track your eligibility."
+  },
+  {
+    question: "How do I claim my FREE deep clean?",
+    answer: "Once you've completed six months of continuous bi-weekly service, we'll automatically notify you that you're eligible for your free deep clean. Simply contact us to schedule it at your convenience. The free deep clean will be applied during your next scheduled cleaning visit."
+  },
+  {
+    question: "What's included in a deep clean?",
+    answer: "Our deep clean includes detailed cleaning of baseboards, ceiling fans, inside appliances (oven, refrigerator upon request), detailed bathroom scrubbing, window cleaning, furniture wiping, and comprehensive dusting throughout your home. See our Deep Cleaning page for a complete checklist."
+  },
+  {
+    question: "What is the minimum service commitment?",
+    answer: "To qualify for the loyalty program benefits, we require a minimum commitment of six bi-weekly cleanings (approximately 3 months). After completing this initial commitment, you'll be eligible for the free bi-annual deep clean upgrade and all loyalty program benefits."
+  },
+  {
+    question: "How do I schedule my bi-annual deep clean?",
+    answer: "Contact us by phone at (352) 764-4747 or through your online account to schedule your free bi-annual deep clean. We'll work with you to find a convenient date and time. The deep clean upgrade will be applied during your regularly scheduled bi-weekly visit, so you don't need to book a separate appointment."
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Palma Cleaning benefits, cleaning service rewards, loyalty program, free deep clean Ocala">
+    <link rel="canonical" href="https://palmacleaningco.com/benefits">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Benefits & Rewards</h1>
+                <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+                    FREE deep clean upgrades and other perks of being a Palma Cleaning customer
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column - Images -->
+                    <div class="relative">
+                        <div class="relative h-[400px] lg:h-[500px]">
+                            <img 
+                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" 
+                                alt="Professional cleaning service" 
+                                class="absolute top-0 left-0 w-3/5 h-3/5 object-cover rounded-lg shadow-xl z-10"
+                                loading="lazy"
+                            />
+                            <img 
+                                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" 
+                                alt="Deep cleaning service" 
+                                class="absolute top-1/4 right-0 w-3/5 h-3/5 object-cover rounded-lg shadow-xl z-20"
+                                loading="lazy"
+                            />
+                            <img 
+                                src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=600&q=80" 
+                                alt="Trusted cleaning team" 
+                                class="absolute bottom-0 left-1/4 w-3/5 h-3/5 object-cover rounded-lg shadow-xl z-30"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Text -->
+                    <div>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            We believe in rewarding our loyal customers who trust us with their homes time and again. Our loyalty program is designed to say 'thank you' in ways that truly matter—with exclusive benefits, and valuable extras that make your experience with us even more exceptional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <!-- New Customers -->
+                    <div class="bg-[#F4F7F6] rounded-2xl p-8 shadow-sm">
+                        <h2 class="text-2xl font-bold text-[#305048] mb-6">New Customers</h2>
+                        <ul class="space-y-4">
+                            {newCustomerBenefits.map((benefit) => (
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-[#305048] mt-1 text-xl"></i>
+                                    <span class="text-gray-700 text-lg">{benefit.text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div class="mt-8">
+                            <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-8 rounded-md hover:bg-[#ff996f] transition duration-300 inline-block">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Loyalty Program -->
+                    <div class="bg-[#F4F7F6] rounded-2xl p-8 shadow-sm">
+                        <h2 class="text-2xl font-bold text-[#305048] mb-6">Loyalty Program</h2>
+                        <ul class="space-y-4">
+                            {loyaltyBenefits.map((benefit) => (
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-[#305048] mt-1 text-xl"></i>
+                                    <span class="text-gray-700 text-lg">{benefit.text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div class="mt-8">
+                            <a href="/book-now" class="bg-[#305048] text-white font-bold py-3 px-8 rounded-md hover:bg-[#305048]/90 transition duration-300 inline-block">
+                                Join Program
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-[#305048] mb-12">Frequently Asked Questions</h2>
+                
+                <div class="space-y-4">
+                    {faqs.map((faq, index) => (
+                        <div class="faq-item" data-index={index}>
+                            <button 
+                                class="faq-question w-full bg-[#305048] text-white font-semibold py-4 px-6 rounded-lg text-left flex items-center justify-between hover:bg-[#305048]/90 transition duration-300"
+                                data-target={`faq-answer-${index}`}
+                            >
+                                <span>{faq.question}</span>
+                                <i class="fa-solid fa-plus ml-4 transition-transform"></i>
+                            </button>
+                            <div 
+                                id={`faq-answer-${index}`}
+                                class="faq-answer hidden bg-white border border-gray-200 rounded-lg mt-2 p-6 text-gray-700 leading-relaxed"
+                            >
+                                <p>{faq.answer}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-[#FF8057]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-4">Ready to Start Earning Benefits?</h2>
+                <p class="text-lg text-[#305048]/90 max-w-2xl mx-auto mb-8">
+                    Sign up for bi-weekly cleaning service today and start enjoying exclusive rewards and discounts.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border-2 border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">
+                        Call (352) 764-4747
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    const answer = document.getElementById(targetId);
+                    const icon = button.querySelector('i');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        if (ans.id !== targetId) {
+                            ans.classList.add('hidden');
+                        }
+                    });
+                    document.querySelectorAll('.faq-question i').forEach(i => {
+                        if (i !== icon) {
+                            i.classList.remove('fa-minus');
+                            i.classList.add('fa-plus');
+                            i.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (answer) {
+                        answer.classList.toggle('hidden');
+                        if (answer.classList.contains('hidden')) {
+                            icon.classList.remove('fa-minus');
+                            icon.classList.add('fa-plus');
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            icon.classList.remove('fa-plus');
+                            icon.classList.add('fa-minus');
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
