@@ -4,29 +4,101 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "About Palma Cleaning - Professional Cleaning Services in Ocala FL";
 const description = "Learn about Palma Cleaning's story, values, and commitment to providing exceptional cleaning services throughout Ocala, Marion County, and The Villages. Licensed, insured, and trusted by hundreds of customers.";
+
+const stats = [
+  { value: "4+", label: "Years Serving Marion County" },
+  { value: "500+", label: "Recurring & One-Time Clients" },
+  { value: "98%", label: "Customer Retention Rate" }
+];
+
+const values = [
+  {
+    icon: "fa-solid fa-handshake",
+    title: "Trust & Reliability",
+    description: "Background-checked, W-2 team members who arrive on time, every time."
+  },
+  {
+    icon: "fa-solid fa-award",
+    title: "Quality Excellence",
+    description: "Checklist-driven cleanings backed by our 48-hour satisfaction guarantee."
+  },
+  {
+    icon: "fa-solid fa-heart",
+    title: "Personal Care",
+    description: "Your home or business is cleaned with the same respect we give our own spaces."
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Eco-Friendly Options",
+    description: "Green products available upon request to protect families, pets, and the planet."
+  }
+];
+
+const differentiators = [
+  {
+    icon: "fa-solid fa-shield-halved",
+    title: "Licensed & Insured",
+    description: "Full liability, bonding, and workers’ comp coverage for total peace of mind."
+  },
+  {
+    icon: "fa-solid fa-users",
+    title: "Experienced Team",
+    description: "Locally hired professionals trained on Palma Cleaning’s standards and processes."
+  },
+  {
+    icon: "fa-solid fa-clock",
+    title: "Flexible Scheduling",
+    description: "Weekly, bi-weekly, monthly, move-in/out, post-construction, and same-day options."
+  },
+  {
+    icon: "fa-solid fa-map-location-dot",
+    title: "Local Expertise",
+    description: "We know how to clean for Florida humidity, equestrian estates, and HOA requirements."
+  }
+];
+
+const coverage = [
+  {
+    icon: "fa-solid fa-map-marker-alt",
+    title: "Ocala & Marion County",
+    description: "Downtown Ocala, Golden Hills, Stone Creek, Oak Run, and every community nearby."
+  },
+  {
+    icon: "fa-solid fa-person-walking",
+    title: "The Villages",
+    description: "From Spanish Springs to Brownwood—golf cart friendly crews ready to help."
+  },
+  {
+    icon: "fa-solid fa-horse",
+    title: "Equestrian Estates",
+    description: "WEC, barns, tack rooms, and luxury acreage properties receive tailored care."
+  },
+  {
+    icon: "fa-solid fa-water",
+    title: "Greater Central Florida",
+    description: "Dunnellon, Belleview, Silver Springs, Rainbow Springs, and expanding routes."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="about Palma Cleaning, professional cleaning Ocala, cleaning company Marion County, The Villages cleaning service, licensed cleaning service Florida">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/about">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -58,171 +130,137 @@ const description = "Learn about Palma Cleaning's story, values, and commitment 
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
+
     <Navigation />
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">About Palma Cleaning</h1>
-                <p class="hero-subtitle">Your Trusted Cleaning Partner in Ocala & The Villages</p>
-                <p class="hero-description">Since 2020, we've been providing exceptional cleaning services to families and businesses throughout Central Florida with professionalism, reliability, and care.</p>
-            </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-heart"></i>
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-[1.3fr,1fr] gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">About Us</p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Your Trusted Cleaning Partner in Ocala & The Villages</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">Since 2020, Palma Cleaning has helped busy families, professionals, and property managers reclaim their time with dependable, high-touch cleaning services.</p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Book Now</a>
+                        <a href="tel:+13527644747" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Call (352) 764-4747</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex">
+                    <div class="bg-[#305048] text-white rounded-2xl p-10 shadow-2xl flex flex-col gap-6">
+                        <h2 class="text-2xl font-bold">Our Promise</h2>
+                        <p class="text-sm text-white/80">Licensed. Insured. Background-checked. Every visit is documented, inspected, and guaranteed.</p>
+                        <ul class="space-y-3 text-white/80 text-sm">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#FF8057]"></i> Dedicated support for recurring clients</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#FF8057]"></i> Eco-friendly products available</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#FF8057]"></i> Satisfaction follow-ups after every clean</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about" id="story">
-        <div class="container">
-            <h2 class="section-title">Our Story</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">Founded with a passion for helping busy families and professionals reclaim their valuable time.</p>
-                    <p>Palma Cleaning began as a simple idea: everyone deserves to come home to a clean, comfortable space without the stress of maintaining it themselves. What started as a small local service has grown into one of the most trusted cleaning companies serving Ocala, Marion County, and The Villages.</p>
-                    <p>Our founder recognized that life in Florida means spending time enjoying the outdoors, family activities, golf, and community events—not scrubbing floors and cleaning bathrooms. That's why we've built our business around reliability, quality, and genuine care for our customers and their homes.</p>
-                    <p>Today, we're proud to serve hundreds of satisfied customers with the same commitment to excellence that started our journey.</p>
+        <!-- Story + Stats -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr,0.8fr] gap-12 items-start">
+                <div class="space-y-5">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Story</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Rooted in Central Florida, Dedicated to Quality</h2>
+                    <p class="text-gray-600 leading-relaxed">Palma Cleaning began with a simple idea: everyone deserves to come home to a clean, comfortable space without sacrificing their weekends. What started as a small family business has grown into one of the most trusted cleaning companies across Ocala, The Villages, and the World Equestrian Center area.</p>
+                    <p class="text-gray-600 leading-relaxed">We combine hospitality-level detail with the reliability of a professional service—checklists, inspections, and communication keep every visit consistent. Whether we're preparing a luxury estate for guests or supporting a busy family schedule, our mission is to deliver peace of mind.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>4+</h3>
-                        <p>Years in Business</p>
-                    </div>
-                    <div class="stat">
-                        <h3>500+</h3>
-                        <p>Happy Customers</p>
-                    </div>
-                    <div class="stat">
-                        <h3>98%</h3>
-                        <p>Customer Retention Rate</p>
-                    </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+                    {stats.map((stat) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-xl p-8 text-center shadow-sm" key={stat.label}>
+                            <p class="text-3xl font-bold text-[#FF8057]">{stat.value}</p>
+                            <p class="mt-2 text-sm text-gray-600">{stat.label}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Our Values</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Trust & Reliability</h3>
-                    <p>We understand that inviting someone into your home or business requires trust. All our team members are thoroughly background-checked, trained, and committed to maintaining the highest standards.</p>
+        <!-- Values -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Values</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">What Guides Every Cleaning</h2>
+                    <p class="mt-4 text-gray-600">We believe great cleaning is built on trust, transparency, and a genuine desire to care for the spaces our clients love most.</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Quality Excellence</h3>
-                    <p>We take pride in our work and attention to detail. Every cleaning is performed to our exacting standards, and we're not satisfied until you are completely happy with the results.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Personal Care</h3>
-                    <p>Your home is your sanctuary, and your business reflects your professionalism. We treat every space with the respect and care it deserves, as if it were our own.</p>
-                </div>
-                
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Environmental Responsibility</h3>
-                    <p>We offer eco-friendly cleaning options and use products that are safe for your family, pets, and the environment. Clean homes shouldn't come at the cost of our planet's health.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {values.map((value) => (
+                        <div class="bg-white border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition" key={value.title}>
+                            <div class="flex items-center gap-4">
+                                <span class="w-12 h-12 rounded-full bg-[#F4F7F6] flex items-center justify-center text-[#FF8057]"><i class={`${value.icon} text-xl`}></i></span>
+                                <h3 class="text-xl font-semibold">{value.title}</h3>
+                            </div>
+                            <p class="mt-4 text-sm text-gray-600 leading-relaxed">{value.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">Why Choose Palma Cleaning?</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="display: grid; gap: 2rem; margin-bottom: 3rem;">
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i>Licensed & Insured</h4>
-                        <p style="color: #666; line-height: 1.6;">We're fully licensed and carry comprehensive general liability and bonding insurance for your complete peace of mind. Your property and belongings are protected.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-users" style="margin-right: 0.5rem;"></i>Experienced Team</h4>
-                        <p style="color: #666; line-height: 1.6;">Our cleaning professionals are experienced, trained in our quality standards, and committed to providing consistent, excellent service every time.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Flexible Scheduling</h4>
-                        <p style="color: #666; line-height: 1.6;">We work around your schedule with flexible appointment times. Whether you need weekly, bi-weekly, monthly, or one-time service, we accommodate your needs.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>Local Knowledge</h4>
-                        <p style="color: #666; line-height: 1.6;">As a local company, we understand the unique needs of Florida living, from managing humidity and dust to working with community-specific requirements like The Villages' golf cart access.</p>
-                    </div>
+        <!-- Differentiators -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Palma Cleaning?</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Licensed • Insured • Locally Trusted</h2>
+                    <p class="mt-4 text-gray-600">From luxury estates to short-term rentals, our crews are prepared for every detail—professional equipment, vetted checklists, and flexible scheduling put you in control.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {differentiators.map((item) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm" key={item.title}>
+                            <div class="flex items-center gap-4">
+                                <span class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#FF8057]"><i class={`${item.icon} text-xl`}></i></span>
+                                <h3 class="text-xl font-semibold">{item.title}</h3>
+                            </div>
+                            <p class="mt-4 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="areas" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Proudly Serving Central Florida</h2>
-            <div class="areas-grid">
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
-                    <p>Our home base, serving downtown Ocala and all surrounding Marion County communities with reliable, professional cleaning services.</p>
+        <!-- Coverage -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Serving Central Florida</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Proudly Supporting Your Community</h2>
+                    <p class="mt-4 text-gray-600">Our teams are routed daily across Ocala, The Villages, and surrounding areas. If you're nearby, chances are we're already cleaning for your neighbors.</p>
                 </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> The Villages</h4>
-                    <p>Specialized service for Florida's Premier Active Adult Community, including all village centers and golf course neighborhoods.</p>
-                </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Premium Communities</h4>
-                    <p>Expert cleaning for upscale communities like Stone Creek, Oak Run, and neighborhoods near the World Equestrian Center.</p>
-                </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
-                    <p>Extended service to Belleview, Dunnellon, Silver Springs, and other Central Florida communities.</p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {coverage.map((item) => (
+                        <div class="bg-white border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm" key={item.title}>
+                            <h3 class="text-xl font-semibold flex items-center gap-2"><i class={`${item.icon} text-[#FF8057]`}></i>{item.title}</h3>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" style="background: #f8fafa; padding: 3rem 0;">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <script type='text/javascript' src='https://link.palmacleaningco.com/reputation/assets/review-widget.js'></script>
-                <iframe class='lc_reviews_widget' src='https://link.palmacleaningco.com/reputation/widgets/review_widget/mAdkXDEE8QQPYfj1uzSF?widgetId=689752c11080b4d725e2dadc' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; min-height: 400px; border-radius: 15px;'></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" style="padding: 4rem 0;">
-        <div class="container">
-            <h2 class="section-title">Ready to Experience the Palma Difference?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join hundreds of satisfied customers who trust Palma Cleaning for their home and business cleaning needs. Get your free quote today!</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- CTA -->
+        <section class="py-24 bg-[#FF8057]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048]">Let’s Build Your Cleaning Plan</h2>
+                <p class="mt-4 text-[#305048]/90 text-lg max-w-2xl mx-auto">Tell us about your home or business, and we’ll customize a schedule, assign the right team, and confirm availability in your community.</p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fa-solid fa-calendar-check mr-2"></i>Book Now</a>
+                    <a href="tel:+13527644747" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747</a>
                 </div>
+                <p class="mt-6 text-[#305048]/80 text-sm">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
