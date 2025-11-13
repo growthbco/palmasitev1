@@ -4,26 +4,140 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Service Areas - House Cleaning Throughout Ocala FL | Palma Cleaning";
 const description = "Professional house cleaning services throughout Ocala, Florida and surrounding areas including Stone Creek, Oak Run, The Villages, Golden Hills, and all Marion County communities.";
+
+const areaGroups = [
+  {
+    title: "Ocala & Marion County",
+    links: [
+      { label: "Downtown Ocala", href: "/ocala" },
+      { label: "Stone Creek", href: "/stone-creek" },
+      { label: "Oak Run", href: "/oak-run" },
+      { label: "Golden Hills", href: "/golden-hills" },
+      { label: "Spruce Creek", href: null },
+      { label: "All Marion County communities", href: null }
+    ],
+    description: "Full-service residential, commercial, and specialty cleaning across Ocala and Marion County."
+  },
+  {
+    title: "The Villages",
+    links: [
+      { label: "Spanish Springs", href: "/the-villages" },
+      { label: "Lake Sumter Landing", href: null },
+      { label: "Brownwood Paddock Square", href: null },
+      { label: "Golf cart communities", href: null },
+      { label: "Villas & patio homes", href: null },
+      { label: "Independent living residences", href: null }
+    ],
+    description: "Specialized cleaning for active adult neighborhoods, seasonal residents, and golf-course properties."
+  },
+  {
+    title: "World Equestrian Center Area",
+    links: [
+      { label: "WEC Neighborhoods", href: "/wec-area" },
+      { label: "Horse farms & barns", href: null },
+      { label: "Luxury estates", href: null },
+      { label: "Tack rooms & arenas", href: null },
+      { label: "Show barns", href: null },
+      { label: "Agricultural properties", href: null }
+    ],
+    description: "Equestrian-ready cleaning for barns, arenas, luxury estates, and event rentals surrounding WEC."
+  },
+  {
+    title: "Surrounding Communities",
+    links: [
+      { label: "Belleview", href: "/belleview" },
+      { label: "Dunnellon", href: "/dunnellon" },
+      { label: "Rainbow Springs", href: null },
+      { label: "Silver Springs", href: null },
+      { label: "Citrus Springs", href: null },
+      { label: "Custom routes available", href: null }
+    ],
+    description: "Extended service coverage throughout North Central Florida—ask if we can add your neighborhood."
+  }
+];
+
+const featuredCommunities = [
+  {
+    icon: "fa-solid fa-house",
+    title: "Stone Creek",
+    description: "Luxury active-adult community with executive homes. Our team manages everything from routine upkeep to post-renovation detailing.",
+    bullets: [
+      "Luxury home maintenance programs",
+      "Deep cleans before/after guests",
+      "Move-in & staging support"
+    ],
+    href: "/stone-creek"
+  },
+  {
+    icon: "fa-solid fa-golf-ball-tee",
+    title: "Oak Run",
+    description: "Golf community specialists offering snowbird prep, arrival cleanings, and flexible recurring care.",
+    bullets: [
+      "Seasonal opening & closing cleans",
+      "Pet-friendly product options",
+      "Easy scheduling for travel lifestyles"
+    ],
+    href: "/oak-run"
+  },
+  {
+    icon: "fa-solid fa-horse",
+    title: "Golden Hills",
+    description: "Equestrian and estate properties receive barn-safe products and acreage-friendly cleaning plans.",
+    bullets: [
+      "Barn, tack room, and feed storage care",
+      "Luxury estate housekeeping",
+      "Show prep and event turnover"
+    ],
+    href: "/golden-hills"
+  },
+  {
+    icon: "fa-solid fa-umbrella-beach",
+    title: "Dunnellon & Rainbow Springs",
+    description: "Vacation rentals, riverfront homes, and short-term getaway properties polished between stays.",
+    bullets: [
+      "Turnover and same-day services",
+      "Laundry add-ons and linen resets",
+      "Guest-ready staging"
+    ],
+    href: "/dunnellon"
+  }
+];
+
+const coverageHighlights = [
+  {
+    icon: "fa-solid fa-route",
+    title: "30+ Mile Radius",
+    description: "Standard coverage extends across Greater Ocala. Ask about special trips beyond our core zone."
+  },
+  {
+    icon: "fa-solid fa-clock",
+    title: "Same-Day Options",
+    description: "Emergency and last-minute cleanings available in most markets with no rush surcharges."
+  },
+  {
+    icon: "fa-solid fa-gas-pump",
+    title: "No Travel Fees",
+    description: "Travel included for the majority of service calls within our Marion County footprint."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="house cleaning service areas Ocala FL, Stone Creek cleaning, Oak Run cleaning, The Villages cleaning, Marion County cleaning services">
     <link rel="canonical" href="https://palmacleaningco.com/service-areas">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
@@ -39,212 +153,152 @@ const description = "Professional house cleaning services throughout Ocala, Flor
             "addressCountry": "US"
         },
         "areaServed": [
-            {
-                "@type": "City",
-                "name": "Ocala",
-                "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
-            },
-            {
-                "@type": "City", 
-                "name": "The Villages"
-            },
-            {
-                "@type": "AdministrativeArea",
-                "name": "Marion County",
-                "containedInPlace": "Florida"
-            }
+            { "@type": "City", "name": "Ocala", "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida" },
+            { "@type": "City", "name": "The Villages" },
+            { "@type": "AdministrativeArea", "name": "Marion County", "containedInPlace": "Florida" }
         ],
         "serviceType": "House Cleaning Service",
         "description": "Professional house cleaning services throughout Ocala, Marion County, and surrounding areas including Stone Creek, Oak Run, The Villages, and more."
     }
     </script>
 </head>
-
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
+
     <Navigation />
-    
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Service Areas Throughout Ocala & Marion County</h1>
-                <p class="hero-description">Professional house cleaning services for communities throughout Ocala, FL and surrounding areas.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="areas" id="areas">
-        <div class="container">
-            <h2 class="section-title">Areas We Serve</h2>
-            <div class="areas-grid">
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
-                    <ul>
-                        <li><a href="/ocala" style="color: #ff8057; text-decoration: none;">Downtown Ocala</a></li>
-                        <li><a href="/stone-creek" style="color: #ff8057; text-decoration: none;">Stone Creek</a></li>
-                        <li><a href="/oak-run" style="color: #ff8057; text-decoration: none;">Oak Run</a></li>
-                        <li><a href="/golden-hills" style="color: #ff8057; text-decoration: none;">Golden Hills</a></li>
-                        <li>Spruce Creek</li>
-                        <li>All Marion County areas</li>
-                    </ul>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
-                        Complete residential and commercial cleaning services throughout Ocala and Marion County.
-                    </p>
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-[1.3fr,1fr] gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Serving Greater Ocala</p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Service Areas Throughout Ocala & Marion County</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">Palma Cleaning supports busy households, luxury estates, equestrian properties, and commercial spaces across Ocala, The Villages, Dunnellon, Belleview, and surrounding communities.</p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Book Now</a>
+                        <a href="tel:+13527644747" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Call (352) 764-4747</a>
+                    </div>
                 </div>
-                
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> The Villages</h4>
-                    <ul>
-                        <li><a href="/the-villages" style="color: #ff8057; text-decoration: none;">Spanish Springs</a></li>
-                        <li>Lake Sumter Landing</li>
-                        <li>Brownwood</li>
-                        <li>All Village Centers</li>
-                        <li>Golf course communities</li>
-                        <li>Villa and patio home cleaning</li>
-                    </ul>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
-                        Specialized cleaning services for active adult communities and golf course properties.
-                    </p>
-                </div>
-                
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> World Equestrian Center Area</h4>
-                    <ul>
-                        <li><a href="/wec-area" style="color: #ff8057; text-decoration: none;">WEC neighborhoods</a></li>
-                        <li>Equestrian properties</li>
-                        <li>Horse farms</li>
-                        <li>Luxury estates</li>
-                        <li>Agricultural properties</li>
-                        <li>Barn and stable cleaning</li>
-                    </ul>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
-                        Specialized cleaning for horse properties and luxury equestrian estates.
-                    </p>
-                </div>
-                
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
-                    <ul>
-                        <li><a href="/belleview" style="color: #ff8057; text-decoration: none;">Belleview</a></li>
-                        <li><a href="/dunnellon" style="color: #ff8057; text-decoration: none;">Dunnellon</a></li>
-                        <li>Rainbow Springs</li>
-                        <li>Silver Springs</li>
-                        <li>Citrus Springs</li>
-                        <li>And more!</li>
-                    </ul>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
-                        Extended service areas throughout North Central Florida.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="service-note">
-                <p><i class="fas fa-info-circle"></i> Don't see your area listed? We serve many locations throughout Central Florida. Call us to check if we service your area!</p>
-            </div>
-
-            <!-- Featured Communities Section -->
-            <div style="margin-top: 4rem;">
-                <h3 style="color: #2f5047; text-align: center; margin-bottom: 3rem; font-size: 2rem;">Featured Communities</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <!-- Stone Creek -->
-                    <div class="service-card">
-                        <div class="service-icon" style="background: #2f5047;">
-                            <i class="fas fa-home" style="color: white;"></i>
-                        </div>
-                        <h3>Stone Creek</h3>
-                        <p>Luxury community with beautiful homes starting from $300K-$800K+. We provide comprehensive cleaning services for this premier neighborhood.</p>
-                        <ul class="service-list" style="text-align: left; margin: 1rem 0;">
-                            <li>Luxury home cleaning</li>
-                            <li>Regular maintenance programs</li>
-                            <li>Deep cleaning services</li>
-                            <li>Move-in/move-out cleaning</li>
+                <div class="hidden lg:block">
+                    <div class="bg-[#305048] text-white rounded-2xl p-10 shadow-2xl">
+                        <h2 class="text-2xl font-bold">Where we clean</h2>
+                        <ul class="mt-6 space-y-3 text-white/80 text-sm">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-[#FF8057]"></i> 30+ mile radius from Ocala</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-calendar-check text-[#FF8057]"></i> Same-day and weekend availability</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-star text-[#FF8057]"></i> Trusted by families, HOAs, and property managers</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-horse text-[#FF8057]"></i> Equestrian-ready cleaning teams</li>
                         </ul>
-                        <a href="/stone-creek" class="btn btn-secondary">Learn More About Stone Creek</a>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Oak Run -->
-                    <div class="service-card">
-                        <div class="service-icon" style="background: #2f5047;">
-                            <i class="fas fa-golf-ball" style="color: white;"></i>
+        <!-- Area Groups -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Areas We Serve</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">From Ocala to The Villages & Beyond</h2>
+                    <p class="mt-4 text-gray-600">Explore the neighborhoods where Palma Cleaning delivers dependable, five-star service. Don’t see your community? Reach out—we’re continually expanding our routes.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {areaGroups.map((group) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm" key={group.title}>
+                            <h3 class="text-xl font-semibold flex items-center gap-2"><i class="fa-solid fa-map-marker-alt text-[#FF8057]"></i>{group.title}</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-[#305048]">
+                                {group.links.map((link) => (
+                                    <li key={link.label}>
+                                        {link.href ? (
+                                            <a href={link.href} class="text-[#FF8057] hover:underline">{link.label}</a>
+                                        ) : (
+                                            <span>{link.label}</span>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p class="mt-5 text-sm text-gray-600 leading-relaxed">{group.description}</p>
                         </div>
-                        <h3>Oak Run</h3>
-                        <p>Active adult 55+ community with golf course homes and patio homes. Specialized cleaning for active retirees and snowbirds.</p>
-                        <ul class="service-list" style="text-align: left; margin: 1rem 0;">
-                            <li>Snowbird home preparation</li>
-                            <li>Golf course home cleaning</li>
-                            <li>Senior-friendly service</li>
-                            <li>Flexible scheduling</li>
-                        </ul>
-                        <a href="/oak-run" class="btn btn-secondary">Learn More About Oak Run</a>
+                    ))}
+                </div>
+                <div class="mt-10 bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-xl px-6 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div class="flex items-center gap-3 text-[#305048]">
+                        <i class="fa-solid fa-circle-info text-[#FF8057]"></i>
+                        <p class="text-sm md:text-base">Don’t see your neighborhood listed? We regularly add new communities across Central Florida—call or text to confirm availability.</p>
                     </div>
+                    <a href="tel:+13527644747" class="inline-flex items-center gap-2 bg-[#FF8057] text-[#305048] font-semibold px-4 py-2 rounded-md hover:bg-[#ff996f] transition text-sm"><i class="fa-solid fa-phone"></i>(352) 764-4747</a>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Golden Hills -->
-                    <div class="service-card">
-                        <div class="service-icon" style="background: #2f5047;">
-                            <i class="fas fa-horse" style="color: white;"></i>
+        <!-- Featured Communities -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Featured Communities</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Expertise Where You Live</h2>
+                    <p class="mt-4 text-gray-600">Our teams understand the unique requirements, HOA expectations, and lifestyle needs of Ocala’s most beloved neighborhoods.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {featuredCommunities.map((community) => (
+                        <div class="bg-white border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition" key={community.title}>
+                            <div class="flex items-center gap-4">
+                                <span class="w-12 h-12 rounded-full bg-[#F4F7F6] flex items-center justify-center text-[#FF8057]"><i class={`${community.icon} text-xl`}></i></span>
+                                <h3 class="text-xl font-semibold">{community.title}</h3>
+                            </div>
+                            <p class="mt-4 text-sm text-gray-600 leading-relaxed">{community.description}</p>
+                            <ul class="mt-4 space-y-2 text-sm text-gray-600 list-disc list-inside">
+                                {community.bullets.map((bullet) => (
+                                    <li key={bullet}>{bullet}</li>
+                                ))}
+                            </ul>
+                            <a href={community.href} class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#305048] hover:text-[#FF8057] transition">Learn more<i class="fa-solid fa-arrow-right text-xs"></i></a>
                         </div>
-                        <h3>Golden Hills</h3>
-                        <p>Horse country community in northwest Ocala with properties ranging from $400K-$1M+. Specialized cleaning for equestrian properties.</p>
-                        <ul class="service-list" style="text-align: left; margin: 1rem 0;">
-                            <li>Equestrian property cleaning</li>
-                            <li>Large estate maintenance</li>
-                            <li>Barn and stable cleaning</li>
-                            <li>Acreage property services</li>
-                        </ul>
-                        <a href="/golden-hills" class="btn btn-secondary">Learn More About Golden Hills</a>
-                    </div>
+                    ))}
                 </div>
             </div>
+        </section>
 
-            <!-- Service Coverage Map Info -->
-            <div style="margin-top: 4rem; background: #f8fafa; padding: 3rem; border-radius: 15px; text-align: center;">
-                <h3 style="color: #2f5047; margin-bottom: 2rem;">Our Service Coverage</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                    <div>
-                        <i class="fas fa-route" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>30+ Mile Radius</h4>
-                        <p style="color: #666;">We service areas within 30 miles of Ocala for most cleaning services.</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-clock" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Same-Day Service</h4>
-                        <p style="color: #666;">Emergency and same-day cleaning available in most service areas.</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-gas-pump" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>No Travel Charges</h4>
-                        <p style="color: #666;">Free travel to most areas within our standard service zone.</p>
-                    </div>
+        <!-- Coverage Highlights -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Coverage Details</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">How We Schedule Your Cleaning</h2>
+                    <p class="mt-4 text-gray-600">Flexible routes, responsive scheduling, and no surprise travel fees for the majority of our clients.</p>
                 </div>
-                <p style="color: #666; font-size: 1.1rem; line-height: 1.6;">
-                    <strong>Not sure if we serve your area?</strong> Give us a call! We're always expanding our service areas and may be able to accommodate special requests.
-                </p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {coverageHighlights.map((highlight) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-xl p-8 text-center shadow-sm" key={highlight.title}>
+                            <i class={`${highlight.icon} text-[#FF8057] text-3xl`}></i>
+                            <h3 class="mt-4 text-xl font-semibold">{highlight.title}</h3>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">{highlight.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Serving Your Community</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
-                    We're proud to serve communities throughout Ocala and Marion County. Contact us to confirm service in your area and get a free cleaning quote.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- CTA -->
+        <section class="py-24 bg-[#FF8057]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048]">Serving Your Community With Care</h2>
+                <p class="mt-4 text-[#305048]/90 text-lg max-w-2xl mx-auto">Tell us about your neighborhood, property type, and schedule. We’ll confirm coverage, provide pricing, and lock in your preferred service date.</p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fa-solid fa-calendar-check mr-2"></i>Book Now</a>
+                    <a href="tel:+13527644747" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747</a>
                 </div>
+                <p class="mt-6 text-[#305048]/80 text-sm">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script src="/script-clean.js" is:inline></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
 </body>
 </html>
