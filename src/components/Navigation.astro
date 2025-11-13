@@ -11,12 +11,12 @@ const showHomeLink = Astro.props?.showHome ?? true;
             {showHomeLink && <a href="/" class="hover:text-[#FF8057] transition duration-300">Home</a>}
             
             <!-- Services Dropdown -->
-            <div class="relative group">
-                <a href="/services" class="hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2">
+            <div class="relative">
+                <button class="desktop-dropdown-toggle hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2 bg-transparent border-0 text-white cursor-pointer" data-target="desktop-services">
                     Services
-                    <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"></i>
-                </a>
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                    <i class="fa-solid fa-chevron-down text-xs opacity-70 transition-transform"></i>
+                </button>
+                <div id="desktop-services" class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible transition-all duration-300 pointer-events-none hidden">
                     <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                         <a href="/standard-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Standard Cleaning</a>
                         <a href="/deep-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Deep Cleaning</a>
@@ -25,19 +25,19 @@ const showHomeLink = Astro.props?.showHome ?? true;
                         <a href="/commercial-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Commercial / Office</a>
                         <div class="border-t border-gray-200 my-1"></div>
                         <a href="/services" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition font-semibold text-[#FF8057]">View All Services</a>
-                    </div>
-                </div>
+            </div>
+        </div>
             </div>
             
             <a href="/about" class="hover:text-[#FF8057] transition duration-300">About</a>
             
             <!-- Locations Dropdown -->
-            <div class="relative group">
-                <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2">
+            <div class="relative">
+                <button class="desktop-dropdown-toggle hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2 bg-transparent border-0 text-white cursor-pointer" data-target="desktop-locations">
                     Locations
-                    <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"></i>
-                </a>
-                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                    <i class="fa-solid fa-chevron-down text-xs opacity-70 transition-transform"></i>
+                </button>
+                <div id="desktop-locations" class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible transition-all duration-300 pointer-events-none hidden">
                     <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                         <a href="/ocala" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Ocala & Marion County</a>
                         <a href="/the-villages" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">The Villages</a>
@@ -49,10 +49,10 @@ const showHomeLink = Astro.props?.showHome ?? true;
                         <a href="/dunnellon" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Dunnellon</a>
                         <div class="border-t border-gray-200 my-1"></div>
                         <a href="/service-areas" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition font-semibold text-[#FF8057]">View All Locations</a>
-                    </div>
-                </div>
-            </div>
-            
+        </div>
+        </div>
+        </div>
+        
             <a href="/blog" class="hover:text-[#FF8057] transition duration-300">Blog</a>
             <a href="/contact" class="hover:text-[#FF8057] transition duration-300">Contact</a>
         </nav>
@@ -151,13 +151,122 @@ const showHomeLink = Astro.props?.showHome ?? true;
             });
         }
 
+        // Close dropdown when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            // Check if click is on a dropdown toggle button
+            const clickedToggle = e.target.closest('.desktop-dropdown-toggle');
+            const clickedMobileToggle = e.target.closest('.mobile-dropdown-toggle');
+            
+            // Check if click is inside a dropdown menu
+            const clickedInsideDropdown = e.target.closest('[id^="desktop-"]') && !e.target.closest('a');
+            const clickedInsideMobile = e.target.closest('[id^="mobile-"]') && !e.target.closest('a');
+            
+            // If clicking on a toggle, let the toggle handler manage it
+            if (clickedToggle || clickedMobileToggle) {
+                return;
+            }
+            
+            // If clicking on a link inside dropdown, close after navigation
+            if (e.target.closest('[id^="desktop-"] a') || e.target.closest('[id^="mobile-"] a')) {
+                // Close all desktop dropdowns
+                document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
+                    menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
+                    menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                });
+                document.querySelectorAll('.desktop-dropdown-toggle i').forEach(chevron => {
+                    chevron.classList.remove('rotate-180', 'opacity-100');
+                    chevron.classList.add('opacity-70');
+                });
+                // Close all mobile dropdowns
+                document.querySelectorAll('[id^="mobile-"]').forEach(menu => {
+                    menu.classList.add('hidden');
+                });
+                document.querySelectorAll('.mobile-dropdown-toggle i').forEach(chevron => {
+                    chevron.classList.remove('rotate-180');
+                });
+                return;
+            }
+            
+            // If clicking outside any dropdown, close all
+            if (!clickedInsideDropdown && !clickedInsideMobile && !clickedToggle && !clickedMobileToggle) {
+                // Close all desktop dropdowns
+                document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
+                    menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
+                    menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                });
+                document.querySelectorAll('.desktop-dropdown-toggle i').forEach(chevron => {
+                    chevron.classList.remove('rotate-180', 'opacity-100');
+                    chevron.classList.add('opacity-70');
+                });
+                // Close all mobile dropdowns (except main menu)
+                document.querySelectorAll('[id^="mobile-"]').forEach(menu => {
+                    if (menu.id !== 'mobile-menu') {
+                        menu.classList.add('hidden');
+                    }
+                });
+                document.querySelectorAll('.mobile-dropdown-toggle i').forEach(chevron => {
+                    chevron.classList.remove('rotate-180');
+                });
+            }
+        });
+
+        // Desktop dropdown toggles
+        document.querySelectorAll('.desktop-dropdown-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const targetId = button.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+                const chevron = button.querySelector('i');
+                
+                if (!targetMenu) return;
+                
+                // Check if current dropdown is open (not hidden and visible)
+                const isCurrentlyOpen = !targetMenu.classList.contains('hidden') && 
+                                       targetMenu.classList.contains('opacity-100');
+                
+                // Close all desktop dropdowns first
+                document.querySelectorAll('[id^="desktop-"]').forEach(menu => {
+                    menu.classList.add('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
+                    menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                });
+                document.querySelectorAll('.desktop-dropdown-toggle i').forEach(ch => {
+                    ch.classList.remove('rotate-180', 'opacity-100');
+                    ch.classList.add('opacity-70');
+                });
+                
+                // If it was closed, open it now (toggle behavior)
+                if (!isCurrentlyOpen) {
+                    targetMenu.classList.remove('hidden', 'opacity-0', 'invisible', 'pointer-events-none');
+                    targetMenu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+                    if (chevron) {
+                        chevron.classList.add('rotate-180', 'opacity-100');
+                        chevron.classList.remove('opacity-70');
+                    }
+                }
+            });
+        });
+
         // Mobile dropdown toggles
         document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 const targetId = button.getAttribute('data-target');
                 const targetMenu = document.getElementById(targetId);
                 const chevron = button.querySelector('i');
+                
+                // Close all other mobile dropdowns
+                document.querySelectorAll('[id^="mobile-"]').forEach(menu => {
+                    if (menu.id !== targetId) {
+                        menu.classList.add('hidden');
+                    }
+                });
+                document.querySelectorAll('.mobile-dropdown-toggle i').forEach(ch => {
+                    if (ch !== chevron) {
+                        ch.classList.remove('rotate-180');
+                    }
+                });
                 
                 if (targetMenu) {
                     targetMenu.classList.toggle('hidden');
