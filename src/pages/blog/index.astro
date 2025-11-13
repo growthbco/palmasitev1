@@ -4,26 +4,124 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import GTMHead from '../../components/GTMHead.astro';
 import GTMBody from '../../components/GTMBody.astro';
+import GlobalHead from '../../components/GlobalHead.astro';
 
 const title = "Cleaning Tips & Guides | Palma Cleaning Blog - Ocala FL";
 const description = "Expert cleaning tips, guides, and advice for homeowners and business owners in Ocala, FL. Professional insights from Marion County's trusted cleaning service.";
+
+const categories = [
+  {
+    icon: "fa-solid fa-home",
+    title: "Residential Cleaning",
+    description: "Tips and guides for keeping your home clean and organized",
+    link: "#residential-posts"
+  },
+  {
+    icon: "fa-solid fa-building",
+    title: "Commercial Cleaning",
+    description: "Professional advice for maintaining business spaces",
+    link: "#commercial-posts"
+  },
+  {
+    icon: "fa-solid fa-calendar-alt",
+    title: "Seasonal Cleaning",
+    description: "Year-round cleaning schedules and seasonal tips",
+    link: "#seasonal-posts"
+  },
+  {
+    icon: "fa-solid fa-lightbulb",
+    title: "Cleaning Hacks",
+    description: "Time-saving tips and professional secrets",
+    link: "#tips-posts"
+  }
+];
+
+const residentialPosts = [
+  {
+    category: "RESIDENTIAL GUIDE",
+    title: "Ultimate Spring Cleaning Checklist for Ocala Homes",
+    description: "Complete room-by-room spring cleaning guide tailored for Florida's unique climate and seasonal needs. Includes timeline and professional tips.",
+    link: "/blog/spring-cleaning-checklist-ocala",
+    readTime: "8 min read",
+    gradient: "from-[#FF8057] to-[#ff6b47]",
+    icon: "fa-solid fa-seedling"
+  },
+  {
+    category: "MAINTENANCE GUIDE",
+    title: "How Often Should You Deep Clean Your House?",
+    description: "Evidence-based cleaning schedules for different home types, family sizes, and lifestyles. Learn when to tackle deep cleaning tasks.",
+    link: "/blog/how-often-deep-clean-house",
+    readTime: "6 min read",
+    gradient: "from-[#305048] to-[#1a3329]",
+    icon: "fa-solid fa-clock"
+  },
+  {
+    category: "MOVING GUIDE",
+    title: "Complete Move-In Cleaning Checklist",
+    description: "Step-by-step guide to sanitizing and preparing your new home before moving in. Essential for health and peace of mind.",
+    link: "/blog/move-in-cleaning-checklist",
+    readTime: "7 min read",
+    gradient: "from-[#4a90e2] to-[#357abd]",
+    icon: "fa-solid fa-box-open"
+  }
+];
+
+const commercialPosts = [
+  {
+    category: "BUSINESS GUIDE",
+    title: "Commercial Office Cleaning: Complete Guide for Business Owners",
+    description: "Everything you need to know about maintaining a professional, healthy workplace environment for your team and clients.",
+    link: "/blog/commercial-office-cleaning-guide",
+    readTime: "10 min read",
+    gradient: "from-[#6c7b7f] to-[#5a6568]",
+    icon: "fa-solid fa-briefcase"
+  },
+  {
+    category: "MEDICAL FACILITIES",
+    title: "Medical Office Cleaning Standards & Best Practices",
+    description: "Essential cleaning protocols for healthcare facilities, including infection control and compliance requirements.",
+    link: "/blog/medical-office-cleaning-standards",
+    readTime: "12 min read",
+    gradient: "from-[#28a745] to-[#1e7e34]",
+    icon: "fa-solid fa-hospital"
+  }
+];
+
+const seasonalPosts = [
+  {
+    category: "SEASONAL GUIDE",
+    title: "Summer Cleaning Tips for Florida Homes",
+    description: "Beat the heat and humidity with these specialized summer cleaning strategies for Florida's unique climate challenges.",
+    link: "/blog/summer-cleaning-tips-florida",
+    readTime: "5 min read",
+    gradient: "from-[#ffa500] to-[#ff8c00]",
+    icon: "fa-solid fa-sun"
+  },
+  {
+    category: "HOLIDAY PREP",
+    title: "Holiday Cleaning: Prepare Your Home for Guests",
+    description: "Timeline and checklist for getting your home guest-ready for the holiday season without the stress.",
+    link: "/blog/holiday-cleaning-preparation",
+    readTime: "6 min read",
+    gradient: "from-[#dc143c] to-[#b22d3c]",
+    icon: "fa-solid fa-gift"
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="cleaning tips, house cleaning guide, commercial cleaning tips, Ocala cleaning advice, cleaning blog, professional cleaning tips">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/blog/">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <script type="application/ld+json">
     {
@@ -44,263 +142,167 @@ const description = "Expert cleaning tips, guides, and advice for homeowners and
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://palmacleaningco.com/blog/"
-        },
-        "blogPost": [
-            {
-                "@type": "BlogPosting",
-                "headline": "Ultimate Spring Cleaning Checklist for Ocala Homes",
-                "url": "https://palmacleaningco.com/blog/spring-cleaning-checklist-ocala",
-                "datePublished": "2025-08-11"
-            },
-            {
-                "@type": "BlogPosting", 
-                "headline": "How Often Should You Deep Clean Your House?",
-                "url": "https://palmacleaningco.com/blog/how-often-deep-clean-house",
-                "datePublished": "2025-08-11"
-            },
-            {
-                "@type": "BlogPosting",
-                "headline": "Commercial Office Cleaning: Complete Guide for Business Owners",
-                "url": "https://palmacleaningco.com/blog/commercial-office-cleaning-guide",
-                "datePublished": "2025-08-11"
-            }
-        ]
+        }
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Blog</span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Cleaning Tips & Professional Guides</h1>
-                <p class="hero-subtitle">Expert Advice from Ocala's Trusted Cleaning Professionals</p>
-                <p class="hero-description">Discover proven cleaning tips, maintenance guides, and industry insights to keep your home or business spotless. From seasonal deep cleaning to daily maintenance, we share the expertise that's helped hundreds of Ocala families and businesses.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Get Professional Cleaning</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Cleaning Tips & Professional Guides</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Expert Advice from Ocala's Trusted Cleaning Professionals
+                </p>
+                <p class="text-white/90 mb-8 leading-relaxed">
+                    Discover proven cleaning tips, maintenance guides, and industry insights to keep your home or business spotless. From seasonal deep cleaning to daily maintenance, we share the expertise that's helped hundreds of Ocala families and businesses.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                        Get Professional Cleaning
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white px-10 py-3 rounded-md text-lg font-bold hover:bg-white hover:text-[#305048] transition-colors duration-300 inline-block">
+                        Call (352) 764-4747
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-book-open"></i>
+        </section>
+
+        <!-- Blog Categories -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Browse by Category</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Browse by Category</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {categories.map((category) => (
+                        <a href={category.link} class="bg-white rounded-2xl p-8 text-center shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300 group">
+                            <i class={`${category.icon} text-4xl text-[#FF8057] mb-4 group-hover:scale-110 transition-transform`}></i>
+                            <h3 class="text-lg font-bold text-[#305048] mb-3">{category.title}</h3>
+                            <p class="text-sm text-gray-600 mb-4">{category.description}</p>
+                            <span class="text-[#FF8057] font-semibold text-sm group-hover:underline">View Articles →</span>
+                        </a>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Categories -->
-    <section class="services" style="background: #f8fafa; padding: 3rem 0;">
-        <div class="container">
-            <h2 class="section-title">Browse by Category</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-home" style="font-size: 3rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Residential Cleaning</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Tips and guides for keeping your home clean and organized</p>
-                    <a href="#residential-posts" style="color: #ff8057; text-decoration: none; font-weight: 500;">View Articles →</a>
+        <!-- Latest Residential Articles -->
+        <section class="py-24 bg-white" id="residential-posts">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Latest Articles</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Latest Residential Cleaning Articles</h2>
                 </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-building" style="font-size: 3rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Commercial Cleaning</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Professional advice for maintaining business spaces</p>
-                    <a href="#commercial-posts" style="color: #ff8057; text-decoration: none; font-weight: 500;">View Articles →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-calendar-alt" style="font-size: 3rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Seasonal Cleaning</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Year-round cleaning schedules and seasonal tips</p>
-                    <a href="#seasonal-posts" style="color: #ff8057; text-decoration: none; font-weight: 500;">View Articles →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #2f5047; margin-bottom: 1rem;">Cleaning Hacks</h3>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Time-saving tips and professional secrets</p>
-                    <a href="#tips-posts" style="color: #ff8057; text-decoration: none; font-weight: 500;">View Articles →</a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {residentialPosts.map((post) => (
+                        <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300">
+                            <div class={`bg-gradient-to-br ${post.gradient} h-48 flex items-center justify-center text-white`}>
+                                <i class={`${post.icon} text-5xl`}></i>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-[#FF8057] text-xs font-semibold uppercase tracking-wide mb-2">{post.category}</div>
+                                <h3 class="text-xl font-bold text-[#305048] mb-3 leading-tight">{post.title}</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">{post.description}</p>
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <a href={post.link} class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
+                                    <span class="text-gray-400 text-xs">{post.readTime}</span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Articles -->
-    <section class="about" id="residential-posts">
-        <div class="container">
-            <h2 class="section-title">Latest Residential Cleaning Articles</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-                
-                <!-- Spring Cleaning Article -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #ff8057, #ff6b47); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-seedling" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">RESIDENTIAL GUIDE</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Ultimate Spring Cleaning Checklist for Ocala Homes</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Complete room-by-room spring cleaning guide tailored for Florida's unique climate and seasonal needs. Includes timeline and professional tips.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/spring-cleaning-checklist-ocala" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">8 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Deep Cleaning Frequency Article -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #2f5047, #1a3329); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-clock" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">MAINTENANCE GUIDE</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">How Often Should You Deep Clean Your House?</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Evidence-based cleaning schedules for different home types, family sizes, and lifestyles. Learn when to tackle deep cleaning tasks.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/how-often-deep-clean-house" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">6 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Move-in Cleaning Article -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #4a90e2, #357abd); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-box-open" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">MOVING GUIDE</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Complete Move-In Cleaning Checklist</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Step-by-step guide to sanitizing and preparing your new home before moving in. Essential for health and peace of mind.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/move-in-cleaning-checklist" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">7 min read</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Commercial Articles -->
-    <section class="services" style="background: #f8fafa;" id="commercial-posts">
-        <div class="container">
-            <h2 class="section-title">Commercial Cleaning Insights</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-                
-                <!-- Office Cleaning Guide -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #6c7b7f, #5a6568); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-briefcase" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">BUSINESS GUIDE</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Commercial Office Cleaning: Complete Guide for Business Owners</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Everything you need to know about maintaining a professional, healthy workplace environment for your team and clients.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/commercial-office-cleaning-guide" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">10 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Healthcare Cleaning -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #28a745, #1e7e34); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-hospital" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">MEDICAL FACILITIES</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Medical Office Cleaning Standards & Best Practices</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Essential cleaning protocols for healthcare facilities, including infection control and compliance requirements.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/medical-office-cleaning-standards" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">12 min read</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seasonal & Tips -->
-    <section class="about" id="seasonal-posts">
-        <div class="container">
-            <h2 class="section-title">Seasonal Cleaning & Pro Tips</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-                
-                <!-- Florida Summer Cleaning -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #ffa500, #ff8c00); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-sun" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">SEASONAL GUIDE</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Summer Cleaning Tips for Florida Homes</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Beat the heat and humidity with these specialized summer cleaning strategies for Florida's unique climate challenges.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/summer-cleaning-tips-florida" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">5 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Holiday Cleaning Prep -->
-                <article style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="background: linear-gradient(135deg, #dc143c, #b22d3c); height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class="fas fa-gift" style="font-size: 3rem;"></i>
-                    </div>
-                    <div style="padding: 2rem;">
-                        <div style="color: #ff8057; font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">HOLIDAY PREP</div>
-                        <h3 style="color: #2f5047; margin-bottom: 1rem; line-height: 1.3;">Holiday Cleaning: Prepare Your Home for Guests</h3>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Timeline and checklist for getting your home guest-ready for the holiday season without the stress.</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <a href="/blog/holiday-cleaning-preparation" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
-                            <span style="color: #999; font-size: 0.9rem;">6 min read</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="contact" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Ready for Professional Cleaning?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">While these tips help maintain your space, nothing beats professional cleaning. Let Palma Cleaning handle the heavy lifting while you focus on what matters most.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/book-now" class="btn btn-primary">Book Professional Cleaning</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- Commercial Articles -->
+        <section class="py-24 bg-[#F4F7F6]" id="commercial-posts">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Commercial Insights</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Commercial Cleaning Insights</h2>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <p style="color: #2f5047; font-weight: 500; margin: 0;">
-                        <i class="fas fa-check-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {commercialPosts.map((post) => (
+                        <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300">
+                            <div class={`bg-gradient-to-br ${post.gradient} h-48 flex items-center justify-center text-white`}>
+                                <i class={`${post.icon} text-5xl`}></i>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-[#FF8057] text-xs font-semibold uppercase tracking-wide mb-2">{post.category}</div>
+                                <h3 class="text-xl font-bold text-[#305048] mb-3 leading-tight">{post.title}</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">{post.description}</p>
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <a href={post.link} class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
+                                    <span class="text-gray-400 text-xs">{post.readTime}</span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal & Pro Tips -->
+        <section class="py-24 bg-white" id="seasonal-posts">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Seasonal Tips</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Seasonal Cleaning & Pro Tips</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    {seasonalPosts.map((post) => (
+                        <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300">
+                            <div class={`bg-gradient-to-br ${post.gradient} h-48 flex items-center justify-center text-white`}>
+                                <i class={`${post.icon} text-5xl`}></i>
+                            </div>
+                            <div class="p-6">
+                                <div class="text-[#FF8057] text-xs font-semibold uppercase tracking-wide mb-2">{post.category}</div>
+                                <h3 class="text-xl font-bold text-[#305048] mb-3 leading-tight">{post.title}</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">{post.description}</p>
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                                    <a href={post.link} class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
+                                    <span class="text-gray-400 text-xs">{post.readTime}</span>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Professional Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+                    While these tips help maintain your space, nothing beats professional cleaning. Let Palma Cleaning handle the heavy lifting while you focus on what matters most.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Professional Cleaning
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
+                </div>
+                <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
+                    <p class="text-white/90 font-semibold">
+                        <i class="fa-solid fa-check-circle text-[#FF8057] mr-2"></i>
                         Licensed & Insured • Free Quotes • Satisfaction Guaranteed • Serving Ocala & Marion County
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 

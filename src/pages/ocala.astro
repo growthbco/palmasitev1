@@ -4,28 +4,161 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Ocala Cleaning Services | Palma Cleaning - Marion County FL";
 const description = "Professional cleaning services in Ocala, FL. House cleaning, commercial cleaning, and specialized services for Ocala residents and businesses. Licensed & insured cleaning company.";
+
+const services = [
+  {
+    icon: "fa-solid fa-home",
+    title: "Standard House Cleaning",
+    description: "Regular cleaning service for Ocala homes, from historic downtown to modern subdivisions.",
+    items: [
+      "Weekly, bi-weekly, or monthly service",
+      "All Ocala neighborhoods",
+      "Flexible scheduling",
+      "Consistent quality standards"
+    ],
+    link: "/standard-cleaning"
+  },
+  {
+    icon: "fa-solid fa-magic",
+    title: "Deep Cleaning",
+    description: "Comprehensive deep cleaning for Ocala homes that demand excellence.",
+    items: [
+      "Top-to-bottom detailed cleaning",
+      "Perfect for seasonal cleaning",
+      "Move-in preparation",
+      "Special occasion readiness"
+    ],
+    link: "/deep-cleaning"
+  },
+  {
+    icon: "fa-solid fa-building",
+    title: "Commercial Cleaning",
+    description: "Professional cleaning for Ocala's thriving business community.",
+    items: [
+      "Downtown office buildings",
+      "Medical facilities",
+      "Retail and restaurants",
+      "Flexible after-hours service"
+    ],
+    link: "/commercial-cleaning"
+  },
+  {
+    icon: "fa-solid fa-box-open",
+    title: "Move-in/Move-out",
+    description: "Complete transition cleaning for Ocala property moves and rentals.",
+    items: [
+      "Real estate ready cleaning",
+      "New homeowner preparation",
+      "Rental deposit protection",
+      "Same-day service available"
+    ],
+    link: "/move-in-out-cleaning"
+  },
+  {
+    icon: "fa-solid fa-hard-hat",
+    title: "Post-Construction",
+    description: "Specialized cleanup after construction and renovation projects.",
+    items: [
+      "New home construction cleanup",
+      "Renovation dust removal",
+      "Builder partnerships",
+      "Move-in ready preparation"
+    ],
+    link: "/post-construction-cleaning"
+  },
+  {
+    icon: "fa-solid fa-horse",
+    title: "Equestrian Properties",
+    description: "Specialized cleaning for Ocala's world-famous horse country estates.",
+    items: [
+      "World Equestrian Center area",
+      "Horse farm properties",
+      "Barn and stable facilities",
+      "Animal-safe products only"
+    ],
+    link: "/wec-area"
+  }
+];
+
+const features = [
+  {
+    icon: "fa-solid fa-shield-check",
+    title: "Licensed & Insured",
+    description: "Fully licensed and insured for your peace of mind"
+  },
+  {
+    icon: "fa-solid fa-user-tie",
+    title: "Professional Service",
+    description: "Trained, uniformed professionals you can trust"
+  },
+  {
+    icon: "fa-solid fa-horse",
+    title: "Equestrian Experience",
+    description: "Specialized experience with horse properties"
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Eco-Friendly Options",
+    description: "Green cleaning products available"
+  }
+];
+
+const stats = [
+  {
+    number: "500+",
+    label: "Ocala Homes Served"
+  },
+  {
+    number: "5★",
+    label: "Average Rating"
+  },
+  {
+    number: "100%",
+    label: "Satisfaction Rate"
+  }
+];
+
+const ocalaLiving = [
+  {
+    icon: "fa-solid fa-building",
+    title: "Historic Downtown",
+    description: "Ocala's historic downtown features beautiful architecture and established neighborhoods. We understand the care needed for historic homes while providing modern cleaning standards."
+  },
+  {
+    icon: "fa-solid fa-horse",
+    title: "Horse Capital of the World",
+    description: "Ocala is home to hundreds of thoroughbred horse farms and the World Equestrian Center. We specialize in cleaning equestrian properties with horse-safe products and farm-friendly scheduling."
+  },
+  {
+    icon: "fa-solid fa-briefcase",
+    title: "Business Hub",
+    description: "As Marion County's economic center, Ocala hosts numerous businesses, medical facilities, and professional services. We provide comprehensive commercial cleaning for all business types."
+  },
+  {
+    icon: "fa-solid fa-home",
+    title: "Diverse Neighborhoods",
+    description: "From Southwest Ocala's newer developments to established neighborhoods throughout the city, we adapt our cleaning approach to serve the unique character of each area."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="Ocala cleaning services, Ocala house cleaning, Ocala commercial cleaning, Ocala FL cleaning company, Marion County cleaning">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/ocala">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <script type="application/ld+json">
     {
@@ -50,235 +183,162 @@ const description = "Professional cleaning services in Ocala, FL. House cleaning
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Ocala Cleaning Services</h1>
-                <p class="hero-subtitle">Professional Cleaning in Marion County's Heart</p>
-                <p class="hero-description">Trusted cleaning services throughout Ocala, Florida. From historic downtown to modern neighborhoods, we provide comprehensive cleaning solutions for homes and businesses across Marion County's largest city.</p>
-                <div class="hero-buttons">
-                    <a href="/contact" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Ocala Cleaning Services</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional Cleaning in Marion County's Heart
+                </p>
+                <p class="text-white/90 mb-8 leading-relaxed">
+                    Trusted cleaning services throughout Ocala, Florida. From historic downtown to modern neighborhoods, we provide comprehensive cleaning solutions for homes and businesses across Marion County's largest city.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white px-10 py-3 rounded-md text-lg font-bold hover:bg-white hover:text-[#305048] transition-colors duration-300 inline-block">
+                        Call (352) 764-4747
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-home"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">Why Ocala Residents Choose Palma Cleaning</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">The trusted cleaning service for Ocala's diverse neighborhoods and thriving business community.</p>
-                    <p>Ocala is Marion County's vibrant heart, home to historic downtown districts, growing suburbs, thriving businesses, and world-renowned equestrian facilities. We understand the unique cleaning needs across Ocala's diverse landscape - from historic homes downtown to modern developments in Southwest Ocala.</p>
-                    <p>From regular house cleaning that maintains your home's comfort to specialized commercial services for Ocala's bustling business district, we provide professional, reliable service that serves all corners of our community.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-user-tie"></i>
-                            <span>Professional Service</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-horse"></i>
-                            <span>Equestrian Experience</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-leaf"></i>
-                            <span>Eco-Friendly Options</span>
-                        </div>
-                    </div>
+        <!-- Why Choose Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Ocala Residents Choose Palma Cleaning</h2>
+                    <p class="text-gray-600">
+                        The trusted cleaning service for Ocala's diverse neighborhoods and thriving business community.
+                    </p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>500+</h3>
-                        <p>Ocala Homes Served</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Ocala is Marion County's vibrant heart, home to historic downtown districts, growing suburbs, thriving businesses, and world-renowned equestrian facilities. We understand the unique cleaning needs across Ocala's diverse landscape - from historic homes downtown to modern developments in Southwest Ocala.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            From regular house cleaning that maintains your home's comfort to specialized commercial services for Ocala's bustling business district, we provide professional, reliable service that serves all corners of our community.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            {features.map((feature) => (
+                                <div class="text-center p-4 bg-[#F4F7F6] rounded-xl">
+                                    <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mx-auto mb-3">
+                                        <i class={feature.icon}></i>
+                                    </div>
+                                    <h4 class="text-sm font-semibold text-[#305048] mb-1">{feature.title}</h4>
+                                    <p class="text-xs text-gray-600">{feature.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div class="stat">
-                        <h3>5★</h3>
-                        <p>Average Rating</p>
-                    </div>
-                    <div class="stat">
-                        <h3>100%</h3>
-                        <p>Satisfaction Rate</p>
+
+                    <div class="grid grid-cols-1 gap-8">
+                        {stats.map((stat) => (
+                            <div class="bg-[#305048] text-white rounded-2xl p-8 text-center shadow-lg">
+                                <div class="text-5xl font-bold text-[#FF8057] mb-2">{stat.number}</div>
+                                <div class="text-white/90 font-semibold">{stat.label}</div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Complete Cleaning Services for Ocala</h2>
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Standard House Cleaning</h3>
-                    <p>Regular cleaning service for Ocala homes, from historic downtown to modern subdivisions.</p>
-                    <ul class="service-list">
-                        <li>Weekly, bi-weekly, or monthly service</li>
-                        <li>All Ocala neighborhoods</li>
-                        <li>Flexible scheduling</li>
-                        <li>Consistent quality standards</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-standard-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
+        <!-- Services Section -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Complete Cleaning Services for Ocala</h2>
+                    <p class="mt-4 text-gray-600">Professional cleaning solutions for every Ocala home and business.</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Deep Cleaning</h3>
-                    <p>Comprehensive deep cleaning for Ocala homes that demand excellence.</p>
-                    <ul class="service-list">
-                        <li>Top-to-bottom detailed cleaning</li>
-                        <li>Perfect for seasonal cleaning</li>
-                        <li>Move-in preparation</li>
-                        <li>Special occasion readiness</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-deep-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Commercial Cleaning</h3>
-                    <p>Professional cleaning for Ocala's thriving business community.</p>
-                    <ul class="service-list">
-                        <li>Downtown office buildings</li>
-                        <li>Medical facilities</li>
-                        <li>Retail and restaurants</li>
-                        <li>Flexible after-hours service</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-commercial-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Move-in/Move-out</h3>
-                    <p>Complete transition cleaning for Ocala property moves and rentals.</p>
-                    <ul class="service-list">
-                        <li>Real estate ready cleaning</li>
-                        <li>New homeowner preparation</li>
-                        <li>Rental deposit protection</li>
-                        <li>Same-day service available</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-move-in-out-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h3>Post-Construction</h3>
-                    <p>Specialized cleanup after construction and renovation projects.</p>
-                    <ul class="service-list">
-                        <li>New home construction cleanup</li>
-                        <li>Renovation dust removal</li>
-                        <li>Builder partnerships</li>
-                        <li>Move-in ready preparation</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-post-construction-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-horse"></i>
-                    </div>
-                    <h3>Equestrian Properties</h3>
-                    <p>Specialized cleaning for Ocala's world-famous horse country estates.</p>
-                    <ul class="service-list">
-                        <li>World Equestrian Center area</li>
-                        <li>Horse farm properties</li>
-                        <li>Barn and stable facilities</li>
-                        <li>Animal-safe products only</li>
-                    </ul>
-                    <div style="margin-top: 1rem; text-align: center;">
-                        <a href="/ocala-equestrian-cleaning" class="btn btn-secondary">Learn More</a>
-                    </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#305048] mb-3">{service.title}</h3>
+                            <p class="text-gray-600 mb-6 text-sm">{service.description}</p>
+                            <ul class="space-y-2 mb-6">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href={service.link} class="block text-center bg-[#305048] text-white py-2 px-6 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm font-semibold">
+                                Learn More
+                            </a>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about" id="ocala-specific">
-        <div class="container">
-            <h2 class="section-title">Understanding Ocala Living</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="display: grid; gap: 2rem;">
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-building" style="margin-right: 0.5rem;"></i>Historic Downtown</h4>
-                        <p style="color: #666; line-height: 1.6;">Ocala's historic downtown features beautiful architecture and established neighborhoods. We understand the care needed for historic homes while providing modern cleaning standards.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-horse" style="margin-right: 0.5rem;"></i>Horse Capital of the World</h4>
-                        <p style="color: #666; line-height: 1.6;">Ocala is home to hundreds of thoroughbred horse farms and the World Equestrian Center. We specialize in cleaning equestrian properties with horse-safe products and farm-friendly scheduling.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-briefcase" style="margin-right: 0.5rem;"></i>Business Hub</h4>
-                        <p style="color: #666; line-height: 1.6;">As Marion County's economic center, Ocala hosts numerous businesses, medical facilities, and professional services. We provide comprehensive commercial cleaning for all business types.</p>
-                    </div>
-                    
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-home" style="margin-right: 0.5rem;"></i>Diverse Neighborhoods</h4>
-                        <p style="color: #666; line-height: 1.6;">From Southwest Ocala's newer developments to established neighborhoods throughout the city, we adapt our cleaning approach to serve the unique character of each area.</p>
-                    </div>
+        <!-- Understanding Ocala Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Understanding Ocala</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Understanding Ocala Living</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {ocalaLiving.map((item) => (
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center">
+                                    <i class={item.icon}></i>
+                                </div>
+                                <h4 class="text-lg font-bold text-[#305048]">{item.title}</h4>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed text-sm">{item.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Ready to Experience Premium Ocala Cleaning?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join hundreds of Ocala residents and businesses who trust Palma Cleaning for exceptional cleaning services. Contact us today for your free quote!</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/contact" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Experience Premium Ocala Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+                    Join hundreds of Ocala residents and businesses who trust Palma Cleaning for exceptional cleaning services. Contact us today for your free quote!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <p style="color: #2f5047; font-weight: 500; margin: 0;">
-                        <i class="fas fa-check-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
+                    <p class="text-white/90 font-semibold">
+                        <i class="fa-solid fa-check-circle text-[#FF8057] mr-2"></i>
                         Licensed & Insured • Ocala Experienced • Satisfaction Guaranteed
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
