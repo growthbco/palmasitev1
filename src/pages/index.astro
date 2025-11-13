@@ -18,20 +18,18 @@ const year = new Date().getFullYear();
     <meta name="description" content={description}>
     <meta name="keywords" content="house cleaning Ocala FL, residential cleaning Ocala, commercial cleaning Ocala, Marion County cleaning, Ocala cleaning service, WEC cleaning">
     <meta name="robots" content="index, follow">
-
+    
     <link rel="canonical" href="https://palmacleaningco.com/">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <style>
-        ::-webkit-scrollbar { display: none; }
-    </style>
-    <script>
+
+    <script is:inline>
+        window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
+    </script>
+    <script is:inline>
         tailwind.config = {
             theme: {
                 extend: {
@@ -50,7 +48,12 @@ const year = new Date().getFullYear();
             }
         }
     </script>
-
+    <script is:inline src="https://cdn.tailwindcss.com"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -263,7 +266,7 @@ const year = new Date().getFullYear();
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
-                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -298,9 +301,9 @@ const year = new Date().getFullYear();
                     <p class="mt-6 text-gray-600 leading-relaxed">Between careers, family schedules, and hosting, keeping a spotless home shouldn't add stress. Palma Cleaning brings dependable, vetted pros to homes throughout Ocala, The Villages, and Marion County.</p>
                     <p class="mt-4 text-gray-600 leading-relaxed">Enjoy seamless online booking, personalized plans, and eco-conscious products that leave your spaces sparkling — all backed by our 48-hour satisfaction guarantee.</p>
                     <a href="#quote" class="mt-8 inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Why Choose -->
         <section id="why" class="bg-brand-green py-24 text-white">
@@ -330,8 +333,8 @@ const year = new Date().getFullYear();
                 </div>
                 <p class="mt-8 text-brand-gray-medium text-sm tracking-wide uppercase">Instant pricing & booking in under 60 seconds</p>
                 <a href="#quote" class="mt-4 inline-block bg-white text-brand-green font-bold py-4 px-10 rounded-md hover:bg-brand-gray-light transition duration-300">View Pricing</a>
-            </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Services Highlight -->
         <section id="services" class="relative py-24 bg-white">
@@ -351,7 +354,7 @@ const year = new Date().getFullYear();
                         <h3 class="text-2xl font-bold">Deep Cleaning</h3>
                         <p class="mt-4 text-gray-600">Comprehensive top-to-bottom refresh — baseboards, fixtures, inside appliances, and more detailed attention.</p>
                         <a href="/deep-cleaning" class="mt-6 inline-block bg-brand-green text-white font-semibold py-3 px-6 rounded-md hover:bg-brand-green/90 transition">Learn More</a>
-                    </div>
+                </div>
                     <div class="bg-white p-8 rounded-xl shadow-2xl border border-brand-gray-medium/40 text-left">
                         <h3 class="text-2xl font-bold">Move-In / Move-Out</h3>
                         <p class="mt-4 text-gray-600">Realtor-ready finish for transitions — includes inside cabinets, drawers, and appliance detailing.</p>
@@ -414,7 +417,7 @@ const year = new Date().getFullYear();
                         <p class="mt-3 text-gray-600 text-sm">Interior window detailing, oven/fridge cleans, linen refresh, laundry folding, and more.</p>
                         <span class="mt-4 inline-flex items-center text-brand-green font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                </div>
+                    </div>
                 <div class="mt-12 text-center">
                     <a href="/services" class="inline-block bg-brand-green text-white font-semibold py-3 px-8 rounded-md hover:bg-brand-green/90 transition">See Service Details</a>
                 </div>
@@ -464,7 +467,7 @@ const year = new Date().getFullYear();
                         <span class="col-span-8 text-gray-700">Fully insured & bonded</span>
                         <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2l text-brand-green"></i></div>
                         <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-xmark text-2l text-brand-coral"></i></div>
-                    </div>
+                        </div>
                     <div class="grid grid-cols-10 items-center bg-white p-4 rounded-lg shadow-sm">
                         <span class="col-span-8 text-gray-700">48-hour satisfaction guarantee</span>
                         <div class="col-span-1 flex justify-center"><i class="fa-solid fa-circle-check text-2xl text-brand-green"></i></div>
@@ -473,9 +476,9 @@ const year = new Date().getFullYear();
                 </div>
                 <div class="text-center mt-12">
                     <a href="#quote" class="inline-block bg-brand-coral text-brand-green font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Service Areas -->
         <section id="areas" class="py-24 bg-white">
@@ -497,8 +500,8 @@ const year = new Date().getFullYear();
                     <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
                         <h3 class="font-semibold text-lg">The Villages & Sumter County</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
-                            <li>Spanish Springs</li>
-                            <li>Lake Sumter Landing</li>
+                        <li>Spanish Springs</li>
+                        <li>Lake Sumter Landing</li>
                             <li>Brownwood Paddock Square</li>
                             <li>Surrounding golf cart communities</li>
                         </ul>
@@ -528,8 +531,8 @@ const year = new Date().getFullYear();
                             <li>On Top of the World (OTOW)</li>
                             <li>Stonecrest</li>
                             <li>Del Webb Spruce Creek</li>
-                        </ul>
-                    </div>
+                    </ul>
+                </div>
                     <div class="border border-brand-gray-medium/60 rounded-xl p-6 shadow-sm bg-brand-gray-light">
                         <h3 class="font-semibold text-lg">Additional Service Areas</h3>
                         <ul class="mt-3 text-gray-600 text-sm space-y-2">
@@ -537,14 +540,14 @@ const year = new Date().getFullYear();
                             <li>Silver Springs & Ocklawaha</li>
                             <li>Gainesville suburbs (select)</li>
                             <li>Custom routes upon request</li>
-                        </ul>
+                    </ul>
                     </div>
                 </div>
                 <div class="mt-12 text-center">
                     <a href="/service-areas" class="inline-block bg-brand-coral text-brand-green font-semibold py-3 px-8 rounded-md hover:bg-[#ff996f] transition">View Detailed Service Areas</a>
-                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Reviews -->
         <section id="reviews" class="bg-brand-green py-24 text-white">
@@ -690,9 +693,9 @@ const year = new Date().getFullYear();
             });
         }
     </script>
-    <script
-        src="https://beta.leadconnectorhq.com/loader.js"
-        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
         data-widget-id="66fd9ee1d53ad5f3145ea591">
     </script>
 </body>
