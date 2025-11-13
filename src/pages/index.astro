@@ -200,15 +200,15 @@ const year = new Date().getFullYear();
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-2xl font-bold tracking-wide">PALMA <span class="text-[#FF8057]">CLEANING</span></a>
             <nav class="hidden lg:flex items-center space-x-8 text-sm">
-                <a href="#services" class="hover:text-[#FF8057] transition duration-300 flex items-center">Services <i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
-                <a href="#about" class="hover:text-[#FF8057] transition duration-300">About</a>
-                <a href="#areas" class="hover:text-[#FF8057] transition duration-300">Locations</a>
+                <a href="/services" class="hover:text-[#FF8057] transition duration-300">Services</a>
+                <a href="/about" class="hover:text-[#FF8057] transition duration-300">About</a>
+                <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300">Locations</a>
                 <a href="/blog" class="hover:text-[#FF8057] transition duration-300">Blog</a>
-                <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300">Service Areas</a>
+                <a href="/contact" class="hover:text-[#FF8057] transition duration-300">Contact</a>
             </nav>
             <div class="flex items-center space-x-6">
                 <a href="tel:3527644747" class="text-xs font-semibold hidden md:block tracking-wide">(352) 764-4747</a>
-                <a href="#quote" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
                 <button id="mobile-menu-button" class="lg:hidden text-2xl" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -216,12 +216,12 @@ const year = new Date().getFullYear();
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-[#305048]/95">
             <nav class="px-6 py-4 space-y-3 text-sm">
-                <a href="#services" class="block text-white/90 hover:text-[#FF8057] transition">Services</a>
-                <a href="#about" class="block text-white/90 hover:text-[#FF8057] transition">About</a>
-                <a href="#areas" class="block text-white/90 hover:text-[#FF8057] transition">Locations</a>
+                <a href="/services" class="block text-white/90 hover:text-[#FF8057] transition">Services</a>
+                <a href="/about" class="block text-white/90 hover:text-[#FF8057] transition">About</a>
+                <a href="/service-areas" class="block text-white/90 hover:text-[#FF8057] transition">Locations</a>
                 <a href="/blog" class="block text-white/90 hover:text-[#FF8057] transition">Blog</a>
-                <a href="/service-areas" class="block text-white/90 hover:text-[#FF8057] transition">Service Areas</a>
-                <a href="#quote" class="block text-[#FF8057] font-semibold">Request Quote</a>
+                <a href="/contact" class="block text-white/90 hover:text-[#FF8057] transition">Contact</a>
+                <a href="/book-now" class="block text-[#FF8057] font-semibold">Book Now</a>
             </nav>
         </div>
     </header>
@@ -233,7 +233,7 @@ const year = new Date().getFullYear();
                 <div class="text-center lg:text-left">
                     <h1 class="text-5xl md:text-6xl font-bold leading-tight">Life's Messy.<br>We Can Help.</h1>
                     <p class="mt-6 text-lg text-gray-600">You've got a million things on your plate... cleaning <span class="underline">shouldn't</span> be one of them.</p>
-                    <a href="#quote" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
+                    <a href="/book-now" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
                     <p class="mt-6 text-sm text-gray-500">Premium, eco-friendly cleaning by Ocala's trusted professionals. Licensed & insured.</p>
                     <div class="mt-6 flex items-center justify-center lg:justify-start space-x-6">
                         <div class="flex items-center space-x-2 text-gray-500">
@@ -282,7 +282,7 @@ const year = new Date().getFullYear();
                     <h2 class="text-4xl font-bold">Cleaning designed for parents & busy professionals.</h2>
                     <p class="mt-6 text-gray-600 leading-relaxed">Between careers, family schedules, and hosting, keeping a spotless home shouldn't add stress. Palma Cleaning brings dependable, vetted pros to homes throughout Ocala, The Villages, and Marion County.</p>
                     <p class="mt-4 text-gray-600 leading-relaxed">Enjoy seamless online booking, personalized plans, and eco-conscious products that leave your spaces sparkling — all backed by our 48-hour satisfaction guarantee.</p>
-                    <a href="#quote" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
+                    <a href="/book-now" class="mt-8 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Request Quote</a>
             </div>
         </div>
     </section>
@@ -314,7 +314,7 @@ const year = new Date().getFullYear();
                     <p class="mt-4 max-w-2xl mx-auto text-[#305048]/80">We follow up with every visit. If anything isn’t perfect, we’ll return within 48 hours and make it right — at no additional cost.</p>
             </div>
                 <p class="mt-8 text-[#E3EAE8] text-sm tracking-wide uppercase">Instant pricing & booking in under 60 seconds</p>
-                <a href="#quote" class="mt-4 inline-block bg-white text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#F4F7F6] transition duration-300">View Pricing</a>
+                <a href="/book-now" class="mt-4 inline-block bg-white text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#F4F7F6] transition duration-300">View Pricing</a>
         </div>
     </section>
 
@@ -379,7 +379,7 @@ const year = new Date().getFullYear();
                         <p class="mt-3 text-gray-600 text-sm">Custom schedules for offices, medical suites, retail, and common areas.</p>
                         <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/services#rentals" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/short-term-rental-turnovers" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Short-Term Rental Turnovers</h3>
                         <p class="mt-3 text-gray-600 text-sm">Same-day turnovers for Airbnbs, VRBOs, and vacation rentals.</p>
                         <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
@@ -389,12 +389,12 @@ const year = new Date().getFullYear();
                         <p class="mt-3 text-gray-600 text-sm">Specialized care for barns, tack rooms, show properties, and large estates.</p>
                         <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/service-areas#senior" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/senior-living-and-assisted-care" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Senior Living & Assisted Care</h3>
                         <p class="mt-3 text-gray-600 text-sm">Gentle, respectful cleaning plans for residents and common areas.</p>
                         <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
                     </a>
-                    <a href="/services#addons" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
+                    <a href="/addons" class="bg-[#F4F7F6] rounded-xl p-6 shadow-sm border border-[#E3EAE8]/50 transition transform hover:-translate-y-1 hover:shadow-lg">
                         <h3 class="font-semibold text-lg">Add-On Services</h3>
                         <p class="mt-3 text-gray-600 text-sm">Interior window detailing, oven/fridge cleans, linen refresh, laundry folding, and more.</p>
                         <span class="mt-4 inline-flex items-center text-[#305048] font-semibold text-sm">Learn more<i class="fa-solid fa-arrow-right ml-2 text-xs"></i></span>
@@ -418,7 +418,7 @@ const year = new Date().getFullYear();
                         <p class="text-sm text-white/70">Ocala, FL</p>
                     </div>
                 </div>
-                <a href="#quote" class="mt-10 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
+                <a href="/book-now" class="mt-10 inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
             </div>
         </section>
 
@@ -457,7 +457,7 @@ const year = new Date().getFullYear();
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <a href="#quote" class="inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
+                    <a href="/book-now" class="inline-block bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition">Request Quote</a>
             </div>
         </div>
     </section>
@@ -644,7 +644,7 @@ const year = new Date().getFullYear();
                         <li><a href="/move-in-out-cleaning" class="hover:text-[#FF8057] transition">Move-In / Move-Out</a></li>
                         <li><a href="/post-construction-cleaning" class="hover:text-[#FF8057] transition">Post-Construction</a></li>
                         <li><a href="/commercial-cleaning" class="hover:text-[#FF8057] transition">Commercial / Office</a></li>
-                        <li><a href="/services#addons" class="hover:text-[#FF8057] transition">Add-On Services</a></li>
+                        <li><a href="/addons" class="hover:text-[#FF8057] transition">Add-On Services</a></li>
                     </ul>
                 </div>
                 <div>
