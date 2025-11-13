@@ -9,9 +9,50 @@ const showHomeLink = Astro.props?.showHome ?? true;
         </a>
         <nav class="hidden lg:flex items-center space-x-8 text-sm">
             {showHomeLink && <a href="/" class="hover:text-[#FF8057] transition duration-300">Home</a>}
-            <a href="/services" class="hover:text-[#FF8057] transition duration-300">Services</a>
+            
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <a href="/services" class="hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2">
+                    Services
+                    <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"></i>
+                </a>
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                    <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
+                        <a href="/standard-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Standard Cleaning</a>
+                        <a href="/deep-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Deep Cleaning</a>
+                        <a href="/move-in-out-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Move-In / Move-Out</a>
+                        <a href="/post-construction-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Post-Construction</a>
+                        <a href="/commercial-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Commercial / Office</a>
+                        <div class="border-t border-gray-200 my-1"></div>
+                        <a href="/services" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition font-semibold text-[#FF8057]">View All Services</a>
+                    </div>
+                </div>
+            </div>
+            
             <a href="/about" class="hover:text-[#FF8057] transition duration-300">About</a>
-            <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300">Locations</a>
+            
+            <!-- Locations Dropdown -->
+            <div class="relative group">
+                <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300 flex items-center gap-1 py-2">
+                    Locations
+                    <i class="fa-solid fa-chevron-down text-xs opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"></i>
+                </a>
+                <div class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                    <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
+                        <a href="/ocala" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Ocala & Marion County</a>
+                        <a href="/the-villages" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">The Villages</a>
+                        <a href="/stone-creek" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Stone Creek</a>
+                        <a href="/oak-run" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Oak Run</a>
+                        <a href="/golden-hills" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Golden Hills</a>
+                        <a href="/belleview" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Belleview</a>
+                        <a href="/wec-area" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">WEC Area</a>
+                        <a href="/dunnellon" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Dunnellon</a>
+                        <div class="border-t border-gray-200 my-1"></div>
+                        <a href="/service-areas" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition font-semibold text-[#FF8057]">View All Locations</a>
+                    </div>
+                </div>
+            </div>
+            
             <a href="/blog" class="hover:text-[#FF8057] transition duration-300">Blog</a>
             <a href="/contact" class="hover:text-[#FF8057] transition duration-300">Contact</a>
         </nav>
@@ -21,14 +62,47 @@ const showHomeLink = Astro.props?.showHome ?? true;
             <button id="mobile-menu-button" class="lg:hidden text-2xl" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
-    </div>
+        </div>
     </div>
     <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-[#305048]/95">
         <nav class="px-6 py-4 space-y-3 text-sm">
             {showHomeLink && <a href="/" class="block text-white/90 hover:text-[#FF8057] transition">Home</a>}
-            <a href="/services" class="block text-white/90 hover:text-[#FF8057] transition">Services</a>
+            
+            <!-- Mobile Services Dropdown -->
+            <div>
+                <button class="mobile-dropdown-toggle w-full flex items-center justify-between text-white/90 hover:text-[#FF8057] transition" data-target="mobile-services">
+                    Services <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobile-services" class="hidden pl-4 pt-2 space-y-2 border-l-2 border-white/20 ml-2 mt-2">
+                    <a href="/standard-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Standard Cleaning</a>
+                    <a href="/deep-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Deep Cleaning</a>
+                    <a href="/move-in-out-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Move-In / Move-Out</a>
+                    <a href="/post-construction-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Post-Construction</a>
+                    <a href="/commercial-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Commercial / Office</a>
+                    <a href="/services" class="block text-[#FF8057] font-semibold mt-2">View All Services</a>
+                </div>
+            </div>
+            
             <a href="/about" class="block text-white/90 hover:text-[#FF8057] transition">About</a>
-            <a href="/service-areas" class="block text-white/90 hover:text-[#FF8057] transition">Locations</a>
+            
+            <!-- Mobile Locations Dropdown -->
+            <div>
+                <button class="mobile-dropdown-toggle w-full flex items-center justify-between text-white/90 hover:text-[#FF8057] transition" data-target="mobile-locations">
+                    Locations <i class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobile-locations" class="hidden pl-4 pt-2 space-y-2 border-l-2 border-white/20 ml-2 mt-2">
+                    <a href="/ocala" class="block text-white/70 hover:text-[#FF8057] transition">Ocala & Marion County</a>
+                    <a href="/the-villages" class="block text-white/70 hover:text-[#FF8057] transition">The Villages</a>
+                    <a href="/stone-creek" class="block text-white/70 hover:text-[#FF8057] transition">Stone Creek</a>
+                    <a href="/oak-run" class="block text-white/70 hover:text-[#FF8057] transition">Oak Run</a>
+                    <a href="/golden-hills" class="block text-white/70 hover:text-[#FF8057] transition">Golden Hills</a>
+                    <a href="/belleview" class="block text-white/70 hover:text-[#FF8057] transition">Belleview</a>
+                    <a href="/wec-area" class="block text-white/70 hover:text-[#FF8057] transition">WEC Area</a>
+                    <a href="/dunnellon" class="block text-white/70 hover:text-[#FF8057] transition">Dunnellon</a>
+                    <a href="/service-areas" class="block text-[#FF8057] font-semibold mt-2">View All Locations</a>
+                </div>
+            </div>
+            
             <a href="/blog" class="block text-white/90 hover:text-[#FF8057] transition">Blog</a>
             <a href="/contact" class="block text-white/90 hover:text-[#FF8057] transition">Contact</a>
             <a href="/book-now" class="block text-[#FF8057] font-semibold">Book Now</a>
@@ -76,5 +150,22 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        // Mobile dropdown toggles
+        document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = button.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+                const chevron = button.querySelector('i');
+                
+                if (targetMenu) {
+                    targetMenu.classList.toggle('hidden');
+                    if (chevron) {
+                        chevron.classList.toggle('rotate-180');
+                    }
+                }
+            });
+        });
     })();
 </script>
