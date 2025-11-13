@@ -1,48 +1,52 @@
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Palma Cleaning</h3>
-                <p>Serving the greater <strong>Ocala</strong> area.</p>
-                <p><strong>Areas served:</strong> Stone Creek, Oak Run, The Villages, Golden Hills, Belleview, WEC Area, Dunnellon, Ocala & Marion County.</p>
-                <p><strong>Licensed & Insured in Florida</strong></p>
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-[#305048] text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold tracking-wide">PALMA <span class="text-[#FF8057]">CLEANING</span></h3>
+                <p class="mt-4 text-white/70 text-sm">Premium residential & commercial cleaning services throughout Ocala, Marion County, and The Villages.</p>
+                <div class="mt-4 flex space-x-4">
+                    <a href="https://www.facebook.com/palmacleaningco" class="text-white hover:text-[#FF8057] transition" aria-label="Facebook"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="https://www.instagram.com/palmacleaningco" class="text-white hover:text-[#FF8057] transition" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="tel:3527644747" class="text-white hover:text-[#FF8057] transition" aria-label="Call Palma Cleaning"><i class="fa-solid fa-phone text-xl"></i></a>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href="/" style="color: #ccc; text-decoration: none;">Home</a></li>
-                    <li><a href="/about" style="color: #ccc; text-decoration: none;">About</a></li>
-                    <li><a href="/services" style="color: #ccc; text-decoration: none;">Services</a></li>
-                    <li><a href="/service-areas" style="color: #ccc; text-decoration: none;">Service Areas</a></li>
-                    <li><a href="/book-now" style="color: #ccc; text-decoration: none;">Book Now</a></li>
-                    <li><a href="/contact" style="color: #ccc; text-decoration: none;">Contact</a></li>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Services</h4>
+                <ul class="space-y-2 text-white/70 text-sm">
+                    <li><a href="/standard-cleaning" class="hover:text-[#FF8057] transition">Standard Cleaning</a></li>
+                    <li><a href="/deep-cleaning" class="hover:text-[#FF8057] transition">Deep Cleaning</a></li>
+                    <li><a href="/move-in-out-cleaning" class="hover:text-[#FF8057] transition">Move-In / Move-Out</a></li>
+                    <li><a href="/post-construction-cleaning" class="hover:text-[#FF8057] transition">Post-Construction</a></li>
+                    <li><a href="/commercial-cleaning" class="hover:text-[#FF8057] transition">Commercial / Office</a></li>
+                    <li><a href="/services" class="hover:text-[#FF8057] transition">All Services</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-section">
-                <h4>Popular Services</h4>
-                <ul>
-                    <li><a href="/affordable-house-cleaning-ocala" style="color: #ccc; text-decoration: none;">Premium Cleaning</a></li>
-                    <li><a href="/weekly-cleaning-service-ocala" style="color: #ccc; text-decoration: none;">Weekly Service</a></li>
-                    <li><a href="/biweekly-cleaning-ocala" style="color: #ccc; text-decoration: none;">Biweekly Service</a></li>
-                    <li><a href="/same-day-cleaning-ocala" style="color: #ccc; text-decoration: none;">Same Day Service</a></li>
-                    <li><a href="/deep-cleaning" style="color: #ccc; text-decoration: none;">Deep Cleaning</a></li>
-                    <li><a href="/move-in-out-cleaning" style="color: #ccc; text-decoration: none;">Move In/Out</a></li>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Service Areas</h4>
+                <ul class="space-y-2 text-white/70 text-sm">
+                    <li><a href="/ocala" class="hover:text-[#FF8057] transition">Ocala & Marion County</a></li>
+                    <li><a href="/the-villages" class="hover:text-[#FF8057] transition">The Villages</a></li>
+                    <li><a href="/dunnellon" class="hover:text-[#FF8057] transition">Dunnellon & Rainbow Springs</a></li>
+                    <li><a href="/wec-area" class="hover:text-[#FF8057] transition">World Equestrian Center</a></li>
+                    <li><a href="/service-areas" class="hover:text-[#FF8057] transition">View All Locations</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p><a href="tel:+13527644747" style="color: #ccc; text-decoration: none;">(352) 764-4747</a></p>
-                <p><a href="mailto:hello@palmacleaningco.com" style="color: #ccc; text-decoration: none;">hello@palmacleaningco.com</a></p>
-                <p>Ocala, FL 34471</p>
-                <p>Monday - Friday 8AM-6PM</p>
-                <p><a href="/book-now" style="color: #ff8057; text-decoration: none;">Book now</a></p>
+            <div>
+                <h4 class="font-bold text-lg mb-4">Contact</h4>
+                <ul class="space-y-2 text-white/70 text-sm">
+                    <li><i class="fa-solid fa-phone mr-2"></i>(352) 764-4747</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i>hello@palmacleaningco.com</li>
+                    <li><i class="fa-solid fa-location-dot mr-2"></i>Ocala, FL</li>
+                    <li><i class="fa-solid fa-clock mr-2"></i>Mon - Fri • 8:00 AM - 6:00 PM</li>
+                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Palma Cleaning. All rights reserved. Professional cleaning services in Ocala, FL and surrounding areas.</p>
+        <div class="mt-12 pt-8 border-t border-white/20 text-center text-white/60 text-sm">
+            <p>&copy; {year} Palma Cleaning LLC. All rights reserved.</p>
         </div>
     </div>
 </footer>

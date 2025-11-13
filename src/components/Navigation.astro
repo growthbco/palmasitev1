@@ -1,482 +1,80 @@
 ---
-// Global Navigation component with mobile hamburger menu
+const showHomeLink = Astro.props?.showHome ?? true;
 ---
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-<header class="header">
-    <!-- Logo -->
-    <div class="logo">PALMA CLEANING</div>
-    
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="nav-item">
-            <a href="/" class="nav-link">Home</a>
-        </div>
-        
-        <div class="nav-item has-dropdown">
-            <a href="/services" class="nav-link">Services</a>
-            <div class="dropdown">
-                <a href="/house-cleaning" class="dropdown-item" style="font-weight: 600; color: #ff8057;">House Cleaning Guide</a>
-                <div class="dropdown-section">Residential</div>
-                <a href="/standard-cleaning" class="dropdown-item">Standard House Cleaning</a>
-                <a href="/deep-cleaning" class="dropdown-item">Deep Cleaning</a>
-                <a href="/move-in-out-cleaning" class="dropdown-item">Move-in/Move-out</a>
-                <div class="dropdown-section">Commercial</div>
-                <a href="/commercial-cleaning" class="dropdown-item">Office Cleaning</a>
-                <a href="/post-construction-cleaning" class="dropdown-item">Post-Construction</a>
-            </div>
-        </div>
-        
-        <div class="nav-item has-dropdown">
-            <a href="/service-areas" class="nav-link">Locations</a>
-            <div class="dropdown">
-                <a href="/ocala" class="dropdown-item">Ocala</a>
-                <a href="/the-villages" class="dropdown-item">The Villages</a>
-                <a href="/belleview" class="dropdown-item">Belleview</a>
-                <a href="/dunnellon" class="dropdown-item">Dunnellon</a>
-            </div>
-        </div>
-        
-        <div class="nav-item">
-            <a href="/about" class="nav-link">About</a>
-        </div>
-        
-        <div class="nav-item">
-            <a href="/blog" class="nav-link">Blog</a>
-        </div>
-        
-        <div class="nav-item">
-            <a href="/contact" class="nav-link">Contact</a>
-        </div>
-    </nav>
-    
-    <!-- Right side - Phone and Book Now -->
-    <div class="header-right">
-        <a href="tel:+13527644747" class="phone-number">(352) 764-4747</a>
-        <a href="/book-now" class="book-now-btn">
-            <span class="book-now-text">Book Now</span>
+<header class="bg-[#305048] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold tracking-wide">
+            PALMA <span class="text-[#FF8057]">CLEANING</span>
         </a>
+        <nav class="hidden lg:flex items-center space-x-8 text-sm">
+            {showHomeLink && <a href="/" class="hover:text-[#FF8057] transition duration-300">Home</a>}
+            <a href="/services" class="hover:text-[#FF8057] transition duration-300">Services</a>
+            <a href="/about" class="hover:text-[#FF8057] transition duration-300">About</a>
+            <a href="/service-areas" class="hover:text-[#FF8057] transition duration-300">Locations</a>
+            <a href="/blog" class="hover:text-[#FF8057] transition duration-300">Blog</a>
+            <a href="/contact" class="hover:text-[#FF8057] transition duration-300">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-6">
+            <a href="tel:3527644747" class="text-xs font-semibold hidden md:block tracking-wide">(352) 764-4747</a>
+            <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
+            <button id="mobile-menu-button" class="lg:hidden text-2xl" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
     </div>
-
-    <!-- Mobile Hamburger Menu -->
-    <div class="mobile-menu-toggle">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
     </div>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <nav class="mobile-nav">
-            <a href="/" class="mobile-nav-link">Home</a>
-            
-            <div class="mobile-nav-section">
-                <span class="mobile-nav-title">Services</span>
-                <a href="/house-cleaning" class="mobile-nav-link">House Cleaning Guide</a>
-                <a href="/standard-cleaning" class="mobile-nav-link">Standard Cleaning</a>
-                <a href="/deep-cleaning" class="mobile-nav-link">Deep Cleaning</a>
-                <a href="/move-in-out-cleaning" class="mobile-nav-link">Move-in/Move-out</a>
-                <a href="/commercial-cleaning" class="mobile-nav-link">Commercial Cleaning</a>
-                <a href="/post-construction-cleaning" class="mobile-nav-link">Post-Construction</a>
-            </div>
-            
-            <div class="mobile-nav-section">
-                <span class="mobile-nav-title">Locations</span>
-                <a href="/ocala" class="mobile-nav-link">Ocala</a>
-                <a href="/the-villages" class="mobile-nav-link">The Villages</a>
-                <a href="/belleview" class="mobile-nav-link">Belleview</a>
-                <a href="/dunnellon" class="mobile-nav-link">Dunnellon</a>
-            </div>
-            
-            <a href="/about" class="mobile-nav-link">About</a>
-            <a href="/blog" class="mobile-nav-link">Blog</a>
-            <a href="/contact" class="mobile-nav-link">Contact</a>
-            
-            <div class="mobile-contact">
-                <a href="tel:+13527644747" class="mobile-phone">(352) 764-4747</a>
-                <a href="/book-now" class="mobile-book-btn">Book Now</a>
-            </div>
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-[#305048]/95">
+        <nav class="px-6 py-4 space-y-3 text-sm">
+            {showHomeLink && <a href="/" class="block text-white/90 hover:text-[#FF8057] transition">Home</a>}
+            <a href="/services" class="block text-white/90 hover:text-[#FF8057] transition">Services</a>
+            <a href="/about" class="block text-white/90 hover:text-[#FF8057] transition">About</a>
+            <a href="/service-areas" class="block text-white/90 hover:text-[#FF8057] transition">Locations</a>
+            <a href="/blog" class="block text-white/90 hover:text-[#FF8057] transition">Blog</a>
+            <a href="/contact" class="block text-white/90 hover:text-[#FF8057] transition">Contact</a>
+            <a href="/book-now" class="block text-[#FF8057] font-semibold">Book Now</a>
         </nav>
     </div>
 </header>
 
-<style>
-body {
-    padding-top: 100px; /* Account for fixed header */
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #2f5047;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-/* Logo */
-.logo {
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    color: #ffffff;
-    flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Main Navigation */
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex: 1;
-    justify-content: center;
-    margin: 0 40px;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-link {
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    padding: 10px 0;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-}
-
-.nav-link:hover {
-    color: #ff8057;
-}
-
-/* Dropdown styling */
-.nav-item.has-dropdown:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
-    background: white;
-    min-width: 220px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    padding: 10px 0;
-    margin-top: 10px;
-}
-
-.dropdown-item {
-    display: block;
-    padding: 12px 20px;
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: none;
-    transition: all 0.3s ease;
-}
-
-.dropdown-item:hover {
-    background: #f8f9fa;
-    color: #ff8057;
-}
-
-.dropdown-section {
-    padding: 8px 20px 4px;
-    font-weight: 600;
-    font-size: 12px;
-    color: #ff8057;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 4px;
-}
-
-/* Right side - Phone and Book Now */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-shrink: 0;
-}
-
-.phone-number {
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
-}
-
-.phone-number:hover {
-    color: #ff8057;
-}
-
-.book-now-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    height: 50px;
-    background-color: #ff8057;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.book-now-btn:hover {
-    background-color: #e56d45;
-    transform: translateY(-2px);
-}
-
-.book-now-text {
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-/* Mobile hamburger menu */
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.mobile-nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-.mobile-nav-link {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: color 0.3s ease;
-}
-
-.mobile-nav-link:hover {
-    color: #ff8057;
-}
-
-.mobile-nav-section {
-    margin: 30px 0;
-}
-
-.mobile-nav-title {
-    display: block;
-    color: #ff8057;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-}
-
-.mobile-nav-section .mobile-nav-link {
-    font-size: 16px;
-    font-weight: 400;
-    padding: 10px 0;
-}
-
-.mobile-contact {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-phone {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.mobile-book-btn {
-    display: inline-block;
-    background-color: #ff8057;
-    color: white;
-    text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    max-width: 140px;
-    text-align: center;
-}
-
-.mobile-book-btn:hover {
-    background-color: #e56d45;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 1200px) {
-    .header {
-        padding: 0 30px;
-    }
-    
-    .main-nav {
-        gap: 30px;
-        margin: 0 20px;
-    }
-    
-    .nav-link {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header {
-        height: 80px;
-        padding: 0 20px;
-    }
-    
-    .logo {
-        font-size: 20px;
-    }
-    
-    .main-nav {
-        display: none;
-    }
-    
-    .phone-number {
-        display: none;
-    }
-    
-    .book-now-btn {
-        width: 100px;
-        height: 40px;
-    }
-    
-    .book-now-text {
-        font-size: 12px;
-    }
-    
-    .mobile-menu-toggle {
-        display: flex;
-    }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileOverlay = document.querySelector('.mobile-menu-overlay');
-    const header = document.querySelector('.header');
-    
-    // Add scroll effect for sticky header
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 10) {
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
-        } else {
-            header.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-        }
-    });
-    
-    if (mobileToggle && mobileOverlay) {
-        mobileToggle.addEventListener('click', function() {
-            mobileToggle.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileOverlay.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking outside
-        mobileOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileOverlay) {
-                mobileToggle.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+<script is:inline>
+    (function() {
+        const ensureLink = (href) => {
+            if (!document.querySelector(`link[href="${href}"]`)) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                document.head.appendChild(link);
             }
-        });
-        
-        // Close menu when clicking links
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-phone, .mobile-book-btn');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileToggle.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-                document.body.style.overflow = '';
+        };
+        ensureLink('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        ensureLink('/home-tailwind.css');
+
+        if (!window.FontAwesomeConfig) {
+            window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
+        }
+        if (!document.querySelector('script[data-fa-loaded="true"]')) {
+            const faScript = document.createElement('script');
+            faScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js';
+            faScript.crossOrigin = 'anonymous';
+            faScript.referrerPolicy = 'no-referrer';
+            faScript.dataset.faLoaded = 'true';
+            document.head.appendChild(faScript);
+        }
+
+        const styleId = 'palma-global-style';
+        if (!document.getElementById(styleId)) {
+            const style = document.createElement('style');
+            style.id = styleId;
+            style.textContent = '.font-poppins{font-family:"Poppins",sans-serif;}::-webkit-scrollbar{display:none;}';
+            document.head.appendChild(style);
+        }
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
-    }
-});
+        }
+    })();
 </script>

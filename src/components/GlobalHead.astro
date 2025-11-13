@@ -1,0 +1,17 @@
+---
+const { disableTailwind } = Astro.props ?? {};
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+{!disableTailwind && <link rel="stylesheet" href="/home-tailwind.css">}
+
+<script is:inline>
+    window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };
+</script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    ::-webkit-scrollbar { display: none; }
+    .font-poppins { font-family: 'Poppins', sans-serif; }
+</style>
