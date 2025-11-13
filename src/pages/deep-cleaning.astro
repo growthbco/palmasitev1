@@ -4,26 +4,153 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Deep House Cleaning Services in Ocala FL | Palma Cleaning";
 const description = "Professional deep house cleaning services in Ocala, FL. Comprehensive top-to-bottom cleaning including baseboards, ceiling fans, inside appliances, and detailed sanitization.";
+
+const checklists = [
+  {
+    title: "Bathroom checklist",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
+    items: [
+      { text: "Scrub and disinfect sinks" },
+      { text: "Wipe/clean tub and shower tile" },
+      { text: "Disinfect toilets inside, outside, and behind" },
+      { text: "Clean and shine chrome fixtures" },
+      { text: "Clean mirrors and glass" },
+      { text: "Dust window sills & blinds" },
+      { text: "Vacuum and mop floors" },
+      { text: "Empty trash & replace liners" },
+      { text: "Hand wash baseboards", tag: "included" },
+      { text: "Scrub shower doors & tubs", tag: "included" }
+    ]
+  },
+  {
+    title: "Bedroom checklist",
+    image: "https://images.unsplash.com/photo-1584622650517-1e3885ab0a83?auto=format&fit=crop&w=900&q=80",
+    items: [
+      { text: "Make beds & straighten linens" },
+      { text: "Dust lamps, frames, and décor" },
+      { text: "Dust furniture top, front, and base" },
+      { text: "Vacuum and/or mop floors" },
+      { text: "Dust window sills & blinds" },
+      { text: "Remove cobwebs" },
+      { text: "Clean mirrors & glass" },
+      { text: "Wipe door handles & switches" },
+      { text: "Basic organizing as needed" },
+      { text: "Hand wash baseboards", tag: "included" }
+    ]
+  },
+  {
+    title: "Kitchen checklist",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80",
+    items: [
+      { text: "Clean appliance exteriors" },
+      { text: "Microwave interior & exterior" },
+      { text: "Disinfect countertops & backsplash" },
+      { text: "Clean cabinet fronts & hardware" },
+      { text: "Scrub sink, polish fixtures & stainless" },
+      { text: "Load dishes or dishwasher" },
+      { text: "Dust window sills & lights" },
+      { text: "Vacuum and mop floors" },
+      { text: "Degrease stove top" },
+      { text: "Hand wash baseboards", tag: "included" }
+    ]
+  },
+  {
+    title: "Other living areas",
+    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80",
+    items: [
+      { text: "Dust and straighten cushions & pillows" },
+      { text: "Ceiling fans, vents, and fixtures dusted" },
+      { text: "Dust picture frames & décor" },
+      { text: "Vacuum and/or mop floors & stairs" },
+      { text: "Dust window sills & blinds" },
+      { text: "Clean mirrors & glass" },
+      { text: "Remove cobwebs" },
+      { text: "Empty trash" },
+      { text: "Hand wash baseboards", tag: "included" },
+      { text: "Wipe down/vacuum furniture", tag: "included" }
+    ]
+  }
+];
+
+const addonUpgrades = [
+  "Clean inside oven",
+  "Clean inside refrigerator",
+  "Inside cabinets & drawers reset",
+  "Pantry or closet organization",
+  "Exterior air vent & return dusting",
+  "Garage sweep & vacuum (if accessible)"
+];
+
+const deepVsStandard = [
+  {
+    title: "Time Investment",
+    icon: "fa-solid fa-clock",
+    copy: "Deep cleans average 4–6 hours vs. 2–3 hours for standard service, letting us hit every detail."
+  },
+  {
+    title: "Specialized Equipment",
+    icon: "fa-solid fa-toolbox",
+    copy: "Commercial-grade vacuums, microfiber systems, and eco-friendly solutions remove buildup safely."
+  },
+  {
+    title: "Comprehensive Coverage",
+    icon: "fa-solid fa-expand",
+    copy: "We tackle baseboards, trim, light fixtures, high dusting, furniture edges, and appliance interiors."
+  },
+  {
+    title: "Sanitization",
+    icon: "fa-solid fa-shield-heart",
+    copy: "Disinfection of high-touch points reduces allergens, bacteria, and everyday germs for a healthier home."
+  }
+];
+
+const useCases = [
+  {
+    icon: "fa-solid fa-calendar-day",
+    title: "Seasonal Reset",
+    copy: "Get ready for spring, holidays, or post-vacation recovery with a full refresh."
+  },
+  {
+    icon: "fa-solid fa-person-carry-box",
+    title: "Move-In / Move-Out",
+    copy: "Present your home in its best light or move into a space that feels truly new."
+  },
+  {
+    icon: "fa-solid fa-star",
+    title: "First-Time Service",
+    copy: "Start recurring maintenance with a baseline deep clean for lasting results."
+  },
+  {
+    icon: "fa-solid fa-champagne-glasses",
+    title: "Special Events",
+    copy: "Hosting guests? Ensure every surface sparkles before (and after) the festivities."
+  }
+];
+
+const quickStats = [
+  { icon: "fa-solid fa-clock", title: "4–6 Hours", copy: "Dedicated cleaning timeline based on home size." },
+  { icon: "fa-solid fa-spray-can-sparkles", title: "Sanitized", copy: "High-touch points disinfected throughout." },
+  { icon: "fa-solid fa-leaf", title: "Eco-Friendly", copy: "Family and pet-safe products available." },
+  { icon: "fa-solid fa-user-shield", title: "Licensed & Insured", copy: "W-2, background-checked Palma Cleaning pros." }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="deep cleaning Ocala FL, spring cleaning, thorough house cleaning, move-in cleaning, detailed cleaning service">
     <link rel="canonical" href="https://palmacleaningco.com/deep-cleaning">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
@@ -31,361 +158,204 @@ const description = "Professional deep house cleaning services in Ocala, FL. Com
         "@type": "Service",
         "name": "Deep House Cleaning Services",
         "alternateName": ["Spring Cleaning", "Intensive House Cleaning", "Detailed Home Cleaning"],
-        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, ceiling fans, and detailed cleaning throughout your home. Perfect for spring cleaning, seasonal refreshes, and move-in preparation.",
+        "description": "Comprehensive deep cleaning services including inside appliances, baseboards, fixtures, ceiling fans, and detailed cleaning throughout your home.",
         "url": "https://palmacleaningco.com/deep-cleaning",
-        "image": "https://palmacleaningco.com/images/deep-cleaning-service.jpg",
         "provider": {
-            "@type": ["LocalBusiness", "Service"],
+            "@type": "LocalBusiness",
             "name": "Palma Cleaning",
-            "@id": "https://palmacleaningco.com/#organization",
             "telephone": "(352) 764-4747",
             "email": "hello@palmacleaningco.com",
-            "url": "https://palmacleaningco.com",
-            "sameAs": [
-                "https://www.facebook.com/palmacleaningco",
-                "https://www.instagram.com/palmacleaningco"
-            ],
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "postalCode": "34471",
-                "addressCountry": "US"
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "147"
-            }
-        },
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place",
-                "name": "Stone Creek",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place",
-                "name": "Oak Run",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "City",
-                "name": "The Villages",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "AdministrativeArea",
-                "name": "Marion County",
-                "containedInPlace": "Florida",
-                "addressCountry": "US"
-            }
-        ],
-        "serviceArea": [
-            {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "29.1872",
-                    "longitude": "-82.1401"
-                },
-                "geoRadius": "48280"
-            }
-        ],
-        "serviceType": "Deep House Cleaning",
-        "category": ["Deep Cleaning", "House Cleaning", "Spring Cleaning", "Seasonal Cleaning"],
-        "additionalType": "https://schema.org/Service",
-        "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "https://palmacleaningco.com/book-now",
-            "servicePhone": "(352) 764-4747"
-        },
-        "hoursAvailable": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "18:00"
-        },
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "One-Time Deep Cleaning",
-                "description": "Comprehensive deep cleaning service for spring cleaning or special occasions",
-                "priceRange": "$200-$500",
-                "availability": "InStock",
-                "validFrom": "2025-01-01"
-            },
-            {
-                "@type": "Offer",
-                "name": "Pre-Event Deep Cleaning",
-                "description": "Deep cleaning service before hosting events or parties",
-                "priceRange": "$250-$600",
-                "availability": "InStock",
-                "validFrom": "2025-01-01"
-            },
-            {
-                "@type": "Offer",
-                "name": "Move-In Deep Cleaning",
-                "description": "Deep cleaning for new homeowners or renters",
-                "priceRange": "$300-$700",
-                "availability": "InStock",
-                "validFrom": "2025-01-01"
-            }
-        ],
-        "audience": {
-            "@type": "Audience",
-            "audienceType": "Homeowners, Renters, Property Managers"
-        },
-        "isRelatedTo": [
-            {
-                "@type": "Service",
-                "name": "Standard House Cleaning",
-                "url": "https://palmacleaningco.com/standard-cleaning"
-            },
-            {
-                "@type": "Service",
-                "name": "Move-in Move-out Cleaning",
-                "url": "https://palmacleaningco.com/move-in-out-cleaning"
-            }
-        ]
+            "url": "https://palmacleaningco.com"
+        }
     }
     </script>
 </head>
-
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
+
     <Navigation />
-    
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/services" style="color: #ff8057; text-decoration: none;">Services</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Deep Cleaning</span>
-            </div>
-        </div>
-    </nav>
-    
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Professional Deep Cleaning Services in Ocala, FL</h1>
-                <p class="hero-description">Comprehensive top-to-bottom cleaning that gets into every corner, perfect for spring cleaning, moving, or starting fresh.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
-                </div>
-                <div class="hero-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>PROFESSIONAL DEEP CLEANING SERVICE</span>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Deep house cleaning services in Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
-            </div>
-        </div>
-    </section>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">What's Included in Our Deep Cleaning</h2>
-            
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-[1.3fr,1fr] gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Deep Cleaning Specialists</p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Professional Deep Cleaning Services in Ocala, FL</h1>
+                    <p class="text-lg text-gray-600 max-w-2xl">Our top-to-bottom service targets buildup, high-touch surfaces, and hard-to-reach areas—perfect for seasonal resets, move-ins, or detailed refreshes.</p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Book Now</a>
+                        <a href="tel:+13527644747" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Call (352) 764-4747</a>
                     </div>
-                    <h3>Kitchen Deep Clean</h3>
-                    <ul class="service-list">
-                        <li>Load dishwasher (if applicable)</li>
-                        <li>Clean all appliance exteriors</li>
-                        <li>Clean cabinet exteriors</li>
-                        <li>Clean backsplash and countertops</li>
-                        <li>Clean inside and outside of microwave</li>
-                        <li>Clean and polish sink and stainless steel</li>
-                        <li>Clean tables and all surfaces</li>
-                        <li>Optional: Clean interior of oven</li>
-                        <li>Optional: Clean interior of refrigerator</li>
-                    </ul>
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-3 text-sm">
+                        <span class="text-[#FF8057] text-lg">★★★★★</span>
+                        <span class="uppercase tracking-[0.25em] text-[#305048]/70">5-Star Deep Cleaning Service</span>
+                    </div>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bath"></i>
-                    </div>
-                    <h3>Bathroom Deep Clean</h3>
-                    <ul class="service-list">
-                        <li>Clean and disinfect toilet (including behind)</li>
-                        <li>Scrub and clean showerhead and hose</li>
-                        <li>Scrub and clean shower walls and doors</li>
-                        <li>Clean and disinfect bathtub</li>
-                        <li>Clean and disinfect sinks</li>
-                        <li>Clean soap holder and fixtures</li>
-                        <li>Clean and disinfect light switches</li>
-                        <li>Neatly fold and hang towels</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>All Rooms Deep Clean</h3>
-                    <ul class="service-list">
-                        <li>Remove cobwebs throughout</li>
-                        <li>Dust and wet wipe ceiling fans (3-step ladder)</li>
-                        <li>Dust blinds and light fixtures</li>
-                        <li>Dust all accessible furniture</li>
-                        <li>Clean all glass surfaces</li>
-                        <li>Clean and disinfect light switches</li>
-                        <li>Clean baseboards throughout</li>
-                        <li>Empty trash cans and replace liners</li>
-                        <li>Vacuum upholstered furniture</li>
-                        <li>Vacuum and mop all floors</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>Bedrooms Deep Clean</h3>
-                    <ul class="service-list">
-                        <li>Make all beds</li>
-                        <li>Change linens (upon request)</li>
-                        <li>Complete all-room cleaning tasks</li>
-                        <li>Dust ceiling fans and light fixtures</li>
-                        <li>Clean baseboards and glass surfaces</li>
-                        <li>Vacuum and mop floors</li>
-                    </ul>
+                <div class="hidden lg:flex">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=80" alt="Palma Cleaning deep clean" class="rounded-2xl shadow-2xl object-cover">
                 </div>
             </div>
+        </section>
 
-            <!-- Deep Cleaning vs Regular Cleaning -->
-            <div style="margin-top: 3rem; background: linear-gradient(135deg, #2f5047 0%, #3a5f56 100%); padding: 3rem 2rem; border-radius: 20px; color: white;">
-                <h3 style="text-align: center; margin-bottom: 2rem; color: white;">What Makes Deep Cleaning Different?</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-clock" style="margin-right: 0.5rem;"></i>Time Investment</h4>
-                        <p style="margin-bottom: 1.5rem;">Deep cleaning takes 4-6 hours vs 2-3 hours for regular cleaning, ensuring every detail is addressed.</p>
-                        
-                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-tools" style="margin-right: 0.5rem;"></i>Specialized Equipment</h4>
-                        <p>We use professional-grade tools and eco-friendly products for deep sanitization and cleaning.</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-expand-arrows-alt" style="margin-right: 0.5rem;"></i>Comprehensive Coverage</h4>
-                        <p style="margin-bottom: 1.5rem;">Every surface, corner, and hard-to-reach area is thoroughly cleaned and sanitized.</p>
-                        
-                        <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i>Sanitization</h4>
-                        <p>Advanced sanitization methods to eliminate bacteria, allergens, and germs throughout your home.</p>
+        <!-- Checklist Section -->
+        <section class="py-24 bg-white" id="checklists">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Detailed Checklists</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Every deep clean covers these spaces</h2>
+                    <p class="mt-4 text-gray-600">From tile grout to baseboards and vent covers, we follow a proven checklist to ensure every room feels freshly reset.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+                    {checklists.map((list) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-6 shadow-sm" key={list.title}>
+                            {list.image && (
+                                <img src={list.image} alt={list.title} class="rounded-xl object-cover w-full h-48" loading="lazy" />
+                            )}
+                            <h3 class="mt-6 text-xl font-semibold">{list.title}</h3>
+                            <ul class="mt-5 space-y-2">
+                                {list.items.map((item) => (
+                                    <li class="flex items-start gap-3" key={item.text}>
+                                        <span class="mt-1 text-[#FF8057]"><i class="fa-solid fa-square-check"></i></span>
+                                        <span class="text-sm text-gray-600 leading-relaxed">
+                                            {item.text}
+                                            {item.tag && (
+                                                <span class="ml-1 text-[#305048] font-semibold text-xs uppercase tracking-wide">({item.tag})</span>
+                                            )}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Add-on Upgrades -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-2xl px-6 py-10">
+                    <h3 class="text-2xl font-semibold text-[#305048]">Want to go even deeper?</h3>
+                    <p class="mt-3 text-sm text-gray-600">Add any of these upgrades to your deep clean and we&rsquo;ll tailor the visit to your exact priorities.</p>
+                    <div class="mt-6 flex flex-wrap justify-center gap-3">
+                        {addonUpgrades.map((upgrade) => (
+                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 text-sm font-semibold text-[#305048]" key={upgrade}>
+                                <i class="fa-solid fa-plus text-[#FF8057] mr-2"></i>{upgrade}
+                            </span>
+                        ))}
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 3rem; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Perfect For These Situations</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-calendar-alt" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Spring Cleaning</h4>
-                        <p>Get your home refreshed and ready for the new season with our comprehensive deep clean.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-truck-moving" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Moving In/Out</h4>
-                        <p>Start fresh in your new home or ensure you get your deposit back with our thorough cleaning.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-star" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>First-Time Service</h4>
-                        <p>Begin your regular cleaning service with a deep clean to establish a baseline of cleanliness.</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-party-horn" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4>Special Events</h4>
-                        <p>Prepare your home for guests and special occasions with our detailed deep cleaning service.</p>
-                    </div>
+        <!-- Deep vs Standard -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Beyond the Basics</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">What Makes Deep Cleaning Different?</h2>
+                    <p class="mt-4 text-white/80">More time, more detail, and professional equipment ensure your home looks and feels truly refreshed.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {deepVsStandard.map((item) => (
+                        <div class="bg-white/15 backdrop-blur rounded-2xl p-8 shadow-lg" key={item.title}>
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl"><i class={item.icon}></i></div>
+                            <h3 class="mt-6 text-xl font-semibold">{item.title}</h3>
+                            <p class="mt-3 text-sm text-white/80 leading-relaxed">{item.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-            
-            <!-- Professional Deep Cleaning Summary -->
-            <div style="margin-top: 3rem; background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <h3 style="color: #2f5047; text-align: center; margin-bottom: 2rem;">Professional Deep Cleaning Process</h3>
-                <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">Our certified cleaning professionals use industry-standard equipment and eco-friendly products to deliver a thorough deep clean that goes beyond surface cleaning.</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-clock" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">4-6 Hours</h4>
-                        <p style="color: #666; font-size: 0.9rem;">Thorough deep cleaning process</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Sanitized</h4>
-                        <p style="color: #666; font-size: 0.9rem;">Disinfected surfaces throughout</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-leaf" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Eco-Friendly</h4>
-                        <p style="color: #666; font-size: 0.9rem;">Safe for families and pets</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-tools" style="font-size: 2.5rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                        <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Professional</h4>
-                        <p style="color: #666; font-size: 0.9rem;">Commercial-grade equipment</p>
-                    </div>
-                </div>
-                
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center;">
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">What's Included in Every Deep Clean</h4>
-                    <p style="color: #666; margin-bottom: 1.5rem;">Our deep cleaning service includes cobweb removal, ceiling fan cleaning, comprehensive dusting, baseboard cleaning, appliance cleaning, and complete floor care throughout your home.</p>
-                    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                        <span style="background: white; padding: 0.5rem 1rem; border-radius: 20px; color: #2f5047; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <i class="fas fa-check" style="color: #ff8057; margin-right: 0.5rem;"></i>Licensed & Insured
-                        </span>
-                        <span style="background: white; padding: 0.5rem 1rem; border-radius: 20px; color: #2f5047; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <i class="fas fa-check" style="color: #ff8057; margin-right: 0.5rem;"></i>Satisfaction Guaranteed
-                        </span>
-                        <span style="background: white; padding: 0.5rem 1rem; border-radius: 20px; color: #2f5047; font-weight: 500; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                            <i class="fas fa-check" style="color: #ff8057; margin-right: 0.5rem;"></i>5-Star Rated
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Ready for a Deep Clean?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">
-                    Our deep cleaning service typically takes 4-6 hours depending on home size. Contact us for a personalized quote based on your specific needs.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- Use Cases -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Perfect For</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">When to Book a Deep Clean</h2>
+                    <p class="mt-4 text-gray-600">Our deep clean is ideal for resets, transitions, and moments when your home deserves extra care.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                    {useCases.map((item) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 text-center shadow-sm" key={item.title}>
+                            <i class={`${item.icon} text-3xl text-[#FF8057]`}></i>
+                            <h3 class="mt-4 text-xl font-semibold">{item.title}</h3>
+                            <p class="mt-3 text-sm text-gray-600 leading-relaxed">{item.copy}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Process & Highlights -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="bg-white border border-[#E3EAE8]/60 rounded-2xl shadow-2xl p-8 md:p-12">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">How We Work</p>
+                        <h2 class="text-3xl font-bold">Professional Deep Cleaning Process</h2>
+                        <p class="mt-4 text-gray-600">Certified Palma Cleaning professionals use commercial-grade equipment, microfiber systems, and eco-friendly products to deliver a spotless, healthier home.</p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+                        {quickStats.map((stat) => (
+                            <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60" key={stat.title}>
+                                <i class={`${stat.icon} text-2xl text-[#FF8057]`}></i>
+                                <h3 class="mt-4 text-lg font-semibold">{stat.title}</h3>
+                                <p class="mt-2 text-sm text-gray-600 leading-relaxed">{stat.copy}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div class="mt-10 bg-[#FF8057]/10 border border-[#FF8057]/30 rounded-xl p-6 text-center">
+                        <h3 class="text-lg font-semibold text-[#305048]">Always Included</h3>
+                        <p class="mt-3 text-sm text-gray-600">Cobweb removal, ceiling fan cleaning (3-step ladder), trim and baseboards, detailed dusting, appliance exteriors, interior windows, and full floor care.</p>
+                        <div class="mt-4 flex flex-wrap justify-center gap-3 text-sm font-semibold text-[#305048]">
+                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-shield-heart text-[#FF8057]"></i>Licensed & Insured</span>
+                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-star text-[#FF8057]"></i>5-Star Rated</span>
+                            <span class="bg-white border border-[#E3EAE8]/60 rounded-full px-4 py-2 inline-flex items-center gap-2"><i class="fa-solid fa-seedling text-[#FF8057]"></i>Satisfaction Guaranteed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupon Section -->
+        <section class="py-20 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto bg-white/10 border border-white/20 rounded-2xl p-10 text-center shadow-xl">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Limited Time Offer</p>
+                    <h2 class="mt-4 text-3xl md:text-4xl font-bold">Save up to 25% on your first deep clean</h2>
+                    <p class="mt-4 text-white/80">New recurring clients receive up to 25% off the first deep clean when they schedule ongoing weekly or bi-weekly service with Palma Cleaning.</p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Claim Offer</a>
+                        <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">Call (352) 764-4747</a>
+                    </div>
+                    <p class="mt-4 text-xs uppercase tracking-[0.2em] text-white/60">Discount applied after first recurring visit · New Palma Cleaning clients only</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-24 bg-[#FF8057]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048]">Ready for a Palma Cleaning Deep Clean?</h2>
+                <p class="mt-4 text-[#305048]/90 text-lg max-w-2xl mx-auto">Share your checklist and availability—we’ll customize a quote, assign the right team, and lock in your preferred date.</p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fa-solid fa-calendar-check mr-2"></i>Book Now</a>
+                    <a href="tel:+13527644747" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747</a>
+                </div>
+                <p class="mt-6 text-[#305048]/80 text-sm">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
+            </div>
+        </section>
+    </main>
 
     <Footer />
 
-    <script src="/script-clean.js" is:inline></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
 </body>
 </html>
