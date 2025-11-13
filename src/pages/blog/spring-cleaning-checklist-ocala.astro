@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import GTMHead from '../../components/GTMHead.astro';
 import GTMBody from '../../components/GTMBody.astro';
+import GlobalHead from '../../components/GlobalHead.astro';
 
 const title = "Ultimate Spring Cleaning Checklist for Ocala Homes | Palma Cleaning Blog";
 const description = "Complete spring cleaning checklist for Florida homes. Room-by-room guide with timeline, professional tips, and seasonal cleaning advice for Ocala residents.";
@@ -14,17 +15,15 @@ const publishDate = "2025-08-11";
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="spring cleaning checklist, Ocala spring cleaning, Florida spring cleaning, house cleaning checklist, seasonal cleaning guide">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/blog/spring-cleaning-checklist-ocala">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <script type="application/ld+json">
     {
@@ -59,216 +58,308 @@ const publishDate = "2025-08-11";
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/blog/" style="color: #ff8057; text-decoration: none;">Blog</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Spring Cleaning Checklist</span>
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="bg-[#F4F7F6] py-3">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <a href="/" class="text-[#FF8057] hover:underline">Home</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <a href="/blog/" class="text-[#FF8057] hover:underline">Blog</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span class="text-gray-700">Spring Cleaning Checklist</span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Article Header -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div style="color: #ff8057; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Residential Guide</div>
-                <h1 class="hero-title">Ultimate Spring Cleaning Checklist for Ocala Homes</h1>
-                <p class="hero-subtitle">Complete room-by-room guide tailored for Florida's unique climate and seasonal needs</p>
-                <div style="display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Published August 11, 2025</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-clock"></i>
-                        <span>8 min read</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-user"></i>
-                        <span>Palma Cleaning Team</span>
+        <!-- Article Header -->
+        <section class="bg-[#305048] text-white py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-[#FF8057] text-sm font-semibold uppercase tracking-[0.3em] mb-4">Residential Guide</div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Ultimate Spring Cleaning Checklist for Ocala Homes</h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">Complete room-by-room guide tailored for Florida's unique climate and seasonal needs</p>
+                    <div class="flex flex-wrap items-center gap-6 text-white/80 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-alt"></i>
+                            <span>Published August 11, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>8 min read</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Palma Cleaning Team</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div style="background: linear-gradient(135deg, #ff8057, #ff6b47); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white;">
-                    <i class="fas fa-seedling" style="font-size: 4rem;"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Article Content -->
-    <article class="about">
-        <div class="container" style="max-width: 800px;">
-            
+        <!-- Article Content -->
+        <article class="max-w-4xl mx-auto px-6 py-12 md:py-16">
             <!-- Introduction -->
-            <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin-bottom: 3rem; border-left: 5px solid #ff8057;">
-                <p style="font-size: 1.1rem; line-height: 1.7; color: #333; margin: 0;">
-                    Spring cleaning in Ocala, Florida requires special attention to our unique climate challenges. High humidity, frequent storms, and year-round allergens mean your spring cleaning checklist needs to address more than just winter dust. This comprehensive guide will help you tackle every room systematically while addressing Florida-specific concerns like mold prevention, humidity control, and storm season preparation. For <a href="/deep-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">professional deep cleaning services in Ocala</a>, our team understands these challenges and can help your home reach its cleanest state.
+            <div class="bg-[#F4F7F6] border-l-4 border-[#FF8057] p-6 md:p-8 rounded-lg mb-10">
+                <p class="text-lg md:text-xl leading-relaxed text-gray-800">
+                    Spring cleaning in Ocala, Florida requires special attention to our unique climate challenges. High humidity, frequent storms, and year-round allergens mean your spring cleaning checklist needs to address more than just winter dust. This comprehensive guide will help you tackle every room systematically while addressing Florida-specific concerns like mold prevention, humidity control, and storm season preparation. For <a href="/deep-cleaning" class="text-[#FF8057] font-semibold hover:underline">professional deep cleaning services in Ocala</a>, our team understands these challenges and can help your home reach its cleanest state.
                 </p>
             </div>
 
-            <!-- Quick Professional Option -->
-            <div style="background: #fff; padding: 1.5rem; border-radius: 10px; border: 2px solid #ff8057; margin-bottom: 3rem; text-align: center;">
-                <p style="color: #666; margin-bottom: 1rem;">
-                    <strong>Short on time?</strong> Our professional spring cleaning service handles everything on this list and more.
+            <!-- Quick Professional CTA -->
+            <div class="bg-white border-2 border-[#FF8057] rounded-xl p-6 md:p-8 text-center mb-12">
+                <p class="text-gray-700 mb-6 text-lg">
+                    <strong class="text-[#305048]">Short on time?</strong> Our professional spring cleaning service handles everything on this list and more.
                 </p>
-                <a href="/deep-cleaning" class="btn btn-primary" style="margin-right: 1rem;">Get Professional Spring Cleaning</a>
-                <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-8 py-3 rounded-md font-bold hover:bg-[#ff996f] transition duration-300">Get Professional Spring Cleaning</a>
+                    <a href="tel:+13527644747" class="bg-[#305048] text-white px-8 py-3 rounded-md font-bold hover:bg-[#305048]/90 transition duration-300">Call (352) 764-4747</a>
+                </div>
             </div>
 
             <!-- Timeline Section -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Spring Cleaning Timeline</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center;">
-                        <div style="background: #ff8057; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">1</div>
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Week 1: Planning & Decluttering</h4>
-                        <p style="color: #666; line-height: 1.6;">Plan your approach, gather supplies, and declutter each room before deep cleaning begins.</p>
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-8">Spring Cleaning Timeline</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60">
+                        <div class="w-14 h-14 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
+                        <h3 class="text-lg font-bold text-[#305048] mb-3">Week 1: Planning & Decluttering</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Plan your approach, gather supplies, and declutter each room before deep cleaning begins.</p>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center;">
-                        <div style="background: #ff8057; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">2</div>
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Week 2: Deep Clean Bedrooms & Bathrooms</h4>
-                        <p style="color: #666; line-height: 1.6;">Focus on personal spaces where allergens and humidity effects are most noticeable.</p>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60">
+                        <div class="w-14 h-14 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
+                        <h3 class="text-lg font-bold text-[#305048] mb-3">Week 2: Deep Clean Bedrooms & Bathrooms</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Focus on personal spaces where allergens and humidity effects are most noticeable.</p>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center;">
-                        <div style="background: #ff8057; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">3</div>
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Week 3: Kitchen & Living Areas</h4>
-                        <p style="color: #666; line-height: 1.6;">Tackle high-traffic areas and appliances, focusing on grease and humidity buildup.</p>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60">
+                        <div class="w-14 h-14 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
+                        <h3 class="text-lg font-bold text-[#305048] mb-3">Week 3: Kitchen & Living Areas</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Tackle high-traffic areas and appliances, focusing on grease and humidity buildup.</p>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center;">
-                        <div style="background: #ff8057; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">4</div>
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Week 4: Exteriors & Final Touches</h4>
-                        <p style="color: #666; line-height: 1.6;">Complete outdoor spaces, windows, and final organization for storm season readiness.</p>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60">
+                        <div class="w-14 h-14 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center font-bold text-xl mx-auto mb-4">4</div>
+                        <h3 class="text-lg font-bold text-[#305048] mb-3">Week 4: Exteriors & Final Touches</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Complete outdoor spaces, windows, and final organization for storm season readiness.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Room-by-Room Checklist -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Room-by-Room Spring Cleaning Checklist</h2>
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-10">Room-by-Room Spring Cleaning Checklist</h2>
                 
                 <!-- Kitchen -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-utensils"></i> Kitchen Deep Clean
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-utensils"></i> Kitchen Deep Clean
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Appliances</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Deep clean inside refrigerator and freezer</li>
-                                <li>Run dishwasher cleaning cycle with vinegar</li>
-                                <li>Degrease oven interior and clean racks</li>
-                                <li>Descale coffee maker and clean filters</li>
-                                <li>Clean microwave inside and out</li>
-                                <li>Wipe down small appliance exteriors</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Appliances</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Deep clean inside refrigerator and freezer</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Run dishwasher cleaning cycle with vinegar</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Degrease oven interior and clean racks</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Descale coffee maker and clean filters</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean microwave inside and out</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Wipe down small appliance exteriors</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Surfaces & Storage</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Empty and clean all cabinets and drawers</li>
-                                <li>Organize pantry and check expiration dates</li>
-                                <li>Deep clean backsplash and grout</li>
-                                <li>Polish countertops and seal natural stone</li>
-                                <li>Clean light fixtures and ceiling fan</li>
-                                <li>Mop and seal floor, especially grout lines</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Surfaces & Storage</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Empty and clean all cabinets and drawers</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Organize pantry and check expiration dates</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Deep clean backsplash and grout</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Polish countertops and seal natural stone</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean light fixtures and ceiling fan</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Mop and seal floor, especially grout lines</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid #ff8057;">
-                        <p style="color: #333; margin: 0; font-weight: 500;">
-                            <i class="fas fa-lightbulb" style="color: #ff8057; margin-right: 0.5rem;"></i>
-                            <strong>Florida Tip:</strong> Pay special attention to areas where grease and humidity combine, like behind the stove and around the sink. Use dehumidification techniques to prevent mold in cabinets. For <a href="/ocala" style="color: #ff8057; text-decoration: none; font-weight: 500;">Ocala area homes</a>, this extra attention is crucial for maintaining a healthy kitchen environment.
+                    <div class="bg-[#F4F7F6] border-l-4 border-[#FF8057] p-5 rounded-lg mt-6">
+                        <p class="text-gray-800 font-medium">
+                            <i class="fa-solid fa-lightbulb text-[#FF8057] mr-2"></i>
+                            <strong>Florida Tip:</strong> Pay special attention to areas where grease and humidity combine, like behind the stove and around the sink. Use dehumidification techniques to prevent mold in cabinets. For <a href="/ocala" class="text-[#FF8057] font-semibold hover:underline">Ocala area homes</a>, this extra attention is crucial for maintaining a healthy kitchen environment.
                         </p>
                     </div>
                 </div>
 
                 <!-- Bathrooms -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-bath"></i> Bathroom Deep Clean
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-bath"></i> Bathroom Deep Clean
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Deep Cleaning Tasks</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Scrub tile and grout with mold prevention</li>
-                                <li>Deep clean shower doors and tracks</li>
-                                <li>Disinfect and descale all fixtures</li>
-                                <li>Replace caulking if mold is present</li>
-                                <li>Clean exhaust fan and replace filter</li>
-                                <li>Sanitize toilet inside and out, including behind</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Deep Cleaning Tasks</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Scrub tile and grout with mold prevention</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Deep clean shower doors and tracks</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Disinfect and descale all fixtures</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Replace caulking if mold is present</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean exhaust fan and replace filter</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Sanitize toilet inside and out, including behind</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Organization & Maintenance</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Declutter medicine cabinet and vanity</li>
-                                <li>Check and replace expired medications</li>
-                                <li>Deep clean mirrors and light fixtures</li>
-                                <li>Wash and replace bath mats and curtains</li>
-                                <li>Organize linen closet and towels</li>
-                                <li>Test and improve ventilation systems</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Organization & Maintenance</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Declutter medicine cabinet and vanity</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Check and replace expired medications</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Deep clean mirrors and light fixtures</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Wash and replace bath mats and curtains</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Organize linen closet and towels</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Test and improve ventilation systems</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; border-left: 4px solid #ff8057;">
-                        <p style="color: #333; margin: 0; font-weight: 500;">
-                            <i class="fas fa-exclamation-triangle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                    <div class="bg-[#F4F7F6] border-l-4 border-[#FF8057] p-5 rounded-lg mt-6">
+                        <p class="text-gray-800 font-medium">
+                            <i class="fa-solid fa-exclamation-triangle text-[#FF8057] mr-2"></i>
                             <strong>Humidity Alert:</strong> Florida bathrooms are mold magnets. Focus on improving ventilation and using mold-resistant products. Consider running exhaust fans for 30+ minutes after showers.
                         </p>
                     </div>
                 </div>
 
                 <!-- Living Areas -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-couch"></i> Living Areas & Bedrooms
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-couch"></i> Living Areas & Bedrooms
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Furniture & Fabrics</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Deep clean upholstered furniture</li>
-                                <li>Vacuum and flip mattresses</li>
-                                <li>Wash all bedding, pillows, and comforters</li>
-                                <li>Steam clean carpets and rugs</li>
-                                <li>Dust and condition wood furniture</li>
-                                <li>Clean and organize closets completely</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Furniture & Fabrics</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Deep clean upholstered furniture</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Vacuum and flip mattresses</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Wash all bedding, pillows, and comforters</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Steam clean carpets and rugs</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Dust and condition wood furniture</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean and organize closets completely</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Air Quality & Details</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Replace HVAC filters throughout home</li>
-                                <li>Clean air vents and return ducts</li>
-                                <li>Dust all surfaces, baseboards, and trim</li>
-                                <li>Clean light fixtures and ceiling fans</li>
-                                <li>Wash windows inside and outside</li>
-                                <li>Vacuum under furniture and beds</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Air Quality & Details</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Replace HVAC filters throughout home</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean air vents and return ducts</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Dust all surfaces, baseboards, and trim</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Clean light fixtures and ceiling fans</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Wash windows inside and outside</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Vacuum under furniture and beds</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -276,100 +367,195 @@ const publishDate = "2025-08-11";
             </section>
 
             <!-- Florida-Specific Tips -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Florida-Specific Spring Cleaning Tips</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-tint"></i> Humidity Control
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-10">Florida-Specific Spring Cleaning Tips</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-tint"></i> Humidity Control
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li>Run dehumidifiers during cleaning</li>
-                            <li>Improve ventilation in all rooms</li>
-                            <li>Address any moisture sources immediately</li>
-                            <li>Use moisture-absorbing products in closets</li>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Run dehumidifiers during cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Improve ventilation in all rooms</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Address any moisture sources immediately</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Use moisture-absorbing products in closets</span>
+                            </li>
                         </ul>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-leaf"></i> Allergen Management
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-leaf"></i> Allergen Management
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li>Deep clean HVAC system and ducts</li>
-                            <li>Wash curtains and blinds thoroughly</li>
-                            <li>Use HEPA filters in vacuums</li>
-                            <li>Clean outdoor furniture and cushions</li>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Deep clean HVAC system and ducts</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Wash curtains and blinds thoroughly</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Use HEPA filters in vacuums</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Clean outdoor furniture and cushions</span>
+                            </li>
                         </ul>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-cloud-rain"></i> Storm Season Prep
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-cloud-rain"></i> Storm Season Prep
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li>Secure outdoor furniture and decor</li>
-                            <li>Clean and inspect gutters and drains</li>
-                            <li>Organize emergency supplies</li>
-                            <li>Check and clean backup generators</li>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Secure outdoor furniture and decor</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Clean and inspect gutters and drains</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Organize emergency supplies</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Check and clean backup generators</span>
+                            </li>
                         </ul>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-bug"></i> Pest Prevention
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bug"></i> Pest Prevention
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li>Seal cracks and entry points</li>
-                            <li>Remove standing water sources</li>
-                            <li>Clean up food debris thoroughly</li>
-                            <li>Trim vegetation away from house</li>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Seal cracks and entry points</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Remove standing water sources</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Clean up food debris thoroughly</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1 text-sm"></i>
+                                <span class="text-sm">Trim vegetation away from house</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Essential Supplies -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Essential Spring Cleaning Supplies</h2>
-                <p style="color: #666; margin-bottom: 2rem; line-height: 1.6;">Gathering the right supplies ensures efficient and effective spring cleaning. According to <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" style="color: #ff8057; text-decoration: none;">CDC cleaning guidelines</a>, proper disinfectants and cleaning techniques are essential for maintaining a healthy home environment. The <a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener noreferrer" style="color: #ff8057; text-decoration: none;">EPA's indoor air quality standards</a> also emphasize the importance of proper ventilation during and after cleaning.</p>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-6">Essential Spring Cleaning Supplies</h2>
+                <p class="text-gray-700 mb-8 leading-relaxed">Gathering the right supplies ensures efficient and effective spring cleaning. According to <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" class="text-[#FF8057] font-semibold hover:underline">CDC cleaning guidelines</a>, proper disinfectants and cleaning techniques are essential for maintaining a healthy home environment. The <a href="https://www.epa.gov/indoor-air-quality-iaq" target="_blank" rel="noopener noreferrer" class="text-[#FF8057] font-semibold hover:underline">EPA's indoor air quality standards</a> also emphasize the importance of proper ventilation during and after cleaning.</p>
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Cleaning Products</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>All-purpose cleaner</li>
-                                <li>Disinfectant spray</li>
-                                <li>Glass and mirror cleaner</li>
-                                <li>Mold and mildew remover</li>
-                                <li>Degreaser for kitchen</li>
-                                <li>Wood polish and conditioner</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Cleaning Products</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>All-purpose cleaner</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Disinfectant spray</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Glass and mirror cleaner</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Mold and mildew remover</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Degreaser for kitchen</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Wood polish and conditioner</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Tools & Equipment</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Vacuum with HEPA filter</li>
-                                <li>Steam cleaner (rental or purchase)</li>
-                                <li>Microfiber cloths and mop</li>
-                                <li>Scrub brushes (various sizes)</li>
-                                <li>Extension pole for high areas</li>
-                                <li>Organizational containers</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Tools & Equipment</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Vacuum with HEPA filter</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Steam cleaner (rental or purchase)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Microfiber cloths and mop</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Scrub brushes (various sizes)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Extension pole for high areas</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Organizational containers</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Florida Essentials</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Dehumidifier (if needed)</li>
-                                <li>Fans for air circulation</li>
-                                <li>Moisture absorbing packets</li>
-                                <li>Mold-resistant caulk</li>
-                                <li>HVAC filters (multiple sizes)</li>
-                                <li>Outdoor furniture cleaner</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Florida Essentials</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Dehumidifier (if needed)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Fans for air circulation</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Moisture absorbing packets</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Mold-resistant caulk</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>HVAC filters (multiple sizes)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Outdoor furniture cleaner</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -377,53 +563,49 @@ const publishDate = "2025-08-11";
             </section>
 
             <!-- Professional Help CTA -->
-            <section style="background: #ff8057; color: white; padding: 3rem 2rem; border-radius: 15px; text-align: center; margin-bottom: 3rem;">
-                <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Feeling Overwhelmed?</h3>
-                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; opacity: 0.9;">
+            <section class="bg-[#FF8057] text-white rounded-2xl p-8 md:p-12 text-center mb-16">
+                <h3 class="text-3xl font-bold mb-4">Feeling Overwhelmed?</h3>
+                <p class="text-lg mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
                     Spring cleaning is a big job, especially in Florida's unique climate. Our professional team can handle your entire spring cleaning checklist in just one day, giving you back your weekends and ensuring every detail is covered.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/deep-cleaning" class="btn" style="background: white; color: #ff8057; border: 2px solid white;">Get Professional Spring Cleaning</a>
-                    <a href="tel:+13527644747" class="btn" style="background: transparent; color: white; border: 2px solid white;">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-white text-[#305048] px-10 py-4 rounded-md font-bold hover:bg-gray-100 transition duration-300">Get Professional Spring Cleaning</a>
+                    <a href="tel:+13527644747" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-md font-bold hover:bg-white hover:text-[#305048] transition duration-300">Call (352) 764-4747</a>
                 </div>
             </section>
 
             <!-- Related Articles -->
-            <section>
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Related Cleaning Guides</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/blog/how-often-deep-clean-house" style="color: #2f5047; text-decoration: none;">How Often Should You Deep Clean Your House?</a>
+            <section class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-8">Related Cleaning Guides</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/blog/how-often-deep-clean-house" class="hover:text-[#FF8057] transition">How Often Should You Deep Clean Your House?</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Learn the optimal cleaning frequency for different areas of your home.</p>
-                        <a href="/blog/how-often-deep-clean-house" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Learn the optimal cleaning frequency for different areas of your home.</p>
+                        <a href="/blog/how-often-deep-clean-house" class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/blog/summer-cleaning-tips-florida" style="color: #2f5047; text-decoration: none;">Summer Cleaning Tips for Florida Homes</a>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/blog/summer-cleaning-tips-florida" class="hover:text-[#FF8057] transition">Summer Cleaning Tips for Florida Homes</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Beat the heat and humidity with specialized summer cleaning strategies.</p>
-                        <a href="/blog/summer-cleaning-tips-florida" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Beat the heat and humidity with specialized summer cleaning strategies.</p>
+                        <a href="/blog/summer-cleaning-tips-florida" class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
                     </div>
-                    
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/house-cleaning" style="color: #2f5047; text-decoration: none;">Complete House Cleaning Guide</a>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/services" class="hover:text-[#FF8057] transition">Complete House Cleaning Guide</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Comprehensive guide to all aspects of house cleaning services and maintenance.</p>
-                        <a href="/house-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Comprehensive guide to all aspects of house cleaning services and maintenance.</p>
+                        <a href="/services" class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
                     </div>
                 </div>
             </section>
-
-        </div>
-    </article>
+        </article>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
