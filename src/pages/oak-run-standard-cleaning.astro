@@ -4,28 +4,140 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Oak Run Standard House Cleaning | Palma Cleaning - Ocala FL";
 const description = "Regular house cleaning services for Oak Run active adult community in Ocala, FL. Weekly, bi-weekly, and monthly cleaning plans for Oak Run golf course homes. Licensed & insured.";
+
+const schedules = [
+  {
+    icon: "fa-solid fa-calendar-week",
+    title: "Weekly Cleaning",
+    description: "Perfect for active entertainers who frequently host guests and want their home always guest-ready.",
+    items: [
+      "Maximum cleanliness",
+      "Always guest-ready",
+      "Best for entertainers",
+      "Premium service"
+    ]
+  },
+  {
+    icon: "fa-solid fa-calendar-alt",
+    title: "Bi-weekly",
+    featured: true,
+    badge: "MOST POPULAR",
+    description: "Most popular choice for Oak Run residents who want consistent cleanliness with great value.",
+    items: [
+      "Best value option",
+      "Consistent cleanliness",
+      "Perfect balance",
+      "Community favorite"
+    ]
+  },
+  {
+    icon: "fa-solid fa-calendar",
+    title: "Monthly",
+    description: "Ideal for frequent travelers and seasonal residents who need flexible, thorough cleaning.",
+    items: [
+      "Travel-friendly",
+      "Seasonal residents",
+      "Thorough deep clean",
+      "Flexible scheduling"
+    ]
+  }
+];
+
+const cleaningAreas = [
+  {
+    icon: "fa-solid fa-utensils",
+    title: "Kitchen",
+    items: [
+      "Clean and sanitize all surfaces",
+      "Appliance exterior cleaning",
+      "Sink and faucet polishing",
+      "Cabinet exterior cleaning",
+      "Countertop care (all surface types)",
+      "Trash removal and liner replacement",
+      "Entertainment area preparation"
+    ]
+  },
+  {
+    icon: "fa-solid fa-bath",
+    title: "Bathrooms",
+    items: [
+      "Complete sanitization",
+      "Shower and tub thorough cleaning",
+      "Toilet cleaning inside and out",
+      "Mirror and fixture polishing",
+      "Tile and grout maintenance",
+      "Floor mopping and sanitizing",
+      "Guest bathroom priority cleaning"
+    ]
+  },
+  {
+    icon: "fa-solid fa-bed",
+    title: "Living Areas & Bedrooms",
+    items: [
+      "Dusting all surfaces and furniture",
+      "Vacuuming carpets and rugs",
+      "Hard floor cleaning and maintenance",
+      "Light organizing and tidying",
+      "Window sill and baseboard cleaning",
+      "Trash emptying throughout",
+      "Guest room preparation focus"
+    ]
+  },
+  {
+    icon: "fa-solid fa-users",
+    title: "Oak Run Community Specialties",
+    items: [
+      "Golf course pollen management",
+      "Entertainment space focus",
+      "Travel preparation cleaning",
+      "Community activity scheduling",
+      "Guest-ready standards",
+      "Active lifestyle support"
+    ]
+  }
+];
+
+const benefits = [
+  {
+    icon: "fa-solid fa-golf-ball",
+    title: "Active Lifestyle Support",
+    description: "Designed for Oak Run's golf course community and active adult lifestyle, keeping your home ready for all your activities."
+  },
+  {
+    icon: "fa-solid fa-users",
+    title: "Entertainment Ready",
+    description: "Your home stays guest-ready for Oak Run's active social calendar and community events."
+  },
+  {
+    icon: "fa-solid fa-plane",
+    title: "Travel Flexibility",
+    description: "Flexible scheduling that accommodates your travel plans and seasonal lifestyle changes."
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Health-Conscious Care",
+    description: "Eco-friendly products and thorough sanitization perfect for health-conscious active adults."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="Oak Run house cleaning, Oak Run standard cleaning, Oak Run weekly cleaning, Oak Run active adult community cleaning Ocala FL">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/oak-run-standard-cleaning">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <script type="application/ld+json">
     {
@@ -49,284 +161,210 @@ const description = "Regular house cleaning services for Oak Run active adult co
         }
     }
     </script>
-    
-    <style>
-        @media (max-width: 768px) {
-            .schedule-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-        }
-        @media (max-width: 480px) {
-            .features-grid {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/service-areas" style="color: #ff8057; text-decoration: none;">Service Areas</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/oak-run" style="color: #ff8057; text-decoration: none;">Oak Run</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Standard Cleaning</span>
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Oak Run Standard House Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Regular Cleaning for Oak Run's Active Adult Community
+                </p>
+                <p class="text-white/90 mb-8 leading-relaxed">
+                    Professional standard house cleaning designed for Oak Run's active lifestyle. Keep your golf course community home clean and ready for entertaining, activities, and travel with our reliable weekly, bi-weekly, or monthly service.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white px-10 py-3 rounded-md text-lg font-bold hover:bg-white hover:text-[#305048] transition-colors duration-300 inline-block">
+                        Call (352) 764-4747
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Oak Run Standard House Cleaning</h1>
-                <p class="hero-subtitle">Regular Cleaning for Oak Run's Active Adult Community</p>
-                <p class="hero-description">Professional standard house cleaning designed for Oak Run's active lifestyle. Keep your golf course community home clean and ready for entertaining, activities, and travel with our reliable weekly, bi-weekly, or monthly service.</p>
-                <div class="hero-buttons">
-                    <a href="/contact" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- Service Description -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Service</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Oak Run Standard Cleaning Service</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our standard house cleaning service is perfectly tailored for Oak Run's active adult lifestyle and golf course community living. We understand the importance of maintaining a clean, welcoming home for entertaining guests, participating in community activities, and enjoying your active retirement.
+                    </p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Professional House Cleaning Service" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Oak Run Standard Cleaning Service</h2>
-            <div style="max-width: 800px; margin: 0 auto 3rem;">
-                <p style="font-size: 1.1rem; color: #666; text-align: center; line-height: 1.6;">Our standard house cleaning service is perfectly tailored for Oak Run's active adult lifestyle and golf course community living. We understand the importance of maintaining a clean, welcoming home for entertaining guests, participating in community activities, and enjoying your active retirement.</p>
-            </div>
-            
-            <h3 style="color: #2f5047; margin-bottom: 2rem; text-align: center;">Choose Your Cleaning Schedule</h3>
-            <div class="schedule-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-calendar-week"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Weekly Cleaning</h4>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Perfect for active entertainers who frequently host guests and want their home always guest-ready.</p>
-                    <ul style="color: #666; text-align: left; line-height: 1.6;">
-                        <li>Maximum cleanliness</li>
-                        <li>Always guest-ready</li>
-                        <li>Best for entertainers</li>
-                        <li>Premium service</li>
-                    </ul>
+        <!-- Schedule Options -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Choose Your Cleaning Schedule</h2>
                 </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #ff8057;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Bi-weekly</h4>
-                    <div style="background: #ff8057; color: white; padding: 0.3rem 1rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; margin-bottom: 1rem; display: inline-block;">MOST POPULAR</div>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Most popular choice for Oak Run residents who want consistent cleanliness with great value.</p>
-                    <ul style="color: #666; text-align: left; line-height: 1.6;">
-                        <li>Best value option</li>
-                        <li>Consistent cleanliness</li>
-                        <li>Perfect balance</li>
-                        <li>Community favorite</li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                    {schedules.map((schedule) => (
+                        <div class={`bg-white rounded-2xl p-8 shadow-lg border ${schedule.featured ? 'border-[#FF8057] border-2' : 'border-[#E3EAE8]/60'} hover:shadow-xl transition duration-300`}>
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mx-auto mb-6">
+                                <i class={schedule.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#305048] mb-2 text-center">{schedule.title}</h3>
+                            {schedule.badge && (
+                                <div class="bg-[#FF8057] text-white text-xs font-semibold px-4 py-1 rounded-full inline-block mb-4">
+                                    {schedule.badge}
+                                </div>
+                            )}
+                            <p class="text-gray-600 mb-6 text-sm text-center">{schedule.description}</p>
+                            <ul class="space-y-2">
+                                {schedule.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border: 2px solid #f8fafa;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-calendar"></i>
+                <div class="max-w-2xl mx-auto bg-white rounded-xl p-6 border border-[#E3EAE8]/60 text-center">
+                    <div class="flex items-center justify-center gap-2 mb-3">
+                        <i class="fa-solid fa-golf-ball text-[#FF8057] text-xl"></i>
+                        <h4 class="text-lg font-bold text-[#305048]">Oak Run Lifestyle Focus</h4>
                     </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Monthly</h4>
-                    <p style="color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Ideal for frequent travelers and seasonal residents who need flexible, thorough cleaning.</p>
-                    <ul style="color: #666; text-align: left; line-height: 1.6;">
-                        <li>Travel-friendly</li>
-                        <li>Seasonal residents</li>
-                        <li>Thorough deep clean</li>
-                        <li>Flexible scheduling</li>
-                    </ul>
+                    <p class="text-gray-700 text-sm">All our schedules are designed around Oak Run's active adult lifestyle - golf course community expertise, entertainment-ready cleaning, travel-flexible scheduling, and active living optimized.</p>
                 </div>
             </div>
-            
-            <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; text-align: center; max-width: 600px; margin: 0 auto;">
-                <h4 style="color: #2f5047; margin-bottom: 1rem;"><i class="fas fa-golf-ball" style="color: #ff8057; margin-right: 0.5rem;"></i>Oak Run Lifestyle Focus</h4>
-                <p style="color: #666; line-height: 1.6;">All our schedules are designed around Oak Run's active adult lifestyle - golf course community expertise, entertainment-ready cleaning, travel-flexible scheduling, and active living optimized.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">What's Included in Oak Run Standard Cleaning</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-utensils" style="margin-right: 0.5rem;"></i>Kitchen</h4>
-                    <ul style="color: #666; line-height: 1.6;">
-                        <li>Clean and sanitize all surfaces</li>
-                        <li>Appliance exterior cleaning</li>
-                        <li>Sink and faucet polishing</li>
-                        <li>Cabinet exterior cleaning</li>
-                        <li>Countertop care (all surface types)</li>
-                        <li>Trash removal and liner replacement</li>
-                        <li>Entertainment area preparation</li>
-                    </ul>
+        <!-- What's Included -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">What's Included</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">What's Included in Oak Run Standard Cleaning</h2>
                 </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-bath" style="margin-right: 0.5rem;"></i>Bathrooms</h4>
-                    <ul style="color: #666; line-height: 1.6;">
-                        <li>Complete sanitization</li>
-                        <li>Shower and tub thorough cleaning</li>
-                        <li>Toilet cleaning inside and out</li>
-                        <li>Mirror and fixture polishing</li>
-                        <li>Tile and grout maintenance</li>
-                        <li>Floor mopping and sanitizing</li>
-                        <li>Guest bathroom priority cleaning</li>
-                    </ul>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-bed" style="margin-right: 0.5rem;"></i>Living Areas & Bedrooms</h4>
-                    <ul style="color: #666; line-height: 1.6;">
-                        <li>Dusting all surfaces and furniture</li>
-                        <li>Vacuuming carpets and rugs</li>
-                        <li>Hard floor cleaning and maintenance</li>
-                        <li>Light organizing and tidying</li>
-                        <li>Window sill and baseboard cleaning</li>
-                        <li>Trash emptying throughout</li>
-                        <li>Guest room preparation focus</li>
-                    </ul>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-users" style="margin-right: 0.5rem;"></i>Oak Run Community Specialties</h4>
-                    <ul style="color: #666; line-height: 1.6;">
-                        <li>Golf course pollen management</li>
-                        <li>Entertainment space focus</li>
-                        <li>Travel preparation cleaning</li>
-                        <li>Community activity scheduling</li>
-                        <li>Guest-ready standards</li>
-                        <li>Active lifestyle support</li>
-                    </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    {cleaningAreas.map((area) => (
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl">
+                                    <i class={area.icon}></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#305048]">{area.title}</h3>
+                            </div>
+                            <ul class="space-y-2">
+                                {area.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Why Oak Run Residents Choose Our Standard Cleaning</h2>
-            <div class="features-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-golf-ball"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Active Lifestyle Support</h4>
-                    <p style="color: #666; line-height: 1.6;">Designed for Oak Run's golf course community and active adult lifestyle, keeping your home ready for all your activities.</p>
+        <!-- Why Choose -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Oak Run Residents Choose Our Standard Cleaning</h2>
                 </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Entertainment Ready</h4>
-                    <p style="color: #666; line-height: 1.6;">Your home stays guest-ready for Oak Run's active social calendar and community events.</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Travel Flexibility</h4>
-                    <p style="color: #666; line-height: 1.6;">Flexible scheduling that accommodates your travel plans and seasonal lifestyle changes.</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="background: #ff8057; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h4 style="color: #2f5047; margin-bottom: 1rem;">Health-Conscious Care</h4>
-                    <p style="color: #666; line-height: 1.6;">Eco-friendly products and thorough sanitization perfect for health-conscious active adults.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    {benefits.map((benefit) => (
+                        <div class="bg-white rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mx-auto mb-4">
+                                <i class={benefit.icon}></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-[#305048] mb-3">{benefit.title}</h4>
+                            <p class="text-gray-700 text-sm leading-relaxed">{benefit.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">Ready for Regular Oak Run House Cleaning?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Join your Oak Run neighbors who trust Palma Cleaning for consistent, professional house cleaning that supports their active lifestyle. Contact us for your free consultation and quote!</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/contact" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Regular Oak Run House Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+                    Join your Oak Run neighbors who trust Palma Cleaning for consistent, professional house cleaning that supports their active lifestyle. Contact us for your free consultation and quote!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
                 </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <p style="color: #2f5047; font-weight: 500; margin: 0;">
-                        <i class="fas fa-check-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
+                <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
+                    <p class="text-white/90 font-semibold">
+                        <i class="fa-solid fa-check-circle text-[#FF8057] mr-2"></i>
                         Licensed & Insured • Oak Run Experienced • Satisfaction Guaranteed
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Other Oak Run Cleaning Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-magic" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Deep Cleaning</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Comprehensive top-to-bottom cleaning</p>
-                    <a href="/oak-run-deep-cleaning" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">Learn More</a>
+        <!-- Other Services -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Other Oak Run Cleaning Services</h2>
                 </div>
-                
-                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-building" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Commercial Cleaning</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Community centers and facilities</p>
-                    <a href="/oak-run-commercial-cleaning" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">Learn More</a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <i class="fa-solid fa-magic text-[#FF8057] text-3xl mb-4"></i>
+                        <h4 class="text-lg font-bold text-[#305048] mb-2">Deep Cleaning</h4>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive top-to-bottom cleaning</p>
+                        <a href="/deep-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More</a>
+                    </div>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <i class="fa-solid fa-building text-[#FF8057] text-3xl mb-4"></i>
+                        <h4 class="text-lg font-bold text-[#305048] mb-2">Commercial Cleaning</h4>
+                        <p class="text-gray-600 text-sm mb-4">Community centers and facilities</p>
+                        <a href="/commercial-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More</a>
+                    </div>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <i class="fa-solid fa-box-open text-[#FF8057] text-3xl mb-4"></i>
+                        <h4 class="text-lg font-bold text-[#305048] mb-2">Move-in/Move-out</h4>
+                        <p class="text-gray-600 text-sm mb-4">Complete transition cleaning</p>
+                        <a href="/move-in-out-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More</a>
+                    </div>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <i class="fa-solid fa-hard-hat text-[#FF8057] text-3xl mb-4"></i>
+                        <h4 class="text-lg font-bold text-[#305048] mb-2">Post-Construction</h4>
+                        <p class="text-gray-600 text-sm mb-4">Renovation cleanup services</p>
+                        <a href="/post-construction-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More</a>
+                    </div>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 text-center border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <i class="fa-solid fa-horse text-[#FF8057] text-3xl mb-4"></i>
+                        <h4 class="text-lg font-bold text-[#305048] mb-2">Equestrian Properties</h4>
+                        <p class="text-gray-600 text-sm mb-4">Horse property cleaning</p>
+                        <a href="/wec-area" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More</a>
+                    </div>
                 </div>
-                
-                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-box-open" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Move-in/Move-out</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Complete transition cleaning</p>
-                    <a href="/oak-run-move-in-out-cleaning" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">Learn More</a>
-                </div>
-                
-                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-hard-hat" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Post-Construction</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Renovation cleanup services</p>
-                    <a href="/oak-run-post-construction-cleaning" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">Learn More</a>
-                </div>
-                
-                <div style="background: #f8fafa; padding: 1.5rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-horse" style="font-size: 2rem; color: #ff8057; margin-bottom: 1rem;"></i>
-                    <h4 style="color: #2f5047; margin-bottom: 0.5rem;">Equestrian Properties</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Horse property cleaning</p>
-                    <a href="/oak-run-equestrian-cleaning" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;">Learn More</a>
+                <div class="text-center mt-10">
+                    <a href="/oak-run" class="bg-[#305048] text-white font-bold py-3 px-8 rounded-md hover:bg-[#305048]/90 transition duration-300 inline-block">
+                        View All Oak Run Services
+                    </a>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="/oak-run" class="btn btn-primary">View All Oak Run Services</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
