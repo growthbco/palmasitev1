@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palma Cleaning Co. — House Cleaning in Ocala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #fefefe;
+            --foreground: #1a1a1a;
+            --primary: #2a2a2a;
+            --secondary: #f8f8f8;
+            --accent: #3a3a3a;
+            --muted: #666666;
+            --border: #e8e8e8;
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif !important; 
+            background: var(--background) !important;
+            color: var(--foreground) !important;
+            line-height: 1.6;
+        }
+        
+        .serif { font-family: 'Playfair Display', serif !important; }
+        
+        .minimal-btn {
+            background: var(--primary);
+            color: white;
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .minimal-btn:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+        
+        .minimal-btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .minimal-btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                    <h1 class="text-2xl font-light serif">Palma Cleaning Co.</h1>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-12">
+                    <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors font-light">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors font-light">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors font-light">Contact</a>
+                    <a href="tel:3527644747" class="minimal-btn px-6 py-2 text-sm">(352) 764-4747</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7">
+                    <div class="mb-6">
+                        <div class="flex items-center space-x-2 text-sm text-gray-600 mb-4">
+                            <span>★★★★★</span>
+                            <span class="font-light">Rated #1 in Ocala</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-6xl font-light serif mb-8 leading-tight">
+                        Professional<br>
+                        House Cleaning<br>
+                        <span class="text-gray-500">in Ocala</span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-600 font-light mb-12 max-w-lg">
+                        Trusted cleaners, flexible scheduling, 100% satisfaction guaranteed. 
+                        Serving Central Florida with care since 2020.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="minimal-btn px-8 py-3 text-base">
+                            Get Free Quote
+                        </button>
+                        <button class="minimal-btn-outline px-8 py-3 text-base">
+                            View Services
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" 
+                             alt="Clean, modern home interior" 
+                             class="w-full h-[500px] object-cover rounded-sm">
+                        <div class="absolute inset-0 bg-black/10 rounded-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">Our Services</h3>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Comprehensive cleaning solutions designed to fit your lifestyle and schedule.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded-sm text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="home" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-xl font-light serif mb-4">Standard Cleaning</h4>
+                    <p class="text-gray-600 font-light mb-6">Regular weekly, bi-weekly, or monthly service to maintain your home's cleanliness.</p>
+                    <a href="#" class="text-gray-900 font-light hover:underline">Learn more</a>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-sm text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-xl font-light serif mb-4">Deep Cleaning</h4>
+                    <p class="text-gray-600 font-light mb-6">Comprehensive deep clean for every corner, perfect for seasonal refreshes.</p>
+                    <a href="#" class="text-gray-900 font-light hover:underline">Learn more</a>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-sm text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="move" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-xl font-light serif mb-4">Move In/Out</h4>
+                    <p class="text-gray-600 font-light mb-6">Complete cleaning for transitions, ensuring a fresh start in your new space.</p>
+                    <a href="#" class="text-gray-900 font-light hover:underline">Learn more</a>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-sm text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="briefcase" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-xl font-light serif mb-4">Commercial</h4>
+                    <p class="text-gray-600 font-light mb-6">Professional office and commercial space cleaning for businesses.</p>
+                    <a href="#" class="text-gray-900 font-light hover:underline">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Why Choose Us -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">Why Choose Us</h3>
+                <p class="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Homeowners in Ocala trust us because we deliver consistent, reliable service with attention to detail.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-lg font-light serif mb-3">Licensed & Insured</h4>
+                    <p class="text-gray-600 font-light">Fully licensed and insured team for your complete peace of mind.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="leaf" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-lg font-light serif mb-3">Eco-Friendly</h4>
+                    <p class="text-gray-600 font-light">Safe, environmentally conscious products available upon request.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="calendar" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-lg font-light serif mb-3">Flexible Scheduling</h4>
+                    <p class="text-gray-600 font-light">Weekly, bi-weekly, monthly, or one-time service options.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <i data-lucide="award" class="w-6 h-6 text-gray-700"></i>
+                    </div>
+                    <h4 class="text-lg font-light serif mb-3">100% Guarantee</h4>
+                    <p class="text-gray-600 font-light">Not satisfied? We'll return within 24 hours to make it right.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-4xl font-light serif mb-8">Serving Ocala Since 2020</h3>
+            <p class="text-xl text-gray-600 font-light leading-relaxed mb-8">
+                We're a locally owned cleaning service dedicated to serving Ocala and surrounding communities. 
+                Our experienced team understands the unique needs of Central Florida homes and is committed 
+                to providing exceptional service that exceeds your expectations.
+            </p>
+            <a href="#" class="text-gray-900 font-light hover:underline">Learn more about our story</a>
+            
+            <div class="mt-12 text-sm text-gray-500 font-light">
+                <p>Service Areas: Ocala • The Villages • Oak Run • Stone Creek • Belleview • Golden Hills • Dunnellon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">What Customers Say</h3>
+                <p class="text-lg text-gray-600 font-light">Hear from satisfied homeowners throughout Central Florida.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="text-gray-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 font-light mb-6 leading-relaxed">
+                        "Palma Cleaning has been maintaining our Oak Run home for two years. 
+                        Their attention to detail and consistency is exceptional."
+                    </p>
+                    <div class="font-light">
+                        <div class="text-gray-900">Sarah M.</div>
+                        <div class="text-sm text-gray-500">Oak Run</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-gray-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 font-light mb-6 leading-relaxed">
+                        "The deep cleaning service exceeded our expectations. Professional, 
+                        thorough, and respectful of our home and belongings."
+                    </p>
+                    <div class="font-light">
+                        <div class="text-gray-900">Michael R.</div>
+                        <div class="text-sm text-gray-500">Ocala</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-gray-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 font-light mb-6 leading-relaxed">
+                        "Reliable, trustworthy, and meticulous. Their move-out cleaning 
+                        helped us secure our full deposit return."
+                    </p>
+                    <div class="font-light">
+                        <div class="text-gray-900">Linda K.</div>
+                        <div class="text-sm text-gray-500">The Villages</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="text-gray-900 font-light hover:underline">Read more reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Before & After -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">Our Work</h3>
+                <p class="text-lg text-gray-600 font-light">Real results from our cleaning services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="text-center">
+                    <h4 class="text-xl font-light serif mb-8">Kitchen Deep Clean</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1556909909-f5d01e1b8fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Kitchen before cleaning" 
+                                 class="w-full h-48 object-cover rounded-sm">
+                            <p class="text-sm text-gray-500 mt-3 font-light">Before</p>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Kitchen after cleaning" 
+                                 class="w-full h-48 object-cover rounded-sm">
+                            <p class="text-sm text-gray-500 mt-3 font-light">After</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="text-xl font-light serif mb-8">Bathroom Refresh</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Bathroom before cleaning" 
+                                 class="w-full h-48 object-cover rounded-sm">
+                            <p class="text-sm text-gray-500 mt-3 font-light">Before</p>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1584622781564-1d987036b4d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Bathroom after cleaning" 
+                                 class="w-full h-48 object-cover rounded-sm">
+                            <p class="text-sm text-gray-500 mt-3 font-light">After</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">Ready to Get Started?</h3>
+                <p class="text-lg text-gray-600 font-light">Request your complimentary estimate today.</p>
+            </div>
+            
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Name" class="w-full px-0 py-3 border-0 border-b border-gray-200 focus:border-gray-900 focus:ring-0 bg-transparent font-light">
+                    <input type="email" placeholder="Email" class="w-full px-0 py-3 border-0 border-b border-gray-200 focus:border-gray-900 focus:ring-0 bg-transparent font-light">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="tel" placeholder="Phone" class="w-full px-0 py-3 border-0 border-b border-gray-200 focus:border-gray-900 focus:ring-0 bg-transparent font-light">
+                    <input type="text" placeholder="Zip Code" class="w-full px-0 py-3 border-0 border-b border-gray-200 focus:border-gray-900 focus:ring-0 bg-transparent font-light">
+                </div>
+                <select class="w-full px-0 py-3 border-0 border-b border-gray-200 focus:border-gray-900 focus:ring-0 bg-transparent font-light">
+                    <option value="">Select Service</option>
+                    <option>Standard Cleaning</option>
+                    <option>Deep Cleaning</option>
+                    <option>Move-In/Move-Out</option>
+                    <option>Commercial Cleaning</option>
+                </select>
+                <div class="text-center pt-8">
+                    <button type="submit" class="minimal-btn px-12 py-3">
+                        Request Estimate
+                    </button>
+                </div>
+            </form>
+            
+            <div class="text-center mt-12 text-gray-600 font-light">
+                <p>Or call us at <a href="tel:3527644747" class="text-gray-900 hover:underline">(352) 764-4747</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-light serif mb-6">Service Areas</h3>
+                <p class="text-lg text-gray-600 font-light">Proudly serving Central Florida communities.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 mb-16">
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Ocala</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">The Villages</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Oak Run</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Stone Creek</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Belleview</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Golden Hills</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">Dunnellon</p>
+                </div>
+                <div class="text-center py-6 px-4 bg-white rounded-sm">
+                    <p class="font-light text-gray-900">WEC Area</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-sm p-12 text-center">
+                <p class="text-gray-600 font-light mb-6">View our complete service area</p>
+                <div class="w-full h-64 bg-gray-100 rounded-sm flex items-center justify-center">
+                    <p class="text-gray-400 font-light">[Interactive Map]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                        <h4 class="text-lg font-light serif">Palma Cleaning Co.</h4>
+                    </div>
+                    <div class="space-y-2 text-gray-600 font-light text-sm">
+                        <p>Professional House Cleaning</p>
+                        <p>Ocala, Florida</p>
+                        <p>(352) 764-4747</p>
+                        <p>hello@palmacleaningco.com</p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="text-gray-400 text-sm">★★★★★</span>
+                            <span class="text-xs text-gray-500 font-light">Google Reviews</span>
+                        </div>
+                        <div class="flex space-x-3 text-xs text-gray-500">
+                            <span>Licensed</span>
+                            <span>•</span>
+                            <span>Insured</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-light mb-4 text-gray-900">Services</h5>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light">
+                        <li><a href="#" class="hover:text-gray-900">Standard Cleaning</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Deep Cleaning</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Move-In/Out</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Commercial</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-light mb-4 text-gray-900">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-600 font-light">
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Service Areas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-light mb-4 text-gray-900">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4 text-gray-600"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4 text-gray-600"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 mt-12 pt-8 text-center">
+                <p class="text-sm text-gray-500 font-light">
+                    © 2024 Palma Cleaning Co. Licensed house cleaning services in Ocala, Florida.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest. We\'ll contact you soon.');
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

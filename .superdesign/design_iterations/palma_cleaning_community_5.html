@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palma Cleaning Co. | Your Local Ocala House Cleaning Family</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #F58549;
+            --primary-light: #FFB38A;
+            --primary-dark: #E56B2F;
+            --warm: #FFF7F0;
+            --community-blue: #4A90E2;
+            --forest-green: #2E7D32;
+            --sunset-yellow: #FFC107;
+        }
+        
+        body { 
+            font-family: 'Poppins', sans-serif !important; 
+            background: var(--warm) !important;
+            color: #2C3E50 !important;
+        }
+        
+        .handwritten { font-family: 'Architects Daughter', cursive !important; }
+        
+        .community-btn {
+            background: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .community-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 133, 73, 0.4);
+        }
+        
+        .community-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+        
+        .community-btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .warm-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 2px solid #FFF7F0;
+            transition: all 0.3s ease;
+        }
+        
+        .warm-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            border-color: var(--primary-light);
+        }
+        
+        .community-badge {
+            background: linear-gradient(135deg, var(--primary), var(--sunset-yellow));
+            color: white;
+            border-radius: 25px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .local-heart {
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .community-pattern {
+            background-image: 
+                radial-gradient(circle at 20px 80px, #F58549 2px, transparent 2px),
+                radial-gradient(circle at 80px 20px, #FFC107 2px, transparent 2px),
+                radial-gradient(circle at 40px 40px, #4A90E2 1px, transparent 1px);
+            background-size: 100px 100px;
+            opacity: 0.1;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, white, #FFF9F5);
+            border-left: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b-2 border-orange-100">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full flex items-center justify-center shadow-lg">
+                        <i data-lucide="heart" class="w-6 h-6 text-white local-heart"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Palma Cleaning Co.</h1>
+                        <p class="text-sm text-orange-600 font-medium handwritten">Your Ocala Neighbors Since 2020</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Our Services</a>
+                    <a href="#community" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Community</a>
+                    <a href="#family" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Our Story</a>
+                    <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Get In Touch</a>
+                    <a href="tel:3527644747" class="community-btn px-6 py-3 rounded-full font-semibold relative z-10">
+                        Call Your Neighbors!
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-orange-50 to-yellow-50 community-pattern relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="mb-6">
+                        <div class="community-badge mb-4">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Proudly Local • Rated #1 by Ocala Families
+                        </div>
+                        <div class="flex items-center space-x-2 text-lg text-orange-600 mb-4">
+                            <span class="handwritten">★★★★★</span>
+                            <span class="font-medium handwritten">Loved by 500+ Local Families!</span>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-6xl font-bold mb-6 leading-tight text-gray-800">
+                        Your <span class="handwritten text-orange-600">Trusted</span><br>
+                        House Cleaning<br>
+                        <span class="text-4xl text-gray-600 handwritten">Family in Ocala</span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Born and raised in Central Florida, we're more than just a cleaning service — 
+                        we're your neighbors who genuinely care about your home and family. 
+                        <strong>Flexible scheduling, eco-friendly products, and that personal touch</strong> 
+                        you can only get from a local family business.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="community-btn px-8 py-4 text-lg font-semibold rounded-full relative">
+                            <span class="relative z-10">Get Your Free Family Quote</span>
+                        </button>
+                        <button class="border-2 border-orange-400 text-orange-600 px-8 py-4 text-lg font-semibold rounded-full hover:bg-orange-50 transition-all">
+                            Meet the Family
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i>
+                            <span>Licensed & Insured Locally</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="users" class="w-4 h-4 text-blue-600"></i>
+                            <span>Family Owned & Operated</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="leaf" class="w-4 h-4 text-green-600"></i>
+                            <span>Eco-Friendly Options</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="warm-card p-1 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Happy local family with clean home in Ocala" 
+                                 class="w-full h-96 object-cover rounded-2xl">
+                        </div>
+                        
+                        <!-- Floating community stats -->
+                        <div class="absolute -top-4 -left-4 bg-white rounded-2xl p-6 shadow-xl border-2 border-orange-100">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-600 mb-1 handwritten">500+</div>
+                                <div class="text-sm text-gray-600 font-medium">Happy Families</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl p-6 shadow-xl border-2 border-green-100">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1 handwritten">4+</div>
+                                <div class="text-sm text-gray-600 font-medium">Years Serving</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="community-badge mb-6 mx-auto">
+                    <i data-lucide="home" class="w-4 h-4"></i>
+                    Services Made for Families Like Yours
+                </div>
+                <h3 class="text-4xl font-bold mb-6 text-gray-800">
+                    House Cleaning Services <span class="handwritten text-orange-600">with Heart</span>
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We understand busy family life in Ocala. That's why we offer flexible, reliable 
+                    cleaning services that fit your schedule and budget — because every family deserves a clean, healthy home.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="warm-card p-8 text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="calendar-heart" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Regular Family Cleaning</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Weekly, bi-weekly, or monthly cleaning that works around your family's busy schedule. 
+                        Kid-safe products available!
+                    </p>
+                    <div class="text-sm text-orange-600 font-medium mb-2 handwritten">Starting at $120</div>
+                    <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                        Learn More →
+                    </a>
+                </div>
+                
+                <div class="warm-card p-8 text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Deep Spring Cleaning</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Perfect for seasonal refreshes or getting ready for family gatherings. 
+                        We tackle every corner with care.
+                    </p>
+                    <div class="text-sm text-orange-600 font-medium mb-2 handwritten">Starting at $250</div>
+                    <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                        Learn More →
+                    </a>
+                </div>
+                
+                <div class="warm-card p-8 text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="truck" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Moving Help</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Whether you're welcoming a new family to Ocala or helping someone move, 
+                        we make transitions stress-free.
+                    </p>
+                    <div class="text-sm text-orange-600 font-medium mb-2 handwritten">Starting at $200</div>
+                    <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                        Learn More →
+                    </a>
+                </div>
+                
+                <div class="warm-card p-8 text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Small Business Support</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Supporting local Ocala businesses with reliable, affordable cleaning 
+                        services that keep your space welcoming.
+                    </p>
+                    <div class="text-sm text-orange-600 font-medium mb-2 handwritten">Custom Pricing</div>
+                    <a href="#" class="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                        Learn More →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us - Community Focus -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="community-badge mb-6 mx-auto">
+                    <i data-lucide="users" class="w-4 h-4"></i>
+                    Why Ocala Families Choose Their Neighbors
+                </div>
+                <h3 class="text-4xl font-bold mb-6 text-gray-800">
+                    More Than Cleaning — We're <span class="handwritten text-orange-600">Family</span>
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    When you choose Palma Cleaning, you're not just getting a service — you're getting neighbors 
+                    who care about your family's health, happiness, and home.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="heart-handshake" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800 handwritten">Personal Touch</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We remember your preferences, respect your home, and treat your family like our own. 
+                        That's the difference local makes.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="baby" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800 handwritten">Family-Safe Products</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        As parents ourselves, we use gentle, non-toxic cleaning products that are safe 
+                        for children, pets, and everyone you love.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="clock" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800 handwritten">Flexible for Families</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Soccer practice, work schedules, family time — we work around YOUR life, 
+                        not the other way around.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        <i data-lucide="handshake" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800 handwritten">Neighbor Guarantee</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Not happy? We'll make it right within 24 hours. That's our promise as your 
+                        Ocala neighbors and friends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Family Story -->
+    <section id="family" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="community-badge mb-6">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        Our Story
+                    </div>
+                    <h3 class="text-4xl font-bold mb-8 text-gray-800">
+                        <span class="handwritten text-orange-600">Born & Raised</span> in Central Florida
+                    </h3>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        Hi there! We're the Martinez family, and we've called Central Florida home our entire lives. 
+                        We started Palma Cleaning Co. in 2020 because we saw how hard it was for busy Ocala families 
+                        to keep up with everything — work, kids, activities, and still maintain a clean, healthy home.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        As parents of two young kids ourselves, we understand the struggle. That's why we created 
+                        a cleaning service that truly gets it — flexible scheduling, family-safe products, and 
+                        the personal touch that only comes from neighbors who genuinely care about your family.
+                    </p>
+                    <div class="bg-orange-50 p-6 rounded-2xl border-l-4 border-orange-400">
+                        <p class="text-lg text-gray-700 italic leading-relaxed handwritten">
+                            "Every home we clean is someone's sanctuary. We don't just clean houses — 
+                            we help families create more time for what matters most: being together."
+                        </p>
+                        <div class="mt-4 text-right">
+                            <span class="text-orange-600 font-semibold">— Maria & Carlos Martinez</span>
+                            <div class="text-sm text-gray-500">Founders & Your Ocala Neighbors</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="warm-card p-2 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909114-4c3a9b84e938?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Martinez family - Palma Cleaning owners in Ocala" 
+                             class="w-full h-80 object-cover rounded-xl">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-blue-100">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600 mb-1 handwritten">Family First</div>
+                            <div class="text-sm text-gray-600">Always & Forever</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-lg text-gray-600 handwritten mb-6">
+                    We're proud to serve our neighbors in...
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
+                    <span class="bg-orange-100 px-4 py-2 rounded-full">Ocala</span>
+                    <span class="bg-blue-100 px-4 py-2 rounded-full">The Villages</span>
+                    <span class="bg-green-100 px-4 py-2 rounded-full">Oak Run</span>
+                    <span class="bg-yellow-100 px-4 py-2 rounded-full">Stone Creek</span>
+                    <span class="bg-purple-100 px-4 py-2 rounded-full">Belleview</span>
+                    <span class="bg-pink-100 px-4 py-2 rounded-full">Golden Hills</span>
+                    <span class="bg-indigo-100 px-4 py-2 rounded-full">Dunnellon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Testimonials -->
+    <section id="community" class="py-20 bg-gradient-to-br from-orange-50 to-yellow-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="community-badge mb-6 mx-auto">
+                    <i data-lucide="message-heart" class="w-4 h-4"></i>
+                    What Our Neighbors Say
+                </div>
+                <h3 class="text-4xl font-bold mb-6 text-gray-800">
+                    Real Reviews from <span class="handwritten text-orange-600">Real Families</span>
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Don't just take our word for it — hear what your fellow Ocala neighbors have to say!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center space-x-1 text-yellow-500 text-lg mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        "Maria and her team are absolutely wonderful! They're not just professional cleaners — 
+                        they're neighbors who really care. They work around our kids' nap times and always 
+                        use the gentle products I requested. Highly recommend to any Ocala family!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                            <span class="text-pink-600 font-bold handwritten">S</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Sarah Johnson</div>
+                            <div class="text-sm text-gray-500">Oak Run Mom of 3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center space-x-1 text-yellow-500 text-lg mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        "We've tried several cleaning services, but Palma Cleaning is different. They remember 
+                        that our dog gets nervous with strangers, and they always take time to say hi to our 
+                        kids. It's the personal touch that makes all the difference!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold handwritten">M</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Mike Rodriguez</div>
+                            <div class="text-sm text-gray-500">Ocala Dad & Teacher</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center space-x-1 text-yellow-500 text-lg mb-6">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        "When we moved to The Villages, Palma Cleaning made our transition so much easier. 
+                        They cleaned our new home before we moved in and helped us get our old place ready. 
+                        Couldn't have asked for better neighbors!"
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <span class="text-green-600 font-bold handwritten">L</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-800">Linda & Tom Wilson</div>
+                            <div class="text-sm text-gray-500">The Villages Retirees</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="community-btn px-8 py-3 rounded-full font-semibold relative">
+                    <span class="relative z-10">Read More Family Stories →</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="community-badge mb-6 mx-auto">
+                    <i data-lucide="camera" class="w-4 h-4"></i>
+                    See the Difference We Make
+                </div>
+                <h3 class="text-4xl font-bold mb-6 text-gray-800">
+                    Real Homes, Real <span class="handwritten text-orange-600">Results</span>
+                </h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Every family deserves a clean, healthy space to call home. Here's how we help make that happen.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="warm-card p-6 overflow-hidden">
+                    <h4 class="text-2xl font-semibold mb-6 text-center text-gray-800 handwritten">
+                        Kitchen Deep Clean for Busy Family
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1556909909-f5d01e1b8fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Kitchen before family-friendly cleaning in Ocala" 
+                                 class="w-full h-48 object-cover">
+                            <div class="absolute bottom-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Before
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Kitchen after safe family cleaning Ocala" 
+                                 class="w-full h-48 object-cover">
+                            <div class="absolute bottom-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                After
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4 italic">
+                        "Now the kids can help with cooking without me worrying about germs!" — Happy Ocala Mom
+                    </p>
+                </div>
+                
+                <div class="warm-card p-6 overflow-hidden">
+                    <h4 class="text-2xl font-semibold mb-6 text-center text-gray-800 handwritten">
+                        Bathroom Makeover for Growing Family
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Bathroom before child-safe cleaning" 
+                                 class="w-full h-48 object-cover">
+                            <div class="absolute bottom-3 left-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Before
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-xl">
+                            <img src="https://images.unsplash.com/photo-1584622781564-1d987036b4d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                 alt="Bathroom after family cleaning service Ocala" 
+                                 class="w-full h-48 object-cover">
+                            <div class="absolute bottom-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                After
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-600 mt-4 italic">
+                        "Sparkles clean and safe for bath time with the little ones!" — Grateful Dad
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form - Family Focused -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-orange-400 to-orange-600 text-white relative overflow-hidden community-pattern">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h3 class="text-5xl font-bold mb-6 handwritten">Let's Chat, Neighbor!</h3>
+                <p class="text-2xl text-orange-100 leading-relaxed">
+                    Ready to give your family the gift of time? Get your personalized cleaning quote 
+                    from your friendly Ocala neighbors — no pressure, just honest advice from one family to another.
+                </p>
+            </div>
+            
+            <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-10 shadow-2xl">
+                <div class="text-center mb-8">
+                    <h4 class="text-2xl font-semibold text-gray-800 mb-2 handwritten">
+                        Tell Us About Your Family's Needs
+                    </h4>
+                    <p class="text-gray-600">We'll create a cleaning plan that works for YOUR schedule and budget</p>
+                </div>
+                
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Parent/Guardian Name</label>
+                            <input type="text" placeholder="Your name" class="w-full px-4 py-3 border border-orange-100 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Best Email</label>
+                            <input type="email" placeholder="your.email@example.com" class="w-full px-4 py-3 border border-orange-100 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition-colors">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" placeholder="(352) 123-4567" class="w-full px-4 py-3 border border-orange-100 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">What area are you in?</label>
+                            <select class="w-full px-4 py-3 border border-orange-100 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition-colors">
+                                <option value="">Select your neighborhood</option>
+                                <option>Ocala</option>
+                                <option>The Villages</option>
+                                <option>Oak Run</option>
+                                <option>Stone Creek</option>
+                                <option>Belleview</option>
+                                <option>Golden Hills</option>
+                                <option>Dunnellon</option>
+                                <option>Other Central Florida</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">What cleaning help do you need?</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center space-x-3 p-3 border border-orange-100 rounded-xl hover:bg-orange-50 cursor-pointer transition-colors">
+                                <input type="checkbox" class="text-orange-600 rounded">
+                                <span>Regular family cleaning</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 border border-orange-100 rounded-xl hover:bg-orange-50 cursor-pointer transition-colors">
+                                <input type="checkbox" class="text-orange-600 rounded">
+                                <span>Deep spring cleaning</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 border border-orange-100 rounded-xl hover:bg-orange-50 cursor-pointer transition-colors">
+                                <input type="checkbox" class="text-orange-600 rounded">
+                                <span>Moving help</span>
+                            </label>
+                            <label class="flex items-center space-x-3 p-3 border border-orange-100 rounded-xl hover:bg-orange-50 cursor-pointer transition-colors">
+                                <input type="checkbox" class="text-orange-600 rounded">
+                                <span>Small business cleaning</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Tell us about your family & home</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-orange-100 rounded-xl focus:border-orange-400 focus:ring-2 focus:ring-orange-200 transition-colors resize-none" placeholder="Do you have kids? Pets? Any special requests or concerns? We want to make sure we're the right fit for your family!"></textarea>
+                    </div>
+                    
+                    <div class="text-center pt-6">
+                        <button type="submit" class="community-btn px-12 py-4 text-lg font-semibold rounded-full relative shadow-xl">
+                            <span class="relative z-10">Get My Family Quote (It's Free!)</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg text-orange-100 mb-4 handwritten">
+                    Prefer to chat? Give us a call!
+                </p>
+                <a href="tel:3527644747" class="text-white font-bold text-3xl hover:text-yellow-200 transition-colors handwritten">
+                    (352) 764-4747
+                </a>
+                <p class="text-orange-100 mt-2">
+                    We're usually available evenings & weekends — because that's when families are home!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
+                            <i data-lucide="heart" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Palma Cleaning Co.</h4>
+                            <p class="text-orange-300 text-sm handwritten">Your Ocala Family Since 2020</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 text-gray-300 text-sm">
+                        <p>The Martinez Family</p>
+                        <p>Ocala, Florida 34470</p>
+                        <p class="text-orange-400 font-bold text-lg">(352) 764-4747</p>
+                        <p class="text-orange-300">hello@palmacleaningco.com</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <div class="community-badge text-xs mb-3">
+                            <i data-lucide="users" class="w-3 h-3"></i>
+                            500+ Happy Families
+                        </div>
+                        <div class="flex space-x-2 text-xs">
+                            <span class="bg-gray-800 px-2 py-1 rounded">Licensed</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded">Insured</span>
+                            <span class="bg-gray-800 px-2 py-1 rounded">Family Owned</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h5 class="font-bold mb-4 text-orange-400 handwritten">Our Services</h5>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Regular Family Cleaning</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Deep Spring Cleaning</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Moving Help</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Small Business Support</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Post-Construction</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Community -->
+                <div>
+                    <h5 class="font-bold mb-4 text-orange-400 handwritten">Our Neighbors</h5>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#family" class="hover:text-orange-400 transition-colors">Meet Our Family</a></li>
+                        <li><a href="#community" class="hover:text-orange-400 transition-colors">Family Stories</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Community Events</a></li>
+                        <li><a href="#contact" class="hover:text-orange-400 transition-colors">Get In Touch</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors">Referral Rewards</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Areas & Social -->
+                <div>
+                    <h5 class="font-bold mb-4 text-orange-400 handwritten">Where We Serve</h5>
+                    <div class="grid grid-cols-2 gap-2 text-gray-300 text-xs mb-6">
+                        <span>Ocala</span>
+                        <span>The Villages</span>
+                        <span>Oak Run</span>
+                        <span>Stone Creek</span>
+                        <span>Belleview</span>
+                        <span>Golden Hills</span>
+                        <span>Dunnellon</span>
+                        <span>WEC Area</span>
+                    </div>
+                    
+                    <div>
+                        <h6 class="font-semibold mb-3 text-orange-400 handwritten text-sm">Connect with Us</h6>
+                        <div class="flex space-x-3">
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 handwritten text-lg">
+                    © 2024 Palma Cleaning Co. — Proudly Serving Central Florida Families with Love ❤️
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We can\'t wait to meet your family and learn how we can help. We\'ll be in touch within 24 hours!');
+        });
+
+        // Community interaction effects
+        const communityBtns = document.querySelectorAll('.community-btn');
+        communityBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Create a small celebration effect
+                const rect = this.getBoundingClientRect();
+                for (let i = 0; i < 6; i++) {
+                    createHeart(rect.left + rect.width/2, rect.top + rect.height/2);
+                }
+            });
+        });
+
+        function createHeart(x, y) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = x + 'px';
+            heart.style.top = y + 'px';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '9999';
+            heart.style.fontSize = '20px';
+            document.body.appendChild(heart);
+            
+            const randomX = (Math.random() - 0.5) * 200;
+            const randomY = Math.random() * -100 - 50;
+            
+            heart.animate([
+                { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                { transform: `translate(${randomX}px, ${randomY}px) scale(0)`, opacity: 0 }
+            ], {
+                duration: 1000,
+                easing: 'ease-out'
+            }).onfinish = () => heart.remove();
+        }
+
+        // Warm hover effects for cards
+        const warmCards = document.querySelectorAll('.warm-card');
+        warmCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+                this.style.boxShadow = '0 15px 35px rgba(245, 133, 73, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+            });
+        });
+    </script>
+</body>
+</html>

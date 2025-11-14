@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALMA CLEANING CO. - HOUSE CLEANING OCALA FL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: oklch(1.0000 0 0);
+            --foreground: oklch(0 0 0);
+            --primary: oklch(0.6489 0.2370 26.9728);
+            --primary-foreground: oklch(1.0000 0 0);
+            --secondary: oklch(0.9680 0.2110 109.7692);
+            --accent: oklch(0.5635 0.2408 260.8178);
+            --muted: oklch(0.9551 0 0);
+            --border: oklch(0 0 0);
+            --shadow: 4px 4px 0px 0px hsl(0 0% 0% / 1.00);
+        }
+        
+        body { 
+            font-family: 'DM Sans', sans-serif !important; 
+            background: var(--background) !important;
+            color: var(--foreground) !important;
+        }
+        
+        .mono { font-family: 'Space Mono', monospace !important; }
+        
+        .brutalist-box {
+            border: 4px solid black !important;
+            box-shadow: var(--shadow) !important;
+            transform: rotate(-1deg);
+            transition: all 0.2s ease;
+        }
+        
+        .brutalist-box:hover {
+            transform: rotate(0deg) scale(1.02);
+            box-shadow: 6px 6px 0px 0px hsl(0 0% 0% / 1.00);
+        }
+        
+        .brutalist-btn {
+            background: var(--primary) !important;
+            color: var(--primary-foreground) !important;
+            border: 4px solid black !important;
+            box-shadow: var(--shadow) !important;
+            text-transform: uppercase !important;
+            font-weight: 900 !important;
+            letter-spacing: 0.1em !important;
+            transition: all 0.1s ease;
+        }
+        
+        .brutalist-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px hsl(0 0% 0% / 1.00);
+        }
+        
+        .brutalist-btn:active {
+            transform: translate(0px, 0px);
+            box-shadow: 2px 2px 0px 0px hsl(0 0% 0% / 1.00);
+        }
+        
+        .section-header {
+            background: var(--secondary) !important;
+            border: 4px solid black !important;
+            transform: skew(-2deg);
+            margin: 0 -20px;
+        }
+        
+        .section-header h2 {
+            transform: skew(2deg);
+        }
+        
+        .noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="noise">
+    <!-- Header -->
+    <header class="bg-white border-b-4 border-black relative z-50">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-black flex items-center justify-center transform rotate-12">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black mono tracking-wider">PALMA</h1>
+                        <p class="text-sm font-bold">CLEANING CO.</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <nav class="flex space-x-6 mono text-sm font-bold uppercase tracking-wider">
+                        <a href="#services" class="hover:bg-yellow-300 px-2 py-1">SERVICES</a>
+                        <a href="#about" class="hover:bg-yellow-300 px-2 py-1">ABOUT</a>
+                        <a href="#reviews" class="hover:bg-yellow-300 px-2 py-1">REVIEWS</a>
+                    </nav>
+                    <a href="tel:3527644747" class="bg-red-500 text-white px-4 py-2 border-4 border-black font-black mono transform -rotate-2 hover:rotate-0 transition-transform">
+                        CALL NOW!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-yellow-200 via-pink-200 to-blue-200"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-white border-4 border-black p-2 inline-block transform rotate-2 mb-6">
+                        <div class="flex text-black text-lg mono">
+                            ★★★★★
+                        </div>
+                        <span class="font-bold text-sm">RATED #1 IN OCALA!</span>
+                    </div>
+                    
+                    <h2 class="text-6xl font-black leading-tight mb-6">
+                        PROFESSIONAL<br>
+                        <span class="bg-yellow-400 px-2 transform -skew-x-12 inline-block">HOUSE</span><br>
+                        CLEANING<br>
+                        <span class="text-red-600">IN OCALA</span>
+                    </h2>
+                    
+                    <div class="bg-white border-4 border-black p-6 transform -rotate-1 mb-8">
+                        <p class="text-xl font-bold mono">
+                            TRUSTED CLEANERS<br>
+                            FLEXIBLE SCHEDULING<br>
+                            100% SATISFACTION GUARANTEED
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="brutalist-btn px-8 py-4 text-lg mono">
+                            GET FREE QUOTE!
+                        </button>
+                        <button class="bg-black text-white border-4 border-black px-8 py-4 text-lg mono font-black uppercase tracking-wider transform rotate-1 hover:-rotate-1 transition-transform">
+                            BOOK TODAY!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="brutalist-box bg-white p-4 transform rotate-2">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="CLEAN HOME IN OCALA" 
+                             class="w-full h-80 object-cover">
+                        <div class="bg-black text-white p-2 mono text-center font-bold">
+                            SPOTLESS RESULTS GUARANTEED!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="section-header py-8 mb-12">
+                <h2 class="text-4xl font-black text-center mono">OUR CLEANING SERVICES</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="brutalist-box bg-yellow-300 p-6">
+                    <div class="bg-black w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-lucide="home" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mono mb-3">STANDARD CLEANING</h3>
+                    <p class="font-bold mb-4">Weekly, bi-weekly, monthly cleaning to keep your home SPOTLESS!</p>
+                    <button class="bg-black text-white px-4 py-2 font-bold mono text-sm uppercase">LEARN MORE →</button>
+                </div>
+                
+                <div class="brutalist-box bg-pink-300 p-6">
+                    <div class="bg-black w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mono mb-3">DEEP CLEANING</h3>
+                    <p class="font-bold mb-4">Intensive deep clean for EVERY corner and crevice!</p>
+                    <button class="bg-black text-white px-4 py-2 font-bold mono text-sm uppercase">LEARN MORE →</button>
+                </div>
+                
+                <div class="brutalist-box bg-blue-300 p-6">
+                    <div class="bg-black w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-lucide="truck" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mono mb-3">MOVE IN/OUT</h3>
+                    <p class="font-bold mb-4">Complete cleaning for moving transitions!</p>
+                    <button class="bg-black text-white px-4 py-2 font-bold mono text-sm uppercase">LEARN MORE →</button>
+                </div>
+                
+                <div class="brutalist-box bg-green-300 p-6">
+                    <div class="bg-black w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-lucide="building" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-black mono mb-3">COMMERCIAL</h3>
+                    <p class="font-bold mb-4">Office and business cleaning services!</p>
+                    <button class="bg-black text-white px-4 py-2 font-bold mono text-sm uppercase">LEARN MORE →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gradient-to-r from-purple-200 to-orange-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="section-header py-8 mb-12">
+                <h2 class="text-4xl font-black text-center mono">WHY OCALA HOMEOWNERS TRUST US!</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white border-4 border-black p-6 transform -rotate-2">
+                    <div class="bg-green-400 w-16 h-16 border-4 border-black flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-black"></i>
+                    </div>
+                    <h4 class="text-lg font-black mono mb-2">LICENSED & INSURED!</h4>
+                    <p class="font-bold">Fully licensed and insured cleaners!</p>
+                </div>
+                
+                <div class="bg-white border-4 border-black p-6 transform rotate-1">
+                    <div class="bg-green-400 w-16 h-16 border-4 border-black flex items-center justify-center mb-4">
+                        <i data-lucide="leaf" class="w-8 h-8 text-black"></i>
+                    </div>
+                    <h4 class="text-lg font-black mono mb-2">ECO-FRIENDLY!</h4>
+                    <p class="font-bold">Safe products for family & pets!</p>
+                </div>
+                
+                <div class="bg-white border-4 border-black p-6 transform -rotate-1">
+                    <div class="bg-blue-400 w-16 h-16 border-4 border-black flex items-center justify-center mb-4">
+                        <i data-lucide="calendar" class="w-8 h-8 text-black"></i>
+                    </div>
+                    <h4 class="text-lg font-black mono mb-2">FLEXIBLE!</h4>
+                    <p class="font-bold">Weekly, bi-weekly, monthly options!</p>
+                </div>
+                
+                <div class="bg-white border-4 border-black p-6 transform rotate-2">
+                    <div class="bg-yellow-400 w-16 h-16 border-4 border-black flex items-center justify-center mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-black"></i>
+                    </div>
+                    <h4 class="text-lg font-black mono mb-2">100% GUARANTEE!</h4>
+                    <p class="font-bold">Not happy? We return in 24 hours!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-yellow-400">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-white border-4 border-black p-8 transform -rotate-1">
+                <h3 class="text-3xl font-black mono mb-6">PROUDLY SERVING OCALA SINCE 2020!</h3>
+                <p class="text-lg font-bold mb-6">
+                    We're a LOCALLY OWNED cleaning service proudly serving Ocala and surrounding areas for over 4 years! 
+                    Our team knows Central Florida homes and we're committed to keeping your space SPOTLESS year-round!
+                </p>
+                <button class="bg-red-500 text-white px-6 py-3 border-4 border-black font-black mono transform rotate-2 hover:-rotate-2 transition-transform">
+                    LEARN OUR STORY →
+                </button>
+                <div class="mt-6 bg-black text-white p-4">
+                    <p class="mono font-bold">
+                        SERVICE AREA: OCALA • THE VILLAGES • OAK RUN • STONE CREEK • BELLEVIEW
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="section-header py-8 mb-12 bg-pink-400">
+                <h2 class="text-4xl font-black text-center mono">WHAT OCALA SAYS!</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-yellow-300 border-4 border-black p-6 transform rotate-1">
+                    <div class="flex text-black text-xl mb-4 mono">★★★★★</div>
+                    <p class="font-bold mb-4">
+                        "AMAZING! Palma Cleaning has been cleaning our Oak Run home for 2 years. 
+                        Always on time and thorough!"
+                    </p>
+                    <div class="bg-black text-white p-2">
+                        <div class="font-black mono">SARAH M.</div>
+                        <div class="text-sm">OAK RUN HOMEOWNER</div>
+                    </div>
+                </div>
+                
+                <div class="bg-blue-300 border-4 border-black p-6 transform -rotate-2">
+                    <div class="flex text-black text-xl mb-4 mono">★★★★★</div>
+                    <p class="font-bold mb-4">
+                        "The deep cleaning was INCREDIBLE! They got every corner. 
+                        My house hasn't been this clean EVER!"
+                    </p>
+                    <div class="bg-black text-white p-2">
+                        <div class="font-black mono">MIKE R.</div>
+                        <div class="text-sm">OCALA RESIDENT</div>
+                    </div>
+                </div>
+                
+                <div class="bg-green-300 border-4 border-black p-6 transform rotate-1">
+                    <div class="flex text-black text-xl mb-4 mono">★★★★★</div>
+                    <p class="font-bold mb-4">
+                        "Professional and TRUSTWORTHY! Move-out cleaning got us our full deposit back!"
+                    </p>
+                    <div class="bg-black text-white p-2">
+                        <div class="font-black mono">LINDA K.</div>
+                        <div class="text-sm">THE VILLAGES</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button class="bg-red-500 text-white px-8 py-4 border-4 border-black font-black mono transform -rotate-1 hover:rotate-1 transition-transform">
+                    READ MORE REVIEWS →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After -->
+    <section class="py-16 bg-gradient-to-r from-pink-200 to-yellow-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="section-header py-8 mb-12 bg-purple-400">
+                <h2 class="text-4xl font-black text-center mono">SEE THE DIFFERENCE!</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-4 border-black p-4 transform -rotate-1">
+                    <h4 class="text-xl font-black mb-4 mono text-center">KITCHEN TRANSFORMATION!</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1556909909-f5d01e1b8fcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                 alt="BEFORE KITCHEN CLEANING OCALA" 
+                                 class="w-full h-32 object-cover border-2 border-black">
+                            <div class="bg-red-500 text-white p-1 text-center font-bold mono text-sm">BEFORE</div>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                 alt="AFTER KITCHEN CLEANING OCALA" 
+                                 class="w-full h-32 object-cover border-2 border-black">
+                            <div class="bg-green-500 text-white p-1 text-center font-bold mono text-sm">AFTER</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border-4 border-black p-4 transform rotate-1">
+                    <h4 class="text-xl font-black mb-4 mono text-center">BATHROOM MAKEOVER!</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                 alt="BEFORE BATHROOM CLEANING" 
+                                 class="w-full h-32 object-cover border-2 border-black">
+                            <div class="bg-red-500 text-white p-1 text-center font-bold mono text-sm">BEFORE</div>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1584622781564-1d987036b4d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                                 alt="AFTER BATHROOM CLEANING OCALA" 
+                                 class="w-full h-32 object-cover border-2 border-black">
+                            <div class="bg-green-500 text-white p-1 text-center font-bold mono text-sm">AFTER</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Form -->
+    <section class="py-16 bg-red-500">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white border-4 border-black p-8 transform -rotate-1">
+                <div class="text-center mb-8">
+                    <h3 class="text-4xl font-black mono mb-4">READY FOR SPARKLING CLEAN?</h3>
+                    <p class="text-xl font-bold">GET YOUR FREE ESTIMATE NOW!</p>
+                </div>
+                
+                <form class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="YOUR NAME" class="w-full px-4 py-3 border-4 border-black font-bold mono text-sm uppercase">
+                        <input type="email" placeholder="EMAIL ADDRESS" class="w-full px-4 py-3 border-4 border-black font-bold mono text-sm uppercase">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="tel" placeholder="PHONE NUMBER" class="w-full px-4 py-3 border-4 border-black font-bold mono text-sm uppercase">
+                        <input type="text" placeholder="ZIP CODE" class="w-full px-4 py-3 border-4 border-black font-bold mono text-sm uppercase">
+                    </div>
+                    <select class="w-full px-4 py-3 border-4 border-black font-bold mono text-sm uppercase">
+                        <option>SELECT SERVICE TYPE</option>
+                        <option>STANDARD CLEANING</option>
+                        <option>DEEP CLEANING</option>
+                        <option>MOVE-IN/MOVE-OUT</option>
+                        <option>COMMERCIAL CLEANING</option>
+                    </select>
+                    <button type="submit" class="brutalist-btn w-full py-4 text-xl mono">
+                        GET MY FREE ESTIMATE!
+                    </button>
+                </form>
+                
+                <div class="text-center mt-6 bg-black text-white p-4">
+                    <p class="mono font-bold">OR CALL DIRECTLY: (352) 764-4747</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 bg-yellow-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-black mono mb-4">WE CLEAN EVERYWHERE!</h3>
+                <p class="text-lg font-bold">PROFESSIONAL HOUSE CLEANING THROUGHOUT CENTRAL FLORIDA</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12">
+                <div class="bg-white border-2 border-black p-3 text-center transform rotate-1">
+                    <p class="font-black mono text-sm">OCALA</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform -rotate-1">
+                    <p class="font-black mono text-sm">VILLAGES</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform rotate-2">
+                    <p class="font-black mono text-sm">OAK RUN</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform -rotate-2">
+                    <p class="font-black mono text-sm">STONE CREEK</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform rotate-1">
+                    <p class="font-black mono text-sm">BELLEVIEW</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform -rotate-1">
+                    <p class="font-black mono text-sm">GOLDEN HILLS</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform rotate-2">
+                    <p class="font-black mono text-sm">DUNNELLON</p>
+                </div>
+                <div class="bg-white border-2 border-black p-3 text-center transform -rotate-2">
+                    <p class="font-black mono text-sm">WEC AREA</p>
+                </div>
+            </div>
+            
+            <div class="bg-white border-4 border-black p-8 text-center">
+                <p class="mono font-bold mb-4">📍 FULL SERVICE AREA COVERAGE</p>
+                <div class="w-full h-48 bg-gray-300 border-4 border-black flex items-center justify-center">
+                    <p class="mono font-bold">[GOOGLE MAP GOES HERE!]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- NAP -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-yellow-400 flex items-center justify-center">
+                            <i data-lucide="zap" class="w-4 h-4 text-black"></i>
+                        </div>
+                        <h4 class="text-xl font-black mono">PALMA CLEANING</h4>
+                    </div>
+                    <div class="space-y-2 mono">
+                        <p>PROFESSIONAL HOUSE CLEANING</p>
+                        <p>OCALA, FL 34470</p>
+                        <p class="text-yellow-400 font-bold">(352) 764-4747</p>
+                        <p class="text-yellow-400">hello@palmacleaningco.com</p>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <div class="flex space-x-2 mb-3">
+                            <div class="bg-green-400 text-black px-2 py-1 text-xs font-bold">LICENSED</div>
+                            <div class="bg-green-400 text-black px-2 py-1 text-xs font-bold">INSURED</div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-yellow-400 text-lg">★★★★★</span>
+                            <span class="ml-2 text-sm mono">GOOGLE REVIEWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h5 class="font-black mono mb-4 text-yellow-400">SERVICES</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-400">STANDARD CLEANING</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">DEEP CLEANING</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">MOVE-IN/OUT</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">COMMERCIAL</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">POST-CONSTRUCTION</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="font-black mono mb-4 text-yellow-400">QUICK LINKS</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-yellow-400">ABOUT US</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">BLOG</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">CONTACT</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">GET QUOTE</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">SERVICE AREAS</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social -->
+                <div>
+                    <h5 class="font-black mono mb-4 text-yellow-400">FOLLOW US</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-yellow-400 text-black flex items-center justify-center font-bold hover:bg-white transition-colors">
+                            F
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-400 text-black flex items-center justify-center font-bold hover:bg-white transition-colors">
+                            I
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-500 text-white flex items-center justify-center font-bold hover:bg-white hover:text-black transition-colors">
+                            Y
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t-4 border-white mt-8 pt-8 text-center">
+                <p class="mono font-bold">&copy; 2024 PALMA CLEANING CO. | LICENSED HOUSE CLEANING IN OCALA, FL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('AWESOME! WE\'LL CONTACT YOU SOON!');
+        });
+
+        // Add some brutalist animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const boxes = document.querySelectorAll('.brutalist-box');
+            boxes.forEach(box => {
+                setInterval(() => {
+                    if (Math.random() > 0.98) {
+                        box.style.transform = `rotate(${Math.random() * 4 - 2}deg) scale(${0.98 + Math.random() * 0.04})`;
+                        setTimeout(() => {
+                            box.style.transform = '';
+                        }, 200);
+                    }
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

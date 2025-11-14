@@ -1,9 +1,6 @@
 ---
 // Homepage content - serving main landing page
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-
-const title = "Palma Cleaning - Professional House & Commercial Cleaning in Ocala FL";
+const title = "Palma Cleaning Services - Professional House Cleaning";
 const description = "Professional house cleaning for busy families & professionals throughout Ocala, FL. Serving all neighborhoods including premium communities near World Equestrian Center. Licensed & insured.";
 ---
 
@@ -19,543 +16,813 @@ const description = "Professional house cleaning for busy families & professiona
     
     <link rel="canonical" href="https://palmacleaningco.com/">
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/styles-clean.css?v=3" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "Service"],
-        "@id": "https://palmacleaningco.com/#organization",
-        "name": "Palma Cleaning",
-        "image": "https://palmacleaningco.com/images/logo.jpg",
-        "description": "Professional house and commercial cleaning services in Ocala, FL",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ocala",
-            "addressRegion": "FL",
-            "postalCode": "34471",
-            "addressCountry": "US"
-        },
-        "telephone": "(352) 764-4747",
-        "email": "hello@palmacleaningco.com",
-        "url": "https://palmacleaningco.com",
-        "sameAs": [
-            "https://www.facebook.com/palmacleaningco",
-            "https://www.instagram.com/palmacleaningco"
-        ],
-        "serviceType": ["House Cleaning Service", "Commercial Cleaning Service", "Residential Cleaning Service"],
-        "category": ["Cleaning Services", "House Cleaning", "Janitorial Services", "Residential Services"],
-        "additionalType": "https://schema.org/Service",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "147",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "areaServed": [
-            {
-                "@type": "City",
-                "name": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US",
-                "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
-            },
-            {
-                "@type": "City",
-                "name": "The Villages",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place",
-                "name": "Stone Creek",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place", 
-                "name": "Oak Run",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place",
-                "name": "Golden Hills",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "Place",
-                "name": "World Equestrian Center Area",
-                "addressLocality": "Ocala",
-                "addressRegion": "FL",
-                "addressCountry": "US"
-            },
-            {
-                "@type": "AdministrativeArea",
-                "name": "Marion County",
-                "containedInPlace": "Florida",
-                "addressCountry": "US"
-            }
-        ],
-        "serviceArea": [
-            {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "29.1872",
-                    "longitude": "-82.1401"
-                },
-                "geoRadius": "48280"
-            }
-        ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Professional Cleaning Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Standard House Cleaning",
-                        "description": "Weekly, bi-weekly, and monthly residential cleaning services",
-                        "serviceType": "Residential Cleaning",
-                        "category": "House Cleaning",
-                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
-                    },
-                    "availability": "Monday-Friday 8AM-6PM",
-                    "priceRange": "$$"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Deep Cleaning",
-                        "description": "Comprehensive top-to-bottom detailed cleaning including baseboards, fixtures, inside appliances",
-                        "serviceType": "Deep House Cleaning",
-                        "category": "Intensive Cleaning",
-                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
-                    },
-                    "availability": "Monday-Friday 8AM-6PM",
-                    "priceRange": "$$$"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Commercial Cleaning",
-                        "description": "Professional office and business cleaning services for retail, medical, and corporate facilities",
-                        "serviceType": "Commercial Office Cleaning",
-                        "category": "Business Cleaning",
-                        "areaServed": ["Ocala, FL", "Marion County, FL"]
-                    },
-                    "availability": "Flexible scheduling including evenings and weekends",
-                    "priceRange": "$$"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Move-in Move-out Cleaning",
-                        "description": "Complete empty house cleaning for transitions, rental deposit recovery, and real estate preparation",
-                        "serviceType": "Transition Cleaning",
-                        "category": "Move-in/Move-out Cleaning",
-                        "areaServed": ["Ocala, FL", "Stone Creek", "Oak Run", "The Villages", "Marion County, FL"]
-                    },
-                    "availability": "Same-day service available",
-                    "priceRange": "$$$"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Post-Construction Cleaning",
-                        "description": "Specialized cleanup services for new construction projects, renovations, and contractor cleanup",
-                        "serviceType": "Construction Cleanup",
-                        "category": "Specialized Cleaning",
-                        "areaServed": ["Ocala, FL", "Marion County, FL"]
-                    },
-                    "availability": "Project-based scheduling",
-                    "priceRange": "$$$"
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Equestrian Property Cleaning",
-                        "description": "Specialized cleaning for horse properties, luxury estates, and World Equestrian Center area homes",
-                        "serviceType": "Luxury Estate Cleaning",
-                        "category": "Equestrian Facility Cleaning",
-                        "areaServed": ["World Equestrian Center Area", "Golden Hills", "Ocala Horse Country"]
-                    },
-                    "availability": "Flexible scheduling around horse activities",
-                    "priceRange": "$$$$"
-                }
-            ]
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "29.1872",
-            "longitude": "-82.1401"
-        },
-        "openingHours": ["Mo-Fr 08:00-18:00"],
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            }
-        ],
-        "priceRange": "$$",
-        "paymentAccepted": ["Cash", "Check", "Credit Card", "Zelle", "Venmo"],
-        "currenciesAccepted": "USD",
-        "knowsAbout": [
-            "Residential House Cleaning",
-            "Commercial Office Cleaning", 
-            "Deep Cleaning Services",
-            "Post-Construction Cleanup",
-            "Move-in Move-out Cleaning",
-            "Luxury Home Cleaning",
-            "Equestrian Property Cleaning",
-            "Eco-friendly Cleaning Products",
-            "Stone Creek Community Services",
-            "Oak Run Community Services",
-            "The Villages Cleaning Services"
-        ],
-        "hasCredential": [
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Licensed Cleaning Service",
-                "description": "Licensed and bonded cleaning service in Florida"
-            },
-            {
-                "@type": "EducationalOccupationalCredential", 
-                "name": "General Liability Insurance",
-                "description": "Comprehensive general liability and bonding insurance coverage"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "Background Checked Team",
-                "description": "All team members are background-checked for customer security"
-            }
-        ],
-        "slogan": "Life's Messy. We Can Help.",
-        "brand": {
-            "@type": "Brand",
-            "name": "Palma Cleaning",
-            "slogan": "House Cleaning for Parents & Busy Professionals"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Palma Cleaning Founders",
-            "description": "Professional cleaning service established in 2020"
-        },
-        "yearEstablished": "2020",
-        "numberOfEmployees": {
-            "@type": "QuantitativeValue",
-            "minValue": 5,
-            "maxValue": 15
-        }
-    }
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <style>
-        .area-item a {
-            transition: color 0.2s ease;
+        ::-webkit-scrollbar { display: none;}
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Fallback styles for the new design */
+        .bg-white { background-color: white; }
+        .bg-gray-50 { background-color: #f9fafb; }
+        .bg-gray-100 { background-color: #f3f4f6; }
+        .bg-gray-200 { background-color: #e5e7eb; }
+        .bg-gray-300 { background-color: #d1d5db; }
+        .bg-gray-600 { background-color: #4b5563; }
+        .bg-gray-800 { background-color: #1f2937; }
+        .bg-secondary { background-color: #2F5047; }
+        .bg-primary { background-color: #F58549; }
+        .bg-green-800 { background-color: #166534; }
+        .text-white { color: white; }
+        .text-gray-200 { color: #e5e7eb; }
+        .text-gray-300 { color: #d1d5db; }
+        .text-gray-600 { color: #4b5563; }
+        .text-secondary { color: #2F5047; }
+        .text-primary { color: #F58549; }
+        .text-accent { color: #666666; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .font-bold { font-weight: 700; }
+        .font-semibold { font-weight: 600; }
+        .font-medium { font-weight: 500; }
+        .rounded-lg { border-radius: 0.5rem; }
+        .rounded-xl { border-radius: 0.75rem; }
+        .rounded-full { border-radius: 9999px; }
+        
+        /* Enhanced button styles */
+        button {
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
-        .area-item a:hover {
-            color: #ff8057 !important;
-            text-decoration: underline !important;
+        
+        .bg-primary {
+            background-color: #F58549;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(245, 133, 73, 0.3);
         }
-        .area-item h4 a:hover {
-            color: #ff8057 !important;
+        
+        .bg-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(245, 133, 73, 0.4);
+        }
+        
+        .border-2 {
+            border-width: 2px;
+            border-style: solid;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .border-white {
+            border-color: white;
+            color: white;
+            background-color: transparent;
+        }
+        
+        .border-white:hover {
+            background-color: white;
+            color: #2F5047;
+        }
+        
+        .border-primary {
+            border-color: #F58549;
+            color: #F58549;
+            background-color: transparent;
+        }
+        
+        .border-primary:hover {
+            background-color: #F58549;
+            color: white;
+        }
+        
+        /* Button size variants */
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        
+        /* Specific button styles for different sections */
+        .btn-primary {
+            background-color: #F58549;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(245, 133, 73, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(245, 133, 73, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #2F5047;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #F58549;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            border: 2px solid #F58549;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: #F58549;
+            color: white;
+        }
+        
+        /* Large button styles */
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            border-radius: 0.5rem;
+        }
+        
+        /* Small button styles */
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            border-radius: 0.375rem;
+        }
+        .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .shadow-xl { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.1); }
+        .shadow-2xl { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .shadow { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+        .sticky { position: sticky; }
+        .fixed { position: fixed; }
+        .relative { position: relative; }
+        .top-0 { top: 0; }
+        .w-full { width: 100%; }
+        .w-10 { width: 2.5rem; }
+        .w-12 { width: 3rem; }
+        .w-16 { width: 4rem; }
+        .w-20 { width: 5rem; }
+        .h-10 { height: 2.5rem; }
+        .h-12 { height: 3rem; }
+        .h-16 { height: 4rem; }
+        .h-20 { height: 5rem; }
+        
+        /* Circular icon containers */
+        .w-16.h-16 {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Trust signals section - ensure perfect circles */
+        #trust-signals .w-16.h-16 {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F58549;
+            flex-shrink: 0;
+        }
+        
+        #trust-signals .w-16.h-16 i {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1;
+            display: inline-block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* Ensure icons don't stretch in flex containers */
+        #trust-signals .flex {
+            align-items: center;
+        }
+        
+        #trust-signals .flex-col {
+            align-items: center;
+        }
+        .h-80 { height: 20rem; }
+        .h-600px { height: 600px; }
+        .container { max-width: 1200px; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+        .px-8 { padding-left: 2rem; padding-right: 2rem; }
+        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+        .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+        .p-6 { padding: 1.5rem; }
+        .p-8 { padding: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .mb-12 { margin-bottom: 3rem; }
+        .mr-3 { margin-right: 0.75rem; }
+        .mr-4 { margin-right: 1rem; }
+        .mt-8 { margin-top: 2rem; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .items-center { align-items: center; }
+        .items-start { align-items: flex-start; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .text-center { text-align: center; }
+        .space-x-4 > * + * { margin-left: 1rem; }
+        .space-x-8 > * + * { margin-left: 2rem; }
+        .space-y-1 > * + * { margin-top: 0.25rem; }
+        .space-y-2 > * + * { margin-top: 0.5rem; }
+        .space-y-3 > * + * { margin-top: 0.75rem; }
+        .space-y-6 > * + * { margin-top: 1.5rem; }
+        .gap-4 { gap: 1rem; }
+        .gap-6 { gap: 1.5rem; }
+        .gap-8 { gap: 2rem; }
+        .gap-12 { gap: 3rem; }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .border-2 { border-width: 2px; }
+        .border-b-2 { border-bottom-width: 2px; }
+        .border-t { border-top-width: 1px; }
+        .border-white { border-color: white; }
+        .border-gray-600 { border-color: #4b5563; }
+        .border-primary { border-color: #F58549; }
+        .leading-tight { line-height: 1.25; }
+        .leading-relaxed { line-height: 1.625; }
+        .italic { font-style: italic; }
+        .cursor-pointer { cursor: pointer; }
+        .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .transition-shadow { transition-property: box-shadow; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .hover\:bg-orange-600:hover { background-color: #ea580c; }
+        .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+        .hover\:bg-white:hover { background-color: white; }
+        .hover\:text-primary:hover { color: #F58549; }
+        .hover\:text-secondary:hover { color: #2F5047; }
+        .hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.1); }
+        .object-cover { object-fit: cover; }
+        .z-50 { z-index: 50; }
+        .flex-shrink-0 { flex-shrink: 0; }
+        .bg-opacity-10 { background-color: rgba(255, 255, 255, 0.1); }
+        .inline-block { display: inline-block; }
+        
+        @media (min-width: 640px) {
+            .sm\:flex-row { flex-direction: row; }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:flex { display: flex; }
+            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+            .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        
+        .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+        .from-secondary { --tw-gradient-from: #2F5047; --tw-gradient-to: rgb(47 80 71 / 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+        .to-green-800 { --tw-gradient-to: #166534; --tw-gradient-stops: var(--tw-gradient-from), #166534; }
+        .max-w-2xl { max-width: 42rem; }
+    </style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "primary": "#F58549",
+        "secondary": "#2F5047",
+        "accent": "#666666"
+      },
+      "fontFamily": {
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
         }
     </style>
 </head>
 <body>
-    <Navigation />
 
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Life's Messy.</h1>
-                <h2 class="hero-subtitle">We Can Help.</h2>
-                <p class="hero-description">You've got a million things on your plate... cleaning <strong><u>shouldn't</u></strong> be one of them.</p>
-                <p class="hero-description-sub">Premium, eco-friendly cleaning by Ocala's trusted cleaning professionals.</p>
-                <div class="hero-buttons">
-                    <a href="/book-now" class="btn btn-primary">Request Quote</a>
+<header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-home text-white text-lg"></i>
                 </div>
-                <div class="hero-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>5-STAR SERVICE</span>
+                <h1 class="text-2xl font-bold text-secondary">Palma Cleaning</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <span class="text-accent hover:text-primary transition-colors cursor-pointer">Home</span>
+                <span class="text-accent hover:text-primary transition-colors cursor-pointer">About Us</span>
+                <span class="text-primary font-semibold border-b-2 border-primary cursor-pointer">Services</span>
+                <span class="text-accent hover:text-primary transition-colors cursor-pointer">FAQs</span>
+                <span class="text-accent hover:text-primary transition-colors cursor-pointer">Contact Us</span>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <span class="text-secondary font-semibold cursor-pointer">(352) 764-4747</span>
+                <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="hero-section" class="bg-gradient-to-br from-secondary to-green-800 text-white py-16 h-[600px] flex items-center">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl font-bold mb-6 leading-tight">Professional Cleaning Services You Can Trust</h1>
+                <p class="text-xl mb-8 text-gray-200">Experience the difference with Palma Cleaning's comprehensive house cleaning services. From regular maintenance to deep cleaning, we've got you covered.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-colors">
+                        Get Free Quote
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-secondary transition-colors">
+                        View Services
+                    </button>
                 </div>
             </div>
-            <div class="hero-images">
-                <div class="hero-image large">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipPOnw5izoRW8TgFgYfRSpCzggHMsXQBUSBkwSit=s1360-w1360-h1020-rw" alt="Professional House Cleaning in Ocala FL" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+            <div class="relative">
+                <img class="w-full h-80 rounded-lg shadow-2xl object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/00cac0ec17-e06eb84356f4c714d0ce.png" alt="professional house cleaner with cleaning supplies in modern home interior">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trust-signals" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-shield-alt text-white text-2xl"></i>
                 </div>
-                <div class="hero-image">
-                    <img src="https://lh3.googleusercontent.com/p/AF1QipMb64CY2eRqex-SQz_ocsbmdpN3ZYv7KPV016ov=s1360-w1360-h1020-rw" alt="Trusted Cleaning Services Ocala" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                <h3 class="font-semibold text-secondary mb-2">Fully Insured</h3>
+                <p class="text-accent text-sm">Complete protection for your home and belongings</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-star text-white text-2xl"></i>
                 </div>
-                <div class="hero-guarantee">
-                    <div>48 HR RECLEAN</div>
-                    <div>GUARANTEE</div>
+                <h3 class="font-semibold text-secondary mb-2">5-Star Rated</h3>
+                <p class="text-accent text-sm">Consistently rated excellent by our customers</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-clock text-white text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-secondary mb-2">On-Time Service</h3>
+                <p class="text-accent text-sm">Reliable and punctual cleaning services</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-leaf text-white text-2xl"></i>
+                </div>
+                <h3 class="font-semibold text-secondary mb-2">Eco-Friendly</h3>
+                <p class="text-accent text-sm">Safe, green cleaning products for your family</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Why Choose Palma Cleaning?</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">Trusted by hundreds of Ocala families and businesses since 2020.</p>
-                    <p>At Palma Cleaning, we understand that life is busy. Whether you're a professional working long hours, a family with young children, or managing a business, cleaning shouldn't add stress to your life.</p>
-                    <p>We serve residential and commercial clients throughout Ocala, Marion County, and The Villages with reliable, professional cleaning services that give you back your valuable time.</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Licensed & Insured</span>
+<section id="reviews-section" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-secondary mb-4">What Our Customers Say</h2>
+            <p class="text-xl text-accent">Don't just take our word for it - hear from our satisfied customers</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-clock"></i>
-                            <span>Flexible Scheduling</span>
+                <p class="text-accent mb-4">"Palma Cleaning transformed my home! Their attention to detail is incredible and the team is always professional and friendly."</p>
+                <div class="flex items-center">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <h4 class="font-semibold text-secondary">Sarah Johnson</h4>
+                        <p class="text-sm text-accent">Verified Customer</p>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-heart"></i>
-                            <span>100% Satisfaction</span>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-leaf"></i>
-                            <span>Eco-Friendly Options</span>
+                        </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-accent mb-4">"Best cleaning service in town! They're reliable, thorough, and use eco-friendly products. Highly recommend!"</p>
+                <div class="flex items-center">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <h4 class="font-semibold text-secondary">Michael Chen</h4>
+                        <p class="text-sm text-accent">Verified Customer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center mb-4">
+                    <div class="flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-accent mb-4">"I've been using Palma Cleaning for over a year. They're consistent, affordable, and my house always looks amazing!"</p>
+                <div class="flex items-center">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <h4 class="font-semibold text-secondary">Emma Davis</h4>
+                        <p class="text-sm text-accent">Verified Customer</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="services-section" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-secondary mb-4">Our Cleaning Services</h2>
+            <p class="text-xl text-accent">Comprehensive cleaning solutions tailored to your needs</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-broom text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3 text-center">Regular Cleaning</h3>
+                <p class="text-accent text-center mb-4">Weekly, bi-weekly, or monthly maintenance cleaning to keep your home spotless</p>
+                <ul class="text-sm text-accent space-y-1">
+                    <li>• Dusting all surfaces</li>
+                    <li>• Vacuuming &amp; mopping</li>
+                    <li>• Bathroom sanitization</li>
+                    <li>• Kitchen cleaning</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-spray-can text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3 text-center">Deep Cleaning</h3>
+                <p class="text-accent text-center mb-4">Intensive cleaning service that reaches every corner and crevice of your home</p>
+                <ul class="text-sm text-accent space-y-1">
+                    <li>• Inside appliances</li>
+                    <li>• Baseboards &amp; windowsills</li>
+                    <li>• Light fixtures</li>
+                    <li>• Cabinet fronts</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-hard-hat text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3 text-center">Post Construction</h3>
+                <p class="text-accent text-center mb-4">Specialized cleaning after renovations or construction work</p>
+                <ul class="text-sm text-accent space-y-1">
+                    <li>• Dust &amp; debris removal</li>
+                    <li>• Paint splatter cleanup</li>
+                    <li>• Window cleaning</li>
+                    <li>• Final touch-ups</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <i class="fas fa-truck-moving text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-secondary mb-3 text-center">Move In/Out</h3>
+                <p class="text-accent text-center mb-4">Complete cleaning for moving transitions, ensuring a fresh start</p>
+                <ul class="text-sm text-accent space-y-1">
+                    <li>• Empty home cleaning</li>
+                    <li>• Appliance cleaning</li>
+                    <li>• Closet sanitization</li>
+                    <li>• Final inspection</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<section id="frequency-pricing" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-secondary mb-4">Flexible Scheduling &amp; Savings</h2>
+            <p class="text-xl text-accent">Choose the frequency that works for you and save more with regular service</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-lg text-center">
+                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-calendar-week text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary mb-4">Weekly Service</h3>
+                <p class="text-accent mb-6">Perfect for busy families and high-traffic homes</p>
+                <div class="bg-primary text-white py-3 px-6 rounded-lg mb-4">
+                    <span class="text-2xl font-bold">Save 15%</span>
+                </div>
+                <p class="text-sm text-accent">Most comprehensive care for your home</p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg text-center border-2 border-primary">
+                <div class="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Most Popular</div>
+                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary mb-4">Bi-Weekly Service</h3>
+                <p class="text-accent mb-6">Great balance of cleanliness and affordability</p>
+                <div class="bg-primary text-white py-3 px-6 rounded-lg mb-4">
+                    <span class="text-2xl font-bold">Save 10%</span>
+                </div>
+                <p class="text-sm text-accent">Our most requested service option</p>
+                    </div>
+            <div class="bg-gray-50 p-8 rounded-lg text-center">
+                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <i class="fas fa-calendar text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary mb-4">Monthly Service</h3>
+                <p class="text-accent mb-6">Ideal for maintaining clean homes with lighter use</p>
+                <div class="bg-primary text-white py-3 px-6 rounded-lg mb-4">
+                    <span class="text-2xl font-bold">Save 5%</span>
+                </div>
+                <p class="text-sm text-accent">Budget-friendly regular maintenance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why-choose-us" class="py-16 bg-secondary text-white">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">Why Choose Palma Cleaning?</h2>
+                <p class="text-xl mb-8 text-gray-200">We're not just another cleaning service. We're your trusted partner in maintaining a healthy, beautiful home environment.</p>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Trained &amp; Vetted Staff</h3>
+                            <p class="text-gray-200">All our cleaners undergo thorough background checks and professional training</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-medal text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">100% Satisfaction Guarantee</h3>
+                            <p class="text-gray-200">If you're not completely satisfied, we'll make it right or refund your money</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Easy Online Booking</h3>
+                            <p class="text-gray-200">Schedule, reschedule, or manage your cleaning service with our user-friendly platform</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>500+</h3>
-                        <p>Happy Customers</p>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                    <p class="text-gray-200">Happy Customers</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">5</div>
+                    <p class="text-gray-200">Years Experience</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">98%</div>
+                    <p class="text-gray-200">Customer Retention</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">24/7</div>
+                    <p class="text-gray-200">Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service-areas" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-secondary mb-4">Areas We Serve</h2>
+            <p class="text-xl text-accent">Professional cleaning services across the greater Ocala area</p>
+        </div>
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Ocala</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">The Villages</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Stone Creek</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Oak Run</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Golden Hills</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Belleview</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">Dunnellon</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                <i class="fas fa-map-marker-alt text-primary text-2xl mb-3"></i>
+                <h3 class="font-semibold text-secondary mb-2">WEC Area</h3>
+                <p class="text-accent text-sm">Full service area</p>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-accent mb-4">Don't see your area listed? Contact us to check availability!</p>
+            <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-colors">
+                Check Service Area
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="cta-section" class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready for a Cleaner Home?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Join hundreds of satisfied customers who trust Palma Cleaning with their homes. Get your free quote today!</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Free Quote
+            </button>
+            <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                Call (352) 764-4747
+            </button>
+        </div>
+        </div>
+    </section>
+
+<footer id="footer" class="bg-secondary text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-home text-white text-lg"></i>
                     </div>
-                    <div class="stat">
-                        <h3>5★</h3>
-                        <p>Average Rating</p>
+                    <h3 class="text-2xl font-bold">Palma Cleaning</h3>
+                </div>
+                <p class="text-gray-300 mb-4">Professional cleaning services you can trust. Making homes cleaner, healthier, and more comfortable since 2019.</p>
+                <div class="flex space-x-4">
+                    <span class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </span>
+                    <span class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
+                        <i class="fab fa-instagram text-white"></i>
+                    </span>
+                    <span class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
+                        <i class="fab fa-google text-white"></i>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Services</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Regular Cleaning</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Deep Cleaning</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Post Construction</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Move In/Out</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Company</h4>
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">About Us</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">FAQs</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Contact</span></li>
+                    <li><span class="hover:text-primary transition-colors cursor-pointer">Reviews</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                <div class="space-y-3 text-gray-300">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-primary mr-3"></i>
+                        <span>(352) 764-4747</span>
                     </div>
-                    <div class="stat">
-                        <h3>4+</h3>
-                        <p>Years in Business</p>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-primary mr-3"></i>
+                        <span>hello@palmacleaningco.com</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-primary mr-3 mt-1"></i>
+                        <span>Ocala, FL<br>Marion County</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="services" style="background: #f8fafa; padding: 3rem 0;">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <script type='text/javascript' src='https://link.palmacleaningco.com/reputation/assets/review-widget.js'></script>
-                <iframe class='lc_reviews_widget' src='https://link.palmacleaningco.com/reputation/widgets/review_widget/mAdkXDEE8QQPYfj1uzSF?widgetId=689752c11080b4d725e2dadc' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; min-height: 400px; border-radius: 15px;'></iframe>
-            </div>
+        <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+            <p>© 2024 Palma Cleaning. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Cleaning Services</h2>
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <p style="font-size: 1.1rem; color: #666; line-height: 1.6; margin-bottom: 1.5rem;">Professional house cleaning solutions for every need and budget.</p>
-                <a href="/house-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-book-open"></i>
-                    Complete House Cleaning Guide
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Standard House Cleaning</h3>
-                    <p>Regular weekly, bi-weekly, or monthly cleaning to keep your home consistently clean and fresh.</p>
-                    <ul class="service-list">
-                        <li>Kitchen and bathroom cleaning</li>
-                        <li>Dusting all surfaces</li>
-                        <li>Vacuuming and mopping</li>
-                        <li>Trash removal</li>
-                        <li>Flexible scheduling</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Deep Cleaning</h3>
-                    <p>Comprehensive top-to-bottom cleaning perfect for spring cleaning, moving, or getting started.</p>
-                    <ul class="service-list">
-                        <li>Inside appliances</li>
-                        <li>Baseboards and fixtures</li>
-                        <li>Cabinet fronts</li>
-                        <li>Window sills</li>
-                        <li>Detailed bathroom work</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Commercial Cleaning</h3>
-                    <p>Professional office and business cleaning to maintain a clean, productive work environment.</p>
-                    <ul class="service-list">
-                        <li>Office buildings</li>
-                        <li>Retail spaces</li>
-                        <li>Medical offices</li>
-                        <li>Restaurants</li>
-                        <li>Flexible hours</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Move-in/Move-out</h3>
-                    <p>Complete cleaning for transitions, perfect for new homeowners and renters getting deposits back.</p>
-                    <ul class="service-list">
-                        <li>Empty house cleaning</li>
-                        <li>All cabinets and drawers</li>
-                        <li>Appliance cleaning</li>
-                        <li>Real estate ready</li>
-                        <li>Same-day service</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div style="margin-top: 3rem; text-align: center; background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                <h3 style="color: #2f5047; margin-bottom: 1rem;">Additional Specialized Services</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                    <div style="text-align: left;">
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;"><i class="fas fa-hard-hat"></i> Post-Construction Cleaning</h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Complete cleanup for new construction and renovation projects.</p>
-                    </div>
-                    <div style="text-align: left;">
-                        <h4 style="color: #ff8057; margin-bottom: 0.5rem;"><i class="fas fa-horse"></i> Equestrian Property Cleaning</h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Specialized cleaning for horse properties and barns.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="areas" id="areas">
-        <div class="container">
-            <h2 class="section-title">Areas We Serve</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
-                <i class="fas fa-info-circle" style="color: #ff8057; margin-right: 0.5rem;"></i>
-                <strong>Tip:</strong> Use the "Locations" menu above for detailed information about each area we serve!
-            </p>
-            <div class="areas-grid">
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Ocala & Marion County</h4>
-                    <ul>
-                        <li><a href="/ocala" style="color: #666; text-decoration: none;">Downtown Ocala</a></li>
-                        <li><a href="/stone-creek" style="color: #666; text-decoration: none;">Stone Creek</a></li>
-                        <li><a href="/oak-run" style="color: #666; text-decoration: none;">Oak Run</a></li>
-                        <li><a href="/golden-hills" style="color: #666; text-decoration: none;">Golden Hills</a></li>
-                        <li><a href="/calesa" style="color: #666; text-decoration: none;">Calesa</a></li>
-                        <li>Spruce Creek</li>
-                        <li>All Marion County areas</li>
-                    </ul>
-                </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/the-villages" style="color: #2f5047; text-decoration: none;">The Villages</a></h4>
-                    <ul>
-                        <li>Spanish Springs</li>
-                        <li>Lake Sumter Landing</li>
-                        <li>Brownwood</li>
-                        <li>All Village Centers</li>
-                        <li>Golf course communities</li>
-                    </ul>
-                </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> <a href="/wec-area" style="color: #2f5047; text-decoration: none;">World Equestrian Center Area</a></h4>
-                    <ul>
-                        <li>WEC neighborhoods</li>
-                        <li>Equestrian properties</li>
-                        <li>Horse farms</li>
-                        <li>Luxury estates</li>
-                        <li>Agricultural properties</li>
-                    </ul>
-                </div>
-                <div class="area-item">
-                    <h4><i class="fas fa-map-marker-alt"></i> Surrounding Areas</h4>
-                    <ul>
-                        <li><a href="/belleview" style="color: #666; text-decoration: none;">Belleview</a></li>
-                        <li><a href="/dunnellon" style="color: #666; text-decoration: none;">Dunnellon</a></li>
-                        <li>Rainbow Springs</li>
-                        <li>Silver Springs</li>
-                        <li>And more!</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="service-note">
-                <p><i class="fas fa-info-circle"></i> Don't see your area listed? We serve many locations throughout Central Florida. Check our "Locations" menu above for detailed area information, or call us to confirm service in your area!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Ready to Get Started?</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.6;">Contact us today for a free, no-obligation quote for any of our cleaning services. We'll create a custom cleaning plan that fits your needs and budget.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <a href="/book-now" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-phone" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;"><a href="tel:+13527644747" style="color: #666; text-decoration: none;">(352) 764-4747</a></p>
-                    </div>
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-envelope" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;">hello@palmacleaningco.com</p>
-                    </div>
-                    <div style="background: #f8fafa; padding: 1rem; border-radius: 10px;">
-                        <i class="fas fa-clock" style="color: #ff8057; font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
-                        <p style="color: #666; margin: 0; font-weight: 500;">Mon-Fri 8AM-6PM</p>
-                    </div>
-                </div>
-                <p style="color: #888; font-size: 0.9rem; margin-top: 1rem;">Response within 24 hours • Licensed & Insured • Satisfaction Guaranteed</p>
-            </div>
-        </div>
-    </section>
-
-    <Footer />
-
-    <script is:inline src="/script-clean.js"></script>
-    <script 
-        src="https://beta.leadconnectorhq.com/loader.js"  
-        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
-        data-widget-id="66fd9ee1d53ad5f3145ea591">
-    </script>
 </body>
 </html>

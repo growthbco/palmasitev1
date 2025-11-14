@@ -1,0 +1,148 @@
+:root {
+  --background: oklch(1.0000 0 0);
+  --foreground: oklch(0.2000 0 0);
+  --card: oklch(1.0000 0 0);
+  --card-foreground: oklch(0.2000 0 0);
+  --popover: oklch(1.0000 0 0);
+  --popover-foreground: oklch(0.2000 0 0);
+  --primary: oklch(0.3500 0.0800 150);
+  --primary-foreground: oklch(0.9800 0 0);
+  --secondary: oklch(0.6500 0.1200 45);
+  --secondary-foreground: oklch(0.9800 0 0);
+  --muted: oklch(0.9600 0 0);
+  --muted-foreground: oklch(0.5000 0 0);
+  --accent: oklch(0.6500 0.1200 45);
+  --accent-foreground: oklch(0.9800 0 0);
+  --destructive: oklch(0.6000 0.2000 15);
+  --destructive-foreground: oklch(0.9800 0 0);
+  --border: oklch(0.9000 0 0);
+  --input: oklch(0.9000 0 0);
+  --ring: oklch(0.3500 0.0800 150);
+  --chart-1: oklch(0.3500 0.0800 150);
+  --chart-2: oklch(0.6500 0.1200 45);
+  --chart-3: oklch(0.5000 0.1000 200);
+  --chart-4: oklch(0.7000 0.1000 300);
+  --chart-5: oklch(0.6000 0.1200 60);
+  --sidebar: oklch(0.9800 0 0);
+  --sidebar-foreground: oklch(0.2000 0 0);
+  --sidebar-primary: oklch(0.3500 0.0800 150);
+  --sidebar-primary-foreground: oklch(0.9800 0 0);
+  --sidebar-accent: oklch(0.9600 0 0);
+  --sidebar-accent-foreground: oklch(0.2000 0 0);
+  --sidebar-border: oklch(0.9000 0 0);
+  --sidebar-ring: oklch(0.3500 0.0800 150);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Inter', serif;
+  --font-mono: 'Inter', monospace;
+  --radius: 0.75rem;
+  --shadow-2xs: 0 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.10);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.10), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+  --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.10), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+  --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Custom Palma Cleaning Brand Colors */
+:root {
+  --palma-primary: #2f5047;
+  --palma-secondary: #ff8057;
+  --palma-light: #f8fafa;
+  --palma-dark: #1a2e28;
+  --palma-accent: #3a5f56;
+}
+
+/* Base Styles */
+* {
+  font-family: var(--font-sans) !important;
+}
+
+body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  line-height: 1.6 !important;
+}
+
+/* Custom Component Styles */
+.btn-primary {
+  background-color: var(--palma-primary) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--palma-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  color: var(--palma-primary) !important;
+  border: 2px solid var(--palma-primary) !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--palma-primary) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.card {
+  background-color: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg) !important;
+  transform: translateY(-4px) !important;
+}
+
+.text-primary {
+  color: var(--palma-primary) !important;
+}
+
+.text-secondary {
+  color: var(--palma-secondary) !important;
+}
+
+.bg-primary {
+  background-color: var(--palma-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--palma-secondary) !important;
+}
+
+.bg-light {
+  background-color: var(--palma-light) !important;
+}
+
+
+
+
+
+

@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import GTMHead from '../../components/GTMHead.astro';
 import GTMBody from '../../components/GTMBody.astro';
+import GlobalHead from '../../components/GlobalHead.astro';
 
 const title = "How Often Should You Deep Clean Your House? Expert Guidelines | Palma Cleaning";
 const description = "Evidence-based cleaning schedules for different home types, family sizes, and lifestyles. Professional recommendations for optimal deep cleaning frequency.";
@@ -14,17 +15,15 @@ const publishDate = "2025-08-11";
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content="how often deep clean house, deep cleaning schedule, house cleaning frequency, home maintenance schedule, professional cleaning advice">
     <meta name="robots" content="index, follow">
-    
     <link rel="canonical" href="https://palmacleaningco.com/blog/how-often-deep-clean-house">
-    <link rel="stylesheet" href="/styles-clean.css?v=3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <script type="application/ld+json">
     {
@@ -85,212 +84,322 @@ const publishDate = "2025-08-11";
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" style="background: #f8fafa; padding: 1rem 0;">
-        <div class="container">
-            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #666;">
-                <a href="/" style="color: #ff8057; text-decoration: none;">Home</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <a href="/blog/" style="color: #ff8057; text-decoration: none;">Blog</a>
-                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
-                <span style="color: #333;">Deep Cleaning Frequency</span>
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="bg-[#F4F7F6] py-3">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <a href="/" class="text-[#FF8057] hover:underline">Home</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <a href="/blog/" class="text-[#FF8057] hover:underline">Blog</a>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                    <span class="text-gray-700">Deep Cleaning Frequency</span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Article Header -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div style="color: #ff8057; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">Maintenance Guide</div>
-                <h1 class="hero-title">How Often Should You Deep Clean Your House?</h1>
-                <p class="hero-subtitle">Evidence-based cleaning schedules for different home types, family sizes, and lifestyles</p>
-                <div style="display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>Published August 11, 2025</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-clock"></i>
-                        <span>6 min read</span>
+        <!-- Article Header -->
+        <section class="bg-[#305048] text-white py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-[#FF8057] text-sm font-semibold uppercase tracking-[0.3em] mb-4">Maintenance Guide</div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">How Often Should You Deep Clean Your House?</h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">Evidence-based cleaning schedules for different home types, family sizes, and lifestyles</p>
+                    <div class="flex flex-wrap items-center gap-6 text-white/80 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-alt"></i>
+                            <span>Published August 11, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>6 min read</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div style="background: linear-gradient(135deg, #2f5047, #1a3329); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white;">
-                    <i class="fas fa-clock" style="font-size: 4rem;"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Article Content -->
-    <article class="about">
-        <div class="container" style="max-width: 800px;">
-            
+        <!-- Article Content -->
+        <article class="max-w-4xl mx-auto px-6 py-12 md:py-16">
             <!-- Quick Answer -->
-            <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin-bottom: 3rem; border-left: 5px solid #ff8057;">
-                <h3 style="color: #2f5047; margin-bottom: 1rem;">Quick Answer</h3>
-                <p style="font-size: 1.1rem; line-height: 1.7; color: #333; margin: 0;">
-                    <strong>Most homes should be deep cleaned every 3-6 months</strong>, but the optimal frequency depends on your specific situation. Busy families with children or pets typically need quarterly deep cleaning, while empty nesters might only require it twice yearly. High-traffic areas like kitchens and bathrooms may need attention every 2-3 months. For <a href="/deep-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">professional deep cleaning services</a> that follow industry standards, working with an experienced team ensures optimal results.
+            <div class="bg-[#F4F7F6] border-l-4 border-[#FF8057] p-6 md:p-8 rounded-lg mb-10">
+                <h3 class="text-xl font-bold text-[#305048] mb-4">Quick Answer</h3>
+                <p class="text-lg md:text-xl leading-relaxed text-gray-800">
+                    <strong class="text-[#305048]">Most homes should be deep cleaned every 3-6 months</strong>, but the optimal frequency depends on your specific situation. Busy families with children or pets typically need quarterly deep cleaning, while empty nesters might only require it twice yearly. High-traffic areas like kitchens and bathrooms may need attention every 2-3 months. For <a href="/deep-cleaning" class="text-[#FF8057] font-semibold hover:underline">professional deep cleaning services</a> that follow industry standards, working with an experienced team ensures optimal results.
                 </p>
             </div>
 
             <!-- Professional Service CTA -->
-            <div style="background: #fff; padding: 1.5rem; border-radius: 10px; border: 2px solid #ff8057; margin-bottom: 3rem; text-align: center;">
-                <p style="color: #666; margin-bottom: 1rem;">
-                    <strong>Let us handle your deep cleaning schedule!</strong> We'll create a custom maintenance plan for your home.
+            <div class="bg-white border-2 border-[#FF8057] rounded-xl p-6 md:p-8 text-center mb-12">
+                <p class="text-gray-700 mb-6 text-lg">
+                    <strong class="text-[#305048]">Let us handle your deep cleaning schedule!</strong> We'll create a custom maintenance plan for your home.
                 </p>
-                <a href="/deep-cleaning" class="btn btn-primary" style="margin-right: 1rem;">Schedule Deep Cleaning</a>
-                <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-8 py-3 rounded-md font-bold hover:bg-[#ff996f] transition duration-300">Schedule Deep Cleaning</a>
+                    <a href="tel:+13527644747" class="bg-[#305048] text-white px-8 py-3 rounded-md font-bold hover:bg-[#305048]/90 transition duration-300">Call (352) 764-4747</a>
+                </div>
             </div>
 
             <!-- Factors That Determine Frequency -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">What Determines Your Deep Cleaning Schedule?</h2>
-                <p style="color: #666; margin-bottom: 2rem; line-height: 1.6;">According to <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" style="color: #ff8057; text-decoration: none;">CDC hygiene guidelines</a> and <a href="https://www.marioncountyfl.org/" target="_blank" rel="noopener noreferrer" style="color: #ff8057; text-decoration: none;">Marion County health resources</a>, several factors influence how often your home needs deep cleaning. Family size, pets, allergies, and home characteristics all play important roles in determining the right schedule for <a href="/ocala" style="color: #ff8057; text-decoration: none; font-weight: 500;">serving Ocala families</a>.</p>
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-8">What Determines Your Deep Cleaning Schedule?</h2>
+                <p class="text-gray-700 mb-8 leading-relaxed">According to <a href="https://www.cdc.gov/hygiene/cleaning/index.html" target="_blank" rel="noopener noreferrer" class="text-[#FF8057] font-semibold hover:underline">CDC hygiene guidelines</a> and Marion County health resources, several factors influence how often your home needs deep cleaning. Family size, pets, allergies, and home characteristics all play important roles in determining the right schedule for <a href="/ocala" class="text-[#FF8057] font-semibold hover:underline">serving Ocala families</a>.</p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-users"></i> Family Size & Lifestyle
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-users"></i> Family Size & Lifestyle
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li><strong>Large families (4+ people):</strong> Every 3 months</li>
-                            <li><strong>Small families (2-3 people):</strong> Every 4-5 months</li>
-                            <li><strong>Singles/couples:</strong> Every 6 months</li>
-                            <li><strong>Empty nesters:</strong> Twice yearly</li>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Large families (4+ people):</span>
+                                <span>Every 3 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Small families (2-3 people):</span>
+                                <span>Every 4-5 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Singles/couples:</span>
+                                <span>Every 6 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Empty nesters:</span>
+                                <span>Twice yearly</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-paw"></i> Pets & Allergens
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-paw"></i> Pets & Allergens
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li><strong>Multiple pets:</strong> Every 2-3 months</li>
-                            <li><strong>One pet:</strong> Every 3-4 months</li>
-                            <li><strong>Allergies/asthma:</strong> Every 2-3 months</li>
-                            <li><strong>No pets/allergies:</strong> Every 4-6 months</li>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Multiple pets:</span>
+                                <span>Every 2-3 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">One pet:</span>
+                                <span>Every 3-4 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Allergies/asthma:</span>
+                                <span>Every 2-3 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">No pets/allergies:</span>
+                                <span>Every 4-6 months</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-home"></i> Home Characteristics
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-home"></i> Home Characteristics
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li><strong>High-traffic areas:</strong> Every 2-3 months</li>
-                            <li><strong>Carpeted homes:</strong> More frequent cleaning</li>
-                            <li><strong>Hard surface floors:</strong> Less frequent cleaning</li>
-                            <li><strong>Open floor plans:</strong> Every 3-4 months</li>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">High-traffic areas:</span>
+                                <span>Every 2-3 months</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Carpeted homes:</span>
+                                <span>More frequent cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Hard surface floors:</span>
+                                <span>Less frequent cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Open floor plans:</span>
+                                <span>Every 3-4 months</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-cloud-rain"></i> Climate Factors
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-cloud-rain"></i> Climate Factors
                         </h4>
-                        <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                            <li><strong>Florida humidity:</strong> More frequent bathroom cleaning</li>
-                            <li><strong>Pollen seasons:</strong> Increased HVAC cleaning</li>
-                            <li><strong>Storm season:</strong> Post-storm deep cleaning</li>
-                            <li><strong>Year-round use:</strong> No seasonal breaks needed</li>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Florida humidity:</span>
+                                <span>More frequent bathroom cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Pollen seasons:</span>
+                                <span>Increased HVAC cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Storm season:</span>
+                                <span>Post-storm deep cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="font-semibold text-[#305048]">Year-round use:</span>
+                                <span>No seasonal breaks needed</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- Room-by-Room Frequency Guide -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Room-by-Room Deep Cleaning Schedule</h2>
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-10">Room-by-Room Deep Cleaning Schedule</h2>
                 
                 <!-- Kitchen -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-utensils"></i> Kitchen: Every 2-3 Months
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-utensils"></i> Kitchen: Every 2-3 Months
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Why More Frequent?</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Grease and food particle buildup</li>
-                                <li>Appliance maintenance requirements</li>
-                                <li>Bacteria and odor prevention</li>
-                                <li>High daily usage and traffic</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Why More Frequent?</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Grease and food particle buildup</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Appliance maintenance requirements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Bacteria and odor prevention</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>High daily usage and traffic</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Deep Cleaning Tasks</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Inside appliances (oven, fridge, dishwasher)</li>
-                                <li>Cabinet interiors and hardware</li>
-                                <li>Backsplash and grout deep cleaning</li>
-                                <li>Light fixtures and exhaust fans</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Deep Cleaning Tasks</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Inside appliances (oven, fridge, dishwasher)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Cabinet interiors and hardware</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Backsplash and grout deep cleaning</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Light fixtures and exhaust fans</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bathrooms -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 2rem;">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-bath"></i> Bathrooms: Every 2-3 Months
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-bath"></i> Bathrooms: Every 2-3 Months
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">High Priority Areas</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Moisture and humidity concerns</li>
-                                <li>Mold and mildew prevention</li>
-                                <li>Bacteria and germ control</li>
-                                <li>Hard water stain buildup</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">High Priority Areas</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Moisture and humidity concerns</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Mold and mildew prevention</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Bacteria and germ control</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Hard water stain buildup</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Focus Areas</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Tile and grout deep scrubbing</li>
-                                <li>Exhaust fan and ventilation cleaning</li>
-                                <li>Behind toilet and hard-to-reach areas</li>
-                                <li>Shower doors and track maintenance</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Focus Areas</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Tile and grout deep scrubbing</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Exhaust fan and ventilation cleaning</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Behind toilet and hard-to-reach areas</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Shower doors and track maintenance</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <!-- Living Areas & Bedrooms -->
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <h3 style="color: #ff8057; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <i class="fas fa-couch"></i> Living Areas & Bedrooms: Every 4-6 Months
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 mb-8">
+                    <h3 class="text-2xl font-bold text-[#FF8057] mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-couch"></i> Living Areas & Bedrooms: Every 4-6 Months
                     </h3>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Less Intensive Needs</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Lower moisture and bacteria levels</li>
-                                <li>Primarily dust and allergen concerns</li>
-                                <li>Seasonal deep cleaning often sufficient</li>
-                                <li>Focus on air quality and comfort</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Less Intensive Needs</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Lower moisture and bacteria levels</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Primarily dust and allergen concerns</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Seasonal deep cleaning often sufficient</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Focus on air quality and comfort</span>
+                                </li>
                             </ul>
                         </div>
-                        
                         <div>
-                            <h4 style="color: #2f5047; margin-bottom: 1rem;">Key Tasks</h4>
-                            <ul style="color: #666; line-height: 1.8; padding-left: 1.5rem;">
-                                <li>Under furniture and behind beds</li>
-                                <li>Light fixtures and ceiling fans</li>
-                                <li>Baseboards and window treatments</li>
-                                <li>HVAC vents and air circulation</li>
+                            <h4 class="text-lg font-semibold text-[#305048] mb-4">Key Tasks</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Under furniture and behind beds</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Light fixtures and ceiling fans</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>Baseboards and window treatments</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                    <span>HVAC vents and air circulation</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -298,135 +407,167 @@ const publishDate = "2025-08-11";
             </section>
 
             <!-- Seasonal Considerations -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Seasonal Deep Cleaning Calendar</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-seedling"></i> Spring (March-May)
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-10">Seasonal Deep Cleaning Calendar</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-seedling"></i> Spring (March-May)
                         </h4>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">Post-winter deep clean and allergen removal.</p>
-                        <ul style="color: #666; line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Complete home deep cleaning</li>
-                            <li>HVAC system maintenance</li>
-                            <li>Window and screen cleaning</li>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Post-winter deep clean and allergen removal.</p>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Complete home deep cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>HVAC system maintenance</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Window and screen cleaning</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-sun"></i> Summer (June-August)
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-sun"></i> Summer (June-August)
                         </h4>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">Focus on humidity and increased usage areas.</p>
-                        <ul style="color: #666; line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Bathroom deep cleaning priority</li>
-                            <li>Kitchen appliance maintenance</li>
-                            <li>Air quality and ventilation focus</li>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Focus on humidity and increased usage areas.</p>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Bathroom deep cleaning priority</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Kitchen appliance maintenance</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Air quality and ventilation focus</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-leaf"></i> Fall (September-November)
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-leaf"></i> Fall (September-November)
                         </h4>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">Prepare for holidays and increased indoor time.</p>
-                        <ul style="color: #666; line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Pre-holiday deep cleaning</li>
-                            <li>HVAC filter replacement</li>
-                            <li>Carpet and upholstery cleaning</li>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Prepare for holidays and increased indoor time.</p>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Pre-holiday deep cleaning</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>HVAC filter replacement</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Carpet and upholstery cleaning</span>
+                            </li>
                         </ul>
                     </div>
                     
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #ff8057; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-snowflake"></i> Winter (December-February)
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                        <h4 class="text-lg font-semibold text-[#FF8057] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-snowflake"></i> Winter (December-February)
                         </h4>
-                        <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">Maintain indoor air quality during closed-up season.</p>
-                        <ul style="color: #666; line-height: 1.6; padding-left: 1.5rem;">
-                            <li>Post-holiday cleanup</li>
-                            <li>Indoor air quality focus</li>
-                            <li>Deep clean living areas</li>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Maintain indoor air quality during closed-up season.</p>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Post-holiday cleanup</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Indoor air quality focus</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                <span>Deep clean living areas</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ Section -->
-            <section style="margin-bottom: 3rem;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Frequently Asked Questions</h2>
-                
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                    <div style="margin-bottom: 2rem;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">What's the difference between regular cleaning and deep cleaning?</h4>
-                        <p style="color: #666; line-height: 1.6;">Regular cleaning maintains daily cleanliness with surface-level tasks like dusting, vacuuming, and wiping down visible areas. Deep cleaning addresses areas that regular cleaning doesn't reach, including inside appliances, behind furniture, baseboards, light fixtures, grout cleaning, and detailed sanitization. Learn more about our <a href="/standard-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">standard house cleaning</a> versus <a href="/deep-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">deep cleaning services</a> to understand which fits your needs.</p>
-                    </div>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Can I deep clean my entire house in one weekend?</h4>
-                        <p style="color: #666; line-height: 1.6;">While possible, deep cleaning an entire house in one weekend can be overwhelming and exhausting. We recommend spreading it over 2-3 weekends or hiring professional cleaners. Most homeowners find it more manageable to focus on 1-2 rooms per weekend.</p>
-                    </div>
-                    
-                    <div style="margin-bottom: 2rem;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">Should I deep clean before or after regular cleaning service?</h4>
-                        <p style="color: #666; line-height: 1.6;">Deep cleaning should be done first to reset your home's cleanliness baseline. After that, regular cleaning services can maintain the higher standard. Many clients schedule deep cleaning 2-4 times per year with regular cleaning service in between.</p>
+            <section class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-10">Frequently Asked Questions</h2>
+                <div class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-[#E3EAE8]/60 space-y-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-[#305048] mb-3">What's the difference between regular cleaning and deep cleaning?</h4>
+                        <p class="text-gray-700 leading-relaxed">Regular cleaning maintains daily cleanliness with surface-level tasks like dusting, vacuuming, and wiping down visible areas. Deep cleaning addresses areas that regular cleaning doesn't reach, including inside appliances, behind furniture, baseboards, light fixtures, grout cleaning, and detailed sanitization. Learn more about our <a href="/standard-cleaning" class="text-[#FF8057] font-semibold hover:underline">standard house cleaning</a> versus <a href="/deep-cleaning" class="text-[#FF8057] font-semibold hover:underline">deep cleaning services</a> to understand which fits your needs.</p>
                     </div>
                     
                     <div>
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">How much does professional deep cleaning cost compared to regular cleaning?</h4>
-                        <p style="color: #666; line-height: 1.6;">Professional deep cleaning typically costs 50-100% more than regular cleaning due to the extra time and detailed work involved. However, it's usually more cost-effective than trying to achieve the same results yourself when you factor in time, supplies, and equipment rental.</p>
+                        <h4 class="text-xl font-bold text-[#305048] mb-3">Can I deep clean my entire house in one weekend?</h4>
+                        <p class="text-gray-700 leading-relaxed">While possible, deep cleaning an entire house in one weekend can be overwhelming and exhausting. We recommend spreading it over 2-3 weekends or hiring professional cleaners. Most homeowners find it more manageable to focus on 1-2 rooms per weekend.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold text-[#305048] mb-3">Should I deep clean before or after regular cleaning service?</h4>
+                        <p class="text-gray-700 leading-relaxed">Deep cleaning should be done first to reset your home's cleanliness baseline. After that, regular cleaning services can maintain the higher standard. Many clients schedule deep cleaning 2-4 times per year with regular cleaning service in between.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold text-[#305048] mb-3">How much does professional deep cleaning cost compared to regular cleaning?</h4>
+                        <p class="text-gray-700 leading-relaxed">Professional deep cleaning typically costs 50-100% more than regular cleaning due to the extra time and detailed work involved. However, it's usually more cost-effective than trying to achieve the same results yourself when you factor in time, supplies, and equipment rental.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Custom Schedule CTA -->
-            <section style="background: #2f5047; color: white; padding: 3rem 2rem; border-radius: 15px; text-align: center; margin-bottom: 3rem;">
-                <h3 style="margin-bottom: 1rem; font-size: 1.8rem;">Ready to Establish Your Cleaning Schedule?</h3>
-                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; opacity: 0.9;">
+            <section class="bg-[#305048] text-white rounded-2xl p-8 md:p-12 text-center mb-16">
+                <h3 class="text-3xl font-bold mb-4">Ready to Establish Your Cleaning Schedule?</h3>
+                <p class="text-lg mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
                     Let us create a custom deep cleaning schedule that fits your home, lifestyle, and budget. We'll handle the heavy lifting while you enjoy a consistently clean home.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/deep-cleaning" class="btn" style="background: #ff8057; color: white; border: 2px solid #ff8057;">Schedule Deep Cleaning</a>
-                    <a href="tel:+13527644747" class="btn" style="background: transparent; color: white; border: 2px solid white;">Call (352) 764-4747</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-4 rounded-md font-bold hover:bg-[#ff996f] transition duration-300">Schedule Deep Cleaning</a>
+                    <a href="tel:+13527644747" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-md font-bold hover:bg-white hover:text-[#305048] transition duration-300">Call (352) 764-4747</a>
                 </div>
             </section>
 
             <!-- Related Articles -->
-            <section>
-                <h2 style="color: #2f5047; margin-bottom: 2rem; font-size: 2rem;">Related Articles</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/blog/spring-cleaning-checklist-ocala" style="color: #2f5047; text-decoration: none;">Ultimate Spring Cleaning Checklist</a>
+            <section class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-8">Related Articles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/blog/spring-cleaning-checklist-ocala" class="hover:text-[#FF8057] transition">Ultimate Spring Cleaning Checklist</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Complete room-by-room guide for your annual deep cleaning.</p>
-                        <a href="/blog/spring-cleaning-checklist-ocala" style="color: #ff8057; text-decoration: none; font-weight: 500;">Read More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Complete room-by-room guide for your annual deep cleaning.</p>
+                        <a href="/blog/spring-cleaning-checklist-ocala" class="text-[#FF8057] font-semibold text-sm hover:underline">Read More →</a>
                     </div>
                     
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/deep-cleaning" style="color: #2f5047; text-decoration: none;">Professional Deep Cleaning Services</a>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/deep-cleaning" class="hover:text-[#FF8057] transition">Professional Deep Cleaning Services</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Learn about our comprehensive deep cleaning service options.</p>
-                        <a href="/deep-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">Learn More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Learn about our comprehensive deep cleaning service options.</p>
+                        <a href="/deep-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More →</a>
                     </div>
                     
-                    <div style="background: #f8fafa; padding: 2rem; border-radius: 15px;">
-                        <h4 style="color: #2f5047; margin-bottom: 1rem;">
-                            <a href="/standard-cleaning" style="color: #2f5047; text-decoration: none;">Regular House Cleaning Services</a>
+                    <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                        <h4 class="text-lg font-bold text-[#305048] mb-3">
+                            <a href="/standard-cleaning" class="hover:text-[#FF8057] transition">Regular House Cleaning Services</a>
                         </h4>
-                        <p style="color: #666; margin-bottom: 1rem;">Maintain your home with our regular cleaning service schedules.</p>
-                        <a href="/standard-cleaning" style="color: #ff8057; text-decoration: none; font-weight: 500;">Learn More →</a>
+                        <p class="text-gray-600 mb-4 text-sm">Maintain your home with our regular cleaning service schedules.</p>
+                        <a href="/standard-cleaning" class="text-[#FF8057] font-semibold text-sm hover:underline">Learn More →</a>
                     </div>
                 </div>
             </section>
-
-        </div>
-    </article>
+        </article>
+    </main>
 
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
