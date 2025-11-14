@@ -16,15 +16,15 @@ const showHomeLink = Astro.props?.showHome ?? true;
                     Services
                     <i class="fa-solid fa-chevron-down text-xs opacity-70 transition-transform"></i>
                 </button>
-                <div id="desktop-services" class="absolute top-full left-0 pt-2 w-64 opacity-0 invisible transition-all duration-300 pointer-events-none hidden">
-                    <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
-                        <a href="/standard-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Standard Cleaning</a>
-                        <a href="/deep-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Deep Cleaning</a>
-                        <a href="/move-in-out-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Move-In / Move-Out</a>
-                        <a href="/post-construction-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Post-Construction</a>
-                        <a href="/commercial-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition">Commercial / Office</a>
+                <div id="desktop-services" class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 opacity-0 invisible transition-all duration-300 pointer-events-none hidden">
+                    <div class="bg-white rounded-lg shadow-xl border border-gray-100 py-2 relative">
+                        <a href="/standard-cleaning" class="block px-4 py-2 text-gray-900 hover:bg-[#F4F7F6] transition">Standard clean</a>
+                        <a href="/deep-cleaning" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] transition font-medium">Deep clean</a>
+                        <a href="/move-in-out-cleaning" class="block px-4 py-2 text-gray-900 hover:bg-[#F4F7F6] transition">Move-in/out clean</a>
+                        <a href="/post-construction-cleaning" class="block px-4 py-2 text-gray-900 hover:bg-[#F4F7F6] transition">Post-Construction</a>
+                        <a href="/commercial-cleaning" class="block px-4 py-2 text-gray-900 hover:bg-[#F4F7F6] transition">Commercial / Office</a>
                         <div class="border-t border-gray-200 my-1"></div>
-                        <a href="/services" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] hover:text-[#FF8057] transition font-semibold text-[#FF8057]">View All Services</a>
+                        <a href="/checklist" class="block px-4 py-2 text-[#305048] hover:bg-[#F4F7F6] transition font-medium">Checklist</a>
             </div>
         </div>
             </div>
@@ -58,7 +58,7 @@ const showHomeLink = Astro.props?.showHome ?? true;
         </nav>
         <div class="flex items-center space-x-6">
             <a href="tel:3527644747" class="text-xs font-semibold hidden md:block tracking-wide">(352) 764-4747</a>
-            <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book Now</a>
+            <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-3 px-6 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase text-center">Book Now</a>
             <button id="mobile-menu-button" class="lg:hidden text-2xl" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -79,6 +79,7 @@ const showHomeLink = Astro.props?.showHome ?? true;
                     <a href="/move-in-out-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Move-In / Move-Out</a>
                     <a href="/post-construction-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Post-Construction</a>
                     <a href="/commercial-cleaning" class="block text-white/70 hover:text-[#FF8057] transition">Commercial / Office</a>
+                    <a href="/checklist" class="block text-[#FF8057] font-semibold mt-2">Checklist</a>
                     <a href="/services" class="block text-[#FF8057] font-semibold mt-2">View All Services</a>
                 </div>
             </div>
@@ -166,13 +167,38 @@ const showHomeLink = Astro.props?.showHome ?? true;
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 mobileMenu.classList.toggle('hidden');
             });
         }
 
         // Close dropdown when clicking outside or on a link
         document.addEventListener('click', (e) => {
+            // Check if click is on mobile menu button or inside mobile menu
+            const clickedMobileMenuButton = e.target.closest('#mobile-menu-button');
+            const clickedInsideMobileMenu = e.target.closest('#mobile-menu');
+            const clickedMobileDropdownToggle = e.target.closest('.mobile-dropdown-toggle');
+            const clickedInsideMobileDropdown = e.target.closest('[id^="mobile-"]');
+            
+            // Don't close mobile menu if clicking the button, inside the menu, or on a mobile dropdown toggle
+            if (clickedMobileMenuButton || clickedInsideMobileMenu || clickedMobileDropdownToggle || clickedInsideMobileDropdown) {
+                // Still need to close dropdowns if clicking outside of them
+                // But don't close the main mobile menu
+                // Check if click is on a desktop dropdown toggle button
+                const clickedToggle = e.target.closest('.desktop-dropdown-toggle');
+                if (clickedToggle) {
+                    return; // Let desktop dropdown handler manage it
+                }
+                return;
+            }
+            
+            // Close mobile menu if clicking outside
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+            
             // Check if click is on a dropdown toggle button
             const clickedToggle = e.target.closest('.desktop-dropdown-toggle');
             const clickedMobileToggle = e.target.closest('.mobile-dropdown-toggle');
@@ -198,13 +224,17 @@ const showHomeLink = Astro.props?.showHome ?? true;
                     chevron.classList.remove('rotate-180', 'opacity-100');
                     chevron.classList.add('opacity-70');
                 });
-                // Close all mobile dropdowns
+                // Close all mobile dropdowns (including sub-dropdowns)
                 document.querySelectorAll('[id^="mobile-"]').forEach(menu => {
                     menu.classList.add('hidden');
                 });
                 document.querySelectorAll('.mobile-dropdown-toggle i').forEach(chevron => {
                     chevron.classList.remove('rotate-180');
                 });
+                // Also close the main mobile menu when clicking a link
+                if (mobileMenu && e.target.closest('[id^="mobile-"] a')) {
+                    mobileMenu.classList.add('hidden');
+                }
                 return;
             }
             
@@ -284,9 +314,14 @@ const showHomeLink = Astro.props?.showHome ?? true;
                 const targetMenu = document.getElementById(targetId);
                 const chevron = button.querySelector('i');
                 
-                // Close all other mobile dropdowns
+                if (!targetMenu) return;
+                
+                // Check if current dropdown is open
+                const isCurrentlyOpen = !targetMenu.classList.contains('hidden');
+                
+                // Close all other mobile dropdowns (but not the main mobile menu)
                 document.querySelectorAll('[id^="mobile-"]').forEach(menu => {
-                    if (menu.id !== targetId) {
+                    if (menu.id !== targetId && menu.id !== 'mobile-menu') {
                         menu.classList.add('hidden');
                     }
                 });
@@ -296,10 +331,16 @@ const showHomeLink = Astro.props?.showHome ?? true;
                     }
                 });
                 
-                if (targetMenu) {
-                    targetMenu.classList.toggle('hidden');
+                // Toggle current dropdown
+                if (isCurrentlyOpen) {
+                    targetMenu.classList.add('hidden');
                     if (chevron) {
-                        chevron.classList.toggle('rotate-180');
+                        chevron.classList.remove('rotate-180');
+                    }
+                } else {
+                    targetMenu.classList.remove('hidden');
+                    if (chevron) {
+                        chevron.classList.add('rotate-180');
                     }
                 }
             });

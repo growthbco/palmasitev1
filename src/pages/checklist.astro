@@ -1,0 +1,362 @@
+---
+// Checklist page - Comprehensive service checklist
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Cleaning Service Checklist | Palma Cleaning - Ocala FL";
+const description = "Complete cleaning checklist for all our services. See exactly what's included in Standard, Deep, and Move-In/Out cleaning for every room in your home.";
+
+const kitchenItems = [
+  { task: "Wipe exterior of small appliances", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe down microwave interior and exterior", standard: true, deep: true, moveInOut: true },
+  { task: "Disinfect countertops and backsplash", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe cabinet fronts", standard: true, deep: true, moveInOut: true },
+  { task: "Scrub and disinfect sinks", standard: true, deep: true, moveInOut: true },
+  { task: "Light dish load", standard: true, deep: true, moveInOut: true },
+  { task: "Vacuum and/or wash floor", standard: true, deep: true, moveInOut: true },
+  { task: "Hand wash baseboards", standard: false, deep: true, moveInOut: true },
+  { task: "Degrease and clean oven interior", standard: false, deep: true, moveInOut: true },
+  { task: "Clean inside fridge", standard: false, deep: false, moveInOut: true },
+  { task: "Wipe inside cabinets and drawers", standard: false, deep: false, moveInOut: true }
+];
+
+const bedroomItems = [
+  { task: "Make beds", standard: true, deep: true, moveInOut: true },
+  { task: "Dust lamps and lampshades (int/ext)", standard: true, deep: true, moveInOut: true },
+  { task: "Dust picture frames", standard: true, deep: true, moveInOut: true },
+  { task: "Dust furniture (top, front, and under)", standard: true, deep: true, moveInOut: true },
+  { task: "Vacuum and/or wash floor", standard: true, deep: true, moveInOut: true },
+  { task: "Dust window sills", standard: true, deep: true, moveInOut: true },
+  { task: "Dust baseboards", standard: true, deep: true, moveInOut: true },
+  { task: "Remove cobwebs", standard: true, deep: true, moveInOut: true },
+  { task: "Empty trash", standard: true, deep: true, moveInOut: true },
+  { task: "Clean mirrors", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe door handles & light switches", standard: true, deep: true, moveInOut: true },
+  { task: "Basic organizing", standard: true, deep: true, moveInOut: true },
+  { task: "Hand wash baseboards", standard: false, deep: true, moveInOut: true }
+];
+
+const bathroomItems = [
+  { task: "Scrub and disinfect sinks", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe/clean tub and shower tiles", standard: true, deep: true, moveInOut: true },
+  { task: "Disinfect toilets inside and out", standard: true, deep: true, moveInOut: true },
+  { task: "Clean and shine chrome fixtures", standard: true, deep: true, moveInOut: true },
+  { task: "Hang and fold towels neatly", standard: true, deep: true, moveInOut: true },
+  { task: "Disinfect countertops", standard: true, deep: true, moveInOut: true },
+  { task: "Clean cabinet front", standard: true, deep: true, moveInOut: true },
+  { task: "Vacuum and/or wash floor", standard: true, deep: true, moveInOut: true },
+  { task: "Dust window sills", standard: true, deep: true, moveInOut: true },
+  { task: "Dust baseboards", standard: true, deep: true, moveInOut: true },
+  { task: "Empty trash", standard: true, deep: true, moveInOut: true },
+  { task: "Clean mirrors", standard: true, deep: true, moveInOut: true },
+  { task: "Hand wash baseboards", standard: false, deep: true, moveInOut: true },
+  { task: "Scrub shower and bathtubs", standard: false, deep: true, moveInOut: true }
+];
+
+const livingAreasItems = [
+  { task: "Fluff and straighten cushions and pillows", standard: true, deep: true, moveInOut: true },
+  { task: "Dust ceiling fans (if accessible)", standard: true, deep: true, moveInOut: true },
+  { task: "Dust lamps and lampshades", standard: true, deep: true, moveInOut: true },
+  { task: "Dust picture frames", standard: true, deep: true, moveInOut: true },
+  { task: "Dust furniture", standard: true, deep: true, moveInOut: true },
+  { task: "Vacuum and/or wash floor", standard: true, deep: true, moveInOut: true },
+  { task: "Vacuum and/or wash hallways/stairs", standard: true, deep: true, moveInOut: true },
+  { task: "Dust window sills", standard: true, deep: true, moveInOut: true },
+  { task: "Dust baseboards", standard: true, deep: true, moveInOut: true },
+  { task: "Remove cobwebs", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe door handles & light switches", standard: true, deep: true, moveInOut: true },
+  { task: "Empty trash", standard: true, deep: true, moveInOut: true },
+  { task: "Basic organizing", standard: true, deep: true, moveInOut: true },
+  { task: "Wipe down/vacuum furniture", standard: false, deep: true, moveInOut: true },
+  { task: "Clean windows and blinds", standard: false, deep: true, moveInOut: true },
+  { task: "Hand wash baseboards", standard: false, deep: true, moveInOut: true },
+  { task: "Vacuum exterior air vents & return", standard: false, deep: true, moveInOut: true },
+  { task: "Sweep garage floors (if vacant)", standard: false, deep: false, moveInOut: true }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="cleaning checklist, service checklist, what's included, standard cleaning, deep cleaning, move in out cleaning">
+    <link rel="canonical" href="https://palmacleaningco.com/checklist">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+    <Navigation />
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-[#305048] text-white h-[400px] md:h-[450px] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Every Corner, Covered</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">From light refreshes to full move-out makeovers, here's exactly what our teams cover in each service. Every home gets our 48-hour satisfaction guarantee.</p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-8 py-3 rounded-md font-bold hover:bg-[#ff996f] transition duration-300 inline-block">
+                    VIEW PRICING
+                </a>
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <!-- Tabs -->
+                <div class="flex flex-wrap justify-center border-b mb-8 md:mb-10 overflow-x-auto">
+                    <button data-target="kitchen-checklist" class="tab-button active-tab text-base md:text-lg px-4 md:px-6 py-3 font-medium text-[#305048] border-b-2 border-[#305048] whitespace-nowrap">
+                        Kitchen
+                    </button>
+                    <button data-target="bedroom-checklist" class="tab-button text-base md:text-lg px-4 md:px-6 py-3 font-medium text-gray-500 hover:text-[#305048] border-b-2 border-transparent whitespace-nowrap">
+                        Bedroom
+                    </button>
+                    <button data-target="bathrooms-checklist" class="tab-button text-base md:text-lg px-4 md:px-6 py-3 font-medium text-gray-500 hover:text-[#305048] border-b-2 border-transparent whitespace-nowrap">
+                        Bathrooms
+                    </button>
+                    <button data-target="living-areas-checklist" class="tab-button text-base md:text-lg px-4 md:px-6 py-3 font-medium text-gray-500 hover:text-[#305048] border-b-2 border-transparent whitespace-nowrap">
+                        All Living Areas
+                    </button>
+                </div>
+
+                <!-- Tab Content Container -->
+                <div class="shadow-lg rounded-lg overflow-hidden border border-gray-100 overflow-x-auto">
+                    <!-- Kitchen Checklist -->
+                    <div id="kitchen-checklist" class="tab-content">
+                        <table class="w-full text-left min-w-[600px]">
+                            <thead class="bg-[#305048] text-white">
+                                <tr>
+                                    <th class="p-4 w-1/2 font-semibold">What we clean</th>
+                                    <th class="p-4 text-center font-semibold">Standard</th>
+                                    <th class="p-4 text-center font-semibold">Deep</th>
+                                    <th class="p-4 text-center font-semibold">Move In/Out</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                {kitchenItems.map((item, index) => (
+                                    <tr class={index % 2 === 0 ? "hover:bg-gray-50" : "bg-[#F4F7F6] hover:bg-gray-50"}>
+                                        <td class="p-4 text-sm md:text-base">{item.task}</td>
+                                        <td class="p-4 text-center">
+                                            {item.standard ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.deep ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.moveInOut ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Bedroom Checklist -->
+                    <div id="bedroom-checklist" class="tab-content hidden">
+                        <table class="w-full text-left min-w-[600px]">
+                            <thead class="bg-[#305048] text-white">
+                                <tr>
+                                    <th class="p-4 w-1/2 font-semibold">What we clean</th>
+                                    <th class="p-4 text-center font-semibold">Standard</th>
+                                    <th class="p-4 text-center font-semibold">Deep</th>
+                                    <th class="p-4 text-center font-semibold">Move In/Out</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                {bedroomItems.map((item, index) => (
+                                    <tr class={index % 2 === 0 ? "hover:bg-gray-50" : "bg-[#F4F7F6] hover:bg-gray-50"}>
+                                        <td class="p-4 text-sm md:text-base">{item.task}</td>
+                                        <td class="p-4 text-center">
+                                            {item.standard ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.deep ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.moveInOut ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Bathrooms Checklist -->
+                    <div id="bathrooms-checklist" class="tab-content hidden">
+                        <table class="w-full text-left min-w-[600px]">
+                            <thead class="bg-[#305048] text-white">
+                                <tr>
+                                    <th class="p-4 w-1/2 font-semibold">What we clean</th>
+                                    <th class="p-4 text-center font-semibold">Standard</th>
+                                    <th class="p-4 text-center font-semibold">Deep</th>
+                                    <th class="p-4 text-center font-semibold">Move In/Out</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                {bathroomItems.map((item, index) => (
+                                    <tr class={index % 2 === 0 ? "hover:bg-gray-50" : "bg-[#F4F7F6] hover:bg-gray-50"}>
+                                        <td class="p-4 text-sm md:text-base">{item.task}</td>
+                                        <td class="p-4 text-center">
+                                            {item.standard ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.deep ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.moveInOut ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- All Living Areas Checklist -->
+                    <div id="living-areas-checklist" class="tab-content hidden">
+                        <table class="w-full text-left min-w-[600px]">
+                            <thead class="bg-[#305048] text-white">
+                                <tr>
+                                    <th class="p-4 w-1/2 font-semibold">What we clean</th>
+                                    <th class="p-4 text-center font-semibold">Standard</th>
+                                    <th class="p-4 text-center font-semibold">Deep</th>
+                                    <th class="p-4 text-center font-semibold">Move In/Out</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                {livingAreasItems.map((item, index) => (
+                                    <tr class={index % 2 === 0 ? "hover:bg-gray-50" : "bg-[#F4F7F6] hover:bg-gray-50"}>
+                                        <td class="p-4 text-sm md:text-base">{item.task}</td>
+                                        <td class="p-4 text-center">
+                                            {item.standard ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.deep ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            {item.moveInOut ? (
+                                                <i class="fa-solid fa-circle-check text-xl md:text-2xl text-[#305048]"></i>
+                                            ) : (
+                                                <i class="fa-solid fa-circle-xmark text-xl md:text-2xl text-red-500"></i>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-4">Ready to Book Your Cleaning Service?</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                    See exactly what's included in each service and get a custom quote for your home.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-4 rounded-md font-bold hover:bg-[#ff996f] transition duration-300">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-[#305048] text-white px-10 py-4 rounded-md font-bold hover:bg-[#305048]/90 transition duration-300">
+                        Call (352) 764-4747
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-target');
+
+                    // Update tab styles
+                    tabs.forEach(t => {
+                        t.classList.remove('active-tab', 'text-[#305048]', 'border-[#305048]');
+                        t.classList.add('text-gray-500', 'border-transparent');
+                    });
+
+                    tab.classList.add('active-tab', 'text-[#305048]', 'border-[#305048]');
+                    tab.classList.remove('text-gray-500', 'border-transparent');
+
+                    // Update content visibility
+                    contents.forEach(content => {
+                        if (content.id === target) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
+
+
