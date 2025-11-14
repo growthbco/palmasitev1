@@ -108,7 +108,7 @@ const livingAreasItems = [
             <div class="container mx-auto px-6 max-w-6xl">
                 <!-- Tabs -->
                 <div class="flex flex-wrap justify-center border-b mb-10 md:mb-12 overflow-x-auto -mx-6 px-6">
-                    <button data-target="kitchen-checklist" class="tab-button active-tab text-sm md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 font-medium text-[#305048] border-b-2 border-[#305048] whitespace-nowrap hover:bg-gray-50 transition-colors duration-200 rounded-t-lg">
+                    <button data-target="kitchen-checklist" class="tab-button active-tab text-sm md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 font-bold text-[#305048] bg-[#FF8057] border-b-2 border-transparent whitespace-nowrap hover:bg-[#ff996f] transition-colors duration-200 rounded-t-lg">
                         Kitchen
                     </button>
                     <button data-target="bedroom-checklist" class="tab-button text-sm md:text-base lg:text-lg px-3 md:px-4 lg:px-6 py-2 md:py-3 font-medium text-gray-500 hover:text-[#305048] hover:border-[#305048] border-b-2 border-transparent whitespace-nowrap hover:bg-gray-50 transition-colors duration-200 rounded-t-lg">
@@ -126,7 +126,7 @@ const livingAreasItems = [
                 <div class="shadow-lg rounded-lg overflow-hidden border border-gray-100 overflow-x-auto">
                     <!-- Kitchen Checklist -->
                     <div id="kitchen-checklist" class="tab-content">
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto py-6 md:py-8">
                             <table class="w-full text-left min-w-[600px]">
                                 <thead class="bg-[#305048] text-white">
                                         <tr>
@@ -142,33 +142,33 @@ const livingAreasItems = [
                                             <td class="p-4 md:p-5 lg:p-6 text-sm md:text-base">{item.task}</td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.standard ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.deep ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.moveInOut ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
@@ -182,7 +182,7 @@ const livingAreasItems = [
 
                     <!-- Bedroom Checklist -->
                     <div id="bedroom-checklist" class="tab-content hidden">
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto py-6 md:py-8">
                             <table class="w-full text-left min-w-[600px]">
                                 <thead class="bg-[#305048] text-white">
                                         <tr>
@@ -198,33 +198,33 @@ const livingAreasItems = [
                                             <td class="p-4 md:p-5 lg:p-6 text-sm md:text-base">{item.task}</td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.standard ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.deep ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.moveInOut ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
@@ -238,7 +238,7 @@ const livingAreasItems = [
 
                     <!-- Bathrooms Checklist -->
                     <div id="bathrooms-checklist" class="tab-content hidden">
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto py-6 md:py-8">
                             <table class="w-full text-left min-w-[600px]">
                                 <thead class="bg-[#305048] text-white">
                                         <tr>
@@ -254,33 +254,33 @@ const livingAreasItems = [
                                             <td class="p-4 md:p-5 lg:p-6 text-sm md:text-base">{item.task}</td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.standard ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.deep ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.moveInOut ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
@@ -294,7 +294,7 @@ const livingAreasItems = [
 
                     <!-- All Living Areas Checklist -->
                     <div id="living-areas-checklist" class="tab-content hidden">
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto py-6 md:py-8">
                             <table class="w-full text-left min-w-[600px]">
                                 <thead class="bg-[#305048] text-white">
                                         <tr>
@@ -310,33 +310,33 @@ const livingAreasItems = [
                                             <td class="p-4 md:p-5 lg:p-6 text-sm md:text-base">{item.task}</td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.standard ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.deep ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
                                             </td>
                                             <td class="p-4 md:p-5 lg:p-6 text-center">
                                                 {item.moveInOut ? (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#305048] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#305048] shadow-sm">
                                                         <i class="fa-solid fa-check text-sm md:text-base lg:text-lg text-[#305048]"></i>
                                                     </span>
                                                 ) : (
-                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
+                                                    <span class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 aspect-square rounded-full bg-white border-2 border-[#FF8057] shadow-sm">
                                                         <i class="fa-solid fa-xmark text-sm md:text-base lg:text-lg text-[#FF8057]"></i>
                                                     </span>
                                                 )}
@@ -383,12 +383,12 @@ const livingAreasItems = [
 
                     // Update tab styles
                     tabs.forEach(t => {
-                        t.classList.remove('active-tab', 'text-[#305048]', 'border-[#305048]');
-                        t.classList.add('text-gray-500', 'border-transparent');
+                        t.classList.remove('active-tab', 'text-[#305048]', 'border-[#305048]', 'bg-[#FF8057]', 'font-bold');
+                        t.classList.add('text-gray-500', 'border-transparent', 'font-medium');
                     });
 
-                    tab.classList.add('active-tab', 'text-[#305048]', 'border-[#305048]');
-                    tab.classList.remove('text-gray-500', 'border-transparent');
+                    tab.classList.add('active-tab', 'text-[#305048]', 'bg-[#FF8057]', 'font-bold');
+                    tab.classList.remove('text-gray-500', 'border-transparent', 'font-medium');
 
                     // Update content visibility
                     contents.forEach(content => {
