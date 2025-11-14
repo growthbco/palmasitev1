@@ -1,0 +1,209 @@
+---
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Thank You | Palma Cleaning - Ocala Cleaning Experts";
+const description = "Thanks for reaching out to Palma Cleaning. Here's what happens next and how to get in touch if you need immediate assistance with your cleaning service.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://palmacleaningco.com/thank-you">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 py-20 max-w-4xl text-center">
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Thank you</p>
+                <h1 class="text-4xl md:text-5xl font-bold mt-4">We received your request</h1>
+                <p class="mt-6 text-lg text-gray-600">Our coordinator is reviewing the details now. Expect a confirmation call or text within one business day (often sooner). If you need immediate help, feel free to reach out directly.</p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 inline-flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        Call (352) 764-4747
+                    </a>
+                    <a href="/book-now" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300 inline-flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        Update booking details
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What happens next -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="max-w-3xl text-center mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">What happens next</h2>
+                    <p class="mt-4 text-gray-600">We keep the process simple so you always know what to expect.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-white border border-[#FF8057] text-[#FF8057] font-bold flex items-center justify-center text-xl">1</div>
+                        <h3 class="mt-6 text-xl font-semibold">Personal confirmation</h3>
+                        <p class="mt-3 text-gray-600 text-sm">We verify the service type, home details, and scheduling preferences you submitted.</p>
+                    </div>
+                    <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-white border border-[#FF8057] text-[#FF8057] font-bold flex items-center justify-center text-xl">2</div>
+                        <h3 class="mt-6 text-xl font-semibold">Schedule & reminders</h3>
+                        <p class="mt-3 text-gray-600 text-sm">We confirm your appointment via call/text/email and send reminders so you’re never left guessing.</p>
+                    </div>
+                    <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 shadow-sm text-center">
+                        <div class="w-14 h-14 mx-auto rounded-full bg-white border border-[#FF8057] text-[#FF8057] font-bold flex items-center justify-center text-xl">3</div>
+                        <h3 class="mt-6 text-xl font-semibold">Day-of experience</h3>
+                        <p class="mt-3 text-gray-600 text-sm">Our trusted team arrives on time with everything required. We follow up afterwards to make sure you’re thrilled.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expectations -->
+        <section class="py-20 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">What to expect from us</h2>
+                    <p class="mt-4 text-white/80">Here’s how we make the transition from booking to cleaning effortless.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Fast follow-up</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-white/80">Weekday submissions are typically confirmed within a few hours. Evening or weekend messages are returned the next business morning.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">We respect your home</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-white/80">Background-checked techs, eco-friendly products on request, shoe covers, and a 48-hour satisfaction guarantee with every visit.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-message"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Open communication</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-white/80">Need to change a room focus, add the inside of an appliance, or adjust access instructions? Text or email us anytime.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Tailored checklist</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-white/80">We customize every visit using the checklist you selected, plus any priorities you shared in the form.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Helpful links -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">While you wait</h2>
+                    <p class="mt-4 text-gray-600">Browse these quick resources or share additional details so we can personalize your visit.</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="/checklist" class="group bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 text-center shadow-sm hover:-translate-y-1 transition">
+                        <i class="fa-solid fa-list-check text-[#FF8057] text-3xl"></i>
+                        <h3 class="mt-4 text-xl font-semibold">Review the checklist</h3>
+                        <p class="mt-3 text-gray-600 text-sm">See what’s included in standard, deep, and move-in/move-out services.</p>
+                        <span class="mt-4 inline-flex items-center gap-2 text-[#305048] font-semibold group-hover:text-[#FF8057] transition text-sm">
+                            View checklist
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <a href="/services" class="group bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 text-center shadow-sm hover:-translate-y-1 transition">
+                        <i class="fa-solid fa-broom text-[#FF8057] text-3xl"></i>
+                        <h3 class="mt-4 text-xl font-semibold">Explore services</h3>
+                        <p class="mt-3 text-gray-600 text-sm">From luxury estates to equestrian properties and office cleaning.</p>
+                        <span class="mt-4 inline-flex items-center gap-2 text-[#305048] font-semibold group-hover:text-[#FF8057] transition text-sm">
+                            See services
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </a>
+                    <a href="/contact" class="group bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-8 text-center shadow-sm hover:-translate-y-1 transition">
+                        <i class="fa-solid fa-envelope-open-text text-[#FF8057] text-3xl"></i>
+                        <h3 class="mt-4 text-xl font-semibold">Share more details</h3>
+                        <p class="mt-3 text-gray-600 text-sm">Need to send gate instructions, photos, or add-ons? Drop us a quick note.</p>
+                        <span class="mt-4 inline-flex items-center gap-2 text-[#305048] font-semibold group-hover:text-[#FF8057] transition text-sm">
+                            Contact us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Need help -->
+        <section class="py-20 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Need help sooner?</p>
+                <h2 class="mt-4 text-3xl md:text-4xl font-bold">We’re here Monday–Friday, 8 AM to 6 PM</h2>
+                <p class="mt-4 text-gray-600">Text, call, or email if you want to update your service, request same-day availability, or coordinate key access.</p>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-[#E3EAE8]/60">
+                        <i class="fa-solid fa-phone text-[#FF8057] text-2xl"></i>
+                        <p class="mt-3 text-sm text-gray-500 uppercase tracking-widest">Call or text</p>
+                        <a href="tel:+13527644747" class="mt-2 text-lg font-semibold hover:text-[#FF8057] transition">(352) 764-4747</a>
+                        <p class="mt-1 text-sm text-gray-600">Weekday response within hours</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-[#E3EAE8]/60">
+                        <i class="fa-solid fa-envelope text-[#FF8057] text-2xl"></i>
+                        <p class="mt-3 text-sm text-gray-500 uppercase tracking-widest">Email</p>
+                        <a href="mailto:hello@palmacleaningco.com" class="mt-2 text-lg font-semibold hover:text-[#FF8057] transition">hello@palmacleaningco.com</a>
+                        <p class="mt-1 text-sm text-gray-600">Replies within 24 hours</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-md border border-[#E3EAE8]/60">
+                        <i class="fa-solid fa-calendar-check text-[#FF8057] text-2xl"></i>
+                        <p class="mt-3 text-sm text-gray-500 uppercase tracking-widest">Book online</p>
+                        <a href="/book-now" class="mt-2 text-lg font-semibold hover:text-[#FF8057] transition">Reserve a spot</a>
+                        <p class="mt-1 text-sm text-gray-600">Instant scheduling 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl text-center border border-[#E3EAE8]/60 rounded-3xl shadow-2xl p-10">
+                <h2 class="text-3xl font-bold">We can’t wait to care for your home</h2>
+                <p class="mt-4 text-gray-600">Thank you for choosing Palma Cleaning. If anything changes before we connect, let us know so we can tailor your visit perfectly.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Make another request</a>
+                    <a href="/" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Back to homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</body>
+</html>
+
