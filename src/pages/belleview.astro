@@ -4,14 +4,120 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "Belleview Cleaning Services FL - Small Town House Cleaning | Palma Cleaning";
 const description = "Professional house cleaning services for Belleview Florida residents. Small town charm with big city service quality. Serving families, professionals, and retirees in Marion County.";
+
+const services = [
+  {
+    icon: "fa-solid fa-broom",
+    title: "Family Home Cleaning",
+    description: "Regular maintenance cleaning designed for Belleview's busy families and working professionals.",
+    items: [
+      "Flexible scheduling for school activities",
+      "Child-safe cleaning products",
+      "Homework area organization",
+      "Pet-friendly service options",
+      "Community event preparation"
+    ],
+    link: "/standard-cleaning"
+  },
+  {
+    icon: "fa-solid fa-sparkles",
+    title: "Small Town Deep Clean",
+    description: "Comprehensive cleaning that gives Belleview homes the thorough attention they deserve.",
+    items: [
+      "Traditional home feature care",
+      "Screen enclosure cleaning",
+      "Seasonal deep sanitization",
+      "Move-in preparation",
+      "Holiday readiness service"
+    ],
+    link: "/deep-cleaning"
+  },
+  {
+    icon: "fa-solid fa-users",
+    title: "Community-Focused Service",
+    description: "Personalized cleaning that understands Belleview's small-town values and community connections.",
+    items: [
+      "Neighbor referral rewards",
+      "Flexible service adjustments",
+      "Local community support",
+      "Trusted relationship building",
+      "Emergency cleaning response"
+    ],
+    link: "/services"
+  }
+];
+
+const features = [
+  {
+    icon: "fa-solid fa-heart",
+    title: "Small Town Service",
+    description: "Friendly, relationship-based cleaning pros"
+  },
+  {
+    icon: "fa-solid fa-shield-alt",
+    title: "Licensed & Insured",
+    description: "Peace of mind for every visit"
+  },
+  {
+    icon: "fa-solid fa-user-check",
+    title: "Background Checked",
+    description: "Trusted professionals in your home"
+  },
+  {
+    icon: "fa-solid fa-hand-holding-heart",
+    title: "Community Trusted",
+    description: "4+ years serving Belleview"
+  }
+];
+
+const stats = [
+  { number: "35+", label: "Belleview Homes" },
+  { number: "4", label: "Years Serving Community" },
+  { number: "5★", label: "Average Rating" }
+];
+
+const communityInsights = [
+  {
+    title: "Growing Community Character",
+    description: "Belleview has grown from 4,492 residents in 2010 to 5,982 today. We adapt our services to families, professionals, and retirees who love the city's small-town charm."
+  },
+  {
+    title: "Housing & Lifestyle",
+    description: "Traditional Florida architecture, established landscaping, and outdoor living spaces require thoughtful cleaning routines that protect property value."
+  },
+  {
+    title: "Working Families",
+    description: "With a median age of 44 and 84% white-collar workforce, our flexible scheduling keeps up with busy commutes, school events, and community commitments."
+  },
+  {
+    title: "Transportation Corridors",
+    description: "Located along U.S. Routes 27/301/441, Belleview homes face extra dust from traffic and rural surroundings. We adjust cleaning frequencies accordingly."
+  }
+];
+
+const seasonalNotes = [
+  {
+    icon: "fa-solid fa-sun",
+    title: "Spring & Summer",
+    description: "Outdoor events, sports, and vacations mean more visitors and community gatherings. We prep homes before parties and help catch up after busy weeks."
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Fall & Winter",
+    description: "Back-to-school routines and holiday entertaining keep households busy. We handle deep cleanings, guest prep, and post-event resets."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -19,13 +125,8 @@ const description = "Professional house cleaning services for Belleview Florida 
     <meta name="keywords" content="Belleview cleaning services, Belleview house cleaning, Marion County cleaning, small town cleaning service, Belleview FL cleaning">
     <meta name="robots" content="index, follow">
     
-    <link rel="canonical" href="https://palmacleaningco.com/belleview-cleaning">
-    
-    <!-- Favicon -->
+    <link rel="canonical" href="https://palmacleaningco.com/belleview">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Belleview Service Schema -->
     <script type="application/ld+json">
@@ -87,302 +188,201 @@ const description = "Professional house cleaning services for Belleview Florida 
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Belleview Cleaning Services</h1>
-                <p class="hero-subtitle">Small Town Charm, Professional Service</p>
-                <p class="hero-description">
-                    Professional house cleaning services for Belleview's growing community of families, 
-                    professionals, and retirees. Experience the personal touch that only a local service can provide.
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white">
+            <div class="container mx-auto px-6 py-24 text-center max-w-4xl">
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">City with Small Town Charm</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4">Belleview Cleaning Services</h1>
+                <p class="mt-6 text-white/90 text-lg">
+                    Professional house cleaning for Belleview's families, professionals, and retirees. Local service, trusted team, and community-first care.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Book Now</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300">
+                        Call (352) 764-4747
+                    </a>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-heart"></i>
+                <p class="mt-6 text-white/70 text-sm">Serving Belleview & Marion County • Licensed & Insured • 48-hour guarantee</p>
+        </div>
+    </section>
+
+        <!-- Why Choose -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Belleview chooses Palma Cleaning</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Small-town values with professional standards</h2>
+                    <p class="text-gray-600">
+                        Belleview residents count on us for punctual pros, respectful communication, and the spotless results you need to keep up with family life, commutes, and community events.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Named after the French phrase for “beautiful view,” Belleview is a growing community where neighbors know each other by name. We deliver that same personal touch with modern systems, reminders, and detailed checklists so you always know what to expect.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Whether you're raising a family, running a business, or enjoying retirement, we adapt to your schedule and home style. From screened lanais and pool decks to homework stations and guest suites, we take care of the spaces that matter most.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            {features.map((feature) => (
+                                <div class="bg-[#F4F7F6] rounded-xl p-4 text-center border border-[#E3EAE8]/60">
+                                    <div class="w-12 h-12 mx-auto rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-3">
+                                        <i class={feature.icon}></i>
+                        </div>
+                                    <p class="text-sm font-semibold">{feature.title}</p>
+                                    <p class="text-xs text-gray-600 mt-1">{feature.description}</p>
+                        </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-8">
+                        {stats.map((stat) => (
+                            <div class="bg-[#305048] text-white rounded-2xl p-8 text-center shadow-xl">
+                                <div class="text-5xl font-bold text-[#FF8057] mb-2">{stat.number}</div>
+                                <p class="text-white/90 font-semibold uppercase tracking-wide">{stat.label}</p>
+                </div>
+                        ))}
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Belleview Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Belleview Community Cleaning: "City with Small Town Charm"</h2>
-                    <p class="about-intro">
-                        Belleview embodies the essence of Florida small-town living, where a growing population of 5,982 residents enjoys the perfect balance of community charm and modern convenience. Our cleaning services reflect these same values - personal, reliable, and tailored to the unique character of Marion County's most welcoming community.
-                    </p>
-                    <p>
-                        Named from the French words meaning "beautiful view," Belleview truly lives up to its name with tree-lined streets, established neighborhoods, and the friendly atmosphere that makes neighbors feel like family. Since 2020, Palma Cleaning has been proud to serve Belleview residents who value quality, trust, and the personal attention that comes with choosing a local, family-owned cleaning service over corporate alternatives.
-                    </p>
-                    <p>
-                        Located just 10 miles southeast of Ocala along major transportation corridors including U.S. Routes 27, 301, and 441, Belleview offers residents the best of both worlds - small town living with easy access to metropolitan amenities. Our cleaning services reflect this same philosophy, providing big-city professionalism with the personal touch and community connection that Belleview residents expect and deserve.
-                    </p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-heart"></i>
-                            <span>Small Town Service</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-user-check"></i>
-                            <span>Background Checked Staff</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-handshake"></i>
-                            <span>Community Trusted</span>
-                        </div>
-                    </div>
+        <!-- Services -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Belleview cleaning packages</h2>
+                    <p class="mt-4 text-gray-600">Customized plans for starter homes, established neighborhoods, and acreage properties.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>35+</h3>
-                        <p>Belleview Homes</p>
-                    </div>
-                    <div class="stat">
-                        <h3>4</h3>
-                        <p>Years Serving Community</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5</h3>
-                        <p>Star Reviews</p>
-                    </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 hover:-translate-y-1 transition duration-300">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
                 </div>
+                            <h3 class="text-xl font-semibold text-[#305048]">{service.title}</h3>
+                            <p class="mt-3 text-gray-600 text-sm">{service.description}</p>
+                            <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href={service.link} class="mt-6 inline-flex items-center gap-2 text-[#305048] font-semibold hover:text-[#FF8057] transition text-sm">
+                                Learn more
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Insights -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Belleview community insights</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">We live the pace of Belleview life</h2>
+                    <p class="mt-4 text-gray-600">Local data helps us tailor service frequency, checklists, and communication for every household.</p>
+                        </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {communityInsights.map((item) => (
+                        <div class="bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl p-6 hover:shadow-lg transition duration-300">
+                            <h3 class="text-lg font-semibold text-[#305048] mb-2">{item.title}</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">{item.description}</p>
+                        </div>
+                    ))}
             </div>
         </div>
     </section>
 
-    <!-- Comprehensive Belleview Local Content -->
-    <section style="background: white; padding: 4rem 0;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto; line-height: 1.7; color: #555;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; text-align: center;">Belleview Community & Local Living Expertise</h2>
-                
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Understanding Belleview's Growing Community Character</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's <strong>steady growth from 4,492 residents in 2010 to 5,982 in 2025</strong> reflects a thriving community that attracts families, young professionals, and retirees seeking small-town charm with modern amenities. This 1.8% annual growth rate creates a dynamic environment where established neighborhoods welcome new residents, creating unique cleaning needs that bridge traditional home maintenance with contemporary living standards.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    The community's <strong>diverse demographic mix</strong> includes 59.62% family households and 40.38% non-family units, creating a varied residential landscape where our cleaning services adapt to everything from busy family homes with children to professional couples and retiree households. This diversity requires flexible service options and deep understanding of different lifestyle needs within Belleview's close-knit community structure.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Marion County School District's above-average ratings</strong> make Belleview particularly attractive to families with school-age children, creating specific cleaning challenges around homework areas, play spaces, and the increased activity that comes with active family living. Our services support busy parents who value both cleanliness and the time savings that professional cleaning provides for family activities and community involvement.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Belleview Housing Characteristics & Cleaning Considerations</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's <strong>median home value of $214,300</strong> reflects an affordable housing market where residents take pride in maintaining their properties as significant investments. The fact that 53.36% of properties are purchased with mortgages and average monthly housing costs reach $912 indicates a community of homeowners who understand the importance of proper maintenance and cleaning to protect their property values over time.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The community's <strong>suburban rural mix atmosphere</strong> means many Belleview homes feature larger lots, established landscaping, and outdoor living spaces that require specialized attention. Florida's climate combined with more spacious properties creates unique cleaning challenges around screen enclosures, pool areas, and outdoor furniture that must withstand year-round use while maintaining the attractive appearance that characterizes Belleview neighborhoods.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    Many Belleview homes reflect <strong>traditional Florida architecture</strong> with features like tile roofs, stucco exteriors, and covered porches that create distinctive cleaning needs. Our team understands the proper care of these materials and architectural features, ensuring that cleaning methods enhance rather than damage the characteristic elements that give Belleview homes their charm and value.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Demographics & Lifestyle Service Adaptations</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's <strong>median age of 44</strong> creates a community where active adults balance career demands, family responsibilities, and community involvement. This demographic sweet spot means our cleaning services often support busy professionals who participate actively in local events, school activities, and community organizations while maintaining homes that reflect their pride in Belleview's reputation and character.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The community's <strong>84.09% white-collar workforce</strong> with an average commute time of 28.8 minutes indicates residents who value their time and understand the benefits of professional services that allow them to focus on careers and family rather than household maintenance. Our scheduling flexibility accommodates these working professionals while ensuring homes remain clean and welcoming for family life and entertaining.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>High home ownership rates</strong> in Belleview mean residents are invested in their properties and community long-term, creating demand for consistent, reliable cleaning services that support property maintenance goals. Our relationship-based approach aligns with Belleview's small-town values, where service providers become trusted community partners rather than anonymous vendors.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Transportation Corridor Benefits & Environmental Factors</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's position along <strong>major transportation routes including U.S. Routes 27, 301, and 441</strong> provides excellent accessibility while also creating specific environmental challenges for home maintenance. Heavy traffic corridors generate additional dust and debris that can affect homes, particularly those closer to these major thoroughfares, requiring adjusted cleaning approaches and schedules to maintain pristine conditions.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The <strong>10-mile proximity to Ocala</strong> means many Belleview residents commute to larger employment centers while returning to the peace and quiet of small-town living each evening. This lifestyle pattern creates specific cleaning needs around entryways, mudrooms, and areas where work clothes and daily accumulation of city dust require regular attention to maintain the clean, comfortable atmosphere that makes home a retreat.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    Central Florida's <strong>climate patterns affect Belleview homes</strong> throughout the year, with seasonal variations in pollen, humidity, and storm activity that require adaptive cleaning approaches. Our local expertise helps Belleview residents manage these environmental factors while maintaining homes that remain comfortable and welcoming regardless of Florida's weather challenges.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Economic Considerations & Value-Based Service</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's <strong>median household income of $48,252</strong> reflects a community of working families who make careful decisions about service investments. Our competitive pricing and flexible service options ensure that professional cleaning remains accessible to Belleview residents who want quality results without compromising their household budgets. We understand that in smaller communities, value and reliability matter more than flashy marketing.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The presence of <strong>11.03% entrepreneurs</strong> in Belleview's workforce creates opportunities to support local business owners who understand the challenges of running a service-based business. Many of our Belleview clients are fellow small business owners who appreciate the attention to detail and customer service focus that comes with working with a locally owned cleaning company that shares their community values.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Seasonal Patterns Specific to Belleview</h3>
-                
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-sun" style="margin-right: 0.5rem;"></i>Spring & Summer Community Activity (March - September)</h4>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Increased community engagement</strong> during warmer months brings Belleview residents together for outdoor events, school activities, and neighborhood gatherings. These social seasons create higher demand for home preparation cleaning, post-event cleanup, and maintaining homes that frequently welcome neighbors and friends. Our flexible scheduling accommodates these community-focused lifestyles.
-                    </p>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Summer vacation patterns</strong> for families with school-age children mean homes experience different usage patterns, from deep cleaning before family trips to catch-up cleaning after vacation returns. Our seasonal service adjustments help Belleview families manage these transitions while maintaining clean, organized homes throughout the busy summer months.
-                    </p>
+        <!-- Seasonal needs -->
+        <section class="py-20 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Seasonal support</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Cleaning plans for Belleview seasons</h2>
+                    <p class="mt-4 text-white/80">From spring festivals to holiday traditions, we build routines that keep up with your calendar.</p>
                 </div>
-
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-leaf" style="margin-right: 0.5rem;"></i>Fall & Winter Residential Focus (October - February)</h4>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Back-to-school season</strong> creates intensive cleaning needs as families establish routines, organize study areas, and prepare homes for the structured schedules that come with the academic year. Our services help busy Belleview parents maintain clean, organized environments that support family success and well-being during these demanding months.
-                    </p>
-                    <p>
-                        <strong>Holiday entertaining</strong> takes on special significance in Belleview's close-knit community, where neighbors frequently gather for celebrations and seasonal events. Our pre-holiday cleaning services ensure that Belleview homes are ready to welcome family and friends, while post-holiday cleanup helps residents transition smoothly back to regular routines.
-                    </p>
-                </div>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Community Values & Service Philosophy</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's motto <strong>"City with Small Town Charm"</strong> perfectly captures the community spirit that guides our service approach. In Belleview, neighbors know each other by name, local businesses are valued, and service providers are expected to contribute positively to the community fabric. Our commitment goes beyond cleaning to supporting the values and relationships that make Belleview such a desirable place to call home.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The community's <strong>conservative-leaning population</strong> often values traditional approaches to business relationships - honesty, reliability, and quality workmanship delivered with personal attention and fair pricing. Our old-fashioned commitment to customer service and community involvement aligns perfectly with these expectations, creating lasting relationships built on trust and consistent performance.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Property Investment & Community Standards</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Above-average car ownership</strong> (2 cars per household) and high homeownership rates indicate Belleview residents are invested in their community and properties for the long term. This stability creates demand for consistent, reliable cleaning services that support property maintenance goals while respecting the community relationships and reputation that matter in smaller towns.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    Belleview's <strong>growing population and stable housing market</strong> create opportunities for residents to build equity and community connections over time. Our cleaning services support these goals by helping maintain properties in excellent condition while freeing up time for residents to participate in the community activities and relationships that make Belleview such a special place to live.
-                </p>
-
-                <div style="background: #e8f5f2; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #2f5047; margin-bottom: 1rem; text-align: center;">Why Belleview Residents Choose Palma Cleaning</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-heart" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Small Town Values</h5>
-                            <p style="font-size: 0.9rem;">Personal service and community commitment that reflects Belleview's friendly, neighbor-helping-neighbor atmosphere</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-handshake" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Trusted Local Service</h5>
-                            <p style="font-size: 0.9rem;">4+ years building relationships with Belleview families and understanding unique community needs</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-dollar-sign" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Fair Value Pricing</h5>
-                            <p style="font-size: 0.9rem;">Competitive rates that respect working families' budgets while delivering professional quality results</p>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {seasonalNotes.map((note) => (
+                        <div class="bg-white/10 border border-white/20 rounded-2xl p-8 backdrop-blur">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class={note.icon}></i>
                     </div>
+                            <h3 class="text-xl font-semibold">{note.title}</h3>
+                            <p class="mt-3 text-white/80 text-sm leading-relaxed">{note.description}</p>
                 </div>
+                    ))}
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Belleview Cleaning Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-broom"></i>
-                    </div>
-                    <h3>Family Home Cleaning</h3>
-                    <p>Regular maintenance cleaning designed for Belleview's busy families and working professionals.</p>
-                    <ul class="service-list">
-                        <li>Flexible scheduling for school activities</li>
-                        <li>Child-safe cleaning products</li>
-                        <li>Homework area organization</li>
-                        <li>Pet-friendly service options</li>
-                        <li>Community event preparation</li>
-                    </ul>
+        <!-- Contact / Form -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Book your Belleview cleaning</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Tell us about your home</h2>
+                    <p class="mt-4 text-gray-600">Same-day responses Monday–Friday. Licensed, insured, and trusted by Belleview neighbors.</p>
                 </div>
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-sparkles"></i>
-                    </div>
-                    <h3>Small Town Deep Clean</h3>
-                    <p>Comprehensive cleaning that gives Belleview homes the thorough attention they deserve.</p>
-                    <ul class="service-list">
-                        <li>Traditional home feature care</li>
-                        <li>Screen enclosure cleaning</li>
-                        <li>Seasonal deep sanitization</li>
-                        <li>Move-in preparation</li>
-                        <li>Holiday readiness service</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community-Focused Service</h3>
-                    <p>Personalized cleaning that understands Belleview's small-town values and community connections.</p>
-                    <ul class="service-list">
-                        <li>Neighbor referral rewards</li>
-                        <li>Flexible service adjustments</li>
-                        <li>Local community support</li>
-                        <li>Trusted relationship building</li>
-                        <li>Emergency cleaning response</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Book Your Belleview Cleaning Service</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
                         <div>
-                            <h4>Call or Text</h4>
-                            <p><a href="tel:+13527644747" style="text-decoration: none; color: inherit;">(352) 764-4747</a></p>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Call or text</p>
+                                <a href="tel:+13527644747" class="text-2xl font-bold text-[#305048] hover:text-[#FF8057] transition">(352) 764-4747</a>
+                                <p class="text-gray-600 text-sm">Weekday response within hours</p>
+                            </div>
                         </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
-                            <p>hello@palmacleaningco.com</p>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Email</p>
+                                <a href="mailto:hello@palmacleaningco.com" class="text-lg font-semibold text-[#305048] hover:text-[#FF8057] transition">hello@palmacleaningco.com</a>
+                                <p class="text-gray-600 text-sm">Replies within 24 hours</p>
+                            </div>
                         </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-map-marker-alt"></i>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Service Area</h4>
-                            <p>Belleview & All Marion County</p>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Service area</p>
+                                <p class="text-lg font-semibold">Belleview & Marion County</p>
+                                <p class="text-gray-600 text-sm">Local team, background checked</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7F6] rounded-xl p-4 border border-dashed border-[#305048]/30 text-sm text-gray-600">
+                            ✓ Small town service ✓ Licensed & insured ✓ Community trusted
                         </div>
                     </div>
-                </div>
-                <div class="contact-form" id="quoteForm">
-                    <h3>Belleview Cleaning Quote</h3>
-                    
+                    <div class="bg-white rounded-2xl p-4 shadow-xl border border-[#E3EAE8]/60">
                     <iframe
                         src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
-                        style="width:100%;height:844px;border:none;border-radius:10px"
-                        id="belleview-form"
+                            class="w-full h-[844px] rounded-xl border-0"
                         data-layout="{'id':'INLINE'}"
                         data-trigger-type="alwaysShow"
                         data-trigger-value=""
@@ -395,17 +395,32 @@ const description = "Professional house cleaning services for Belleview Florida 
                         data-form-id="aSlLmaqsq5CZ1gocNBlC"
                         title="Belleview Contact Form">
                     </iframe>
-                    
-                    <p class="form-note">✓ Small town service ✓ Licensed & insured ✓ Community trusted</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-4xl border border-[#E3EAE8]/60 rounded-3xl shadow-2xl p-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Ready for a locally loved cleaning team?</h2>
+                <p class="mt-4 text-gray-600">
+                    Belleview residents trust Palma Cleaning for respectful service, reliable scheduling, and homes that feel peaceful after every visit.
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Book now</a>
+                    <a href="/" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300 text-sm uppercase">Back to home</a>
             </div>
         </div>
     </section>
+    </main>
 
-    <!-- Footer -->
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
-    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
 </body>
 </html>

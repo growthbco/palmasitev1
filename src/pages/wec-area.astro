@@ -4,14 +4,120 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import GTMHead from '../components/GTMHead.astro';
 import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
 const title = "World Equestrian Center Area Cleaning Services - Horse Property & Luxury Home Specialists | Palma Cleaning";
 const description = "Professional cleaning services for World Equestrian Center area properties in Ocala FL. Specialized equestrian facility and luxury home cleaning near WEC. Horse barn, stall, and residential cleaning experts.";
+
+const services = [
+  {
+    icon: "fa-solid fa-horse",
+    title: "Equestrian Facility Cleaning",
+    description: "Horse-safe barn, stall, tack room, and training facility cleaning tailored to WEC standards.",
+    items: [
+      "Stall deep sanitizing & bedding reset",
+      "Barn aisle, feed & wash area detailing",
+      "Tack room and gear organization",
+      "Arena-side dust mitigation",
+      "Safe products for horses & pets"
+    ],
+    link: "/stone-creek-equestrian-cleaning"
+  },
+  {
+    icon: "fa-solid fa-crown",
+    title: "Luxury Estate Cleaning",
+    description: "Concierge-style care for multimillion-dollar residences surrounding WEC.",
+    items: [
+      "Custom millwork & premium surfaces",
+      "Trophy rooms & viewing lounges",
+      "Outdoor pavilion & lanai care",
+      "Event-ready guest suites",
+      "Discrete, uniformed staff"
+    ],
+    link: "/standard-cleaning"
+  },
+  {
+    icon: "fa-solid fa-trophy",
+    title: "Event & Competition Prep",
+    description: "Scalable teams for show weeks, sponsor entertaining, and off-season resets.",
+    items: [
+      "Pre-competition detailing",
+      "Post-event turnover",
+      "Sponsor & rider hospitality areas",
+      "Short-notice scheduling",
+      "Coordination with barn managers"
+    ],
+    link: "/services"
+  }
+];
+
+const features = [
+  {
+    icon: "fa-solid fa-horse-head",
+    title: "Equestrian Experts",
+    description: "4+ years serving WEC properties"
+  },
+  {
+    icon: "fa-solid fa-flask",
+    title: "Horse-Safe Products",
+    description: "Materials vetted with barn managers"
+  },
+  {
+    icon: "fa-solid fa-crown",
+    title: "Luxury Estate Trained",
+    description: "Custom finishes & art collections"
+  },
+  {
+    icon: "fa-solid fa-calendar-check",
+    title: "Event Flexibility",
+    description: "Competition-ready scheduling"
+  }
+];
+
+const stats = [
+  { number: "25+", label: "WEC Properties" },
+  { number: "4", label: "Years Equestrian Experience" },
+  { number: "100%", label: "Horse-Safe Cleaning" }
+];
+
+const insights = [
+  {
+    title: "3,000-acre lifestyle",
+    description: "The WEC campus blends world-class arenas with luxury homes. Properties within 5 miles face arena dust, show traffic, and constant guest turnover."
+  },
+  {
+    title: "Luxury + working barns",
+    description: "Many estates pair marble kitchens with 20+ stall barns. We protect finishes indoors while keeping active equestrian spaces sanitary."
+  },
+  {
+    title: "Event-driven rhythms",
+    description: "Show weeks demand rapid turnarounds, rider accommodations, and extra staffing. Off-season is ideal for deep projects and renovations."
+  },
+  {
+    title: "Air & health standards",
+    description: "We manage dust control, HVAC filtration, and ventilation to protect riders, guests, and horses year-round."
+  }
+];
+
+const seasonalNotes = [
+  {
+    icon: "fa-solid fa-medal",
+    title: "Competition Season (Oct–Apr)",
+    description: "Peak events bring international riders, sponsors, and media. We scale teams for daily service, VIP entertaining, and post-show resets."
+  },
+  {
+    icon: "fa-solid fa-sun",
+    title: "Off-Season (May–Sep)",
+    description: "Ideal for deep cleaning barns, resurfacing guest suites, and prepping estates for the next circuit while managing Florida humidity."
+  }
+];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <GTMHead />
+    <GlobalHead />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
@@ -20,12 +126,7 @@ const description = "Professional cleaning services for World Equestrian Center 
     <meta name="robots" content="index, follow">
     
     <link rel="canonical" href="https://palmacleaningco.com/wec-area">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/styles-clean.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- WEC Area Service Schema -->
     <script type="application/ld+json">
@@ -87,322 +188,230 @@ const description = "Professional cleaning services for World Equestrian Center 
     }
     </script>
 </head>
-<body>
+<body class="bg-white font-poppins text-[#305048]">
     <GTMBody />
     <Navigation />
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">World Equestrian Center Area Cleaning</h1>
-                <p class="hero-subtitle">Horse Property & Luxury Home Specialists</p>
-                <p class="hero-description">
-                    Professional cleaning services for the World Equestrian Center area's unique combination of 
-                    luxury residential properties and active equestrian facilities. The only cleaning service specializing in horse country estates.
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#1f2f2a] text-white">
+            <div class="container mx-auto px-6 py-24 text-center max-w-5xl">
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">World Equestrian Center Area</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4">Horse Property & Luxury Estate Cleaning</h1>
+                <p class="mt-6 text-white/85 text-lg">
+                    Trusted by multi-million dollar estates within 5 miles of WEC. We combine concierge-level residential service with equestrian facility expertise.
                 </p>
-                <div class="hero-buttons">
-                    <a href="/contact" class="btn btn-primary">Book Now</a>
-                    <a href="tel:+13527644747" class="btn btn-secondary">Call (352) 764-4747</a>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">
+                        Request Quote
+                    </a>
+                    <a href="tel:+13527644747" class="border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300">
+                        Call (352) 764-4747
+                    </a>
                 </div>
+                <p class="mt-6 text-sm text-white/70">Licensed & insured • Horse-safe products • NDA available on request</p>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-horse-head"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About WEC Area Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>World Equestrian Center Area: America's Premier Horse Country Destination</h2>
-                    <p class="about-intro">
-                        The World Equestrian Center area represents the pinnacle of luxury equestrian living, where multi-million dollar estates combine elegant residential spaces with world-class horse facilities. As the largest equestrian complex in the United States spanning 3,000 acres, WEC creates a unique environment that demands specialized cleaning expertise.
-                    </p>
-                    <p>
-                        Located in the heart of Marion County's horse capital, the WEC area attracts discerning property owners who invest from $1.6 million to over $18 million in estates that seamlessly blend luxury home living with professional-grade equestrian facilities. Since 2020, Palma Cleaning has been the trusted cleaning service for WEC area properties, understanding both the sophisticated residential standards and the unique challenges of maintaining facilities where horses and humans coexist.
-                    </p>
-                    <p>
-                        The World Equestrian Estates development features 300 farm estates on multi-acre lots, each presenting distinct cleaning challenges that combine luxury residential maintenance with equestrian facility care. Our specialized team understands how to maintain these valuable investments while addressing the specific requirements of properties that must meet both residential comfort standards and equestrian operational needs.
-                    </p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-horse"></i>
-                            <span>Equestrian Facility Experts</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-crown"></i>
-                            <span>Luxury Home Specialists</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-certificate"></i>
-                            <span>Horse-Safe Products</span>
-                        </div>
-                    </div>
+        <!-- Why choose -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why WEC owners trust us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Luxury home polish with barn-level know-how</h2>
+                    <p class="text-gray-600">We respect access protocols, coordinate with barn managers, and protect every surface— from marble foyers to European stalls.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>25+</h3>
-                        <p>WEC Area Properties</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            The World Equestrian Center spans 3,000 acres of arenas, hospitality, and private estates. Properties here battle arena dust, event traffic, and Florida humidity while showcasing impeccable interiors for riders, sponsors, and guests.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our team has four consecutive show seasons under its belt. We understand how to time services around turnout schedules, manage separate teams for house vs. barn, and deliver flawless results while keeping horses calm.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            {features.map((feature) => (
+                                <div class="bg-[#F4F7F6] rounded-xl p-4 text-center border border-[#E3EAE8]/60">
+                                    <div class="w-12 h-12 mx-auto rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-3">
+                                        <i class={feature.icon}></i>
+                                    </div>
+                                    <p class="text-sm font-semibold">{feature.title}</p>
+                                    <p class="text-xs text-gray-600 mt-1">{feature.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div class="stat">
-                        <h3>4</h3>
-                        <p>Years Equestrian Experience</p>
-                    </div>
-                    <div class="stat">
-                        <h3>100%</h3>
-                        <p>Horse-Safe Cleaning</p>
+
+                    <div class="grid grid-cols-1 gap-8">
+                        {stats.map((stat) => (
+                            <div class="bg-[#305048] text-white rounded-2xl p-8 text-center shadow-xl">
+                                <div class="text-5xl font-bold text-[#FF8057] mb-2">{stat.number}</div>
+                                <p class="text-white/90 font-semibold uppercase tracking-wide">{stat.label}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Comprehensive WEC Area Local Content -->
-    <section style="background: white; padding: 4rem 0;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto; line-height: 1.7; color: #555;">
-                <h2 style="color: #2f5047; margin-bottom: 2rem; text-align: center;">World Equestrian Center Area & Luxury Horse Property Expertise</h2>
-                
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Understanding WEC's Unique Property Landscape</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    The <strong>3,000-acre World Equestrian Center complex</strong> creates a distinctive microenvironment where luxury residential properties exist alongside the largest equestrian facility in the United States. This proximity means WEC area homes face unique cleaning challenges from arena dust, increased equestrian traffic, and the specialized requirements of properties where horses and luxury living converge on the same estates.
-                </p>
-                
-                <p style="margin-bottom: 1.5rem;">
-                    Properties <strong>within 5 miles of WEC ranging from $1.6 million to over $18 million</strong> represent some of Marion County's most valuable real estate investments. These estates demand cleaning services that understand both luxury residential standards and the specialized requirements of equestrian facility maintenance. Our expertise spans from climate-controlled indoor living spaces to working horse barns and everything in between.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The <strong>World Equestrian Estates' 300 farm estates on multi-acre lots</strong> create a unique residential community where each property combines luxury home features with professional-grade equestrian facilities. This integration requires cleaning services that can seamlessly transition from maintaining marble countertops and custom millwork to cleaning horse stalls and tack rooms with equal expertise and attention to detail.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Equestrian Facility Cleaning Expertise</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    WEC's <strong>1,500 permanent stalls and multiple indoor arenas</strong> generate significant dust and debris that affects nearby residential properties. Our specialized knowledge of equestrian facility cleaning includes understanding air circulation patterns, dust settlement areas, and the specific challenges of maintaining properties adjacent to active horse operations. We use techniques and scheduling that account for arena activity, training schedules, and event calendars.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Horse barn and facility cleaning</strong> requires specialized knowledge of horse-safe cleaning products, proper ventilation during cleaning, and techniques that maintain sanitary conditions without creating stress for animals. Our team understands the importance of timing cleaning activities around feeding schedules, turnout times, and training sessions to ensure both thoroughness and minimal disruption to equestrian operations.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The integration of <strong>luxury residential spaces with working equestrian facilities</strong> on the same properties creates unique challenges around contamination control, air quality management, and maintaining separate standards for living areas versus working areas. Our protocols ensure that equestrian facility cleaning never compromises the pristine conditions expected in luxury residential spaces.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Luxury Home Features & Specialized Care</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    WEC area luxury homes often feature <strong>custom architectural details, premium materials, and sophisticated technology systems</strong> that require experienced cleaning professionals familiar with high-end residential maintenance. From climate-controlled wine cellars to custom-designed equestrian viewing areas, these homes demand cleaning services that understand the value and proper care of luxury features.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    Many properties include <strong>specialized spaces like trophy rooms, tack cleaning areas, and horse viewing lounges</strong> that blur the lines between residential and equestrian functions. Our cleaning team understands how to maintain these unique spaces while respecting both luxury living standards and practical equestrian needs, ensuring that every area serves its intended purpose while remaining pristine.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Outdoor living areas and covered pavilions</strong> are particularly common in WEC area properties, providing spaces for entertaining while enjoying views of horse activities. These areas require specialized attention to dust control, UV protection for furnishings, and maintenance that accounts for increased exposure to equestrian-related particles and weather conditions.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Event-Driven Cleaning Considerations</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    The WEC's role as a <strong>major equestrian competition venue</strong> creates seasonal patterns of increased activity, traffic, and cleaning demands throughout the area. During major events, the influx of competitors, spectators, and support staff creates temporary but significant impacts on nearby properties, requiring adapted cleaning schedules and enhanced services to manage increased dust, traffic, and activity levels.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Competition seasons and training periods</strong> create varying levels of arena activity, dust generation, and property access challenges that require flexible cleaning approaches. Our scheduling and service levels adapt to these patterns, ensuring that WEC area properties maintain their standards regardless of the intensity of equestrian activities occurring nearby.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Seasonal Patterns Specific to WEC Area</h3>
-                
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-trophy" style="margin-right: 0.5rem;"></i>Competition Season Intensity (October - April)</h4>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Peak competition season</strong> brings increased activity to the WEC area with major equestrian events, international competitors, and thousands of visitors. This creates elevated dust levels, increased traffic, and higher cleaning demands for area properties. Our services scale up during these periods to manage the additional challenges while maintaining the pristine conditions that WEC area property owners expect.
-                    </p>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Event-driven entertaining</strong> becomes intensive as property owners host competitors, sponsors, and equestrian industry professionals in their homes. Our pre-event and post-event cleaning services ensure that WEC area homes are ready to showcase the luxury and hospitality that characterizes this premier equestrian destination.
-                    </p>
+        <!-- Services -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Specialized services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Built for WEC estates & equestrian facilities</h2>
+                    <p class="mt-4 text-gray-600">Concierge teams, NDA-compliant staff, and schedules that sync with competition calendars.</p>
                 </div>
 
-                <div style="background: #f8fafa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #ff8057; margin-bottom: 1rem;"><i class="fas fa-sun" style="margin-right: 0.5rem;"></i>Off-Season Maintenance (May - September)</h4>
-                    <p style="margin-bottom: 1rem;">
-                        <strong>Reduced competition activity</strong> provides opportunities for comprehensive deep cleaning and maintenance projects on both residential and equestrian facility areas. Many property owners use this period for renovations, deep cleaning projects, and comprehensive maintenance that prepares properties for the upcoming competition season.
-                    </p>
-                    <p>
-                        <strong>Summer weather challenges</strong> include increased humidity, afternoon thunderstorms, and the typical Florida climate factors that affect both luxury homes and equestrian facilities. Our services adapt to these seasonal patterns while maintaining the year-round standards that protect these valuable property investments.
-                    </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 hover:-translate-y-1 transition duration-300">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-[#305048]">{service.title}</h3>
+                            <p class="mt-3 text-gray-600 text-sm">{service.description}</p>
+                            <ul class="mt-6 space-y-2 text-sm text-gray-700">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a href={service.link} class="mt-6 inline-flex items-center gap-2 text-[#305048] font-semibold hover:text-[#FF8057] transition text-sm">
+                                Learn more
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">World Equestrian Center insights</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">We live the WEC rhythm</h2>
+                    <p class="mt-4 text-gray-600">Luxury residences, working barns, and international guests demand a cleaning partner who understands the stakes.</p>
                 </div>
 
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Property Investment & Value Protection</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Multi-million dollar property values</strong> in the WEC area represent significant investments that require proper maintenance to protect and enhance value over time. Our cleaning services contribute to investment protection by maintaining properties in excellent condition, preventing damage from neglect, and ensuring that both residential and equestrian facility areas meet the high standards expected in this premium market.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The <strong>unique combination of luxury residential and professional equestrian features</strong> makes WEC area properties particularly attractive to discerning buyers seeking the pinnacle of horse country living. Our specialized knowledge ensures these properties maintain their distinctive appeal and continue to command premium valuations in this competitive luxury market.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Health & Safety Considerations</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Horse-safe cleaning products and techniques</strong> are essential when cleaning properties where horses are present or nearby. Our team uses only products and methods that are proven safe for equines, understanding that traditional cleaning chemicals can be harmful to horses through direct contact, inhalation, or environmental contamination.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    <strong>Air quality management</strong> becomes particularly important in the WEC area where dust from arenas and horse activities can affect both equine and human health. Our cleaning protocols include specialized attention to air filtration systems, dust removal techniques, and maintaining indoor air quality standards that protect both residents and horses.
-                </p>
-
-                <h3 style="color: #2f5047; margin: 2rem 0 1rem;">Exclusive Service Area Expertise</h3>
-                <p style="margin-bottom: 1.5rem;">
-                    As <strong>Marion County's home to more than 1,200 horse farms</strong>, the WEC area represents the epicenter of America's equestrian industry. Our exclusive focus on this specialized market means we understand the nuances, requirements, and expectations that come with serving clients who operate at the highest levels of both luxury living and equestrian sport.
-                </p>
-
-                <p style="margin-bottom: 1.5rem;">
-                    The <strong>international visibility of WEC as an equestrian destination</strong> means that properties in the area often host visitors, competitors, and industry professionals from around the world. Our cleaning standards reflect this international profile, ensuring that WEC area properties consistently present at levels worthy of their prestigious location and clientele.
-                </p>
-
-                <div style="background: #e8f5f2; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h4 style="color: #2f5047; margin-bottom: 1rem; text-align: center;">Why WEC Area Property Owners Choose Palma Cleaning</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                        <div style="text-align: center;">
-                            <i class="fas fa-horse-head" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Equestrian Facility Expertise</h5>
-                            <p style="font-size: 0.9rem;">Only cleaning service in Ocala specializing in both luxury homes and horse facilities with horse-safe products and techniques</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {insights.map((item) => (
+                        <div class="bg-[#F4F7F6] rounded-2xl p-6 border border-[#E3EAE8]/60 hover:shadow-lg transition duration-300">
+                            <h3 class="text-lg font-semibold text-[#305048] mb-2">{item.title}</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">{item.description}</p>
                         </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-crown" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Luxury Property Standards</h5>
-                            <p style="font-size: 0.9rem;">Specialized knowledge of high-end residential cleaning and premium material care for multi-million dollar estates</p>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal support -->
+        <section class="py-20 bg-[#1f2f2a] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Seasonal expertise</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Competition season vs. off-season</h2>
+                    <p class="mt-4 text-white/80">We scale teams, adjust checklists, and coordinate with trainers so the property stays immaculate year-round.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {seasonalNotes.map((note) => (
+                        <div class="bg-white/10 border border-white/20 rounded-2xl p-8 backdrop-blur">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class={note.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">{note.title}</h3>
+                            <p class="mt-3 text-white/80 text-sm leading-relaxed">{note.description}</p>
                         </div>
-                        <div style="text-align: center;">
-                            <i class="fas fa-calendar-alt" style="font-size: 2rem; color: #ff8057; margin-bottom: 0.5rem;"></i>
-                            <h5 style="color: #2f5047; margin-bottom: 0.5rem;">Event-Adapted Service</h5>
-                            <p style="font-size: 0.9rem;">Flexible scheduling and enhanced services during competition seasons and special events</p>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Request a WEC quote</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Tell us about your estate or facility</h2>
+                    <p class="mt-4 text-gray-600">Dedicated coordinator, horse-safe protocol, and coordination with trainers, barn managers, and estate staff.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Call or text</p>
+                                <a href="tel:+13527644747" class="text-2xl font-bold text-[#305048] hover:text-[#FF8057] transition">(352) 764-4747</a>
+                                <p class="text-gray-600 text-sm">Weekday response within hours</p>
+                            </div>
                         </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Email</p>
+                                <a href="mailto:hello@palmacleaningco.com" class="text-lg font-semibold text-[#305048] hover:text-[#FF8057] transition">hello@palmacleaningco.com</a>
+                                <p class="text-gray-600 text-sm">NDA available upon request</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm uppercase tracking-[0.2em] text-gray-500">Service radius</p>
+                                <p class="text-lg font-semibold">WEC campus & horse country estates</p>
+                                <p class="text-gray-600 text-sm">Background checked, badged if needed</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#F4F7F6] rounded-xl p-4 border border-dashed border-[#305048]/30 text-sm text-gray-600">
+                            ✓ Equestrian facility experts ✓ Horse-safe products ✓ Event-ready crews
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl p-4 shadow-xl border border-[#E3EAE8]/60">
+                        <iframe
+                            src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
+                            class="w-full h-[844px] rounded-xl border-0"
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="WEC Area Contact Form"
+                            data-height="844"
+                            data-form-id="aSlLmaqsq5CZ1gocNBlC"
+                            title="WEC Area Contact Form">
+                        </iframe>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" style="background: #f8fafa;">
-        <div class="container">
-            <h2 class="section-title">WEC Area Specialized Cleaning Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-horse"></i>
-                    </div>
-                    <h3>Equestrian Facility Cleaning</h3>
-                    <p>Professional cleaning of horse barns, stalls, tack rooms, and training facilities using horse-safe products.</p>
-                    <ul class="service-list">
-                        <li>Horse stall deep cleaning</li>
-                        <li>Barn and arena maintenance</li>
-                        <li>Tack room organization</li>
-                        <li>Feed room sanitization</li>
-                        <li>Horse-safe product usage</li>
-                    </ul>
-                </div>
-                <div class="service-card featured">
-                    <div class="service-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <h3>Luxury Estate Cleaning</h3>
-                    <p>Comprehensive cleaning for WEC area's multi-million dollar estates combining residential and equestrian spaces.</p>
-                    <ul class="service-list">
-                        <li>Custom millwork detailing</li>
-                        <li>Premium material care</li>
-                        <li>Trophy room maintenance</li>
-                        <li>Viewing area cleaning</li>
-                        <li>Outdoor pavilion care</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Event Preparation Service</h3>
-                    <p>Specialized cleaning for competition seasons and equestrian events hosted at WEC area properties.</p>
-                    <ul class="service-list">
-                        <li>Pre-event property preparation</li>
-                        <li>Competition season support</li>
-                        <li>Post-event cleanup</li>
-                        <li>Competitor accommodation prep</li>
-                        <li>Flexible event scheduling</li>
-                    </ul>
+        <!-- CTA -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-4xl border border-[#E3EAE8]/60 rounded-3xl shadow-2xl p-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Protect your WEC investment</h2>
+                <p class="mt-4 text-gray-600">From barn aisles to penthouse suites, Palma Cleaning keeps every square foot competition ready.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">Schedule service</a>
+                    <a href="/" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300 text-sm uppercase">Back to home</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">Book Your WEC Area Specialized Service</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Call or Text</h4>
-                            <p><a href="tel:+13527644747" style="text-decoration: none; color: inherit;">(352) 764-4747</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>hello@palmacleaningco.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Service Area</h4>
-                            <p>WEC Area & All Horse Properties</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form" id="quoteForm">
-                    <h3>WEC Area Property Quote</h3>
-                    
-                    <iframe
-                        src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
-                        style="width:100%;height:844px;border:none;border-radius:10px"
-                        id="wec-area-form"
-                        data-layout="{'id':'INLINE'}"
-                        data-trigger-type="alwaysShow"
-                        data-trigger-value=""
-                        data-activation-type="alwaysActivated"
-                        data-activation-value=""
-                        data-deactivation-type="neverDeactivate"
-                        data-deactivation-value=""
-                        data-form-name="WEC Area Contact Form"
-                        data-height="844"
-                        data-form-id="aSlLmaqsq5CZ1gocNBlC"
-                        title="WEC Area Contact Form">
-                    </iframe>
-                    
-                    <p class="form-note">✓ Equestrian facility experts ✓ Horse-safe products ✓ Licensed & insured</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <Footer />
 
-    <script is:inline src="/script-clean.js"></script>
-    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
