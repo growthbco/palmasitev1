@@ -1,0 +1,255 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Booking Confirmation - Your Cleaning Service is Scheduled | Palma Cleaning";
+const description = "Your cleaning service booking has been confirmed! View your booking details and what to expect next from Palma Cleaning in Ocala, FL.";
+
+// Get booking details from URL params if available
+const bookingId = Astro.url.searchParams.get('booking_id') || null;
+const serviceType = Astro.url.searchParams.get('service') || null;
+const date = Astro.url.searchParams.get('date') || null;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="canonical" href="https://palmacleaningco.com/booking-confirmation">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Palma Cleaning",
+        "image": "https://palmacleaningco.com/images/logo.jpg",
+        "description": "Professional cleaning services in Ocala, FL",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ocala",
+            "addressRegion": "FL",
+            "postalCode": "34471",
+            "addressCountry": "US"
+        },
+        "telephone": "(352) 764-4747",
+        "email": "hello@palmacleaningco.com",
+        "url": "https://palmacleaningco.com"
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+    <Navigation />
+
+    <main>
+        <!-- Success Hero -->
+        <section class="bg-[#F4F7F6] py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-[#FF8057] text-white flex items-center justify-center text-5xl mb-6 shadow-lg animate-bounce">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Booking Confirmed!</h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Thank you for choosing Palma Cleaning. Your cleaning service has been scheduled successfully.
+                    </p>
+                    {bookingId && (
+                        <div class="bg-white rounded-xl p-6 shadow-md border border-[#E3EAE8]/60 mb-8">
+                            <p class="text-sm text-gray-500 mb-2">Booking Reference</p>
+                            <p class="text-2xl font-bold text-[#305048]">{bookingId}</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Details -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-[#F4F7F6] rounded-2xl p-8 md:p-12 shadow-lg border border-[#E3EAE8]/60">
+                        <h2 class="text-2xl font-bold mb-6">Booking Details</h2>
+                        <div class="space-y-4">
+                            {serviceType && (
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-sparkles"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Service Type</p>
+                                        <p class="text-lg font-semibold text-[#305048]">{serviceType}</p>
+                                    </div>
+                                </div>
+                            )}
+                            {date && (
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center flex-shrink-0">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Scheduled Date</p>
+                                        <p class="text-lg font-semibold text-[#305048]">{date}</p>
+                                    </div>
+                                </div>
+                            )}
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Confirmation Email</p>
+                                    <p class="text-lg font-semibold text-[#305048]">Check your inbox</p>
+                                    <p class="text-sm text-gray-600 mt-1">A confirmation email with all details has been sent to you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect -->
+        <section class="py-16 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-12">What Happens Next?</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-xl p-6 shadow-md border border-[#E3EAE8]/60">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#305048] text-white flex items-center justify-center flex-shrink-0 font-bold text-xl">1</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Email Confirmation</h3>
+                                    <p class="text-gray-600">You'll receive a detailed confirmation email within a few minutes with your booking information, service details, and our contact information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-md border border-[#E3EAE8]/60">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#305048] text-white flex items-center justify-center flex-shrink-0 font-bold text-xl">2</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Pre-Service Reminder</h3>
+                                    <p class="text-gray-600">We'll send you a reminder 24 hours before your scheduled service date with arrival time and what to expect.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-md border border-[#E3EAE8]/60">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#305048] text-white flex items-center justify-center flex-shrink-0 font-bold text-xl">3</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Service Day</h3>
+                                    <p class="text-gray-600">Our trusted, background-checked team will arrive on time with all equipment and supplies needed. We'll work efficiently and respect your home.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 shadow-md border border-[#E3EAE8]/60">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-[#305048] text-white flex items-center justify-center flex-shrink-0 font-bold text-xl">4</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Follow-Up</h3>
+                                    <p class="text-gray-600">After service completion, we'll check in to ensure everything meets your expectations. Your satisfaction is our priority.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Information -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">Important Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Arrival Time</h3>
+                            <p class="text-gray-600 text-sm">Our team will arrive within the scheduled time window. You'll receive a text notification when we're on the way.</p>
+                        </div>
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Access Instructions</h3>
+                            <p class="text-gray-600 text-sm">If you provided access instructions, we'll follow them. Otherwise, we'll contact you before arrival.</p>
+                        </div>
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Licensed & Insured</h3>
+                            <p class="text-gray-600 text-sm">All team members are background-checked, licensed, and fully insured for your peace of mind.</p>
+                        </div>
+                        <div class="bg-[#F4F7F6] rounded-xl p-6 border border-[#E3EAE8]/60">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Satisfaction Guarantee</h3>
+                            <p class="text-gray-600 text-sm">We offer a 48-hour satisfaction guarantee. If something isn't right, we'll make it right.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Need to Make Changes? -->
+        <section class="py-16 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4">Need to Make Changes?</h2>
+                    <p class="text-white/80 mb-8">No problem! Contact us and we'll help you reschedule or modify your booking.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">
+                            <i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747
+                        </a>
+                        <a href="mailto:hello@palmacleaningco.com" class="border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300">
+                            <i class="fa-solid fa-envelope mr-2"></i>Email Us
+                        </a>
+                    </div>
+                    <p class="mt-6 text-sm text-white/70">Business Hours: Monday - Friday • 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center border border-[#E3EAE8]/60 rounded-3xl shadow-xl p-12 bg-[#F4F7F6]">
+                    <h2 class="text-3xl font-bold mb-4">Thank You for Choosing Palma Cleaning!</h2>
+                    <p class="text-gray-600 mb-8">We're excited to serve you and make your space shine. If you have any questions before your service, don't hesitate to reach out.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="/" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">
+                            Back to Home
+                        </a>
+                        <a href="/services" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">
+                            View Our Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
+
