@@ -136,21 +136,21 @@ const allRoomsChecklist = [
     </section>
 
         <!-- Checklist Section -->
-        <section class="py-24 bg-white">
+        <section class="py-12 md:py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-20">
 
                 <!-- Bathroom Checklist -->
                     <div>
-                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Bathroom checklist</h2>
-                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                        <h2 class="text-3xl font-bold mb-4 md:mb-6 text-[#305048]">Bathroom checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-4 md:mb-6 border-4 border-[#305048] shadow-lg">
                             <img class="w-full h-64 object-cover" src="/images/bathrrom.webp" alt="a person with yellow gloves cleaning a white bathroom sink, detailed, professional cleaning service photo" loading="lazy" />
                     </div>
                         <ul class="space-y-3 text-gray-700">
                             {bathroomChecklist.map((item) => (
-                                <li class="flex items-start">
-                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span class="text-base">
+                                <li class="flex items-start gap-3">
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-0.5 flex-shrink-0`}></i>
+                                    <span class="text-base leading-relaxed">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
@@ -161,34 +161,34 @@ const allRoomsChecklist = [
 
                     <!-- Bedroom Checklist -->
                     <div>
-                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Bedroom checklist</h2>
-                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                        <h2 class="text-3xl font-bold mb-4 md:mb-6 text-[#305048]">Bedroom checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-4 md:mb-6 border-4 border-[#305048] shadow-lg">
                            <img class="w-full h-64 object-cover" src="/images/bedrom2.webp" alt="a neatly made bed in a modern sunlit bedroom, with a person spraying a cleaning solution on a nightstand, professional cleaning service photo" loading="lazy" />
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {bedroomChecklist.map((item) => (
-                                <li class="flex items-start">
-                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span class="text-base">
+                                <li class="flex items-start gap-3">
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-0.5 flex-shrink-0`}></i>
+                                    <span class="text-base leading-relaxed">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
-                        </li>
+                                </li>
                             ))}
-                    </ul>
-            </div>
+                        </ul>
+                    </div>
             
                     <!-- Kitchen Checklist -->
                     <div>
-                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Kitchen checklist</h2>
-                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                        <h2 class="text-3xl font-bold mb-4 md:mb-6 text-[#305048]">Kitchen checklist</h2>
+                        <div class="rounded-lg overflow-hidden mb-4 md:mb-6 border-4 border-[#305048] shadow-lg">
                            <img class="w-full h-64 object-cover" src="/images/Kitchen.jpg" alt="a person carefully washing a glass plate in a clean kitchen sink, close-up shot, professional cleaning service photo" loading="lazy" />
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {kitchenChecklist.map((item) => (
-                                <li class="flex items-start">
-                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span class="text-base">
+                                <li class="flex items-start gap-3">
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-0.5 flex-shrink-0`}></i>
+                                    <span class="text-base leading-relaxed">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
@@ -199,15 +199,15 @@ const allRoomsChecklist = [
 
                     <!-- Other Living Areas -->
                     <div>
-                        <h2 class="text-3xl font-bold mb-6 text-[#305048]">Other living areas</h2>
-                        <div class="rounded-lg overflow-hidden mb-6 border-4 border-[#305048] shadow-lg">
+                        <h2 class="text-3xl font-bold mb-4 md:mb-6 text-[#305048]">Other living areas</h2>
+                        <div class="rounded-lg overflow-hidden mb-4 md:mb-6 border-4 border-[#305048] shadow-lg">
                             <img class="w-full h-64 object-cover" src="/images/Living Room.jpg" alt="a person in yellow gloves using a squeegee to clean a large window in a living room, bright and airy, professional cleaning service photo" loading="lazy" />
                         </div>
                         <ul class="space-y-3 text-gray-700">
                             {allRoomsChecklist.map((item) => (
-                                <li class="flex items-start">
-                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-1 mr-3`}></i>
-                                    <span class="text-base">
+                                <li class="flex items-start gap-3">
+                                    <i class={`fa-regular ${item.included ? 'fa-square-check text-[#305048]' : 'fa-square-check text-[#305048]'} mt-0.5 flex-shrink-0`}></i>
+                                    <span class="text-base leading-relaxed">
                                         {item.text}
                                         {item.included && <strong class="text-[#305048]"> (included)</strong>}
                                     </span>
