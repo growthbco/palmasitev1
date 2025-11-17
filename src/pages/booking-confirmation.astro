@@ -54,30 +54,31 @@ const date = Astro.url.searchParams.get('date') || null;
 
     <main>
         <!-- Success Hero -->
-        <section class="bg-gradient-to-b from-[#F4F7F6] to-white py-24 md:py-32">
+        <section class="bg-gradient-to-b from-[#F4F7F6] to-white py-20 md:py-28">
             <div class="container mx-auto px-6">
-                <div class="max-w-5xl mx-auto">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="text-center lg:text-left">
-                            <div class="w-28 h-28 mx-auto lg:mx-0 rounded-full bg-[#FF8057] text-white flex items-center justify-center text-6xl mb-8 shadow-xl">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                        <div class="text-center lg:text-left order-2 lg:order-1">
+                            <div class="w-24 h-24 md:w-28 md:h-28 mx-auto lg:mx-0 rounded-full bg-[#FF8057] text-white flex items-center justify-center text-5xl md:text-6xl mb-6 shadow-xl">
                                 <i class="fa-solid fa-circle-check"></i>
                             </div>
-                            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Booking Confirmed!</h1>
-                            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 md:mb-6 leading-tight">Booking Confirmed!</h1>
+                            <p class="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
                                 Thank you for choosing Palma Cleaning. Your cleaning service has been scheduled successfully.
                             </p>
                             {bookingId && (
-                                <div class="bg-white rounded-xl p-6 shadow-lg border border-[#E3EAE8]/60 mb-8 inline-block">
-                                    <p class="text-sm text-gray-500 mb-2 uppercase tracking-wide">Booking Reference</p>
-                                    <p class="text-3xl font-bold text-[#305048]">{bookingId}</p>
+                                <div class="bg-white rounded-xl p-5 md:p-6 shadow-lg border border-[#E3EAE8]/60 mb-6 md:mb-8 inline-block">
+                                    <p class="text-xs md:text-sm text-gray-500 mb-2 uppercase tracking-wide">Booking Reference</p>
+                                    <p class="text-2xl md:text-3xl font-bold text-[#305048]">{bookingId}</p>
                                 </div>
                             )}
                         </div>
-                        <div class="hidden lg:block">
+                        <div class="order-1 lg:order-2">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1955838466rd-w1280_h960.webp" 
                                 alt="Professional cleaning service" 
                                 class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                                loading="eager"
                             />
                         </div>
                     </div>
@@ -86,12 +87,12 @@ const date = Astro.url.searchParams.get('date') || null;
         </section>
 
         <!-- Booking Details -->
-        <section class="py-20 bg-white">
+        <section class="py-16 md:py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
-                    <div class="bg-gradient-to-br from-[#F4F7F6] to-white rounded-3xl p-10 md:p-14 shadow-xl border border-[#E3EAE8]/60">
-                        <h2 class="text-3xl font-bold mb-8 text-center">Booking Details</h2>
-                        <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-[#F4F7F6] to-white rounded-2xl md:rounded-3xl p-8 md:p-12 shadow-xl border border-[#E3EAE8]/60">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Booking Details</h2>
+                        <div class="space-y-5 md:space-y-6">
                             {serviceType && (
                                 <div class="flex items-start gap-6 bg-white rounded-xl p-6 shadow-sm">
                                     <div class="w-14 h-14 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center flex-shrink-0 text-xl">
@@ -131,14 +132,14 @@ const date = Astro.url.searchParams.get('date') || null;
         </section>
 
         <!-- What to Expect -->
-        <section class="py-24 bg-[#F4F7F6]">
+        <section class="py-16 md:py-24 bg-[#F4F7F6]">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">What Happens Next?</h2>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">A seamless process from booking to follow-up, designed for busy families and professionals.</p>
+                    <div class="text-center mb-10 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">What Happens Next?</h2>
+                        <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">A seamless process from booking to follow-up, designed for busy families and professionals.</p>
                     </div>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
                         <div class="bg-white rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60 hover:shadow-xl transition duration-300">
                             <div class="flex items-start gap-6 mb-4">
                                 <div class="w-16 h-16 rounded-full bg-[#305048] text-white flex items-center justify-center flex-shrink-0 font-bold text-2xl">1</div>
@@ -176,11 +177,12 @@ const date = Astro.url.searchParams.get('date') || null;
                             </div>
                         </div>
                     </div>
-                    <div class="mt-12">
+                    <div class="mt-8 md:mt-12">
                         <img 
                             src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1984629877rd-w1280_h960.webp" 
                             alt="Professional cleaning team" 
-                            class="rounded-2xl shadow-xl w-full h-auto object-cover max-h-96"
+                            class="rounded-xl md:rounded-2xl shadow-xl w-full h-auto object-cover max-h-80 md:max-h-96"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -188,14 +190,14 @@ const date = Astro.url.searchParams.get('date') || null;
         </section>
 
         <!-- Important Information -->
-        <section class="py-24 bg-white">
+        <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Important Information</h2>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to know about your upcoming service.</p>
+                    <div class="text-center mb-10 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Important Information</h2>
+                        <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to know about your upcoming service.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
                         <div class="bg-gradient-to-br from-[#F4F7F6] to-white rounded-2xl p-8 border border-[#E3EAE8]/60 shadow-lg hover:shadow-xl transition duration-300">
                             <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
                                 <i class="fa-solid fa-clock"></i>
@@ -225,11 +227,12 @@ const date = Astro.url.searchParams.get('date') || null;
                             <p class="text-gray-600 leading-relaxed">We offer a 48-hour satisfaction guarantee. If something isn't right, we'll make it right.</p>
                         </div>
                     </div>
-                    <div class="mt-12">
+                    <div class="mt-8 md:mt-12">
                         <img 
                             src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1724902688rd-w1280_h960.webp" 
                             alt="Clean and organized home" 
-                            class="rounded-2xl shadow-xl w-full h-auto object-cover max-h-96"
+                            class="rounded-xl md:rounded-2xl shadow-xl w-full h-auto object-cover max-h-80 md:max-h-96"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -237,28 +240,29 @@ const date = Astro.url.searchParams.get('date') || null;
         </section>
 
         <!-- Need to Make Changes? -->
-        <section class="py-24 bg-gradient-to-br from-[#305048] to-[#1f2f2a] text-white">
+        <section class="py-16 md:py-24 bg-gradient-to-br from-[#305048] to-[#1f2f2a] text-white">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="text-center lg:text-left">
-                            <h2 class="text-4xl md:text-5xl font-bold mb-6">Need to Make Changes?</h2>
-                            <p class="text-xl text-white/90 mb-8 leading-relaxed">No problem! Contact us and we'll help you reschedule or modify your booking.</p>
-                            <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 mb-6">
-                                <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 inline-flex items-center justify-center">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+                        <div class="text-center lg:text-left order-2 lg:order-1">
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6">Need to Make Changes?</h2>
+                            <p class="text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">No problem! Contact us and we'll help you reschedule or modify your booking.</p>
+                            <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 mb-5 md:mb-6">
+                                <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-bold py-3 md:py-4 px-8 md:px-10 rounded-md hover:bg-[#ff996f] transition duration-300 inline-flex items-center justify-center text-sm md:text-base">
                                     <i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747
                                 </a>
-                                <a href="mailto:hello@palmacleaningco.com" class="border-2 border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 inline-flex items-center justify-center">
+                                <a href="mailto:hello@palmacleaningco.com" class="border-2 border-white text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 inline-flex items-center justify-center text-sm md:text-base">
                                     <i class="fa-solid fa-envelope mr-2"></i>Email Us
                                 </a>
                             </div>
-                            <p class="text-sm text-white/70">Business Hours: Monday - Friday • 8:00 AM - 6:00 PM</p>
+                            <p class="text-xs md:text-sm text-white/70">Business Hours: Monday - Friday • 8:00 AM - 6:00 PM</p>
                         </div>
-                        <div class="hidden lg:block">
+                        <div class="order-1 lg:order-2">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
                                 alt="Customer service" 
-                                class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                                class="rounded-xl md:rounded-2xl shadow-2xl w-full h-auto object-cover"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -267,17 +271,17 @@ const date = Astro.url.searchParams.get('date') || null;
         </section>
 
         <!-- CTA -->
-        <section class="py-24 bg-gradient-to-b from-white to-[#F4F7F6]">
+        <section class="py-16 md:py-24 bg-gradient-to-b from-white to-[#F4F7F6]">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
-                    <div class="bg-white border-2 border-[#E3EAE8]/60 rounded-3xl shadow-2xl p-12 md:p-16 text-center">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Thank You for Choosing Palma Cleaning!</h2>
-                        <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">We're excited to serve you and make your space shine. If you have any questions before your service, don't hesitate to reach out.</p>
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <a href="/" class="bg-[#FF8057] text-[#305048] font-bold py-5 px-12 rounded-md hover:bg-[#ff996f] transition duration-300 text-lg">
+                    <div class="bg-white border-2 border-[#E3EAE8]/60 rounded-2xl md:rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 text-center">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Thank You for Choosing Palma Cleaning!</h2>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">We're excited to serve you and make your space shine. If you have any questions before your service, don't hesitate to reach out.</p>
+                        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                            <a href="/" class="bg-[#FF8057] text-[#305048] font-bold py-4 md:py-5 px-8 md:px-12 rounded-md hover:bg-[#ff996f] transition duration-300 text-base md:text-lg">
                                 Back to Home
                             </a>
-                            <a href="/services" class="border-2 border-[#305048] text-[#305048] font-bold py-5 px-12 rounded-md hover:bg-[#305048] hover:text-white transition duration-300 text-lg">
+                            <a href="/services" class="border-2 border-[#305048] text-[#305048] font-bold py-4 md:py-5 px-8 md:px-12 rounded-md hover:bg-[#305048] hover:text-white transition duration-300 text-base md:text-lg">
                                 View Our Services
                             </a>
                         </div>
