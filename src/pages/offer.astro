@@ -1,0 +1,153 @@
+---
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Get Your Free Quote - Professional Cleaning in Ocala FL | Palma Cleaning";
+const description = "Get a free quote for professional house cleaning in Ocala, FL. Licensed, insured, and trusted by families across Marion County. Book in under 60 seconds.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://palmacleaningco.com/offer">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <script src="https://convertlabs.io/js/booking_embed.js"></script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-[#F4F7F6] to-white py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Professional House Cleaning<br>
+                    <span class="text-[#FF8057]">Get Your Free Quote Today</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Licensed, insured, and trusted by families across Ocala, The Villages, and Marion County
+                </p>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-12 text-sm md:text-base">
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fa-solid fa-shield-halved text-[#FF8057] text-xl"></i>
+                        <span class="font-semibold">Licensed & Insured</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fa-solid fa-star text-[#FF8057] text-xl"></i>
+                        <span class="font-semibold">5-Star Rated</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-700">
+                        <i class="fa-solid fa-clock text-[#FF8057] text-xl"></i>
+                        <span class="font-semibold">Same-Day Available</span>
+                    </div>
+                </div>
+
+                <!-- Primary CTA -->
+                <a href="#quote-form" class="inline-block bg-[#FF8057] text-[#305048] font-bold py-5 px-12 rounded-lg text-lg hover:bg-[#ff996f] transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Get Your Free Quote Now
+                </a>
+                <p class="mt-4 text-sm text-gray-500">No obligation • Instant pricing • Book in under 60 seconds</p>
+            </div>
+        </section>
+
+        <!-- Lead Form Section -->
+        <section id="quote-form" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="bg-white border-2 border-[#E3EAE8] rounded-2xl shadow-2xl p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Free Quote</h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Fill out the form below to get an instant quote and book your cleaning service. 
+                            We'll confirm your appointment right away.
+                        </p>
+                    </div>
+                    <iframe 
+                        src="https://convertlabs.io/booking_form/3473" 
+                        frameborder="0" 
+                        scrolling="auto" 
+                        class="w-full h-[1400px] min-h-[1400px] rounded-xl border-0">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 md:py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                    Why Choose <span class="text-[#FF8057]">Palma Cleaning?</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
+                        <i class="fa-solid fa-shield-halved text-[#FF8057] text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">48-Hour Guarantee</h3>
+                        <p class="text-white/80 text-sm">If anything isn't perfect, we'll return within 48 hours at no extra cost.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
+                        <i class="fa-solid fa-users text-[#FF8057] text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Background Checked</h3>
+                        <p class="text-white/80 text-sm">Every team member is vetted, trained, and trusted by local families.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
+                        <i class="fa-solid fa-leaf text-[#FF8057] text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">Eco-Friendly Options</h3>
+                        <p class="text-white/80 text-sm">Safe, non-toxic products that keep your family and pets comfortable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-16 md:py-24 bg-[#FF8057]">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-6">
+                    Ready to Reclaim Your Time?
+                </h2>
+                <p class="text-lg text-[#305048]/90 mb-8">
+                    Join hundreds of satisfied customers across Ocala, The Villages, and Marion County. 
+                    Get your free quote and book your first cleaning today.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#quote-form" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-[#305048]/90 transition duration-300 shadow-lg">
+                        Get Free Quote
+                    </a>
+                    <a href="tel:+13527644747" class="bg-white text-[#305048] font-bold py-4 px-10 rounded-lg text-lg hover:bg-[#F4F7F6] transition duration-300 shadow-lg">
+                        <i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747
+                    </a>
+                </div>
+                <p class="mt-6 text-sm text-[#305048]/80">
+                    Licensed & Insured • Satisfaction Guaranteed • Same-Day Service Available
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="bg-[#305048] text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm text-white/80">
+                © {new Date().getFullYear()} Palma Cleaning. All rights reserved. | 
+                <a href="tel:+13527644747" class="hover:text-[#FF8057] transition">(352) 764-4747</a> | 
+                <a href="mailto:hello@palmacleaningco.com" class="hover:text-[#FF8057] transition">hello@palmacleaningco.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
