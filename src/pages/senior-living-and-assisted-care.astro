@@ -1,0 +1,337 @@
+---
+// Senior Living and Assisted Care cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Senior Living & Assisted Care Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Gentle, respectful cleaning services for senior living facilities and assisted care communities in Ocala, FL. Licensed, insured, and trained in senior care environments.";
+
+const services = [
+  {
+    title: "Resident Apartment Cleaning",
+    icon: "fa-solid fa-home",
+    description: "Comprehensive cleaning services for resident apartments with attention to safety and comfort.",
+    items: [
+      "Kitchen and bathroom sanitization",
+      "Dusting and surface cleaning",
+      "Floor care (carpet and hard surface)",
+      "Window cleaning",
+      "Trash removal",
+      "Light fixture cleaning",
+      "Respectful handling of personal items",
+      "Flexible scheduling around resident routines"
+    ]
+  },
+  {
+    title: "Common Area Cleaning",
+    icon: "fa-solid fa-users",
+    description: "Maintain clean, welcoming common spaces where residents gather and socialize.",
+    items: [
+      "Dining room maintenance",
+      "Activity and recreation rooms",
+      "Lobbies and reception areas",
+      "Hallways and corridors",
+      "Elevators and stairwells",
+      "Library and reading areas",
+      "Fitness and wellness centers",
+      "Outdoor patios and seating areas"
+    ]
+  },
+  {
+    title: "Medical & Care Areas",
+    icon: "fa-solid fa-heart-pulse",
+    description: "Specialized cleaning for medical stations, care offices, and health service areas.",
+    items: [
+      "Nurse station sanitization",
+      "Medical equipment cleaning",
+      "Examination room maintenance",
+      "Pharmacy area cleaning",
+      "Infection control protocols",
+      "Hospital-grade disinfectants",
+      "HIPAA-compliant service",
+      "Biohazard waste handling"
+    ]
+  }
+];
+
+const whyChoose = [
+  {
+    icon: "fa-solid fa-heart",
+    title: "Compassionate Service",
+    copy: "Our team understands the unique needs of senior living environments and treats residents with dignity and respect."
+  },
+  {
+    icon: "fa-solid fa-shield-halved",
+    title: "Licensed & Insured",
+    copy: "Fully licensed, bonded, and insured with specialized coverage for senior care facilities."
+  },
+  {
+    icon: "fa-solid fa-user-check",
+    title: "Background Checked",
+    copy: "All team members undergo thorough background checks and training in senior care facility protocols."
+  },
+  {
+    icon: "fa-solid fa-leaf",
+    title: "Eco-Friendly Products",
+    copy: "Safe, non-toxic cleaning products that protect resident health and indoor air quality."
+  }
+];
+
+const additionalServices = [
+  {
+    icon: "fa-solid fa-utensils",
+    title: "Dining Room Cleaning",
+    copy: "Daily cleaning and sanitization of dining facilities and food service areas."
+  },
+  {
+    icon: "fa-solid fa-spa",
+    title: "Spa & Wellness Areas",
+    copy: "Maintenance of spa, salon, and wellness center facilities."
+  },
+  {
+    icon: "fa-solid fa-car",
+    title: "Transportation Areas",
+    copy: "Cleaning of shuttle bus interiors and transportation waiting areas."
+  },
+  {
+    icon: "fa-solid fa-building",
+    title: "Administrative Offices",
+    copy: "Professional office cleaning for administrative and management areas."
+  }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="senior living cleaning Ocala FL, assisted care cleaning, retirement community cleaning, nursing home cleaning, senior facility cleaning">
+    <link rel="canonical" href="https://palmacleaningco.com/senior-living-and-assisted-care">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Senior Living and Assisted Care Cleaning Services",
+        "alternateName": ["Senior Facility Cleaning", "Assisted Living Cleaning", "Retirement Community Cleaning"],
+        "description": "Gentle, respectful cleaning services for senior living facilities, assisted care communities, and retirement homes with specialized training in senior care environments.",
+        "url": "https://palmacleaningco.com/senior-living-and-assisted-care",
+        "provider": {
+            "@type": ["LocalBusiness", "Service"],
+            "name": "Palma Cleaning",
+            "@id": "https://palmacleaningco.com/#organization",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "postalCode": "34471",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "147"
+            }
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Marion County",
+                "containedInPlace": "Florida",
+                "addressCountry": "US"
+            }
+        ],
+        "serviceType": "Senior Living Facility Cleaning",
+        "category": ["Senior Care Cleaning", "Assisted Living Cleaning", "Retirement Community Cleaning", "Healthcare Facility Cleaning"],
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://palmacleaningco.com/book-now",
+            "servicePhone": "(352) 764-4747"
+        },
+        "hoursAvailable": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Resident Apartment Cleaning",
+                "description": "Regular cleaning service for resident apartments",
+                "priceRange": "$100-$300",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Common Area Cleaning",
+                "description": "Daily or weekly cleaning for common spaces and shared areas",
+                "priceRange": "$200-$500",
+                "availability": "InStock"
+            },
+            {
+                "@type": "Offer",
+                "name": "Medical Area Cleaning",
+                "description": "Specialized cleaning for medical stations and care areas",
+                "priceRange": "$150-$400",
+                "availability": "InStock"
+            }
+        ],
+        "isRelatedTo": [
+            {
+                "@type": "Service",
+                "name": "Commercial Cleaning",
+                "url": "https://palmacleaningco.com/commercial-cleaning"
+            },
+            {
+                "@type": "Service",
+                "name": "Deep Cleaning Services",
+                "url": "https://palmacleaningco.com/deep-cleaning"
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Senior Living & Assisted Care Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Gentle, respectful cleaning services designed for senior living facilities and assisted care communities. Trained professionals who understand the unique needs of senior care environments.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    VIEW PRICING
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Our Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Senior Living Cleaning Services</h2>
+                    <p class="mt-4 text-gray-600">Comprehensive cleaning solutions tailored to senior living and assisted care facilities.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                        <div class="bg-[#F4F7F6] rounded-2xl p-8 shadow-lg border border-[#E3EAE8]/60">
+                            <div class="w-16 h-16 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-2xl mb-6">
+                                <i class={service.icon}></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[#305048] mb-3">{service.title}</h3>
+                            <p class="text-gray-600 mb-6 text-sm">{service.description}</p>
+                            <ul class="space-y-2">
+                                {service.items.map((item) => (
+                                    <li class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class="fa-solid fa-check text-[#305048] mt-1"></i>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Why Choose Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Senior Living Facilities Choose Palma Cleaning</h2>
+                    <p class="mt-4 text-white/80">Compassionate, professional cleaning services designed for senior care environments.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {whyChoose.map((item) => (
+                        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center">
+                            <div class="w-12 h-12 rounded-full bg-[#FF8057] text-[#305048] flex items-center justify-center text-xl mx-auto mb-4">
+                                <i class={item.icon}></i>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-3">{item.title}</h3>
+                            <p class="text-sm text-white/80 leading-relaxed">{item.copy}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services Section -->
+        <section class="py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">More Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Additional Facility Services</h2>
+                    <p class="mt-4 text-gray-600">Specialized cleaning solutions for all areas of your senior living community.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {additionalServices.map((service) => (
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-[#E3EAE8]/60 text-center">
+                            <i class={`${service.icon} text-3xl text-[#FF8057] mb-4`}></i>
+                            <h3 class="text-lg font-semibold text-[#305048] mb-2">{service.title}</h3>
+                            <p class="text-sm text-gray-600">{service.copy}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-[#305048] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready for Professional Senior Living Cleaning?</h2>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+                    Contact us for a free facility assessment. We'll create a custom cleaning plan that respects resident routines and maintains the highest standards of cleanliness and safety.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/book-now" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300 text-sm uppercase">
+                        Book Now
+                    </a>
+                    <a href="tel:+13527644747" class="bg-transparent border border-white text-white font-bold py-4 px-10 rounded-md hover:bg-white hover:text-[#305048] transition duration-300 text-sm uppercase">
+                        Call (352) 764-4747
+                    </a>
+                </div>
+                <p class="mt-6 text-white/70 text-sm">Free facility consultations • Flexible scheduling • Background-checked staff • 48-hour satisfaction guarantee</p>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
