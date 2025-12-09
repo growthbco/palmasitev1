@@ -37,6 +37,7 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
         .btn { display: inline-block; padding: 18px 40px; border-radius: 8px; font-weight: 700; font-size: 1.125rem; }
         .btn-primary { background: #FF8057; color: #305048; }
         .btn-primary:hover { background: #ff996f; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,128,87,0.3); }
+        .btn:hover { transform: translateY(-2px); transition: all 0.3s; }
         .text-center { text-align: center; }
         .text-accent { color: #FF8057; }
         .text-gray { color: #666; }
@@ -51,6 +52,41 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
         @media (max-width: 768px) {
             .trust-grid { grid-template-columns: 1fr !important; }
             iframe { height: 300px !important; }
+        }
+        .floating-call-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            background: #FF8057;
+            color: #305048;
+            padding: 16px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255,128,87,0.4);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .floating-call-btn:hover {
+            background: #ff996f;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255,128,87,0.5);
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255,128,87,0.4); }
+            50% { box-shadow: 0 10px 30px rgba(255,128,87,0.7); }
+        }
+        @media (max-width: 768px) {
+            .floating-call-btn {
+                bottom: 16px;
+                right: 16px;
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -71,9 +107,14 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                 </p>
                 
                 <!-- Primary CTA -->
-                <a href="#quote-form" class="btn btn-primary">
-                    Get Free Quote Now →
-                </a>
+                <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center; margin-bottom: 20px;">
+                    <a href="#quote-form" class="btn btn-primary">
+                        Get Free Quote Now →
+                    </a>
+                    <a href="tel:+13527644747" class="btn" style="background: #305048; color: white; border: 2px solid #305048;">
+                        <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>Call Now (352) 764-4747
+                    </a>
+                </div>
                 <p style="margin-top: 20px; font-size: 0.875rem; color: #666;">No obligation • Instant pricing</p>
             </div>
         </section>
@@ -225,6 +266,12 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
             </p>
         </div>
     </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:+13527644747" class="floating-call-btn">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call Now</span>
+    </a>
 
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
