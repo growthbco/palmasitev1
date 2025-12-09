@@ -21,53 +21,107 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <script src="https://convertlabs.io/js/booking_embed.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #fff; 
+            color: #305048; 
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        section { padding: 64px 0; }
+        h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
+        h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+        p { margin-bottom: 16px; }
+        a { text-decoration: none; transition: all 0.3s; }
+        .btn { display: inline-block; padding: 16px 32px; border-radius: 8px; font-weight: 700; }
+        .btn-primary { background: #FF8057; color: #305048; }
+        .btn-primary:hover { background: #ff996f; }
+        .btn-secondary { background: #305048; color: white; }
+        .btn-secondary:hover { background: #305048dd; }
+        .text-center { text-align: center; }
+        .grid { display: grid; gap: 24px; }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .flex { display: flex; }
+        .flex-wrap { flex-wrap: wrap; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .gap-4 { gap: 16px; }
+        .gap-6 { gap: 24px; }
+        .mb-4 { margin-bottom: 16px; }
+        .mb-6 { margin-bottom: 24px; }
+        .mb-8 { margin-bottom: 32px; }
+        .mb-12 { margin-bottom: 48px; }
+        .mt-4 { margin-top: 16px; }
+        .mt-6 { margin-top: 24px; }
+        .py-16 { padding-top: 64px; padding-bottom: 64px; }
+        .py-24 { padding-top: 96px; padding-bottom: 96px; }
+        .bg-light { background: #F4F7F6; }
+        .bg-dark { background: #305048; color: white; }
+        .bg-accent { background: #FF8057; color: #305048; }
+        .text-accent { color: #FF8057; }
+        .text-gray { color: #666; }
+        .rounded-xl { border-radius: 12px; }
+        .rounded-2xl { border-radius: 16px; }
+        .shadow-lg { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .shadow-2xl { box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .border { border: 2px solid #E3EAE8; }
+        .p-8 { padding: 32px; }
+        .p-12 { padding: 48px; }
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-<body class="bg-white font-poppins text-[#305048]">
+<body>
     <GTMBody />
 
     <main>
         <!-- Hero Section -->
-        <section class="bg-gradient-to-br from-[#F4F7F6] to-white py-16 md:py-24">
-            <div class="container mx-auto px-6 text-center max-w-4xl">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+        <section class="bg-light py-24">
+            <div class="container text-center">
+                <h1>
                     Professional House Cleaning<br>
-                    <span class="text-[#FF8057]">Get Your Free Quote Today</span>
+                    <span class="text-accent">Get Your Free Quote Today</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 32px;">
                     Licensed, insured, and trusted by families across Ocala, The Villages, and Marion County
                 </p>
                 
                 <!-- Trust Indicators -->
-                <div class="flex flex-wrap justify-center items-center gap-6 mb-12 text-sm md:text-base">
-                    <div class="flex items-center gap-2 text-gray-700">
-                        <i class="fa-solid fa-shield-halved text-[#FF8057] text-xl"></i>
-                        <span class="font-semibold">Licensed & Insured</span>
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-12">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-accent" style="font-size: 1.25rem;"></i>
+                        <span style="font-weight: 600;">Licensed & Insured</span>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-700">
-                        <i class="fa-solid fa-star text-[#FF8057] text-xl"></i>
-                        <span class="font-semibold">5-Star Rated</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-star text-accent" style="font-size: 1.25rem;"></i>
+                        <span style="font-weight: 600;">5-Star Rated</span>
                     </div>
-                    <div class="flex items-center gap-2 text-gray-700">
-                        <i class="fa-solid fa-clock text-[#FF8057] text-xl"></i>
-                        <span class="font-semibold">Same-Day Available</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-accent" style="font-size: 1.25rem;"></i>
+                        <span style="font-weight: 600;">Same-Day Available</span>
                     </div>
                 </div>
 
                 <!-- Primary CTA -->
-                <a href="#quote-form" class="inline-block bg-[#FF8057] text-[#305048] font-bold py-5 px-12 rounded-lg text-lg hover:bg-[#ff996f] transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <a href="#quote-form" class="btn btn-primary" style="font-size: 1.125rem;">
                     Get Your Free Quote Now
                 </a>
-                <p class="mt-4 text-sm text-gray-500">No obligation • Instant pricing • Book in under 60 seconds</p>
+                <p style="margin-top: 16px; font-size: 0.875rem; color: #666;">No obligation • Instant pricing • Book in under 60 seconds</p>
             </div>
         </section>
 
         <!-- Lead Form Section -->
-        <section id="quote-form" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="bg-white border-2 border-[#E3EAE8] rounded-2xl shadow-2xl p-8 md:p-12">
+        <section id="quote-form" class="py-24" style="background: white;">
+            <div class="container">
+                <div class="border rounded-2xl shadow-2xl p-12" style="background: white;">
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get Your Free Quote</h2>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <h2>Get Your Free Quote</h2>
+                        <p class="text-gray" style="font-size: 1.125rem; max-width: 600px; margin: 0 auto;">
                             Fill out the form below to get an instant quote and book your cleaning service. 
                             We'll confirm your appointment right away.
                         </p>
@@ -76,57 +130,57 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                         src="https://convertlabs.io/booking_form/3473" 
                         frameborder="0" 
                         scrolling="auto" 
-                        class="w-full h-[1400px] min-h-[1400px] rounded-xl border-0">
+                        style="width: 100%; height: 1400px; min-height: 1400px; border-radius: 12px; border: 0;">
                     </iframe>
                 </div>
             </div>
         </section>
 
         <!-- Benefits Section -->
-        <section class="py-16 md:py-24 bg-[#305048] text-white">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-                    Why Choose <span class="text-[#FF8057]">Palma Cleaning?</span>
+        <section class="py-24 bg-dark">
+            <div class="container">
+                <h2 class="text-center mb-12">
+                    Why Choose <span class="text-accent">Palma Cleaning?</span>
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
-                        <i class="fa-solid fa-shield-halved text-[#FF8057] text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">48-Hour Guarantee</h3>
-                        <p class="text-white/80 text-sm">If anything isn't perfect, we'll return within 48 hours at no extra cost.</p>
+                <div class="grid grid-3">
+                    <div class="rounded-xl p-8 text-center" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-solid fa-shield-halved text-accent" style="font-size: 2.5rem; margin-bottom: 16px;"></i>
+                        <h3>48-Hour Guarantee</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem;">If anything isn't perfect, we'll return within 48 hours at no extra cost.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
-                        <i class="fa-solid fa-users text-[#FF8057] text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Background Checked</h3>
-                        <p class="text-white/80 text-sm">Every team member is vetted, trained, and trusted by local families.</p>
+                    <div class="rounded-xl p-8 text-center" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-solid fa-users text-accent" style="font-size: 2.5rem; margin-bottom: 16px;"></i>
+                        <h3>Background Checked</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem;">Every team member is vetted, trained, and trusted by local families.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur rounded-xl p-8 text-center">
-                        <i class="fa-solid fa-leaf text-[#FF8057] text-4xl mb-4"></i>
-                        <h3 class="text-xl font-bold mb-3">Eco-Friendly Options</h3>
-                        <p class="text-white/80 text-sm">Safe, non-toxic products that keep your family and pets comfortable.</p>
+                    <div class="rounded-xl p-8 text-center" style="background: rgba(255,255,255,0.1);">
+                        <i class="fa-solid fa-leaf text-accent" style="font-size: 2.5rem; margin-bottom: 16px;"></i>
+                        <h3>Eco-Friendly Options</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem;">Safe, non-toxic products that keep your family and pets comfortable.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA Section -->
-        <section class="py-16 md:py-24 bg-[#FF8057]">
-            <div class="container mx-auto px-6 text-center max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#305048] mb-6">
+        <section class="py-24 bg-accent">
+            <div class="container text-center">
+                <h2 style="color: #305048; margin-bottom: 24px;">
                     Ready to Reclaim Your Time?
                 </h2>
-                <p class="text-lg text-[#305048]/90 mb-8">
+                <p style="font-size: 1.125rem; color: rgba(48,80,72,0.9); margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">
                     Join hundreds of satisfied customers across Ocala, The Villages, and Marion County. 
                     Get your free quote and book your first cleaning today.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#quote-form" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-[#305048]/90 transition duration-300 shadow-lg">
+                    <a href="#quote-form" class="btn btn-secondary">
                         Get Free Quote
                     </a>
-                    <a href="tel:+13527644747" class="bg-white text-[#305048] font-bold py-4 px-10 rounded-lg text-lg hover:bg-[#F4F7F6] transition duration-300 shadow-lg">
-                        <i class="fa-solid fa-phone mr-2"></i>Call (352) 764-4747
+                    <a href="tel:+13527644747" class="btn" style="background: white; color: #305048;">
+                        <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>Call (352) 764-4747
                     </a>
                 </div>
-                <p class="mt-6 text-sm text-[#305048]/80">
+                <p style="margin-top: 24px; font-size: 0.875rem; color: rgba(48,80,72,0.8);">
                     Licensed & Insured • Satisfaction Guaranteed • Same-Day Service Available
                 </p>
             </div>
@@ -134,12 +188,12 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
     </main>
 
     <!-- Minimal Footer -->
-    <footer class="bg-[#305048] text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm text-white/80">
+    <footer class="bg-dark" style="padding: 32px 0;">
+        <div class="container text-center">
+            <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8);">
                 © {new Date().getFullYear()} Palma Cleaning. All rights reserved. | 
-                <a href="tel:+13527644747" class="hover:text-[#FF8057] transition">(352) 764-4747</a> | 
-                <a href="mailto:hello@palmacleaningco.com" class="hover:text-[#FF8057] transition">hello@palmacleaningco.com</a>
+                <a href="tel:+13527644747" style="color: rgba(255,255,255,0.8);">(352) 764-4747</a> | 
+                <a href="mailto:hello@palmacleaningco.com" style="color: rgba(255,255,255,0.8);">hello@palmacleaningco.com</a>
             </p>
         </div>
     </footer>
