@@ -16,95 +16,79 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
     <meta name="description" content={description}>
     <link rel="canonical" href="https://palmacleaningco.com/offer">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: #fff; 
-            color: #305048; 
-            line-height: 1.6;
-        }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        h1 { font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
-        h2 { font-size: 1.75rem; font-weight: 700; margin-bottom: 12px; }
-        p { margin-bottom: 16px; }
-        a { text-decoration: none; transition: all 0.3s; }
-        .btn { display: inline-block; padding: 18px 40px; border-radius: 8px; font-weight: 700; font-size: 1.125rem; }
-        .btn-primary { background: #FF8057; color: #305048; }
-        .btn-primary:hover { background: #ff996f; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,128,87,0.3); }
-        .btn:hover { transform: translateY(-2px); transition: all 0.3s; }
-        .text-center { text-align: center; }
-        .text-accent { color: #FF8057; }
-        .text-gray { color: #666; }
-        .rounded-xl { border-radius: 12px; }
-        .rounded-2xl { border-radius: 16px; }
-        .shadow-2xl { box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-        .border { border: 2px solid #E3EAE8; }
-        @media (min-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-        }
-        @media (max-width: 768px) {
-            .trust-grid { grid-template-columns: 1fr !important; }
-            iframe { height: 300px !important; }
-            #image-slideshow { height: 280px !important; }
-            .slide-nav { 
-                width: 36px !important; 
-                height: 36px !important; 
-                font-size: 1.2rem !important; 
-                left: 8px !important; 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#FF8057',
+                        'secondary': '#305048',
+                        'accent': '#F4F7F6'
+                    }
+                }
             }
-            .slide-nav.next { right: 8px !important; }
-            h1 { font-size: 1.75rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            .container { padding: 0 16px !important; }
-            img[alt="Palma Cleaning Logo"] { max-width: 150px !important; }
-            div[style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
         }
+    </script>
+    <style>
+        ::-webkit-scrollbar { display: none;}
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
+<body class="font-inter bg-white">
     <GTMBody />
 
     <main>
         <!-- Hero Section -->
-        <section style="background: linear-gradient(135deg, #F4F7F6 0%, #ffffff 100%); padding: 50px 0 40px;">
-            <div class="container text-center">
-                <div style="margin-bottom: 20px;">
+        <section class="bg-gradient-to-br from-accent to-white py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-8">
                     <img 
                         src="/images/logo-02-2048x1324-1.png" 
                         alt="Palma Cleaning Logo" 
-                        style="max-width: 180px; width: 100%; height: auto; margin: 0 auto;"
+                        class="max-w-[180px] w-full h-auto mx-auto mb-6"
                         loading="eager">
+                    <h1 class="text-4xl md:text-5xl font-bold text-secondary leading-tight mb-4">
+                        Get Your Free Cleaning Quote<br>
+                        <span class="text-primary">In Under 60 Seconds</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-6">
+                        Professional house cleaning in Ocala, The Villages & Marion County<br>
+                        Licensed • Insured • 5-Star Rated
+                    </p>
+                    <div class="flex items-center justify-center space-x-4 mb-6">
+                        <div class="flex items-center space-x-1">
+                            <div class="flex text-primary">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">5.0/5 from 21+ reviews</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="#quote-form" class="bg-primary text-secondary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#ff996f] transition-colors shadow-lg">
+                            Get Free Quote Now
+                        </a>
+                        <a href="tel:+13527644747" class="bg-secondary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#305048]/90 transition-colors">
+                            <i class="fa-solid fa-phone mr-2"></i>Call Now
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">No obligation • Instant pricing</p>
                 </div>
-                <h1>
-                    Get Your Free Cleaning Quote<br>
-                    <span class="text-accent">In Under 60 Seconds</span>
-                </h1>
-                <p style="font-size: 1rem; max-width: 600px; margin: 0 auto 30px; color: #666;">
-                    Professional house cleaning in Ocala, The Villages & Marion County<br>
-                    Licensed • Insured • 5-Star Rated
-                </p>
-                
-                <!-- Primary CTA -->
-                <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; margin-bottom: 16px;">
-                    <a href="#quote-form" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">
-                        Get Free Quote Now →
-                    </a>
-                    <a href="tel:+13527644747" class="btn" style="background: #305048; color: white; border: 2px solid #305048; padding: 14px 32px; font-size: 1rem;">
-                        <i class="fa-solid fa-phone" style="margin-right: 6px;"></i>Call Now
-                    </a>
-                </div>
-                <p style="margin-top: 16px; font-size: 0.8rem; color: #666;">No obligation • Instant pricing</p>
             </div>
         </section>
 
-        <!-- Lead Form Section - Moved to Top -->
-        <section id="quote-form" style="padding: 0; background: white; width: 100%;">
+        <!-- Lead Form Section -->
+        <section id="quote-form" class="bg-white py-0">
             <iframe
                 src="https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep"
                 style="width:100%;height:577px;border:none;border-radius:0;display:block;"
@@ -122,276 +106,389 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                 data-form-id="UlPHV9CBTZU2NsWsquep"
                 title="Form 4">
             </iframe>
-            
             <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
         </section>
 
+        <!-- Image Slideshow Section -->
+        <section class="bg-accent py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+                    <div id="image-slideshow" class="relative w-full h-[400px] md:h-[500px] bg-gray-100">
+                        <img 
+                            src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1955838466rd-w1280_h960.webp" 
+                            alt="Professional Cleaning Service" 
+                            class="slide-image absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-500 z-[2]"
+                            data-index="0"
+                            loading="eager">
+                        <img 
+                            src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1984629877rd-w1280_h960.webp" 
+                            alt="Trusted Cleaning Team" 
+                            class="slide-image absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 z-0"
+                            data-index="1"
+                            loading="lazy">
+                        <img 
+                            src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
+                            alt="Quality House Cleaning" 
+                            class="slide-image absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 z-0"
+                            data-index="2"
+                            loading="lazy">
+                        <img 
+                            src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1724902688rd-w1280_h960.webp" 
+                            alt="Professional Cleaning Services" 
+                            class="slide-image absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 z-0"
+                            data-index="3"
+                            loading="lazy">
+                    </div>
+                    <!-- Navigation Arrows -->
+                    <button class="slide-nav prev absolute top-1/2 left-4 -translate-y-1/2 bg-white/95 border-2 border-primary w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer text-xl md:text-2xl text-primary flex items-center justify-center transition-all z-10 shadow-lg font-bold hover:bg-primary hover:text-white hover:scale-110" onclick="changeSlide(-1)">
+                        ‹
+                    </button>
+                    <button class="slide-nav next absolute top-1/2 right-4 -translate-y-1/2 bg-white/95 border-2 border-primary w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer text-xl md:text-2xl text-primary flex items-center justify-center transition-all z-10 shadow-lg font-bold hover:bg-primary hover:text-white hover:scale-110" onclick="changeSlide(1)">
+                        ›
+                    </button>
+                    <!-- Dots Indicator -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                        <span class="slide-dot active w-2.5 h-2.5 rounded-full bg-white cursor-pointer opacity-100 transition-all" onclick="currentSlide(1)"></span>
+                        <span class="slide-dot w-2.5 h-2.5 rounded-full bg-white cursor-pointer opacity-70 transition-all" onclick="currentSlide(2)"></span>
+                        <span class="slide-dot w-2.5 h-2.5 rounded-full bg-white cursor-pointer opacity-70 transition-all" onclick="currentSlide(3)"></span>
+                        <span class="slide-dot w-2.5 h-2.5 rounded-full bg-white cursor-pointer opacity-70 transition-all" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Trust Features Section -->
-        <section style="padding: 40px 0; background: #F4F7F6;">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center;">
-                    <!-- Image Slideshow -->
-                    <div style="position: relative; max-width: 700px; margin: 0 auto 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); background: #f0f0f0;">
-                        <div id="image-slideshow" style="position: relative; width: 100%; height: 400px; background: #f0f0f0; min-height: 400px;">
-                            <img 
-                                src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1955838466rd-w1280_h960.webp" 
-                                alt="Professional Cleaning Service" 
-                                class="slide-image"
-                                data-index="0"
-                                loading="eager"
-                                onerror="console.error('Image failed to load:', this.src); this.style.display='none';"
-                                onload="console.log('Image loaded:', this.src); this.style.display='block'; this.style.opacity='1';"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.5s; z-index: 2; display: block; visibility: visible;">
-                            <img 
-                                src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1984629877rd-w1280_h960.webp" 
-                                alt="Trusted Cleaning Team" 
-                                class="slide-image"
-                                data-index="1"
-                                loading="lazy"
-                                onerror="console.error('Image failed to load:', this.src);"
-                                onload="this.style.display='block';"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
-                            <img 
-                                src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
-                                alt="Quality House Cleaning" 
-                                class="slide-image"
-                                data-index="2"
-                                loading="lazy"
-                                onerror="console.error('Image failed to load:', this.src);"
-                                onload="this.style.display='block';"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
-                            <img 
-                                src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1724902688rd-w1280_h960.webp" 
-                                alt="Professional Cleaning Services" 
-                                class="slide-image"
-                                data-index="3"
-                                loading="lazy"
-                                onerror="console.error('Image failed to load:', this.src);"
-                                onload="this.style.display='block';"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
+        <section class="bg-accent py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <!-- Google Reviews Badge -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="mb-4">
+                            <i class="fa-brands fa-google text-4xl text-[#4285F4]"></i>
                         </div>
-                        <!-- Navigation Arrows -->
-                        <button class="slide-nav prev" onclick="changeSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: 2px solid #FF8057; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; color: #FF8057; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 10; box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-weight: bold;" onmouseover="this.style.background='#FF8057'; this.style.color='white'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#FF8057'; this.style.transform='translateY(-50%)'">
-                            ‹
-                        </button>
-                        <button class="slide-nav next" onclick="changeSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: 2px solid #FF8057; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; color: #FF8057; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 10; box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-weight: bold;" onmouseover="this.style.background='#FF8057'; this.style.color='white'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#FF8057'; this.style.transform='translateY(-50%)'">
-                            ›
-                        </button>
-                        <!-- Dots Indicator -->
-                        <div style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10;">
-                            <span class="slide-dot active" onclick="currentSlide(1)" style="width: 10px; height: 10px; border-radius: 50%; background: white; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;"></span>
-                            <span class="slide-dot" onclick="currentSlide(2)" style="width: 10px; height: 10px; border-radius: 50%; background: white; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;"></span>
-                            <span class="slide-dot" onclick="currentSlide(3)" style="width: 10px; height: 10px; border-radius: 50%; background: white; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;"></span>
-                            <span class="slide-dot" onclick="currentSlide(4)" style="width: 10px; height: 10px; border-radius: 50%; background: white; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;"></span>
+                        <div class="flex justify-center gap-1 mb-3">
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                            <i class="fa-solid fa-star text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">5.0 Rating</h3>
+                        <p class="text-gray-600 text-sm mb-3">21+ Google Reviews</p>
+                        <a href="https://g.page/r/CcQuC91RfHgYEBM/review" target="_blank" rel="noopener noreferrer" class="text-[#4285F4] font-semibold text-sm hover:underline">
+                            Read Reviews →
+                        </a>
+                    </div>
+                    
+                    <!-- Licensed & Insured -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Licensed & Insured</h3>
+                        <p class="text-gray-600 text-sm">Fully protected service</p>
+                    </div>
+                    
+                    <!-- Background Checked -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-user-check text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Background Checked</h3>
+                        <p class="text-gray-600 text-sm">Every team member vetted</p>
+                    </div>
+                    
+                    <!-- Satisfaction Guarantee -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-handshake text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">48-Hour Guarantee</h3>
+                        <p class="text-gray-600 text-sm">We'll make it right</p>
+                    </div>
+                    
+                    <!-- Eco-Friendly -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-leaf text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Eco-Friendly</h3>
+                        <p class="text-gray-600 text-sm">Safe for kids & pets</p>
+                    </div>
+                    
+                    <!-- Local & Trusted -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-map-marker-alt text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Locally Owned</h3>
+                        <p class="text-gray-600 text-sm">Serving Ocala since 2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="bg-white py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-secondary mb-4">Our Cleaning Services</h2>
+                    <p class="text-xl text-gray-600">Comprehensive cleaning solutions tailored to your needs</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-broom text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Standard Cleaning</h3>
+                        <p class="text-gray-600">Weekly or bi-weekly maintenance cleaning to keep your home spotless</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-sparkles text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Deep Cleaning</h3>
+                        <p class="text-gray-600">Thorough one-time cleaning for move-ins, special occasions, or spring cleaning</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+                        <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-building text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Move-In/Out</h3>
+                        <p class="text-gray-600">Complete cleaning service for moving transitions and property handovers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="bg-accent py-16">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-secondary mb-4">What Our Customers Say</h2>
+                    <p class="text-xl text-gray-600">Trusted by hundreds of happy homeowners</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex text-primary mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Palma Cleaning exceeded my expectations. My house has never been this clean! Professional, reliable, and affordable."</p>
+                        <div class="flex items-center">
+                            <div>
+                                <div class="font-semibold text-secondary">Cristina Veras</div>
+                                <div class="text-sm text-gray-500">Verified Customer</div>
+                            </div>
                         </div>
                     </div>
                     
-                    <script>
-                        (function() {
-                            let slideIndex = 0;
-                            let touchStartX = 0;
-                            let touchEndX = 0;
-                            const slides = document.querySelectorAll('.slide-image');
-                            const dots = document.querySelectorAll('.slide-dot');
-                            const slideshow = document.getElementById('image-slideshow');
-                            let autoSlideInterval;
-                            
-                            function showSlide(n) {
-                                slideIndex = n;
-                                if (slideIndex >= slides.length) slideIndex = 0;
-                                if (slideIndex < 0) slideIndex = slides.length - 1;
-                                
-                                slides.forEach((slide, i) => {
-                                    if (i === slideIndex) {
-                                        slide.style.opacity = '1';
-                                        slide.style.zIndex = '2';
-                                        slide.style.display = 'block';
-                                    } else {
-                                        slide.style.opacity = '0';
-                                        slide.style.zIndex = '0';
-                                        slide.style.display = 'block';
-                                    }
-                                });
-                                
-                                dots.forEach((dot, i) => {
-                                    if (i === slideIndex) {
-                                        dot.classList.add('active');
-                                        dot.style.opacity = '1';
-                                        dot.style.background = '#FF8057';
-                                    } else {
-                                        dot.classList.remove('active');
-                                        dot.style.opacity = '0.7';
-                                        dot.style.background = 'white';
-                                    }
-                                });
-                            }
-                            
-                            window.changeSlide = function(n) {
-                                showSlide(slideIndex + n);
-                                resetAutoSlide();
-                            };
-                            
-                            window.currentSlide = function(n) {
-                                showSlide(n - 1);
-                                resetAutoSlide();
-                            };
-                            
-                            function resetAutoSlide() {
-                                clearInterval(autoSlideInterval);
-                                autoSlideInterval = setInterval(() => {
-                                    changeSlide(1);
-                                }, 5000);
-                            }
-                            
-                            // Touch/swipe support for mobile
-                            if (slideshow) {
-                                slideshow.addEventListener('touchstart', (e) => {
-                                    touchStartX = e.changedTouches[0].screenX;
-                                });
-                                
-                                slideshow.addEventListener('touchend', (e) => {
-                                    touchEndX = e.changedTouches[0].screenX;
-                                    const swipeThreshold = 50;
-                                    const diff = touchStartX - touchEndX;
-                                    
-                                    if (Math.abs(diff) > swipeThreshold) {
-                                        if (diff > 0) {
-                                            changeSlide(1);
-                                        } else {
-                                            changeSlide(-1);
-                                        }
-                                    }
-                                });
-                                
-                                // Pause on hover (desktop)
-                                slideshow.addEventListener('mouseenter', () => {
-                                    clearInterval(autoSlideInterval);
-                                });
-                                
-                                slideshow.addEventListener('mouseleave', () => {
-                                    resetAutoSlide();
-                                });
-                            }
-                            
-                            // Initialize - wait for DOM and images to load
-                            if (document.readyState === 'loading') {
-                                document.addEventListener('DOMContentLoaded', function() {
-                                    setTimeout(() => {
-                                        showSlide(0);
-                                        resetAutoSlide();
-                                    }, 100);
-                                });
-                            } else {
-                                setTimeout(() => {
-                                    showSlide(0);
-                                    resetAutoSlide();
-                                }, 100);
-                            }
-                            
-                            // Ensure first image is visible on load
-                            window.addEventListener('load', function() {
-                                const firstSlide = slides[0];
-                                if (firstSlide) {
-                                    firstSlide.style.opacity = '1';
-                                    firstSlide.style.zIndex = '2';
-                                    firstSlide.style.display = 'block';
-                                }
-                            });
-                        })();
-                    </script>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex text-primary mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Amazing service! They're punctual, thorough, and use eco-friendly products. Highly recommend to anyone!"</p>
+                        <div class="flex items-center">
+                            <div>
+                                <div class="font-semibold text-secondary">Angélica Flores</div>
+                                <div class="text-sm text-gray-500">Verified Customer</div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <!-- Trust Badges -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;">
-                        <!-- Google Reviews Badge -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-brands fa-google" style="font-size: 2.5rem; color: #4285F4;"></i>
-                            </div>
-                            <div style="display: flex; justify-content: center; gap: 3px; margin-bottom: 10px;">
-                                <i class="fa-solid fa-star" style="color: #FF8057; font-size: 1.2rem;"></i>
-                                <i class="fa-solid fa-star" style="color: #FF8057; font-size: 1.2rem;"></i>
-                                <i class="fa-solid fa-star" style="color: #FF8057; font-size: 1.2rem;"></i>
-                                <i class="fa-solid fa-star" style="color: #FF8057; font-size: 1.2rem;"></i>
-                                <i class="fa-solid fa-star" style="color: #FF8057; font-size: 1.2rem;"></i>
-                            </div>
-                            <h3 style="font-size: 1.25rem; font-weight: 700; color: #305048; margin-bottom: 6px;">5.0 Rating</h3>
-                            <p style="color: #666; font-size: 0.85rem;">21+ Google Reviews</p>
-                            <a href="https://g.page/r/CcQuC91RfHgYEBM/review" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 12px; color: #4285F4; font-weight: 600; font-size: 0.9rem;">
-                                Read Reviews →
-                            </a>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex text-primary mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
-                        
-                        <!-- Licensed & Insured -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-solid fa-shield-halved" style="font-size: 2.5rem; color: #FF8057;"></i>
+                        <p class="text-gray-600 mb-4">"Best cleaning service in town! They pay attention to every detail and my home always looks perfect."</p>
+                        <div class="flex items-center">
+                            <div>
+                                <div class="font-semibold text-secondary">Geraldine Nembhard</div>
+                                <div class="text-sm text-gray-500">Verified Customer</div>
                             </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 700; color: #305048; margin-bottom: 6px;">Licensed & Insured</h3>
-                            <p style="color: #666; font-size: 0.85rem;">Fully protected service</p>
-                        </div>
-                        
-                        <!-- Background Checked -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-solid fa-user-check" style="font-size: 2.5rem; color: #FF8057;"></i>
-                            </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 700; color: #305048; margin-bottom: 6px;">Background Checked</h3>
-                            <p style="color: #666; font-size: 0.85rem;">Every team member vetted</p>
-                        </div>
-                        
-                        <!-- Satisfaction Guarantee -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-solid fa-handshake" style="font-size: 2.5rem; color: #FF8057;"></i>
-                            </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 700; color: #305048; margin-bottom: 6px;">48-Hour Guarantee</h3>
-                            <p style="color: #666; font-size: 0.85rem;">We'll make it right</p>
-                        </div>
-                        
-                        <!-- Eco-Friendly -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-solid fa-leaf" style="font-size: 2.5rem; color: #FF8057;"></i>
-                            </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 700; color: #305048; margin-bottom: 6px;">Eco-Friendly</h3>
-                            <p style="color: #666; font-size: 0.85rem;">Safe for kids & pets</p>
-                        </div>
-                        
-                        <!-- Local & Trusted -->
-                        <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
-                            <div style="margin-bottom: 12px;">
-                                <i class="fa-solid fa-map-marker-alt" style="font-size: 2.5rem; color: #FF8057;"></i>
-                            </div>
-                            <h3 style="font-size: 1.1rem; font-weight: 700; color: #305048; margin-bottom: 6px;">Locally Owned</h3>
-                            <p style="color: #666; font-size: 0.85rem;">Serving Ocala since 2020</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Final CTA Section -->
-        <section style="padding: 40px 0; background: #FF8057;">
-            <div class="container text-center">
-                <h2 style="color: #305048; margin-bottom: 16px; font-size: 1.75rem;">
-                    Questions? Call Us Now
-                </h2>
-                <a href="tel:+13527644747" class="btn" style="background: #305048; color: white; margin-top: 16px; padding: 14px 32px; font-size: 1rem;">
-                    <i class="fa-solid fa-phone" style="margin-right: 6px;"></i>(352) 764-4747
-                </a>
+        <!-- CTA Section -->
+        <section class="bg-primary py-16">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Ready for a Spotless Home?</h2>
+                <p class="text-xl text-secondary/80 mb-8">Join hundreds of satisfied customers. Book your cleaning service today!</p>
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <a href="#quote-form" class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Get Free Quote
+                    </a>
+                    <div class="flex items-center space-x-2 text-secondary">
+                        <i class="fa-solid fa-phone text-lg"></i>
+                        <a href="tel:+13527644747" class="text-lg font-semibold hover:underline">(352) 764-4747</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Minimal Footer -->
-    <footer style="padding: 40px 0; background: #305048; color: white; text-align: center;">
-        <div class="container">
-            <p style="font-size: 0.875rem; color: rgba(255,255,255,0.8);">
-                © {new Date().getFullYear()} Palma Cleaning. Licensed & Insured.
-            </p>
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-xl font-bold">Palma Cleaning</span>
+                    </div>
+                    <p class="text-gray-400">Professional cleaning services you can trust.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Standard Cleaning</li>
+                        <li>Deep Cleaning</li>
+                        <li>Move-In/Out</li>
+                        <li>Commercial</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="tel:+13527644747" class="hover:text-white">(352) 764-4747</a></li>
+                        <li><a href="mailto:hello@palmacleaningco.com" class="hover:text-white">hello@palmacleaningco.com</a></li>
+                        <li>Available Mon-Fri</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Areas Served</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Ocala</li>
+                        <li>The Villages</li>
+                        <li>Marion County</li>
+                        <li>Stone Creek</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; {new Date().getFullYear()} Palma Cleaning. All rights reserved. Licensed & Insured.</p>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Slideshow functionality
+        (function() {
+            let slideIndex = 0;
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const slides = document.querySelectorAll('.slide-image');
+            const dots = document.querySelectorAll('.slide-dot');
+            const slideshow = document.getElementById('image-slideshow');
+            let autoSlideInterval;
+            
+            function showSlide(n) {
+                slideIndex = n;
+                if (slideIndex >= slides.length) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = slides.length - 1;
+                
+                slides.forEach((slide, i) => {
+                    if (i === slideIndex) {
+                        slide.style.opacity = '1';
+                        slide.style.zIndex = '2';
+                    } else {
+                        slide.style.opacity = '0';
+                        slide.style.zIndex = '0';
+                    }
+                });
+                
+                dots.forEach((dot, i) => {
+                    if (i === slideIndex) {
+                        dot.classList.add('active');
+                        dot.style.opacity = '1';
+                        dot.style.background = '#FF8057';
+                    } else {
+                        dot.classList.remove('active');
+                        dot.style.opacity = '0.7';
+                        dot.style.background = 'white';
+                    }
+                });
+            }
+            
+            window.changeSlide = function(n) {
+                showSlide(slideIndex + n);
+                resetAutoSlide();
+            };
+            
+            window.currentSlide = function(n) {
+                showSlide(n - 1);
+                resetAutoSlide();
+            };
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    changeSlide(1);
+                }, 5000);
+            }
+            
+            // Touch/swipe support
+            if (slideshow) {
+                slideshow.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                slideshow.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const swipeThreshold = 50;
+                    const diff = touchStartX - touchEndX;
+                    
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            changeSlide(1);
+                        } else {
+                            changeSlide(-1);
+                        }
+                    }
+                });
+                
+                slideshow.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlideInterval);
+                });
+                
+                slideshow.addEventListener('mouseleave', () => {
+                    resetAutoSlide();
+                });
+            }
+            
+            // Initialize
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        showSlide(0);
+                        resetAutoSlide();
+                    }, 100);
+                });
+            } else {
+                setTimeout(() => {
+                    showSlide(0);
+                    resetAutoSlide();
+                }, 100);
+            }
+        })();
+    </script>
 
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
