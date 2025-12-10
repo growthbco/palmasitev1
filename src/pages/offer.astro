@@ -108,36 +108,44 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center;">
                     <!-- Image Slideshow -->
-                    <div style="position: relative; max-width: 700px; margin: 0 auto 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
-                        <div id="image-slideshow" style="position: relative; width: 100%; height: 400px;">
+                    <div style="position: relative; max-width: 700px; margin: 0 auto 30px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.12); background: #f0f0f0;">
+                        <div id="image-slideshow" style="position: relative; width: 100%; height: 400px; background: #f0f0f0; min-height: 400px;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1955838466rd-w1280_h960.webp" 
                                 alt="Professional Cleaning Service" 
                                 class="slide-image"
                                 data-index="0"
                                 loading="eager"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.5s; z-index: 1;">
+                                onerror="console.error('Image failed to load:', this.src); this.style.display='none';"
+                                onload="console.log('Image loaded:', this.src); this.style.display='block'; this.style.opacity='1';"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.5s; z-index: 2; display: block; visibility: visible;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1984629877rd-w1280_h960.webp" 
                                 alt="Trusted Cleaning Team" 
                                 class="slide-image"
                                 data-index="1"
                                 loading="lazy"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
+                                onerror="console.error('Image failed to load:', this.src);"
+                                onload="this.style.display='block';"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
                                 alt="Quality House Cleaning" 
                                 class="slide-image"
                                 data-index="2"
                                 loading="lazy"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
+                                onerror="console.error('Image failed to load:', this.src);"
+                                onload="this.style.display='block';"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1724902688rd-w1280_h960.webp" 
                                 alt="Professional Cleaning Services" 
                                 class="slide-image"
                                 data-index="3"
                                 loading="lazy"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
+                                onerror="console.error('Image failed to load:', this.src);"
+                                onload="this.style.display='block';"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0; display: block; visibility: visible;">
                         </div>
                         <!-- Navigation Arrows -->
                         <button class="slide-nav prev" onclick="changeSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: 2px solid #FF8057; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; color: #FF8057; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 10; box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-weight: bold;" onmouseover="this.style.background='#FF8057'; this.style.color='white'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#FF8057'; this.style.transform='translateY(-50%)'">
@@ -171,7 +179,15 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                                 if (slideIndex < 0) slideIndex = slides.length - 1;
                                 
                                 slides.forEach((slide, i) => {
-                                    slide.style.opacity = i === slideIndex ? '1' : '0';
+                                    if (i === slideIndex) {
+                                        slide.style.opacity = '1';
+                                        slide.style.zIndex = '2';
+                                        slide.style.display = 'block';
+                                    } else {
+                                        slide.style.opacity = '0';
+                                        slide.style.zIndex = '0';
+                                        slide.style.display = 'block';
+                                    }
                                 });
                                 
                                 dots.forEach((dot, i) => {
@@ -234,9 +250,30 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                                 });
                             }
                             
-                            // Initialize
-                            showSlide(0);
-                            resetAutoSlide();
+                            // Initialize - wait for DOM and images to load
+                            if (document.readyState === 'loading') {
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    setTimeout(() => {
+                                        showSlide(0);
+                                        resetAutoSlide();
+                                    }, 100);
+                                });
+                            } else {
+                                setTimeout(() => {
+                                    showSlide(0);
+                                    resetAutoSlide();
+                                }, 100);
+                            }
+                            
+                            // Ensure first image is visible on load
+                            window.addEventListener('load', function() {
+                                const firstSlide = slides[0];
+                                if (firstSlide) {
+                                    firstSlide.style.opacity = '1';
+                                    firstSlide.style.zIndex = '2';
+                                    firstSlide.style.display = 'block';
+                                }
+                            });
                         })();
                     </script>
                     
