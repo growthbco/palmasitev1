@@ -63,6 +63,7 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
             h2 { font-size: 1.5rem !important; }
             .container { padding: 0 16px !important; }
             img[alt="Palma Cleaning Logo"] { max-width: 150px !important; }
+            div[style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -114,25 +115,29 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                                 alt="Professional Cleaning Service" 
                                 class="slide-image"
                                 data-index="0"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.5s;">
+                                loading="eager"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.5s; z-index: 1;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1984629877rd-w1280_h960.webp" 
                                 alt="Trusted Cleaning Team" 
                                 class="slide-image"
                                 data-index="1"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;">
+                                loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
                                 alt="Quality House Cleaning" 
                                 class="slide-image"
                                 data-index="2"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;">
+                                loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
                             <img 
                                 src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1724902688rd-w1280_h960.webp" 
                                 alt="Professional Cleaning Services" 
                                 class="slide-image"
                                 data-index="3"
-                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s;">
+                                loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s; z-index: 0;">
                         </div>
                         <!-- Navigation Arrows -->
                         <button class="slide-nav prev" onclick="changeSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: 2px solid #FF8057; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; color: #FF8057; display: flex; align-items: center; justify-content: center; transition: all 0.3s; z-index: 10; box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-weight: bold;" onmouseover="this.style.background='#FF8057'; this.style.color='white'; this.style.transform='translateY(-50%) scale(1.1)'" onmouseout="this.style.background='rgba(255,255,255,0.95)'; this.style.color='#FF8057'; this.style.transform='translateY(-50%)'">
@@ -236,7 +241,7 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                     </script>
                     
                     <!-- Trust Badges -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;">
                         <!-- Google Reviews Badge -->
                         <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center;">
                             <div style="margin-bottom: 12px;">
