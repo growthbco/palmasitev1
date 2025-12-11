@@ -49,6 +49,11 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                 grid-template-columns: 1fr !important; 
             }
         }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+            border-color: #FF8057 !important;
+        }
     </style>
 </head>
 <body style="font-family: 'Inter', sans-serif; background: #fff; margin: 0; padding: 0;">
@@ -250,25 +255,25 @@ const description = "Get a free quote for professional house cleaning in Ocala, 
                     <p style="font-size: 1.125rem; color: #666;">Comprehensive cleaning solutions tailored to your needs</p>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8;">
-                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-center: center; margin: 0 auto 16px;">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto;">
+                    <div class="service-card" style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8; cursor: pointer; transition: all 0.3s ease;">
+                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
                             <i class="fa-solid fa-broom" style="font-size: 2rem; color: #FF8057;"></i>
                         </div>
                         <h3 style="font-size: 1.25rem; font-weight: 600; color: #305048; margin-bottom: 12px;">Standard Cleaning</h3>
                         <p style="color: #666; font-size: 0.95rem;">Weekly or bi-weekly maintenance cleaning to keep your home spotless</p>
                     </div>
-                    
-                    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8;">
-                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-center: center; margin: 0 auto 16px;">
-                            <i class="fa-solid fa-sparkles" style="font-size: 2rem; color: #FF8057;"></i>
+
+                    <div class="service-card" style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8; cursor: pointer; transition: all 0.3s ease;">
+                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                            <i class="fa-solid fa-spray-can" style="font-size: 2rem; color: #FF8057;"></i>
                         </div>
                         <h3 style="font-size: 1.25rem; font-weight: 600; color: #305048; margin-bottom: 12px;">Deep Cleaning</h3>
                         <p style="color: #666; font-size: 0.95rem;">Thorough one-time cleaning for move-ins, special occasions, or spring cleaning</p>
                     </div>
-                    
-                    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8;">
-                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-center: center; margin: 0 auto 16px;">
+
+                    <div class="service-card" style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); text-align: center; border: 1px solid #E3EAE8; cursor: pointer; transition: all 0.3s ease;">
+                        <div style="background: rgba(255,128,87,0.1); width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
                             <i class="fa-solid fa-building" style="font-size: 2rem; color: #FF8057;"></i>
                         </div>
                         <h3 style="font-size: 1.25rem; font-weight: 600; color: #305048; margin-bottom: 12px;">Move-In/Out</h3>
