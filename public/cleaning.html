@@ -115,14 +115,14 @@
         }
         ::-webkit-scrollbar { display: none; }
         .video-thumbnail {
-            position: relative;
             cursor: pointer;
             transition: transform 0.3s ease;
         }
         .video-thumbnail:hover {
-            transform: scale(1.05);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
         }
-        .video-thumbnail::after {
+        .video-thumbnail .relative::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -135,8 +135,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 10;
         }
-        .video-thumbnail::before {
+        .video-thumbnail .relative::before {
             content: '▶';
             position: absolute;
             top: 50%;
@@ -144,7 +145,7 @@
             transform: translate(-45%, -50%);
             color: white;
             font-size: 24px;
-            z-index: 10;
+            z-index: 11;
         }
     </style>
 </head>
@@ -489,28 +490,36 @@
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop" alt="Testimonial 1" class="w-full h-48 object-cover">
-                    <div class="bg-white p-4">
-                        <p class="font-bold text-sm">Mom Of 3 Finally Enjoys Weekends Without The Hassle</p>
+                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=600&fit=crop" alt="Testimonial 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white p-4 flex-1 flex items-center">
+                        <p class="font-bold text-sm text-center w-full">Mom Of 3 Finally Enjoys Weekends Without The Hassle</p>
                     </div>
                 </div>
-                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Testimonial 2" class="w-full h-48 object-cover">
-                    <div class="bg-white p-4">
-                        <p class="font-bold text-sm">Busy Professional Gets Time Back Every Week</p>
+                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop" alt="Testimonial 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white p-4 flex-1 flex items-center">
+                        <p class="font-bold text-sm text-center w-full">Busy Professional Gets Time Back Every Week</p>
                     </div>
                 </div>
-                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop" alt="Testimonial 3" class="w-full h-48 object-cover">
-                    <div class="bg-white p-4">
-                        <p class="font-bold text-sm">Family Home Stays Spotless All Year Round</p>
+                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop" alt="Testimonial 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white p-4 flex-1 flex items-center">
+                        <p class="font-bold text-sm text-center w-full">Family Home Stays Spotless All Year Round</p>
                     </div>
                 </div>
-                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop" alt="Testimonial 4" class="w-full h-48 object-cover">
-                    <div class="bg-white p-4">
-                        <p class="font-bold text-sm">Retiree Enjoys Clean Home Without The Work</p>
+                <div class="video-thumbnail rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="relative aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=600&fit=crop" alt="Testimonial 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white p-4 flex-1 flex items-center">
+                        <p class="font-bold text-sm text-center w-full">Retiree Enjoys Clean Home Without The Work</p>
                     </div>
                 </div>
             </div>
