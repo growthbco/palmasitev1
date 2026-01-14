@@ -5,6 +5,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Landing page - /cleaning serves cleaning.html
+[[redirects]]
+  from = "/cleaning"
+  to = "/cleaning.html"
+  status = 200
+
 # Redirect .html extensions to clean URLs
 [[redirects]]
   from = "/*.html"

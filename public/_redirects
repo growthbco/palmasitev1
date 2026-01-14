@@ -8,3 +8,6 @@ http://palmacleaningco.com/* https://palmacleaningco.com/:splat 301!
 # Legacy redirects if needed
 https://palmenew.growthbco.com/* https://palmacleaningco.com/:splat 301!
 http://palmenew.growthbco.com/* https://palmacleaningco.com/:splat 301!
+
+# Landing page redirect - /cleaning serves cleaning.html
+/cleaning /cleaning.html 200!
