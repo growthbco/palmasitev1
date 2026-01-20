@@ -4,8 +4,12 @@ const showHomeLink = Astro.props?.showHome ?? true;
 
 <header class="bg-[#305048] text-white sticky top-0 z-50 shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold tracking-wide">
-            PALMA <span class="text-[#FF8057]">CLEANING</span>
+        <a href="/" class="flex items-center">
+            <img 
+                src="/images/3485b789a3de7f5469fe8cfe29e87a33l-m1671343361rd-w1280_h960.webp" 
+                alt="Palma Cleaning Logo" 
+                class="h-10 w-auto"
+                loading="eager">
         </a>
         <nav class="hidden lg:flex items-center space-x-8 text-sm">
             {showHomeLink && <a href="/" class="hover:text-[#FF8057] transition duration-300">Home</a>}
