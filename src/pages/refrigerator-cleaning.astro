@@ -1,0 +1,183 @@
+---
+// Refrigerator cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Refrigerator Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert refrigerator cleaning services in Ocala, FL. Deep interior cleaning, shelf organization, door seal cleaning, and exterior polishing. Sanitized and organized refrigerators. Licensed & insured.";
+
+const services = [
+  { text: "Remove all food items and organize" },
+  { text: "Remove and clean all shelves and drawers" },
+  { text: "Deep clean interior walls and surfaces" },
+  { text: "Sanitize door seals and gaskets" },
+  { text: "Clean and polish exterior surfaces" },
+  { text: "Clean door handles and controls" },
+  { text: "Remove expired items" },
+  { text: "Clean condenser coils (if accessible)" },
+  { text: "Organize items back efficiently" },
+  { text: "Deodorize and eliminate odors" },
+  { text: "Clean water and ice dispensers" },
+  { text: "Check and clean drip pans" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="refrigerator cleaning Ocala FL, professional refrigerator cleaning, fridge deep cleaning, refrigerator sanitization, Ocala fridge cleaning services">
+    <link rel="canonical" href="https://palmacleaningco.com/refrigerator-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Refrigerator Cleaning Services",
+        "alternateName": ["Fridge Deep Cleaning", "Refrigerator Sanitization", "Professional Refrigerator Cleaning"],
+        "description": "Comprehensive refrigerator cleaning services including deep interior cleaning, shelf organization, door seal maintenance, exterior polishing, and complete sanitization.",
+        "url": "https://palmacleaningco.com/refrigerator-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Refrigerator Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Refrigerator Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Refrigerator Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Refrigerator Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Refrigerator Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional refrigerator cleaning services that thoroughly sanitize and organize your fridge. We clean interior surfaces, shelves, door seals, and exterior surfaces for a hygienic and organized refrigerator.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Refrigerator Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Kitchen.jpg" alt="Professional refrigerator cleaning service showing detailed interior cleaning and organization" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Refrigerator Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-shield-halved text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Food Safety</h3>
+                            <p class="text-gray-700">Thorough sanitization eliminates bacteria and prevents cross-contamination, ensuring food safety for your family.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-boxes-stacked text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Better Organization</h3>
+                            <p class="text-gray-700">Professional organization makes it easier to find items and reduces food waste from forgotten items.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-snowflake text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Improved Efficiency</h3>
+                            <p class="text-gray-700">Clean refrigerators operate more efficiently, potentially reducing energy costs and extending appliance life.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-wind text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Odor Elimination</h3>
+                            <p class="text-gray-700">Professional cleaning removes odors and prevents them from transferring to fresh food items.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for a Clean, Organized Refrigerator?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional refrigerator cleaning service today and enjoy a sanitized, organized, and efficient fridge.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

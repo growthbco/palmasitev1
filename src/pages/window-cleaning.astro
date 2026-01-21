@@ -1,0 +1,183 @@
+---
+// Window cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Window Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert window cleaning services in Ocala, FL. Interior and exterior window cleaning, streak-free results, window frame cleaning, and screen maintenance. Licensed & insured.";
+
+const services = [
+  { text: "Interior window cleaning" },
+  { text: "Exterior window cleaning (ground level)" },
+  { text: "Streak-free glass polishing" },
+  { text: "Window frame and sill cleaning" },
+  { text: "Window screen cleaning" },
+  { text: "Blind and shutter cleaning" },
+  { text: "Removal of hard water spots" },
+  { text: "Cleaning of window tracks" },
+  { text: "Mirror cleaning and polishing" },
+  { text: "Glass door cleaning" },
+  { text: "French door cleaning" },
+  { text: "Sliding door track cleaning" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="window cleaning Ocala FL, professional window cleaning, interior window cleaning, exterior window cleaning, streak-free windows, Ocala window services">
+    <link rel="canonical" href="https://palmacleaningco.com/window-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Window Cleaning Services",
+        "alternateName": ["Professional Window Cleaning", "Interior Window Cleaning", "Exterior Window Cleaning"],
+        "description": "Comprehensive window cleaning services including interior and exterior cleaning, streak-free polishing, frame cleaning, and screen maintenance for crystal-clear windows.",
+        "url": "https://palmacleaningco.com/window-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Window Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Window Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Interior Window Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Exterior Window Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Window Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional window cleaning services that deliver streak-free, crystal-clear windows. We clean both interior and exterior surfaces, frames, tracks, and screens for maximum clarity and natural light.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Window Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Living Room.jpg" alt="Professional window cleaning service showing streak-free window cleaning with squeegee and professional tools" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Window Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-sun text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Streak-Free Results</h3>
+                            <p class="text-gray-700">Professional techniques and tools ensure crystal-clear, streak-free windows that maximize natural light.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-spray-can text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Hard Water Spot Removal</h3>
+                            <p class="text-gray-700">Specialized solutions to remove stubborn hard water spots and mineral deposits from glass surfaces.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-window-maximize text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Complete Window Care</h3>
+                            <p class="text-gray-700">We clean glass, frames, tracks, sills, and screens for comprehensive window maintenance.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-eye text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Enhanced Curb Appeal</h3>
+                            <p class="text-gray-700">Clean windows dramatically improve your home's appearance both inside and out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for Crystal-Clear Windows?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional window cleaning service today and enjoy the clarity and brightness that clean windows bring to your home.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

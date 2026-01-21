@@ -93,6 +93,63 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Specialty Cleaning Services -->
+    <url>
+        <loc>https://palmacleaningco.com/bathroom-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/dining-room-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/window-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/ceiling-fan-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/refrigerator-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/countertop-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/mirror-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://palmacleaningco.com/stair-cleaning</loc>
+        <lastmod>2025-08-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
     <!-- ======================================== -->
     <!-- HIGH PRIORITY - LOCAL SEO PAGES -->
     <!-- ======================================== -->

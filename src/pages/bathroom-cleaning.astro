@@ -1,0 +1,183 @@
+---
+// Bathroom cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Bathroom Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert bathroom cleaning services in Ocala, FL. Deep sanitization, tile scrubbing, fixture polishing, and comprehensive bathroom maintenance. Licensed & insured.";
+
+const services = [
+  { text: "Scrub and disinfect sinks" },
+  { text: "Deep clean tub and shower tiles" },
+  { text: "Disinfect toilets inside and out" },
+  { text: "Clean and shine chrome fixtures" },
+  { text: "Disinfect countertops and surfaces" },
+  { text: "Clean cabinet fronts and handles" },
+  { text: "Vacuum and mop floors" },
+  { text: "Clean mirrors and glass surfaces" },
+  { text: "Remove soap scum and hard water stains" },
+  { text: "Sanitize all touch points" },
+  { text: "Empty trash and replace liners" },
+  { text: "Organize toiletries and towels" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="bathroom cleaning Ocala FL, professional bathroom cleaning, tile cleaning, shower cleaning, bathroom sanitization, Ocala bathroom services">
+    <link rel="canonical" href="https://palmacleaningco.com/bathroom-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Bathroom Cleaning Services",
+        "alternateName": ["Bathroom Deep Cleaning", "Bathroom Sanitization", "Professional Bathroom Cleaning"],
+        "description": "Comprehensive bathroom cleaning services including deep sanitization, tile scrubbing, fixture polishing, and thorough maintenance for all bathroom surfaces.",
+        "url": "https://palmacleaningco.com/bathroom-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Bathroom Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Bathroom Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Bathroom Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Bathroom Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Bathroom Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional bathroom cleaning services that leave your bathroom sparkling clean and sanitized. We handle everything from tile scrubbing to fixture polishing, ensuring a hygienic and fresh environment.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Bathroom Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/bathrrom.webp" alt="Professional bathroom cleaning service showing detailed cleaning of sinks, tiles, and fixtures" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Bathroom Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-shield-halved text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Deep Sanitization</h3>
+                            <p class="text-gray-700">Thorough disinfection of all surfaces to eliminate germs and bacteria, ensuring a hygienic environment.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-sparkles text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Fixture Polishing</h3>
+                            <p class="text-gray-700">Chrome fixtures and mirrors are polished to a brilliant shine, removing water spots and streaks.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-droplet text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Hard Water Stain Removal</h3>
+                            <p class="text-gray-700">Specialized techniques to remove stubborn hard water stains and soap scum buildup.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-clock text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Time Saving</h3>
+                            <p class="text-gray-700">Let our professionals handle the deep cleaning while you focus on what matters most to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for a Sparkling Clean Bathroom?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional bathroom cleaning service today and experience the difference of a truly sanitized and spotless bathroom.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

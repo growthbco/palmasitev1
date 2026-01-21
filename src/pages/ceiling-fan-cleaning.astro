@@ -1,0 +1,181 @@
+---
+// Ceiling fan cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Ceiling Fan Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert ceiling fan cleaning services in Ocala, FL. Thorough dust removal, blade cleaning, light fixture cleaning, and motor housing maintenance. Licensed & insured.";
+
+const services = [
+  { text: "Remove dust and debris from fan blades" },
+  { text: "Clean and polish fan blades (top and bottom)" },
+  { text: "Clean light fixtures and bulbs" },
+  { text: "Dust motor housing and canopy" },
+  { text: "Clean pull chains and switches" },
+  { text: "Remove cobwebs from fan and surrounding area" },
+  { text: "Sanitize all accessible surfaces" },
+  { text: "Check for loose screws or hardware" },
+  { text: "Clean decorative elements and trim" },
+  { text: "Vacuum surrounding ceiling area" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="ceiling fan cleaning Ocala FL, professional ceiling fan cleaning, fan blade cleaning, ceiling fan maintenance, Ocala fan cleaning services">
+    <link rel="canonical" href="https://palmacleaningco.com/ceiling-fan-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Ceiling Fan Cleaning Services",
+        "alternateName": ["Fan Blade Cleaning", "Ceiling Fan Maintenance", "Professional Ceiling Fan Cleaning"],
+        "description": "Comprehensive ceiling fan cleaning services including blade cleaning, light fixture maintenance, motor housing cleaning, and thorough dust removal for improved air quality.",
+        "url": "https://palmacleaningco.com/ceiling-fan-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Ceiling Fan Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Ceiling Fan Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Ceiling Fan Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Ceiling Fan Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Ceiling Fan Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional ceiling fan cleaning services that remove accumulated dust and debris from fan blades, light fixtures, and motor housings. Improve air quality and fan efficiency with our thorough cleaning.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Ceiling Fan Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Living Room.jpg" alt="Professional ceiling fan cleaning service showing detailed cleaning of fan blades and light fixtures" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Ceiling Fan Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-wind text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Improved Air Quality</h3>
+                            <p class="text-gray-700">Removing accumulated dust prevents it from circulating throughout your home, improving indoor air quality.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-bolt text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Better Fan Efficiency</h3>
+                            <p class="text-gray-700">Clean fans operate more efficiently, providing better air circulation and potentially reducing energy costs.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-lightbulb text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Light Fixture Care</h3>
+                            <p class="text-gray-700">Professional cleaning of light fixtures and bulbs ensures maximum brightness and longevity.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-shield-halved text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Safe Cleaning</h3>
+                            <p class="text-gray-700">Our professionals use proper equipment and techniques to safely clean ceiling fans without damage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for Cleaner, More Efficient Ceiling Fans?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional ceiling fan cleaning service today and enjoy improved air quality and fan performance.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

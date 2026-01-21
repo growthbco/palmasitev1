@@ -1,0 +1,183 @@
+---
+// Dining room cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Dining Room Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert dining room cleaning services in Ocala, FL. Comprehensive cleaning of dining furniture, chandeliers, table settings, and all dining area surfaces. Licensed & insured.";
+
+const services = [
+  { text: "Dust and polish dining table and chairs" },
+  { text: "Clean and shine chandeliers and light fixtures" },
+  { text: "Dust picture frames and wall art" },
+  { text: "Vacuum and clean area rugs" },
+  { text: "Mop and polish hardwood floors" },
+  { text: "Dust window sills and window treatments" },
+  { text: "Clean baseboards and trim" },
+  { text: "Polish china cabinets and display cases" },
+  { text: "Clean and organize serving pieces" },
+  { text: "Remove cobwebs from corners and ceilings" },
+  { text: "Dust ceiling fans (if accessible)" },
+  { text: "Clean and sanitize all surfaces" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="dining room cleaning Ocala FL, professional dining room cleaning, chandelier cleaning, dining furniture cleaning, formal dining room cleaning">
+    <link rel="canonical" href="https://palmacleaningco.com/dining-room-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Dining Room Cleaning Services",
+        "alternateName": ["Formal Dining Room Cleaning", "Dining Area Cleaning", "Professional Dining Room Cleaning"],
+        "description": "Comprehensive dining room cleaning services including furniture polishing, chandelier cleaning, floor care, and detailed maintenance of all dining room surfaces.",
+        "url": "https://palmacleaningco.com/dining-room-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Dining Room Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Dining Room Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Dining Room Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Dining Room Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Dining Room Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional dining room cleaning services that restore elegance to your formal dining space. We handle everything from chandelier cleaning to furniture polishing, ensuring your dining room is ready for any occasion.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Dining Room Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Living Room.jpg" alt="Professional dining room cleaning service showing detailed cleaning of furniture, chandeliers, and dining surfaces" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Dining Room Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-gem text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Chandelier Cleaning</h3>
+                            <p class="text-gray-700">Expert cleaning of delicate chandeliers and light fixtures to restore their brilliance and sparkle.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-chair text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Furniture Care</h3>
+                            <p class="text-gray-700">Professional polishing and maintenance of dining tables, chairs, and fine furniture pieces.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-rug text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Floor Care</h3>
+                            <p class="text-gray-700">Thorough vacuuming, mopping, and polishing of hardwood floors and area rugs.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-calendar-check text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Event Ready</h3>
+                            <p class="text-gray-700">Your dining room will be perfectly prepared for special occasions and dinner parties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready to Restore Your Dining Room's Elegance?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional dining room cleaning service today and enjoy a beautifully maintained space for entertaining.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+---
+// Countertop cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Countertop Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert countertop cleaning services in Ocala, FL. Deep cleaning, sanitization, and polishing for granite, quartz, marble, and all countertop surfaces. Licensed & insured.";
+
+const services = [
+  { text: "Deep clean all countertop surfaces" },
+  { text: "Sanitize and disinfect countertops" },
+  { text: "Remove stains and spills" },
+  { text: "Polish granite and stone surfaces" },
+  { text: "Clean backsplashes" },
+  { text: "Remove hard water spots" },
+  { text: "Clean around sink areas" },
+  { text: "Remove food residue and grease" },
+  { text: "Polish to restore shine" },
+  { text: "Clean edges and corners" },
+  { text: "Apply protective sealant (if needed)" },
+  { text: "Clean and organize items on countertops" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="countertop cleaning Ocala FL, professional countertop cleaning, granite cleaning, quartz cleaning, marble cleaning, countertop sanitization">
+    <link rel="canonical" href="https://palmacleaningco.com/countertop-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Countertop Cleaning Services",
+        "alternateName": ["Granite Countertop Cleaning", "Quartz Countertop Cleaning", "Professional Countertop Cleaning"],
+        "description": "Comprehensive countertop cleaning services including deep cleaning, sanitization, stain removal, and polishing for granite, quartz, marble, and all countertop materials.",
+        "url": "https://palmacleaningco.com/countertop-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Countertop Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Countertop Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Countertop Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Countertop Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Countertop Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional countertop cleaning services that restore the beauty and hygiene of your surfaces. We use appropriate cleaning methods for granite, quartz, marble, and all countertop materials.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Countertop Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Kitchen.jpg" alt="Professional countertop cleaning service showing detailed cleaning and polishing of granite and quartz surfaces" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Countertop Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-gem text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Material-Specific Care</h3>
+                            <p class="text-gray-700">We use appropriate cleaning methods and products for each countertop material to prevent damage and maintain beauty.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-shield-halved text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Sanitization</h3>
+                            <p class="text-gray-700">Thorough sanitization eliminates bacteria and germs, ensuring safe food preparation surfaces.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-sparkles text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Stain Removal</h3>
+                            <p class="text-gray-700">Professional techniques to remove stubborn stains, spills, and hard water spots without damaging surfaces.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-clock text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Surface Protection</h3>
+                            <p class="text-gray-700">Proper cleaning and sealing helps protect your investment and extends the life of your countertops.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for Sparkling Clean Countertops?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional countertop cleaning service today and enjoy beautiful, sanitized surfaces that enhance your kitchen and bathroom.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>

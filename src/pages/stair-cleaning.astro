@@ -1,0 +1,183 @@
+---
+// Stair cleaning service page
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import GTMHead from '../components/GTMHead.astro';
+import GTMBody from '../components/GTMBody.astro';
+import GlobalHead from '../components/GlobalHead.astro';
+
+const title = "Professional Stair Cleaning Services in Ocala FL | Palma Cleaning";
+const description = "Expert stair cleaning services in Ocala, FL. Comprehensive cleaning of stairs, railings, treads, risers, and banisters. Deep vacuuming and detailed maintenance. Licensed & insured.";
+
+const services = [
+  { text: "Vacuum all stair treads and risers" },
+  { text: "Deep clean carpeted stairs" },
+  { text: "Mop and polish hardwood stairs" },
+  { text: "Clean and polish railings and banisters" },
+  { text: "Dust spindles and balusters" },
+  { text: "Clean stair corners and edges" },
+  { text: "Remove pet hair and debris" },
+  { text: "Clean stairwell walls" },
+  { text: "Remove cobwebs from corners" },
+  { text: "Clean baseboards on stairs" },
+  { text: "Polish metal railings" },
+  { text: "Sanitize high-touch areas" }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <GTMHead />
+    <GlobalHead />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="stair cleaning Ocala FL, professional stair cleaning, staircase cleaning, railing cleaning, banister cleaning, Ocala stair services">
+    <link rel="canonical" href="https://palmacleaningco.com/stair-cleaning">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Stair Cleaning Services",
+        "alternateName": ["Staircase Cleaning", "Stairwell Cleaning", "Professional Stair Cleaning"],
+        "description": "Comprehensive stair cleaning services including tread and riser cleaning, railing and banister polishing, carpet deep cleaning, and thorough maintenance of all stair surfaces.",
+        "url": "https://palmacleaningco.com/stair-cleaning",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Palma Cleaning",
+            "telephone": "(352) 764-4747",
+            "email": "hello@palmacleaningco.com",
+            "url": "https://palmacleaningco.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ocala",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ocala",
+            "sameAs": "https://en.wikipedia.org/wiki/Ocala,_Florida"
+        },
+        "serviceType": "Stair Cleaning",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Stair Cleaning Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Standard Stair Cleaning"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Deep Stair Cleaning"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white font-poppins text-[#305048]">
+    <GTMBody />
+
+    <Navigation />
+    
+    <main>
+        <!-- Hero -->
+        <section class="bg-[#305048] text-white h-[450px] flex items-center justify-center">
+            <div class="text-center max-w-3xl mx-auto px-6">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">Stair Cleaning</h1>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Professional stair cleaning services that thoroughly clean treads, risers, railings, and banisters. We handle carpeted and hardwood stairs with detailed attention to every step.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    BOOK NOW
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">What's Included in Our Stair Cleaning</h2>
+                    <div class="rounded-lg overflow-hidden mb-8 border-4 border-[#305048] shadow-lg">
+                        <img class="w-full h-96 object-cover" src="/images/Living Room.jpg" alt="Professional stair cleaning service showing detailed cleaning of treads, risers, and railings" loading="lazy" />
+                    </div>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                        {services.map((service) => (
+                            <li class="flex items-start gap-3">
+                                <i class="fa-regular fa-square-check text-[#305048] mt-0.5 flex-shrink-0"></i>
+                                <span class="text-base leading-relaxed">{service.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-12 md:py-24 bg-[#F4F7F6]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold mb-8 text-[#305048] text-center">Why Choose Professional Stair Cleaning?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-stairs text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Comprehensive Cleaning</h3>
+                            <p class="text-gray-700">Thorough cleaning of every step, including treads, risers, corners, and edges that are often missed in regular cleaning.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-hand-holding-hand text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Railing & Banister Care</h3>
+                            <p class="text-gray-700">Professional polishing and cleaning of railings, banisters, and spindles for a pristine appearance.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-couch text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Carpet Deep Cleaning</h3>
+                            <p class="text-gray-700">Deep vacuuming and cleaning of carpeted stairs to remove embedded dirt, pet hair, and allergens.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <i class="fa-solid fa-shield-halved text-3xl text-[#305048] mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-[#305048]">Safety & Hygiene</h3>
+                            <p class="text-gray-700">Clean stairs reduce slip hazards and improve overall hygiene in high-traffic areas of your home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-[#305048] py-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl font-bold text-[#FF8057] mb-4">Ready for Spotless, Safe Stairs?</h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg">
+                    Book your professional stair cleaning service today and enjoy clean, well-maintained stairs that enhance your home's appearance and safety.
+                </p>
+                <a href="/book-now" class="bg-[#FF8057] text-[#305048] px-10 py-3 rounded-md text-lg font-bold hover:bg-[#ff996f] transition-colors duration-300 inline-block">
+                    GET STARTED
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <script 
+        src="https://beta.leadconnectorhq.com/loader.js"  
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
+        data-widget-id="66fd9ee1d53ad5f3145ea591">
+    </script>
+</body>
+</html>
