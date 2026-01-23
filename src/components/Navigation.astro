@@ -4,11 +4,12 @@ const showHomeLink = Astro.props?.showHome ?? true;
 
 <header class="bg-[#305048] text-white sticky top-0 z-50 shadow-md">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center h-full">
             <img 
                 src="/images/palma-logo.png" 
                 alt="Palma Cleaning Logo" 
-                class="h-4 w-auto max-w-[80px]"
+                class="h-6 w-auto object-contain"
+                style="max-height: 32px;"
                 loading="eager">
         </a>
         <nav class="hidden lg:flex items-center space-x-8 text-sm">
