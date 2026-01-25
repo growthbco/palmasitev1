@@ -5,7 +5,7 @@
                 <img 
                     src="/images/palma-logo.png" 
                     alt="Palma Cleaning Logo" 
-                    style="height: 60px; width: auto; min-height: 60px; object-fit: contain;"
+                    style="height: 40px; width: auto; object-fit: contain;"
                     loading="eager">
             </a>
         </div>
@@ -236,6 +236,7 @@ body {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
     
     // Add scroll effect for sticky navbar
     window.addEventListener('scroll', function() {
