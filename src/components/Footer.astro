@@ -54,3 +54,101 @@ const year = new Date().getFullYear();
         </div>
     </div>
 </footer>
+
+<!-- Request a Quote modal (lead capture form) -->
+<div
+    id="quote-modal"
+    class="fixed inset-0 z-[1000] hidden p-4"
+    aria-hidden="true"
+>
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" data-quote-modal-overlay></div>
+    <div class="relative mx-auto w-full max-w-4xl h-[min(90vh,820px)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-black/10">
+        <div class="h-14 px-4 sm:px-6 flex items-center justify-between border-b border-black/10 bg-white">
+            <div class="font-semibold text-[#305048]">Request a Quote</div>
+            <button
+                type="button"
+                class="w-10 h-10 inline-flex items-center justify-center rounded-lg hover:bg-black/5 transition"
+                aria-label="Close"
+                data-quote-modal-close
+            >
+                <i class="fa-solid fa-xmark text-[#305048]"></i>
+            </button>
+        </div>
+        <iframe
+            id="quote-modal-iframe"
+            title="Request a Quote"
+            class="w-full h-[calc(100%-56px)] border-0"
+            loading="lazy"
+        ></iframe>
+    </div>
+</div>
+
+<script is:inline>
+    (function () {
+        const FORM_URL = 'https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep';
+        const MODAL_ID = 'quote-modal';
+        const IFRAME_ID = 'quote-modal-iframe';
+
+        const ensureEmbedScript = () => {
+            const src = 'https://link.palmacleaningco.com/js/form_embed.js';
+            if (document.querySelector(`script[src="${src}"]`)) return;
+            const s = document.createElement('script');
+            s.src = src;
+            s.async = true;
+            document.body.appendChild(s);
+        };
+
+        const getEls = () => {
+            const modal = document.getElementById(MODAL_ID);
+            const iframe = document.getElementById(IFRAME_ID);
+            return { modal, iframe };
+        };
+
+        const openModal = () => {
+            const { modal, iframe } = getEls();
+            if (!modal || !iframe) return;
+
+            // Lazy-load the form on first open.
+            if (!iframe.getAttribute('src')) {
+                iframe.setAttribute('src', FORM_URL);
+                ensureEmbedScript();
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex', 'items-center', 'justify-center');
+            modal.setAttribute('aria-hidden', 'false');
+            document.documentElement.classList.add('overflow-hidden');
+        };
+
+        const closeModal = () => {
+            const { modal } = getEls();
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex', 'items-center', 'justify-center');
+            modal.setAttribute('aria-hidden', 'true');
+            document.documentElement.classList.remove('overflow-hidden');
+        };
+
+        // Delegate clicks for any "Request Quote" CTA.
+        document.addEventListener('click', (e) => {
+            const trigger = e.target.closest('[data-request-quote]');
+            if (trigger) {
+                e.preventDefault();
+                openModal();
+                return;
+            }
+
+            if (e.target.closest('[data-quote-modal-close]') || e.target.closest('[data-quote-modal-overlay]')) {
+                e.preventDefault();
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape') return;
+            const { modal } = getEls();
+            if (!modal || modal.classList.contains('hidden')) return;
+            closeModal();
+        });
+    })();
+</script>
