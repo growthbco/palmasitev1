@@ -127,11 +127,44 @@ const faqs = [
                     <p class="text-lg text-gray-600 max-w-2xl">Call, text, or send a quick message. We’ll return your quote within 24 hours and help you choose the perfect cleaning package for your home or business.</p>
                     <div class="flex flex-wrap justify-center lg:justify-start gap-4">
                         <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#ff996f] transition duration-300">Call (352) 764-4747</a>
-                        <a href="https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep" data-request-quote class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Request Quote</a>
+                        <a href="#quote-form" class="border border-[#305048] text-[#305048] font-bold py-4 px-10 rounded-md hover:bg-[#305048] hover:text-white transition duration-300">Request Quote</a>
                     </div>
                 </div>
                 <div class="hidden lg:flex">
                     <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Palma Cleaning customer support" class="rounded-2xl shadow-2xl object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Form (Inline) -->
+        <section id="quote-form" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Request a Quote</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Tell us about your space</h2>
+                    <p class="mt-4 text-gray-600">Share a few details and we’ll follow up quickly with next steps.</p>
+                </div>
+                <div class="mt-10 max-w-5xl mx-auto bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl shadow-2xl p-4 md:p-6">
+                    <iframe
+                        src="https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep"
+                        style="width:100%;height:100%;border:none;border-radius:6px"
+                        id="inline-UlPHV9CBTZU2NsWsquep"
+                        data-layout="{'id':'INLINE'}"
+                        data-trigger-type="alwaysShow"
+                        data-trigger-value=""
+                        data-activation-type="alwaysActivated"
+                        data-activation-value=""
+                        data-deactivation-type="neverDeactivate"
+                        data-deactivation-value=""
+                        data-form-name="Pop Up Form"
+                        data-height="undefined"
+                        data-layout-iframe-id="inline-UlPHV9CBTZU2NsWsquep"
+                        data-form-id="UlPHV9CBTZU2NsWsquep"
+                        title="Pop Up Form"
+                        class="w-full min-h-[820px] rounded-xl border-0"
+                        loading="lazy"
+                    ></iframe>
+                    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
                 </div>
             </div>
         </section>
@@ -160,7 +193,7 @@ const faqs = [
                 </div>
                 <div class="mt-10 flex flex-wrap justify-center gap-4">
                     <a href="tel:+13527644747" class="bg-[#FF8057] text-[#305048] font-semibold px-6 py-3 rounded-md hover:bg-[#ff996f] transition text-sm uppercase tracking-wide"><i class="fa-solid fa-phone mr-2"></i>Call Now</a>
-                    <a href="https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep" data-request-quote class="bg-transparent border border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#305048] transition text-sm uppercase tracking-wide"><i class="fa-solid fa-clipboard-list mr-2"></i>Get Quote Online</a>
+                    <a href="#quote-form" class="bg-transparent border border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-[#305048] transition text-sm uppercase tracking-wide"><i class="fa-solid fa-clipboard-list mr-2"></i>Get Quote Online</a>
                 </div>
             </div>
         </section>
@@ -198,25 +231,7 @@ const faqs = [
             </div>
         </section>
 
-        <!-- Quote Form -->
-        <section id="quote" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-[#FF8057]">Free Quote</p>
-                    <h2 class="text-3xl md:text-4xl font-bold">Tell us about your space</h2>
-                    <p class="mt-4 text-gray-600">Share a few details about your home or business and we’ll build a custom cleaning plan. No obligations, ever.</p>
-                </div>
-                <div class="mt-10 max-w-4xl mx-auto bg-[#F4F7F6] border border-[#E3EAE8]/60 rounded-2xl shadow-2xl p-6 md:p-10">
-                    <iframe
-                        src="https://link.palmacleaningco.com/widget/form/aSlLmaqsq5CZ1gocNBlC"
-                        title="Palma Cleaning Contact Form"
-                        class="w-full h-[820px] rounded-xl border-0 shadow-lg"
-                        loading="lazy">
-                    </iframe>
-                    <p class="mt-4 text-sm text-center text-gray-500">We’ll follow up within 24 hours. Licensed &amp; insured • Satisfaction guaranteed.</p>
-                </div>
-            </div>
-        </section>
+        <!-- (Removed old contact form embed) -->
 
         <!-- Service Areas -->
         <section class="py-24 bg-[#F4F7F6]">
@@ -272,7 +287,7 @@ const faqs = [
                 <p class="mt-4 text-[#305048]/90 text-lg max-w-2xl mx-auto">Call, text, or complete the form above to grab your personalized quote. We can often start service the same week.</p>
                 <div class="mt-10 flex flex-wrap justify-center gap-4">
                     <a href="tel:+13527644747" class="bg-[#305048] text-white font-bold py-4 px-10 rounded-md hover:bg-[#305048]/90 transition duration-300 text-sm uppercase"><i class="fa-solid fa-phone mr-2"></i>Call Now</a>
-                    <a href="https://link.palmacleaningco.com/widget/form/UlPHV9CBTZU2NsWsquep" data-request-quote class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-clipboard-list mr-2"></i>Get Quote Online</a>
+                    <a href="#quote-form" class="bg-transparent text-[#305048] font-bold py-4 px-10 rounded-md border border-[#305048] transition duration-300 text-sm uppercase"><i class="fa-solid fa-clipboard-list mr-2"></i>Get Quote Online</a>
                 </div>
                 <p class="mt-6 text-[#305048]/80 text-sm">Licensed & Insured • Satisfaction Guaranteed • Same Day Service Available</p>
             </div>
@@ -281,7 +296,6 @@ const faqs = [
 
     <Footer />
 
-    <script src="https://link.palmacleaningco.com/js/form_embed.js"></script>
     <script 
         src="https://beta.leadconnectorhq.com/loader.js"  
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" 
